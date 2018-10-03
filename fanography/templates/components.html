@@ -10,6 +10,7 @@
         <th scope="col">index</th>
       {% endif %}
       <th scope="col">description</th>
+      <th scope="col">can be blown up?</th>
       {% if rho != 1 %}
         <th scope="col">blowup&nbsp;of&nbsp;...</th>
       {% endif %}
@@ -22,16 +23,25 @@
       {% set fano = fanos[ID] %}
       <tr>
         <td><a class="identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] }}">{{ fano["rho"] }}&ndash;{{ fano["ID"] }}</a></td>
+
         <td>{{ fano["KX3"] }}</td>
+
         <td>{{ fano["h12"] }}</td>
+
         {% if rho in [1, 2, 3] %}
           <td scope="col">{{ fano["index"] }}</td>
         {% endif %}
+
         <td>{{ fano["description"] | safe }}</td>
+
+        <td>
+          {% if fano["blowup"] %}yes{% endif %}
+        </td>
+
         {% if rho != 1 %}
           <td>
-          {% for identifier in fano["blowdown"] %}
-            <a href="/{{ identifier }}" class="identifier">{{ identifier | replace("-", "&ndash;") | safe }}</a>
+          {% for blowdown in fano["blowdown"] %}
+            <a href="/{{ blowdown.identifier() }}" class="identifier">{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>
           {% endfor %}
           </td>
         {% endif %}
@@ -145,11 +155,13 @@
 
 {# information about blowups and blowdowns #}
 {% macro birational(fano) %}
-{% if fano["blowdown"] %}
+{% if fano["primitive"] %}
+  <p>This Fano variety is primitive.<p>
+{% else %}
   <p>This Fano variety is the blowup of
   <ul>
-    {% for identifier in fano["blowdown"] %}
-      <li><a href="/{{ identifier }}" class="identifier">{{ identifier | replace("-", "&ndash;") | safe }}</a>
+    {% for blowdown in fano["blowdown"] %}
+      <li><a href="/{{ blowdown.identifier() }}" class="identifier">{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ fano["h12"] - blowdown["h12"] }}
     {% endfor %}
   </ul>
 {% endif %}
@@ -157,8 +169,8 @@
 {% if fano["blowup"] %}
   <p>This Fano variety can be blown up to
   <ul>
-    {% for identifier in fano["blowup"] %}
-      <li><a href="/{{ identifier }}" class="identifier">{{ identifier | replace("-", "&ndash;") | safe }}</a>
+    {% for blowup in fano["blowup"] %}
+      <li><a href="/{{ blowup.identifier() }}" class="identifier">{{ blowup.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ blowup["h12"] - fano["h12"] }}
     {% endfor %}
   </ul>
 {% endif %}

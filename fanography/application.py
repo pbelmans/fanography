@@ -31,8 +31,17 @@ class Fano:
       self.genus = (self.KX3 + 2) / 2
 
     # deal with blowdowns
+    self.primitive = not "blowdown" in yaml
     if "blowdown" in yaml:
-      self.blowdown = yaml["blowdown"] # TODO maybe do a postprocessing step, replacing this by an actual reference to the Fano?
+      self.blowdown = yaml["blowdown"]
+    else:
+      self.blowdown = []
+
+  def __eq__(self, other):
+    return self.identifier() == other.identifier()
+
+  def identifier(self):
+    return "{}-{}".format(self.rho, self.ID) # TODO use this wherever possible!
 
   # process strings
   def __parse(self, string):
@@ -44,9 +53,29 @@ fanos = {i: dict() for i in range(1, 11)}
 with open("data.yml", "r") as f:
   data = yaml.load(f)
 
+  # read in the data
   for rho in data.keys():
     for ID in data[rho].keys():
       fanos[rho][ID] = Fano(rho, ID, data[rho][ID])
+
+  # postprocessing step to replace identifiers by objects in list of blowdowns
+  for rho in fanos.keys():
+    # these are minimal
+    if rho == 1:
+      continue
+
+    for ID in fanos[rho].keys():
+      fanos[rho][ID].blowdown = [fanos[rho - 1][i] for i in fanos[rho - 1] if "{}-{}".format(rho - 1, i) in fanos[rho][ID].blowdown]
+
+  # determine which Fano varieties can be blown up in an irreducible curve and remain Fano
+  for rho in fanos.keys():
+    # these cannot be blown up
+    if rho == 10:
+      fanos[rho][1].blowup = []
+      continue
+
+    for ID in fanos[rho].keys():
+      fanos[rho][ID].blowup = [fano for fano in fanos[rho + 1].values() if "{}-{}".format(rho, ID) in [blowdown.identifier() for blowdown in fano.blowdown]]
 
 
 @app.route("/")
