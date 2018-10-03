@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+
 body {
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
 }
 
 div#menu {
@@ -20,6 +23,7 @@ div#content {
   margin: 0 auto;
   max-width: 1200px;
   padding: 1rem .5rem;
+  overflow-x: scroll;
 }
 
 div#menu ul {
@@ -40,9 +44,13 @@ div#menu a:hover {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-variant: small-caps;
   padding-top: .3rem;
+}
+
+h1 a {
+  display: block;
 }
 
 h1 a,
@@ -51,9 +59,14 @@ h1 a:hover {
   color: black;
 }
 
+h1 a::first-letter {
+  color: #971539;
+}
+
+
 p#slogan {
   font-style: italic;
-  font-size: .8rem;
+  font-size: .9rem;
   margin-bottom: .5rem;
 }
 
@@ -67,23 +80,15 @@ h2 a:hover {
 }
 
 .identifier {
-  font-family: monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 table.overview tr .row-identifier {
-  width: 3rem;
+  width: 2rem;
 }
 
 table.overview tr .volume,
 table.overview tr .h12,
 table.overview tr .index {
   width: 2rem;
-}
-
-table.overview tr .row-identifier,
-table.overview tr .volume,
-table.overview tr .h12,
-table.overview tr .index {
-  white-space: nowrap;
-  text-align: center;
 }
