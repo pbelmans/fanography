@@ -51,6 +51,10 @@ with open("data.yml", "r") as f:
 def index():
   return render_template("index.html", fanos=fanos)
 
+@app.route("/<int:rho>")
+def show_table(rho):
+  return render_template("table.show.html", fanos=fanos[rho], rho=rho)
+
 """
 # Naming scheme
 

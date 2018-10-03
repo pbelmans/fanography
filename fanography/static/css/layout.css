@@ -43,11 +43,9 @@ h1 {
   padding-top: .3rem;
 }
 
-h1 a {
-  color: black;
-}
-
+h1 a,
 h1 a:hover {
+  color: black;
   color: black;
 }
 
@@ -59,6 +57,11 @@ p#slogan {
 
 h2 {
   font-size: 1.3rem;
+}
+
+h2 a,
+h2 a:hover {
+  color: black;
 }
 
 .identifier {
