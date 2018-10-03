@@ -457,6 +457,8 @@
     -KX3: 24
     h12: 0
 
+    blowdown: ["2-24", "2-34"]
+
 
   9:
     description: blowup of ... # TODO continue
