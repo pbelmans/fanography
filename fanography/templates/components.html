@@ -10,11 +10,11 @@
         <th scope="col">index</th>
       {% endif %}
       <th scope="col">description</th>
-      <th scope="col">can be blown up?</th>
+      <th scope="col"><span class="d-none d-lg-block">blowups</span></th>
       {% if rho != 1 %}
-        <th scope="col">blowup&nbsp;of&nbsp;...</th>
+        <th scope="col"><span class="d-none d-lg-block">blowdowns</span></th>
       {% endif %}
-      <th scope="col">rationality</th>
+      <th scope="col"><span class="d-none dg-lg-block">rationality</span></th>
     </tr>
   </thead>
 
@@ -22,26 +22,26 @@
     {% for ID in fanos.keys() | sort %}
       {% set fano = fanos[ID] %}
       <tr>
-        <td><a class="identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] }}">{{ fano["rho"] }}&ndash;{{ fano["ID"] }}</a></td>
+        <td class="align-middle row-identifier"><a class="identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] }}">{{ fano["rho"] }}&ndash;{{ fano["ID"] }}</a></td>
 
-        <td>{{ fano["KX3"] }}</td>
+        <td class="align-middle volume">{{ fano["KX3"] }}</td>
 
-        <td>{{ fano["h12"] }}</td>
+        <td class="align-middle h12">{{ fano["h12"] }}</td>
 
         {% if rho in [1, 2, 3] %}
-          <td scope="col">{{ fano["index"] }}</td>
+          <td class="align-middle index" scope="col">{{ fano["index"] }}</td>
         {% endif %}
 
-        <td>{{ fano["description"] | safe }}</td>
+        <td class="align-middle">{{ fano["description"] | safe }}</td>
 
-        <td>
+        <td class="align-middle">
           {% if fano["blowup"] %}yes{% endif %}
         </td>
 
         {% if rho != 1 %}
-          <td>
+          <td class="align-middle">
           {% for blowdown in fano["blowdown"] %}
-            <a href="/{{ blowdown.identifier() }}" class="identifier">{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>
+            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap">{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>
           {% endfor %}
           </td>
         {% endif %}
@@ -69,14 +69,14 @@
 <p>{{ fano["description"] | safe }}
 
 <dl class="row">
-  <dt class="col-sm-6">rank
-  <dd class="col-sm-6">{{ fano["rho"] }}
+  <dt class="col-6 text-right">rank
+  <dd class="col-6">{{ fano["rho"] }}
 
-  <dt class="col-sm-6">$-\mathrm{K}_X^3$
-  <dd class="col-sm-6">{{ fano["KX3"] }}
+  <dt class="col-6 text-right">$-\mathrm{K}_X^3$
+  <dd class="col-6">{{ fano["KX3"] }}
 
-  <dt class="col-sm-6">$\mathrm{h}^{1,2}(X)$
-  <dd class="col-sm-6">{{ fano["h12"] }}
+  <dt class="col-6 text-right">$\mathrm{h}^{1,2}(X)$
+  <dd class="col-6">{{ fano["h12"] }}
 </dl>
 
 <p class="clearfix">
@@ -94,31 +94,31 @@
 {# information about |-K_X| #}
 {% macro anticanonical(fano) %}
 <dl class="row">
-  <dt class="col-sm-6">index
-  <dd class="col-sm-6">{{ fano["index"] }}
+  <dt class="col-6 text-right">index</dt>
+  <dd class="col-6">{{ fano["index"] }}</dd>
 
   {# page 216 of Iskovskikh--Prokhorov, remark (ii) #}
-  <dt class="col-sm-6">basepoint free</dt>
+  <dt class="col-6 text-right">basepoint free</dt>
   {% if (fano["rho"], fano["ID"]) not in [(2, 1), (3, 8)] %}
-    <dd class="col-sm-6">yes
+    <dd class="col-6 text-nowrap">yes</dd>
   {% else %}
-    <dd class="col-sm-6">no
+    <dd class="col-6 text-nowrap">no</dd>
   {% endif %}
 
   {# page 216 of Iskovskikh--Prokhorov, remark (iii) #}
-  <dt class="col-sm-6">hyperelliptic</dt>
+  <dt class="col-6 text-right">hyperelliptic</dt>
   {% if (fano["rho"], fano["ID"]) not in [(2, 2), (2, 3), (10, 1)] %}
-    <dd class="col-sm-6">no
+    <dd class="col-6 text-nowrap">no
   {% else %}
-    <dd class="col-sm-6">yes
+    <dd class="col-6 text-nowrap">yes
   {% endif %}
 
   {# page 216 of Iskovskikh--Prokhorov, remark (iv) #}
-  <dt class="col-sm-6">trigonal</dt>
+  <dt class="col-6 text-right">trigonal</dt>
   {% if (fano["rho"], fano["ID"]) not in [(2, 4), (2, 5), (8, 1)] %}
-    <dd class="col-sm-6">no
+    <dd class="col-6 text-nowrap">no
   {% else %}
-    <dd class="col-sm-6">yes
+    <dd class="col-6 text-nowrap">yes
   {% endif %}
 </dl>
 {% endmacro %}
