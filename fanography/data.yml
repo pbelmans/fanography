@@ -61,7 +61,7 @@
 
 
   11:
-    description: "?"
+    description: hypersurface of degree 6 in $\mathbb{P}(1,1,1,2,3)$
     -KX3: 8
     h12: 21
 
@@ -421,7 +421,7 @@
 
 
   4:
-    description: blowup of ((2-18)) along smooth fiber of the composition of the projection to $\mathbb{P}^1\times<mathbb{P}^2$ with the projection to $\mathbb{P}^2$ of the double cover with the projection
+    description: blowup of ((2-18)) along smooth fiber of the composition of the projection to $\mathbb{P}^1\times\mathbb{P}^2$ with the projection to $\mathbb{P}^2$ of the double cover with the projection
     -KX3: 18
     h12: 2
 
@@ -737,7 +737,7 @@
 
 
   12:
-    description: blowup of ((2-33) along the disjoint union of two exceptional lines of the blowup
+    description: blowup of ((2-33)) along the disjoint union of two exceptional lines of the blowup
     -KX3: 46
     h12: 0
 
