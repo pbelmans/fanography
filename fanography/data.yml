@@ -105,6 +105,8 @@
     -KX3: 52
     h12: 0
 
+    index: 3
+
 
   17:
     description: $\mathbb{P}^3$
@@ -363,6 +365,8 @@
     -KX3: 48
     h12: 0
 
+    index: 2
+
 
   33:
     description: blowup of ((1-17)) along a line
@@ -384,6 +388,8 @@
     h12: 0
 
     alternative: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(1))$
+
+    index: 2
 
 
   36:
@@ -602,6 +608,8 @@
     description: $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 48
     h12: 0
+
+    index: 2
 
 
   28:
