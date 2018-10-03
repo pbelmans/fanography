@@ -4,6 +4,10 @@
 
 {% block content %}
 
-{{ components.identification(fano) }}
+  {{ components.component("Identification", components.basic(fano)) }}
+
+  {{ components.component("Hodge diamond", components.diamond(fano)) }}
+
+  {{ components.component("Anticanonical bundle", components.anticanonical(fano)) }}
 
 {% endblock %}
