@@ -1,0 +1,32 @@
+{% macro component(header, title, content) %}
+<div class="card">
+  <div class="card-body">
+    <div class="card-header">{{- header }}</div>
+    <h5 class="card-title">{{- title }}</h5>
+
+    <p class="card-text">{{ content }}</
+    </p>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro title(fano) %}
+Fano variety {{ fano['rho'] }}&ndash;{{ fano['ID'] }}
+{% endmacro %}
+
+{% macro basic(fano) %}
+<dl class="list-group">
+  <dt>rank
+  <dd>{{ fano["rho"] }}
+
+  <dt>$-\mathrm{K}_X^3$
+  <dd>${{ fano["KX3"] }}$
+
+  <dt>$\mathrm{h}^{1,2}(X)$
+  <dd>${{ fano["h12"] }}$
+</dl>
+{% endmacro %}
+
+{% macro identification(fano) %}
+  {{ component("Identification", title(fano), basic(fano)) }}
+{% endmacro %}

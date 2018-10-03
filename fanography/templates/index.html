@@ -1,0 +1,32 @@
+{% extends "page.html" %}
+
+{% block title %}List of Fano varieties{% endblock %}
+
+{% block content %}
+
+{% for rho in fanos.keys() %}
+  <h2>Fano threefolds with $\rho={{ rho }}$</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>$-\mathrm{K}_X^3$</th>
+      <th>$\mathrm{h}^{1,2}$</th>
+      <th>description</th>
+      <th>blowup of ...</th>
+      <th>rationality</th>
+    </tr>
+
+    {% for ID in fanos[rho].keys() | sort %}
+      {% set fano = fanos[rho][ID] %}
+      <tr>
+        <td><a href="/{{ fano["rho"] }}-{{ fano["ID"] }}">{{ fano["rho"] }}&ndash;{{ fano["ID"] }}</a></td>
+        <td>{{ fano["KX3"] }}</td>
+        <td>{{ fano["h12"] }}</td>
+        <td>{{ fano["description"] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endfor %}
+
+{% endblock %}
+
