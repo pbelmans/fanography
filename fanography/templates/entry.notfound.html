@@ -1,0 +1,18 @@
+{% extends "page.html" %}
+
+{% block title %}Entry not found{% endblock %}
+
+{% block content %}
+<h2>Entry {{ rho }}&ndash;{{ ID }} not found.</h2>
+
+{% if rho < 0 %}
+  <p>The rank cannot be negative.</p>
+{% elif rho > 10 %}
+  <p>The rank cannot be greater than 10.</p>
+{% else %}
+  <p>There is no Fano 3-fold of rank ${{ rho }}$, with ID {{ ID }}.
+{% endif %}
+
+
+{% endblock %}
+

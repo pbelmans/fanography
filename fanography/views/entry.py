@@ -1,15 +1,13 @@
 from flask import render_template, request, redirect
 import yaml
 
-from fanography.application import app, Fano
+from fanography.application import app, fanos
 
-@app.route("/<string:rho>-<string:ID>")
+@app.route("/<int:rho>-<int:ID>")
 def show_entry(rho, ID):
-  filename = "data/{}-{}.yml".format(rho, ID)
   try:
-    with open(filename, "r") as f:
-      return render_template("entry.html", fano=Fano(rho, ID, yaml.load(f)))
+    return render_template("entry.show.html", fano=fanos[rho][ID])
 
-  except FileNotFoundError:
-    pass
+  except KeyError:
+    return render_template("entry.notfound.html", rho=rho, ID=ID)
 

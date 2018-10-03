@@ -3,13 +3,14 @@ body {
 }
 
 div#menu {
-  background-color: #000;
+  background-color: black;
   text-align: center;
   height: 2rem;
 }
 
 div#title {
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   text-align: center;
   font-family: Georgia, serif;
 }
@@ -51,7 +52,7 @@ h1 a:hover {
 p#slogan {
   font-style: italic;
   font-size: .8rem;
-  padding-bottom: .5rem;
+  margin-bottom: .5rem;
 }
 
 

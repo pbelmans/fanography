@@ -1,0 +1,168 @@
+# rank 1
+1:
+  1:
+    description: $X\to\mathbb{P}^3$ is a double cover with ramification divisor of degree 6
+    -KX3: 2
+    h12: 52
+
+
+  2:
+    description: $X_4$ quartic in $\mathbb{P}^4$
+    -KX3: 4
+    h12: 30
+
+
+  3:
+    description: $X_{2,3}$ complete intersection of quadric and cubic in $\mathbb{P}^5$
+    -KX3: 6
+    h12: 20
+
+
+  4:
+    description: $X_{2,2,2}$ complete intersection of 3 quadrics in $\mathbb{P}^6$
+    -KX3: 8
+    h12: 14
+
+
+  5:
+    description: section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 2 subspace and a quadric
+    -KX3: 10
+    h12: 10
+
+
+  6:
+    description: $X_{12}$
+    -KX3: 12
+    h12: 7
+
+
+  7:
+    description: section of Plücker embedding of $\mathrm{Gr}(2,6)$ by codimension 5 subspace
+    -KX3: 14
+    h12: 5
+
+
+  8:
+    description: $X_{16}$
+    -KX3: 16
+    h12: 3
+
+
+  9:
+    description: $X_{18}$
+    -KX3: 18
+    h12: 2
+
+
+  10:
+    description: $X_{22}$
+    -KX3: 22
+    h12: 0
+
+
+  11:
+    description: "?"
+    -KX3: 8
+    h12: 21
+
+    index: 2
+
+
+  12:
+    description: a double cover of $\mathbb{P}^3$ ramified along a smooth quartic surface
+    -KX3: 16
+    h12: 10
+
+    index: 2
+
+
+  13:
+    description: $X_3$ cubic in $\mathbb{P}^4$
+    -KX3: 24
+    h12: 5
+
+    index: 2
+
+
+  14:
+    description: $X_{2,2}$ intersection of 2 quadrics in $\mathbb{P}^5$
+    -KX3: 32
+    h12: 2
+
+    index: 2
+
+
+  15:
+    description: section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 3 subspace
+    -KX3: 40
+    h12: 0
+
+    index: 2
+
+
+  16:
+    description: $X\to\mathbb{P}^3$ is a double cover with ramification divisor of degree 6
+    -KX3: 2
+    h12: 52
+
+
+  17:
+    description: $\mathbb{P}^3$
+    -KX3: 64
+    h12: 0
+
+    index: 4
+
+
+# rank 2
+2:
+  1:
+    description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system # TODO suboptimal description...
+    -KX3: 4
+    h12: 22
+
+    blowdown: 1-11
+
+
+  2:
+    description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ whose branch locus is a $(2,4)$-divisor
+    -KX3: 8
+    h12: 11
+
+
+  3:
+    description: blowup of ((1-12)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
+    -KX3: 8
+    h12: 11
+
+    blowdown: 1-12
+
+
+  4:
+    description: blowup of ((1-17)) in the intersection of two cubics
+    -KX3: 10
+    h12: 10
+
+    blowdown: 1-17
+
+
+  5:
+    description: blowup of ((1-13)) along a plane cubic
+    -KX3: 12
+    h12: 6
+
+    blowdown: 1-13
+
+
+  6:
+    description: a $(2,2)$-divisor on $\mathbb{P}^2\times\mathbb{P}^2$
+    -KX3: 12
+    h12: 9
+
+
+  7:
+    description: blowup of ((1-16)) along the intersection of two divisors from $|\mathcal{O}_{X_2}(2)|$
+    -KX3: 14
+    h12: 5
+
+    blowdown: 1-16
