@@ -1,7 +1,7 @@
 # rank 1
 1:
   1:
-    description: $X\to\mathbb{P}^3$ is a double cover with ramification divisor of degree 6
+    description: double cover of $\mathbb{P}^3$ with ramification divisor of degree 6
     -KX3: 2
     h12: 52
 
@@ -121,7 +121,7 @@
     -KX3: 4
     h12: 22
 
-    blowdown: 1-11
+    blowdown: ["1-11"]
 
 
   2:
@@ -135,7 +135,7 @@
     -KX3: 8
     h12: 11
 
-    blowdown: 1-12
+    blowdown: ["1-12"]
 
 
   4:
@@ -143,7 +143,7 @@
     -KX3: 10
     h12: 10
 
-    blowdown: 1-17
+    blowdown: ["1-17"]
 
 
   5:
@@ -151,7 +151,7 @@
     -KX3: 12
     h12: 6
 
-    blowdown: 1-13
+    blowdown: ["1-13"]
 
 
   6:
@@ -165,4 +165,228 @@
     -KX3: 14
     h12: 5
 
-    blowdown: 1-16
+    blowdown: ["1-16"]
+
+
+  8:
+    description: double cover of $\mathrm{Bl}_p\mathbb{P}^3$ with branch locus an anticanonical divisor such that the intersection with the exceptional divisor is smooth
+    -KX3: 14
+    h12: 9
+
+    degeneration: intersection with the exceptional divisor is singular but reduced
+
+
+  9:
+    description: blowup of ((1-17)) along a curve of degree 7 and genus 5, which is intersection of 2 cubics
+    -KX3: 16
+    h12: 5
+
+    blowdown: ["1-17"]
+
+
+  10:
+    description: blowup of ((1-14)) along an elliptic curve which is intersection of 2 hyperplanes
+    -KX3: 16
+    h12: 3
+
+    blowdown: ["1-14"]
+
+
+  11:
+    description: blowup of ((1-13)) along a line
+    -KX3: 18
+    h12: 5
+
+    blowdown: ["1-13"]
+
+
+  12:
+    description: blowup of ((1-17)) along a curve of degree 6 and genus 3 which is an intersection of 2 cubics
+    -KX3: 20
+    h12: 3
+
+    blowdown: ["1-17"]
+
+
+  13:
+    description: blowup of ((1-16)) along a curve of degree 6 and genus 2
+    -KX3: 20
+    h12: 2
+
+
+  14:
+    description: blowup of ((1-15)) along an elliptic curve which is an intersection of 2 hyperplanes
+    -KX3: 20
+    h12: 1
+
+    blowdown: ["1-15"]
+
+
+  15:
+    description: blowup of ((1-17)) along the intersection of a quadric and a cubic
+    -KX3: 22
+    h12: 4
+
+    degeneration: quadric is singular but reduced
+
+    blowdown: ["1-17"]
+
+
+  16:
+    description: blowup of ((1-14)) along a conic
+    -KX3: 22
+    h12: 2
+
+    blowdown: ["1-14"]
+
+
+  17:
+    description: blowup of ((1-16)) along an elliptic curve of degree 5
+    -KX3: 24
+    h12: 1
+
+    blowdown: ["1-16", "1-17"]
+
+
+  18:
+    description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ with ramification divisor of degree $(2,2)$
+    -KX3: 24
+    h12: 2
+
+
+  19:
+    description: blowup of ((1-14)) along a line
+    -KX3: 26
+    h12: 2
+
+    blowdown: ["1-14", "1-17"]
+
+
+  20:
+    description: blowup of ((1-15)) along a twisted cubic
+    -KX3: 26
+    h12: 0
+
+    blowdown: ["1-15"]
+
+
+  21:
+    description: blowup of ((1-16)) along a twisted quartic
+    -KX3: 28
+    h12: 0
+
+    blowdown: ["1-16", "1-16"]
+
+
+  22:
+    description: blowup of ((1-15)) along a conic
+    -KX3: 30
+    h12: 0
+
+    blowdown: ["1-15", "1-17"]
+
+
+  23:
+    description: blowup of ((1-16)) along an intersection of $A\in|\mathcal{O}_Q(1)|$ and $B\in|\mathcal{O}_Q(2)|$ such that $A$ is smooth
+    -KX3: 30
+    h12: 1
+
+    degeneration: $A$ is singular
+
+    blowdown: ["1-16"]
+
+
+  24:
+    description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(1,2)$
+    -KX3: 30
+    h12: 0
+
+
+  25:
+    description: blowup of ((1-17)) along an elliptic curve which is an intersection of 2 quadrics
+    -KX3: 32
+    h12: 1
+
+    blowdown: ["1-17"]
+
+
+  26:
+    description: blowup of ((1-15)) along a line
+    -KX3: 34
+    h12: 0
+
+    blowdown: ["1-15", "1-16"]
+
+
+  27:
+    description: blowup of ((1-17)) along a twisted cubic
+    -KX3: 38
+    h12: 0
+
+    blowdown: ["1-17"]
+
+
+  28:
+    description: blowup of ((1-17)) along a plane cubic
+    -KX3: 40
+    h12: 1
+
+    blowdown: ["1-17"]
+
+
+  29:
+    description: blowup of ((1-16)) along a line
+    -KX3: 40
+    h12: 0
+
+    blowdown: ["1-16"]
+
+
+  30:
+    description: blowup of ((1-17)) along a conic
+    -KX3: 46
+    h12: 0
+
+    blowdown: ["1-17"]
+
+
+  31:
+    description: blowup of ((1-16)) along a line
+    -KX3: 46
+    h12: 0
+
+    blowdown: ["1-16"]
+
+
+  32:
+    description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(2,2)$
+    -KX3: 48
+    h12: 0
+
+
+  33:
+    description: blowup of ((1-17)) along a line
+    -KX3: 54
+    h12: 0
+
+    blowdown: ["1-17"]
+
+
+  34:
+    description: $\mathbb{P}^1\times\mathbb{P}^2$
+    -KX3: 54
+    h12: 0
+
+
+  35:
+    description: $\mathrm{Bl}_p\mathbb{P}^3$
+    -KX3: 56
+    h12: 0
+
+    alternative: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(1))$
+
+
+  36:
+    description: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(2))$
+    -KX3: 62
+    h12: 0
