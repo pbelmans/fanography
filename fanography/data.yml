@@ -101,9 +101,9 @@
 
 
   16:
-    description: $X\to\mathbb{P}^3$ is a double cover with ramification divisor of degree 6
-    -KX3: 2
-    h12: 52
+    description: $X_2$ quadric in $\mathbb{P}^4$
+    -KX3: 52
+    h12: 0
 
 
   17:
