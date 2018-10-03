@@ -26,11 +26,13 @@ class Fano:
     else:
       self.index = 1
 
+    # if rho = 1 and index = 1 then there is also a genus, from -K_X^3
+    if self.rho == 1 and self.index == 1:
+      self.genus = (self.KX3 + 2) / 2
+
     # deal with blowdowns
     if "blowdown" in yaml:
-      self.blowdown = yaml["blowdown"]
-
-    # if rho = 1 and index = 1 then there is also a genus, from -K_X^3
+      self.blowdown = yaml["blowdown"] # TODO maybe do a postprocessing step, replacing this by an actual reference to the Fano?
 
   # process strings
   def __parse(self, string):
