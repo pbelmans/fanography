@@ -1,0 +1,41 @@
+{% extends "page.html" %}
+
+{% import "components.html" as components %}
+
+{% block title %}List of Fano varieties{% endblock %}
+
+{% block content %}
+
+<h2>Statistics</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="row" class="text-right">Picard rank $\rho$</th>
+      {% for rho in fanos.keys() | sort %}
+      <th scope="col">{{ rho }}</th>
+      {% endfor %}
+      <th scope="col">total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="text-right">number of deformation families</th>
+      {% for rho in fanos.keys() | sort %}
+      <td>{{ fanos[rho] | length }}</td>
+      {% endfor %}
+      <td><em>105</em></td>
+    </tr>
+    <tr>
+      <th scope="row" class="text-right">number of primitive deformation families</th>
+      {% for rho in fanos.keys() | sort %}
+      <td>{{ fanos[rho].values() | selectattr("is_primitive") | list | length }}</td>
+      {% endfor %}
+      <td><em>31</em></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
+
+

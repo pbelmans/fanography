@@ -31,7 +31,7 @@ class Fano:
       self.genus = (self.KX3 + 2) / 2
 
     # deal with blowdowns
-    self.primitive = not "blowdown" in yaml
+    self.is_primitive = not "blowdown" in yaml
     if "blowdown" in yaml:
       self.blowdown = yaml["blowdown"]
     else:
@@ -49,8 +49,9 @@ class Fano:
     return re.sub(r'\(\(([0-9])+-([0-9])+\)\)', r'<a class="identifier" href="/\1-\2">\1&ndash;\2</a>', string)
 
 
+# create the dictionary of all deformation families of Fano 3-folds
 fanos = {i: dict() for i in range(1, 11)}
-with open("data.yml", "r") as f:
+with open("fanography/data.yml", "r") as f:
   data = yaml.load(f)
 
   # read in the data
@@ -85,6 +86,10 @@ def index():
 @app.route("/<int:rho>")
 def show_table(rho):
   return render_template("table.show.html", fanos=fanos[rho], rho=rho)
+
+@app.route("/explained")
+def show_explained():
+  return render_template("explained.html", fanos=fanos)
 
 """
 # Naming scheme
