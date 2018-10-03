@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 
 import glob
+import re
 import yaml
 
 app = Flask(__name__)
@@ -15,9 +16,8 @@ class Fano:
     self.rho = rho
     self.ID  = ID
 
-    self.description = yaml["description"]
+    self.description = self.__parse(yaml["description"])
     self.KX3 = yaml["-KX3"]
-    print(yaml["-KX3"])
     self.h12 = yaml["h12"]
 
     if "index" in yaml:
@@ -26,6 +26,10 @@ class Fano:
       self.index = 1
 
     # if rho = 1 and index = 1 then there is also a genus, from -K_X^3
+
+  # process strings
+  def __parse(self, string):
+    return re.sub(r'\(\(([0-9])+-([0-9])+\)\)', r'<a class="identifier" href="/\1-\2">\1&ndash;\2</a>', string)
 
 
 fanos = {i: dict() for i in range(1, 11)}
