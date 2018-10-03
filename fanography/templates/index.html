@@ -13,7 +13,9 @@
         <th scope="col">$-\mathrm{K}_X^3$</th>
         <th scope="col">$\mathrm{h}^{1,2}$</th>
         <th scope="col">description</th>
-        <th scope="col">blowup of ...</th>
+        {% if rho != 1 %}
+          <th scope="col">blowup of ...</th>
+        {% endif %}
         <th scope="col">rationality</th>
       </tr>
     </thead>

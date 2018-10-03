@@ -1,3 +1,60 @@
+body {
+  font-size: 16px;
+}
+
+div#menu {
+  background-color: #000;
+  text-align: center;
+  height: 2rem;
+}
+
+div#title {
+  background-color: #eee;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+div#content {
+}
+
+div#menu ul {
+  padding-top: .2rem;
+}
+
+div#menu ul li {
+  margin: 0 1rem;
+}
+
+div#menu a {
+  color: #337ab7;
+}
+
+div#menu a:hover {
+  color: #d9edf7;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-variant: small-caps;
+  padding-top: .3rem;
+}
+
+h1 a {
+  color: black;
+}
+
+h1 a:hover {
+  color: black;
+}
+
+p#slogan {
+  font-style: italic;
+  font-size: .8rem;
+  padding-bottom: .5rem;
+}
+
+
 table.overview tr td:nth-of-type(1), table.overview tr th:nth-of-type(1),
 table.overview tr td:nth-of-type(2), table.overview tr th:nth-of-type(2),
 table.overview tr td:nth-of-type(3), table.overview tr th:nth-of-type(3) {

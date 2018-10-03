@@ -35,8 +35,21 @@
 </head>
 
 <body>
-{% import "components.html" as components %}
 
-{% block content %}{% endblock %}
+<div id="menu">
+  <ul class="list-inline">
+    <li class="list-inline-item"><a href="/explained">the classification explained</a>
+    <li class="list-inline-item"><a href="/about">about</a>
+  </ul>
+</div>
+
+<div id="title" class="sticky-top">
+  <h1><a href="/">Fanography</a></h1>
+  <p id="slogan">A tool to visually study the geography of Fano 3-folds.</p>
+</div>
+
+<div id="content">
+  {% block content %}{% endblock %}
+</div>
 </body>
 </html>
