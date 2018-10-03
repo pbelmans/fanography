@@ -26,6 +26,10 @@ div#content {
   overflow-x: scroll;
 }
 
+div#content::-webkit-scrollbar {
+  display: none;
+}
+
 div#menu ul {
   padding-top: .2rem;
 }
