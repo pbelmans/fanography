@@ -743,7 +743,13 @@
 
     blowdown: ["3-30", "3-30"]
 
-  # TODO don't forget number 13 here
+
+  13:
+    description: blowup of ((3-27)) along a curve of degree $(1,1,3)$
+    -KX3: 26
+    h12: 0
+
+    blowdown: ["3-27", "3-31", "3-31"]
 
 
 # rank 5
