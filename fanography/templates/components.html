@@ -72,6 +72,7 @@
 <dl class="row">
   <dt class="col-6 text-right">rank
   <dd class="col-6">{{ fano["rho"] }}
+  {% if fano["rho"] in [1, 2, 3, 4, 5] %}(<a href="/{{ fano["rho"] }}">others</a>){% endif %}
 
   <dt class="col-6 text-right">$-\mathrm{K}_X^3$
   <dd class="col-6">{{ fano["KX3"] }}
@@ -175,4 +176,17 @@
     {% endfor %}
   </ul>
 {% endif %}
+{% endmacro %}
+
+
+{% macro deformations(fano) %}
+<dl class="row">
+  <dt class="col-6 text-right">number of moduli</dt>
+  {# TODO remove this eventually #}
+  {% if fano["moduli"] == -1 %}
+    <dd class="col-6"><p class="alert alert-warning">Currently there is no correct value available.</p>
+  {% else %}
+    <dd class="col-6">{{ fano["moduli"] }}</dd>
+  {% endif %}
+</dl>
 {% endmacro %}

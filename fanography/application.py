@@ -20,6 +20,9 @@ class Fano:
     self.KX3 = yaml["-KX3"]
     self.h12 = yaml["h12"]
 
+    # deal with moduli and automorphisms
+    self.moduli = yaml["moduli"]
+
     # by default the index is 1
     if "index" in yaml:
       self.index = yaml["index"]
@@ -105,6 +108,7 @@ Obligatory fields:
   - description
   - -KX3
   - h12
+  - moduli
 
 Optional fields:
   - index: if not present, assumed to be 1
