@@ -1,7 +1,22 @@
+@media (max-width: 700px) {
+  div.card-columns {
+    column-count: 1;
+  }
+}
+
+a.previous:before {
+  content: "\ab";
+}
+
+a.next:after {
+  content: "\bb";
+}
+
 div.diamond {
   text-align: center;
 }
 
 div.diamond span {
-  padding: 0 1rem;
+  display: inline-block;
+  width: 2.5rem;
 }

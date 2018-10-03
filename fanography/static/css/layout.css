@@ -13,9 +13,11 @@ div#title {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   text-align: center;
   font-family: Georgia, serif;
+  z-index: 3;
 }
 
 div#content {
+  margin-top: 1rem;
 }
 
 div#menu ul {
@@ -55,9 +57,13 @@ p#slogan {
   margin-bottom: .5rem;
 }
 
+h2 {
+  font-size: 1.3rem;
+}
 
 table.overview tr td:nth-of-type(1), table.overview tr th:nth-of-type(1),
 table.overview tr td:nth-of-type(2), table.overview tr th:nth-of-type(2),
 table.overview tr td:nth-of-type(3), table.overview tr th:nth-of-type(3) {
+  white-space: nowrap;
   text-align: center;
 }
