@@ -640,3 +640,180 @@
     h12: 0
 
     alternative: $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
+
+
+# rank 4
+4:
+  1:
+    description: divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$ of degree $(1,1,1,1)$
+    -KX3: 24
+    h12: 1
+
+    blowdown: ["3-27", "3-27", "3-27", "3-27"]
+
+
+  2:
+    description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ along the disjoint union of the vertex and an elliptic curve on the quadric
+    -KX3: 28
+    h12: 1
+
+    blowdown: ["3-31", "3-31"]
+
+
+  3:
+    description: blowup of ((3-27)) along a curve of degree $(1,1,2)$
+    -KX3: 30
+    h12: 0
+
+    blowdown: ["3-17", "3-27", "3-28", "3-28"]
+
+
+  4:
+    description: blowup of ((3-19)) along the proper transform of a conic through the points
+    -KX3: 32
+    h12: 0
+
+    blowdown: ["3-18", "3-18", "3-19", "3-30", "3-30"]
+
+
+  5:
+    description: blowup of ((2-34)) along the disjoint union of a curve of degree $(2,1)$ and a curve of degree $(1,0)$
+    -KX3: 32
+    h12: 0
+
+    blowdown: ["3-21", "3-28", "3-31"]
+
+
+  6:
+    description: blowup of ((1-17)) along the disjoint union of 3 lines
+    -KX3: 34
+    h12: 0
+
+    alternative: blowup of ((3-27)) along tridiagonal
+
+    blowdown: ["3-25", "3-25", "3-25", "3-27"]
+
+
+  7:
+    description: blowup of ((2-32)) along the disjoint union of a curve of degree $(0,1)$ and a curve of degree $(1,0)$
+    -KX3: 36
+    h12: 0
+
+    blowdown: ["3-24", "3-24", "3-28", "3-28"]
+
+
+  8:
+    description: blowup of ((3-27)) along a curve of degree $(0,1,1)$
+    -KX3: 38
+    h12: 0
+
+    blowdown: ["3-27", "3-31"]
+
+
+  9:
+    description: blowup of ((3-25)) along an exceptional curve of the blowup
+    -KX3: 40
+    h12: 0
+
+    blowdown: ["3-25", "3-26", "3-28", "3-30"]
+
+
+  10:
+    description: $\mathbb{P}^1\times\mathrm{Bl}_2\mathbb{P}^2$
+    -KX3: 42
+    h12: 0
+
+    blowdown: ["3-27", "3-28", "3-28"]
+
+
+  11:
+    description: blowup of ((3-28)) along $\{x\}\times E$, $x\in\mathbb{P}^1$ and $E$ the $(-1)$-curve
+    -KX3: 44
+    h12: 0
+
+    blowdown: ["3-28", "3-31"]
+
+
+  12:
+    description: blowup of ((2-33) along the disjoint union of two exceptional lines of the blowup
+    -KX3: 46
+    h12: 0
+
+    blowdown: ["3-30", "3-30"]
+
+  # TODO don't forget number 13 here
+
+
+# rank 5
+5:
+  1:
+    description: blowup of ((2-29)) along the disjoint union of three exceptional lines of the blowup
+    -KX3: 28
+    h12: 0
+
+    blowdown: ["4-4", "4-4", "4-4", "4-12", "4-12", "4-12"]
+
+  2:
+    description: blowup of ((3-25)) along the disjoint union of two exceptional lines on the same irreducible component
+    -KX3: 36
+    h12: 0
+
+    blowdown: ["4-9", "4-9", "4-11", "4-11", "4-12"]
+
+
+  3:
+    description: $\mathbb{P}^1\times\mathrm{Bl}_3\mathbb{P}^2$
+    -KX3: 36
+    h12: 0
+
+    blowdown: ["4-10", "4-10", "4-10", "4-10", "4-10", "4-10"]
+
+
+# rank 6
+6:
+  1:
+    description: $\mathbb{P}^1\times\mathrm{Bl}_4\mathbb{P}^2$
+    -KX3: 30
+    h12: 0
+
+    blowdown: ["5-3"]
+
+
+# rank 7
+7:
+  1:
+    description: $\mathbb{P}^1\times\mathrm{Bl}_5\mathbb{P}^2$
+    -KX3: 24
+    h12: 0
+
+    blowdown: ["6-1"]
+
+
+# rank 8
+8:
+  1:
+    description: $\mathbb{P}^1\times\mathrm{Bl}_6\mathbb{P}^2$
+    -KX3: 18
+    h12: 0
+
+    blowdown: ["7-1"]
+
+
+# rank 9
+9:
+  1:
+    description: $\mathbb{P}^1\times\mathrm{Bl}_7\mathbb{P}^2$
+    -KX3: 12
+    h12: 0
+
+    blowdown: ["8-1"]
+
+
+# rank 10
+10:
+  1:
+    description: $\mathbb{P}^1\times\mathrm{Bl}_8\mathbb{P}^2$
+    -KX3: 6
+    h12: 0
+
+    blowdown: ["9-1"]
