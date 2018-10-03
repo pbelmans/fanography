@@ -14,7 +14,7 @@
         <th scope="col">$\mathrm{h}^{1,2}$</th>
         <th scope="col">description</th>
         {% if rho != 1 %}
-          <th scope="col">blowup of ...</th>
+          <th scope="col">blowup&nbsp;of&nbsp;...</th>
         {% endif %}
         <th scope="col">rationality</th>
       </tr>
@@ -27,7 +27,14 @@
           <td><a class="identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] }}">{{ fano["rho"] }}&ndash;{{ fano["ID"] }}</a></td>
           <td>{{ fano["KX3"] }}</td>
           <td>{{ fano["h12"] }}</td>
-          <td>{{ fano["description"] }}</td>
+          <td>{{ fano["description"] | safe }}</td>
+          {% if rho != 1 %}
+            <td>
+            {% for identifier in fano["blowdown"] %}
+              <a href="/{{ identifier }}" class="identifier">{{ identifier | replace("-", "&ndash;") | safe }}</a>
+            {% endfor %}
+            </td>
+          {% endif %}
         </tr>
       {% endfor %}
     </tbody>

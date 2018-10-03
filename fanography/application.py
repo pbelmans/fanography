@@ -20,15 +20,21 @@ class Fano:
     self.KX3 = yaml["-KX3"]
     self.h12 = yaml["h12"]
 
+    # by default the index is 1
     if "index" in yaml:
       self.index = yaml["index"]
     else:
       self.index = 1
 
+    # deal with blowdowns
+    if "blowdown" in yaml:
+      self.blowdown = yaml["blowdown"]
+
     # if rho = 1 and index = 1 then there is also a genus, from -K_X^3
 
   # process strings
   def __parse(self, string):
+    # TODO doesn't parse 1-10 correctly?!
     return re.sub(r'\(\(([0-9])+-([0-9])+\)\)', r'<a class="identifier" href="/\1-\2">\1&ndash;\2</a>', string)
 
 
