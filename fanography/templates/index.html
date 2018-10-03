@@ -12,6 +12,9 @@
         <th scope="col">ID</th>
         <th scope="col">$-\mathrm{K}_X^3$</th>
         <th scope="col">$\mathrm{h}^{1,2}$</th>
+        {% if rho in [1, 2, 3] %}
+          <th scope="col">index</th>
+        {% endif %}
         <th scope="col">description</th>
         {% if rho != 1 %}
           <th scope="col">blowup&nbsp;of&nbsp;...</th>
@@ -27,6 +30,9 @@
           <td><a class="identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] }}">{{ fano["rho"] }}&ndash;{{ fano["ID"] }}</a></td>
           <td>{{ fano["KX3"] }}</td>
           <td>{{ fano["h12"] }}</td>
+          {% if rho in [1, 2, 3] %}
+            <td scope="col">{{ fano["index"] }}</td>
+          {% endif %}
           <td>{{ fano["description"] | safe }}</td>
           {% if rho != 1 %}
             <td>
