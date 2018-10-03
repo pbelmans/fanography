@@ -9,9 +9,12 @@
 </div>
 {% endmacro %}
 
-{% macro basic(fano) %}
+
+{# basic information on X #}
+{% macro basic(fano, previous, next) %}
 <h5 class="card-title">Fano variety {{ fano['rho'] }}&ndash;{{ fano['ID'] }}</h5>
 <p>{{ fano["description"] }}
+
 <dl class="row">
   <dt class="col-sm-6">rank
   <dd class="col-sm-6">{{ fano["rho"] }}
@@ -22,8 +25,20 @@
   <dt class="col-sm-6">$\mathrm{h}^{1,2}(X)$
   <dd class="col-sm-6">${{ fano["h12"] }}$
 </dl>
+
+<p class="clearfix">
+{% if previous %}
+  <a class="previous float-left" href="/{{ fano["rho"] }}-{{ fano["ID"] - 1}}">{{ fano["rho"] }}&ndash;{{ fano["ID"] - 1 }}</a>
+{% endif %}
+
+{% if next %}
+  <a class="next float-right" href="/{{ fano["rho"] }}-{{ fano["ID"] + 1}}">{{ fano["rho"] }}&ndash;{{ fano["ID"] + 1 }}</a>
+{% endif %}
+</p>
 {% endmacro %}
 
+
+{# information about |-K_X| #}
 {% macro anticanonical(fano) %}
 <dl class="row">
   <dt class="col-sm-6">index
@@ -55,6 +70,8 @@
 </dl>
 {% endmacro %}
 
+
+{# Hodge diamond #}
 {% macro diamond(fano) %}
 <div class="diamond">
   <span>1</span><br style="clear: both">
@@ -79,4 +96,5 @@
   <span>0</span><br style="clear: both">
 
   <span>1</span><br style="clear: both">
+</div>
 {% endmacro %}
