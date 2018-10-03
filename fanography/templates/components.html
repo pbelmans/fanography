@@ -12,27 +12,27 @@
 
 {# basic information on X #}
 {% macro basic(fano, previous, next) %}
-<h5 class="card-title">Fano variety {{ fano['rho'] }}&ndash;{{ fano['ID'] }}</h5>
-<p>{{ fano["description"] }}
+<h5 class="card-title">Fano variety <span class="identifier">{{ fano['rho'] }}&ndash;{{ fano['ID'] }}</span></h5>
+<p>{{ fano["description"] | safe }}
 
 <dl class="row">
   <dt class="col-sm-6">rank
   <dd class="col-sm-6">{{ fano["rho"] }}
 
   <dt class="col-sm-6">$-\mathrm{K}_X^3$
-  <dd class="col-sm-6">${{ fano["KX3"] }}$
+  <dd class="col-sm-6">{{ fano["KX3"] }}
 
   <dt class="col-sm-6">$\mathrm{h}^{1,2}(X)$
-  <dd class="col-sm-6">${{ fano["h12"] }}$
+  <dd class="col-sm-6">{{ fano["h12"] }}
 </dl>
 
 <p class="clearfix">
 {% if previous %}
-  <a class="previous float-left" href="/{{ fano["rho"] }}-{{ fano["ID"] - 1}}">{{ fano["rho"] }}&ndash;{{ fano["ID"] - 1 }}</a>
+  <a class="previous float-left identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] - 1}}">{{ fano["rho"] }}&ndash;{{ fano["ID"] - 1 }}</a>
 {% endif %}
 
 {% if next %}
-  <a class="next float-right" href="/{{ fano["rho"] }}-{{ fano["ID"] + 1}}">{{ fano["rho"] }}&ndash;{{ fano["ID"] + 1 }}</a>
+  <a class="next float-right identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] + 1}}">{{ fano["rho"] }}&ndash;{{ fano["ID"] + 1 }}</a>
 {% endif %}
 </p>
 {% endmacro %}
@@ -42,7 +42,7 @@
 {% macro anticanonical(fano) %}
 <dl class="row">
   <dt class="col-sm-6">index
-  <dd class="col-sm-6">${{ fano["index"] }}$
+  <dd class="col-sm-6">{{ fano["index"] }}
 
   {# page 216 of Iskovskikh--Prokhorov, remark (ii) #}
   <dt class="col-sm-6">basepoint free</dt>
