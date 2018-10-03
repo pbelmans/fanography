@@ -94,6 +94,10 @@ def show_table(rho):
 def show_explained():
   return render_template("explained.html", fanos=fanos)
 
+@app.route("/about")
+def show_about():
+  return render_template("about.html", fanos=fanos)
+
 """
 # Naming scheme
 
