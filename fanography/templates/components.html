@@ -156,7 +156,7 @@
 
 {# information about blowups and blowdowns #}
 {% macro birational(fano) %}
-{% if fano["primitive"] %}
+{% if fano["is_primitive"] %}
   <p>This Fano variety is primitive.<p>
 {% else %}
   <p>This Fano variety is the blowup of
