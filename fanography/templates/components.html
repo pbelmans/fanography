@@ -1,32 +1,81 @@
-{% macro component(header, title, content) %}
-<div class="card">
-  <div class="card-body">
-    <div class="card-header">{{- header }}</div>
-    <h5 class="card-title">{{- title }}</h5>
+{% macro component(header, content) %}
+<div class="card" style="width: 20rem">
+  <div class="card-header">{{- header }}</div>
 
-    <p class="card-text">{{ content }}</
-    </p>
+  <div class="card-body">
+    {{ content }}
   </div>
 </div>
 {% endmacro %}
 
-{% macro title(fano) %}
-Fano variety {{ fano['rho'] }}&ndash;{{ fano['ID'] }}
-{% endmacro %}
-
 {% macro basic(fano) %}
-<dl class="list-group">
-  <dt>rank
-  <dd>{{ fano["rho"] }}
+<h5 class="card-title">Fano variety {{ fano['rho'] }}&ndash;{{ fano['ID'] }}</h5>
+<p>{{ fano["description"] }}
+<dl class="row">
+  <dt class="col-sm-6">rank
+  <dd class="col-sm-6">{{ fano["rho"] }}
 
-  <dt>$-\mathrm{K}_X^3$
-  <dd>${{ fano["KX3"] }}$
+  <dt class="col-sm-6">$-\mathrm{K}_X^3$
+  <dd class="col-sm-6">${{ fano["KX3"] }}$
 
-  <dt>$\mathrm{h}^{1,2}(X)$
-  <dd>${{ fano["h12"] }}$
+  <dt class="col-sm-6">$\mathrm{h}^{1,2}(X)$
+  <dd class="col-sm-6">${{ fano["h12"] }}$
 </dl>
 {% endmacro %}
 
-{% macro identification(fano) %}
-  {{ component("Identification", title(fano), basic(fano)) }}
+{% macro anticanonical(fano) %}
+<dl class="row">
+  <dt class="col-sm-6">index
+  <dd class="col-sm-6">${{ fano["index"] }}$
+
+  {# page 216 of Iskovskikh--Prokhorov, remark (ii) #}
+  <dt class="col-sm-6">basepoint free</dt>
+  {% if (fano["rho"], fano["ID"]) not in [(2, 1), (3, 8)] %}
+    <dd class="col-sm-6">yes
+  {% else %}
+    <dd class="col-sm-6">no
+  {% endif %}
+
+  {# page 216 of Iskovskikh--Prokhorov, remark (iii) #}
+  <dt class="col-sm-6">hyperelliptic</dt>
+  {% if (fano["rho"], fano["ID"]) not in [(2, 2), (2, 3), (10, 1)] %}
+    <dd class="col-sm-6">no
+  {% else %}
+    <dd class="col-sm-6">yes
+  {% endif %}
+
+  {# page 216 of Iskovskikh--Prokhorov, remark (iv) #}
+  <dt class="col-sm-6">trigonal</dt>
+  {% if (fano["rho"], fano["ID"]) not in [(2, 4), (2, 5), (8, 1)] %}
+    <dd class="col-sm-6">no
+  {% else %}
+    <dd class="col-sm-6">yes
+  {% endif %}
+</dl>
+{% endmacro %}
+
+{% macro diamond(fano) %}
+<div class="diamond">
+  <span>1</span><br style="clear: both">
+
+  <span>0</span>
+  <span>0</span><br style="clear: both">
+
+  <span>0</span>
+  <span>{{ fano["rho"] }}</span>
+  <span>0</span><br style="clear: both">
+
+  <span>0</span>
+  <span>{{ fano["h12"] }}</span>
+  <span>{{ fano["h12"] }}</span>
+  <span>0</span><br style="clear: both">
+
+  <span>0</span>
+  <span>{{ fano["rho"] }}</span>
+  <span>0</span><br style="clear: both">
+
+  <span>0</span>
+  <span>0</span><br style="clear: both">
+
+  <span>1</span><br style="clear: both">
 {% endmacro %}
