@@ -98,3 +98,25 @@
   <span>1</span><br style="clear: both">
 </div>
 {% endmacro %}
+
+
+{# information about blowups and blowdowns #}
+{% macro birational(fano) %}
+{% if fano["blowdown"] %}
+  <p>This Fano variety is the blowup of
+  <ul>
+    {% for identifier in fano["blowdown"] %}
+      <li><a href="/{{ identifier }}" class="identifier">{{ identifier | replace("-", "&ndash;") | safe }}</a>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% if fano["blowup"] %}
+  <p>This Fano variety can be blown up to
+  <ul>
+    {% for identifier in fano["blowup"] %}
+      <li><a href="/{{ identifier }}" class="identifier">{{ identifier | replace("-", "&ndash;") | safe }}</a>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% endmacro %}
