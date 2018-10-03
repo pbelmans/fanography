@@ -390,3 +390,245 @@
     description: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(2))$
     -KX3: 62
     h12: 0
+
+
+# rank 3
+3:
+  1:
+    description: a double cover of $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$ ramified in a divisor of degree $(2,2,2)$
+    -KX3: 12
+    h12: 8
+
+
+  2:
+    description: a divisor from $|\mathcal{L}^{\otimes 2}\otimes\mathcal{O}(2,3)|$ on the $\mathbb{P}^2$-bundle $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(-1,-1)^{\oplus 2})$ over $\mathbb{P}^1\times\mathbb{P}^1$ such that $X\cap Y$ is irreducible, and $\mathcal{L}$ is the tautological bundle, and $Y\in|\mathcal{L}|$ # TODO better description?!
+    -KX3: 14
+    h12: 3
+
+
+  3:
+    description: a divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$ of degree $(1,1,2)$
+    -KX3: 18
+    h12: 3
+
+    blowdown: ["2-34", "2-34"]
+
+
+  4:
+    description: blowup of ((2-18)) along smooth fiber of the composition of the projection to $\mathbb{P}^1\times<mathbb{P}^2$ with the projection to $\mathbb{P}^2$ of the double cover with the projection
+    -KX3: 18
+    h12: 2
+
+    blowdown: ["2-18"]
+
+
+  5:
+    description: blowup of ((2-34)) along a curve $C$ of degree $(5,2)$ such that $C\hookrightarrow\mathbb{P}^1\times\mathbb{P}^2\to\mathbb{P}^2$ is an embedding
+    -KX3: 20
+    h12: 0
+
+    blowdown: ["2-34"]
+
+
+  6:
+    description: blowup of ((1-17)) along the disjoint union of a line and an elliptic curve of degre 4
+    -KX3: 22
+    h12: 1
+
+    blowdown: ["2-25", "2-33"]
+
+
+  7:
+    description: blowup of ((2-32)) along an elliptic curve which is the intersection of two divisors from $-\frac{1}{2}\mathrm{K}_W|$
+    -KX3: 24
+    h12: 1
+
+    blowdown: ["2-32", "2-34", "2-34"]
+
+
+  8:
+    description: divisor from ... # TODO continue
+    -KX3: 24
+    h12: 0
+
+
+  9:
+    description: blowup of ... # TODO continue
+    -KX3: 26
+    h12: 3
+
+    blowdown: ["2-36", "2-36"]
+
+
+  10:
+    description: blowup of ((1-16)) along disjoint union of 2 conics
+    -KX3: 26
+    h12: 0
+
+    blowdown: ["2-29", "2-29"]
+
+
+  11:
+    description: blowup of ((2-35)) along an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_{V_7}|$
+    -KX3: 28
+    h12: 1
+
+    blowdown: ["2-25", "2-34", "2-35"]
+
+
+  12:
+    description: blowup of ((1-17)) along disjoint union of a line and a twisted cubic
+    -KX3: 28
+    h12: 0
+
+    blowdown: ["2-27", "2-33", "2-34"]
+
+
+  13:
+    description: blowup of ((2-32)) along a curve $C$ of bidegree $(2,2)$ such that the composition $C\hookrightarrow W\hookrightarrow\mathbb{P}^2\times\mathbb{P}^2\overset{p_i}{\to}\mathbb{P}^2$ is an embedding for $i=1,2$
+    -KX3: 30
+    h12: 0
+
+    blowdown: ["2-32", "2-32", "2-32"]
+
+
+  14:
+    description: blowup of ((1-17)) along the union of a plane cubic curve and a point outside the plane
+    -KX3: 32
+    h12: 1
+
+    blowdown: ["2-35", "2-36"]
+
+
+  15:
+    description: blowup of ((1-16)) along the disjoint union of a line and a conic
+    -KX3: 32
+    h12: 0
+
+    blowdown: ["2-29", "2-31", "2-34"]
+
+
+  16:
+    description: blowup of ((2-35)) along the proper transform of a twisted cubic containing the center of the blowup
+    -KX3: 34
+    h12: 0
+
+    blowdown: ["2-27", "2-32", "2-35"]
+
+
+  17:
+    description: divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$ of degree $(1,1,1)$
+    -KX3: 36
+    h12: 0
+
+    blowdown: ["2-34", "2-34"]
+
+
+  18:
+    description: blowup of ((1-17)) along the disjoint union of a line and a conic
+    -KX3: 36
+    h12: 0
+
+    blowdown: ["2-29", "2-30", "2-33"]
+
+
+  19:
+    description: blowup of ((1-16)) along two non-collinear points
+    -KX3: 38
+    h12: 0
+
+    blowdown: ["2-35", "2-35"]
+
+
+  20:
+    description: blowup of ((1-16)) along the disjoint union of two lines
+    -KX3: 38
+    h12: 0
+
+    blowdown: ["2-31", "2-31", "2-32"]
+
+
+  21:
+    description: blowup of ((2-34)) along a curve of degree $(2,1)$
+    -KX3: 38
+    h12: 0
+
+    blowdown: ["2-34"]
+
+
+  22:
+    description: blowup of ((2-34)) along a conic on $\{x\}\times\mathbb{P}^2$, $x\in\mathbb{P}^1$
+    -KX3: 40
+    h12: 0
+
+    blowdown: ["2-34", "2-36"]
+
+
+  23:
+    description: blowup of ((2-35)) along the proper transform of a conic containing the center of the blowup
+    -KX3: 42
+    h12: 0
+
+    blowdown: ["2-30", "2-31", "2-35"]
+
+
+  24:
+    description: the fiber product of ((2-32)) with $\mathrm{Bl}_p\mathbb{P}^2$ over $\mathbb{P}^2$
+    -KX3: 42
+    h12: 0
+
+    blowdown: ["2-32", "2-34"]
+
+
+  25:
+    description: blowup of ((1-17)) along the disjoint union of two lines
+    -KX3: 44
+    h12: 0
+
+    alternative: $\mathbb{P}(\mathcal{O}(1,0)\oplus\mathcal{O}(0,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
+
+    blowdown: ["2-33", "2-33"]
+
+
+  26:
+    description: blowup of ((1-17)) along the disjoint union of a point and a line
+    -KX3: 46
+    h12: 0
+
+    blowdown: ["2-34", "2-35"]
+
+
+  27:
+    description: $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$
+    -KX3: 48
+    h12: 0
+
+
+  28:
+    description: $\mathbb{P}^1\times\mathrm{Bl}_p\mathbb{P}^2$
+    -KX3: 48
+    h12: 0
+
+    blowdown: ["2-34"]
+
+
+  29:
+    description: blowup of ((2-35)) along a line on the exceptional divisor
+    -KX3: 50
+    h12: 0
+
+    blowdown: ["2-35", "2-35"]
+
+  30:
+    description: blowup of ((2-35)) along the proper transform of a line containing the center of the blowup
+    -KX3: 50
+    h12: 0
+
+    blowdown: ["2-33", "2-35"]
+
+  31:
+    description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the vertex
+    -KX3: 52
+    h12: 0
+
+    alternative: $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
