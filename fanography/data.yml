@@ -8,7 +8,7 @@
 
 
   2:
-    description: $X_4$ quartic in $\mathbb{P}^4$
+    description: $X_4$ quartic in $\mathbb{P}^4$, or a double cover of the smooth quadric $X_2$ with ramification divisor of degree 8
     -KX3: 4
     h12: 30
     moduli: -1
@@ -35,7 +35,7 @@
 
 
   5:
-    description: section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 2 subspace and a quadric
+    description: section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 2 subspace and a quadric, or a double cover of ((1-15)) with ramification divisor a quadric
     -KX3: 10
     h12: 10
     moduli: -1
@@ -44,7 +44,7 @@
 
 
   6:
-    description: $X_{12}$
+    description: section of half-spinor embedding of a connected component of $\mathrm{OGr}_+(5,10)$ by codimension 7 subspace
     -KX3: 12
     h12: 7
     moduli: -1
@@ -62,7 +62,7 @@
 
 
   8:
-    description: $X_{16}$
+    description: section of Plücker embedding of $\mathrm{SGr}(3,6)$ by codimension 3 subspace
     -KX3: 16
     h12: 3
     moduli: -1
@@ -71,7 +71,7 @@
 
 
   9:
-    description: $X_{18}$
+    description: section of the $\mathrm{G}_2$-Grassmannian $\mathrm{G}_2\mathrm{Gr}(2,7)$ by codimension 2 subspace
     -KX3: 18
     h12: 2
     moduli: -1
@@ -80,7 +80,7 @@
 
 
   10:
-    description: $X_{22}$
+    description: zero locus of $(\bigwedge^2\mathcal{U}^\vee)^{\oplus 3}$ on $\mathrm{Gr}(3,7)$
     -KX3: 22
     h12: 0
     moduli: 6
@@ -166,7 +166,7 @@
 # rank 2
 2:
   1:
-    description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system # TODO suboptimal description...
+    description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_{V_1}|$
     -KX3: 4
     h12: 22
     moduli: -1
@@ -573,7 +573,7 @@
 
 
   2:
-    description: a divisor from $|\mathcal{L}^{\otimes 2}\otimes\mathcal{O}(2,3)|$ on the $\mathbb{P}^2$-bundle $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(-1,-1)^{\oplus 2})$ over $\mathbb{P}^1\times\mathbb{P}^1$ such that $X\cap Y$ is irreducible, and $\mathcal{L}$ is the tautological bundle, and $Y\in|\mathcal{L}|$ # TODO better description?!
+    description: a divisor from $|\mathcal{L}^{\otimes 2}\otimes\mathcal{O}(2,3)|$ on the $\mathbb{P}^2$-bundle $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(-1,-1)^{\oplus 2})$ over $\mathbb{P}^1\times\mathbb{P}^1$ such that $X\cap Y$ is irreducible, and $\mathcal{L}$ is the tautological bundle, and $Y\in|\mathcal{L}|$
     -KX3: 14
     h12: 3
     moduli: -1
@@ -626,7 +626,7 @@
 
 
   7:
-    description: blowup of ((2-32)) along an elliptic curve which is the intersection of two divisors from $-\frac{1}{2}\mathrm{K}_W|$
+    description: blowup of ((2-32)) along an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_W|$
     -KX3: 24
     h12: 1
     moduli: -1
@@ -637,7 +637,7 @@
 
 
   8:
-    description: divisor from ... # TODO continue
+    description: divisor from from the linear system $|(\alpha\circ\pi_1)^*(\mathcal{O}_{\mathbb{P}^2}(1)\otimes\pi_2^*(\mathcal{O}_{\mathbb{P}^2}(2))|$ where $\pi_i\colon\mathrm{Bl}_1\times\mathbb{P}^2$ are the projections, and $\alpha\colon\mathrm{Bl}_1\mathbb{P}^2\to\mathbb{P}^2$ is the blowup
     -KX3: 24
     h12: 0
     moduli: 3
@@ -648,10 +648,10 @@
 
 
   9:
-    description: blowup of ... # TODO continue
+    description: blowup of the cone over the Veronese of $\mathbb{P}^2$ in $\mathbb{P}^5$ with center the disjoint union of the vertex and a quartic on $\mathbb{P}^2$
     -KX3: 26
     h12: 3
-    moduli: 0
+    moduli: 6
 
     rational: yes
 
