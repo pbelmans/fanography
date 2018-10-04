@@ -8,7 +8,7 @@ body {
 div#menu {
   background-color: black;
   text-align: center;
-  height: 2rem;
+  height: 2.5rem;
 }
 
 div#title {
@@ -31,7 +31,7 @@ div#content::-webkit-scrollbar {
 }
 
 div#menu ul {
-  padding-top: .2rem;
+  padding-top: .5rem;
 }
 
 div#menu ul li {
