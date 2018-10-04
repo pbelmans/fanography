@@ -49,8 +49,9 @@ class Fano:
 
   # process strings
   def __parse(self, string):
-    # TODO doesn't parse 1-10 correctly?!
-    return re.sub(r'\(\(([0-9])+-([0-9])+\)\)', r'<a class="identifier" href="/\1-\2">\1&ndash;\2</a>', string)
+    # weird workaround to deal with ((i-jk))
+    string = re.sub(r"\(\((\d)-(\d\d)\)\)", r'<a class="identifier" href="/\1-\2">\1&ndash;\2</a>', string)
+    return re.sub(r"\(\((\d){1}-(\d){1}\)\)", r'<a class="identifier" href="/\1-\2">\1&ndash;\2</a>', string)
 
 
 # create the dictionary of all deformation families of Fano 3-folds
