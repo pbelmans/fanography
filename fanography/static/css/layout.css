@@ -60,7 +60,11 @@ h1 a {
 h1 a,
 h1 a:hover {
   color: black;
-  color: black;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+  text-decoration-color: #971539;
 }
 
 h1 a::first-letter {
@@ -75,7 +79,8 @@ p#slogan {
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  margin: 1rem 0;
 }
 
 h2 a,
@@ -85,6 +90,10 @@ h2 a:hover {
 
 .identifier {
   font-family: "Roboto Mono", monospace;
+}
+
+table.overview {
+  margin-bottom: 3rem;
 }
 
 table.overview tr .row-identifier {

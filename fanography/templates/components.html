@@ -12,7 +12,9 @@
       {% endif %}
       <th scope="col">description</th>
 
-      <th scope="col" class="text-center"><span class="d-none d-lg-block">blowups</span></th>
+      {% if rho != 10 %}
+        <th scope="col" class="text-center"><span class="d-none d-lg-block">blowups</span></th>
+      {% endif %}
 
       {% if rho != 1 %}
         <th scope="col" class="text-center"><span class="d-none d-lg-block">blowdowns</span></th>
@@ -40,9 +42,11 @@
 
         <td class="align-middle">{{ fano["description"] | safe }}</td>
 
-        <td class="align-middle text-center">
-          {% if fano["blowup"] %}yes{% endif %}
-        </td>
+        {% if rho != 10 %}
+          <td class="align-middle text-center">
+            {% if fano["blowup"] %}yes{% endif %}
+          </td>
+        {% endif %}
 
         {% if rho != 1 %}
           <td class="align-middle text-center">
