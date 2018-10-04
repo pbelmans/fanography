@@ -99,6 +99,9 @@
   <dt class="col-6 text-right">index</dt>
   <dd class="col-6">{{ fano["index"] }}</dd>
 
+  <dt class="col-6 text-right">$\dim\mathrm{H}^0(X,\omega_X^\vee)$</dt>
+  <dd class="col-6">{{ fano["KX3"] // 2 + 3 }}</dd>
+
   {# page 216 of Iskovskikh--Prokhorov, remark (ii) #}
   <dt class="col-6 text-right">basepoint free</dt>
   {% if (fano["rho"], fano["ID"]) not in [(2, 1), (3, 8)] %}
