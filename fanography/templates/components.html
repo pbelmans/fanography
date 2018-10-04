@@ -6,15 +6,20 @@
       <th scope="col" class="text-center">ID</th>
       <th scope="col" class="text-center">$-\mathrm{K}_X^3$</th>
       <th scope="col" class="text-center">$\mathrm{h}^{1,2}$</th>
+
       {% if rho in [1, 2, 3] %}
         <th scope="col" class="text-center">index</th>
       {% endif %}
       <th scope="col">description</th>
+
       <th scope="col" class="text-center"><span class="d-none d-lg-block">blowups</span></th>
+
       {% if rho != 1 %}
         <th scope="col" class="text-center"><span class="d-none d-lg-block">blowdowns</span></th>
       {% endif %}
-      <th scope="col" class="text-center"><span class="d-none dg-lg-block">rationality</span></th>
+
+      <th scope="col" class="text-center"><span class="d-none d-lg-block">rational</span></th>
+      <th scope="col" class="text-center"><span class="d-none d-lg-block">unirational</span></th>
     </tr>
   </thead>
 
@@ -46,6 +51,9 @@
           {% endfor %}
           </td>
         {% endif %}
+
+        <td class="align-middle text-center">{{ fano["rationality"] }}</td>
+        <td class="align-middle text-center">{{ fano["unirationality"] }}</td>
       </tr>
     {% endfor %}
   </tbody>

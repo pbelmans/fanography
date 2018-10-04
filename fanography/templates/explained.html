@@ -44,7 +44,7 @@
     <tr>
       <th scope="row" class="text-right">number of unirational deformation families</th>
       {% for rho in fanos.keys() | sort %}
-      <td>{{ fanos[rho].values() | selectattr("is_rational") | list | length }}</td>
+      <td>{{ fanos[rho].values() | selectattr("is_unirational") | list | length }}</td>
       {% endfor %}
       <td>0</td>
     </tr>

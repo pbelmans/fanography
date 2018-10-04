@@ -41,6 +41,21 @@ class Fano:
     else:
       self.blowdown = []
 
+    # deal with (uni)rationality
+    self.is_rational = "rational" in yaml
+    if "rational" in yaml:
+      if yaml["rational"] == True: self.rationality = "yes"
+      else: self.rationality = yaml["rational"]
+    else: self.rationality = "no"
+
+    self.is_unirational = "unirational" in yaml or "rational" in yaml
+    if "unirational" in yaml:
+      if yaml["unirational"] == True: self.unirationality = "yes"
+      else: self.unirationality = yaml["unirational"]
+    elif self.is_rational: self.unirationality = "yes"
+    else: self.unirationality = "no"
+
+
   def __eq__(self, other):
     return self.identifier() == other.identifier()
 
