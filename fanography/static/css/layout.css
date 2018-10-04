@@ -71,7 +71,6 @@ h1 a::first-letter {
   color: #971539;
 }
 
-
 p#slogan {
   font-style: italic;
   font-size: .9rem;
@@ -90,6 +89,14 @@ h2 a:hover {
 
 .identifier {
   font-family: "Roboto Mono", monospace;
+}
+
+:target::before { /* offsets all # links */
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 5.5rem;
+  margin-top: -5.5rem;
 }
 
 table.overview {
