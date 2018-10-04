@@ -11,7 +11,7 @@
     <tr>
       <th scope="row" class="text-right">Picard rank $\rho$</th>
       {% for rho in fanos.keys() | sort %}
-      <th scope="col">{{ rho }}</th>
+        <th scope="col"><a href="/{{ rho }}">{{ rho }}</a></th>
       {% endfor %}
       <th scope="col">total</th>
     </tr>
