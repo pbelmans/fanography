@@ -62,6 +62,18 @@ class Fano:
       if "fibrelike" in yaml: self.fibrelike = True
       else: self.fibrelike = False
 
+    # deal with Aut^0
+    if "Aut" not in yaml:
+      self.Aut = [("0", self.moduli)]
+    else:
+      # always read in the Aut
+      self.Aut = yaml["Aut"]
+
+      # if the number of moduli for the family is equal to the maximal we assume that there are no trivial Aut^0's in the family
+      moduli = [pair[1] for pair in self.Aut]
+      if not self.moduli == max(moduli):
+        self.Aut.append(("0", self.moduli),)
+
 
   def __eq__(self, other):
     return self.identifier() == other.identifier()

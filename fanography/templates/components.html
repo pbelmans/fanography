@@ -209,9 +209,29 @@
   <dt class="col-6 text-right">number of moduli</dt>
   {# TODO remove this eventually #}
   {% if fano["moduli"] == -1 %}
-    <dd class="col-6"><p class="alert alert-warning">Currently there is no correct value available.</p>
+    <dd class="col-6"><p class="alert alert-warning">Currently there is no correct value available.</dd>
   {% else %}
     <dd class="col-6">{{ fano["moduli"] }}</dd>
   {% endif %}
+
+  <hr>
+
+  <table class="table-sm mx-auto">
+    <thead>
+      <tr class="border-bottom">
+        <th>$\mathrm{Aut}^0(X)$</th>
+        <th>number of moduli</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for tuple in fano["Aut"] %}
+        <tr>
+          <td class="text-center">${{ tuple[0] }}$</td>
+          <td class="text-center">{{ tuple[1] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </dl>
 {% endmacro %}
