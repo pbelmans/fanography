@@ -13,6 +13,7 @@ a.next:after {
 }
 
 div.diamond {
+  margin: 0 -1.25rem;
   text-align: center;
 }
 
