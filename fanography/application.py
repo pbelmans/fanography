@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 
 import glob
+import os
 import re
 import yaml
 
@@ -54,7 +55,8 @@ class Fano:
 
 # create the dictionary of all deformation families of Fano 3-folds
 fanos = {i: dict() for i in range(1, 11)}
-with open("fanography/data.yml", "r") as f:
+
+with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "data.yml"), "r") as f:
   data = yaml.load(f)
 
   # read in the data
@@ -86,17 +88,39 @@ with open("fanography/data.yml", "r") as f:
 def index():
   return render_template("index.html", fanos=fanos)
 
-@app.route("/<int:rho>")
-def show_table(rho):
-  return render_template("table.show.html", fanos=fanos[rho], rho=rho)
 
 @app.route("/explained")
 def show_explained():
   return render_template("explained.html", fanos=fanos)
 
+
 @app.route("/about")
 def show_about():
   return render_template("about.html", fanos=fanos)
+
+
+
+@app.route("/<int:rho>")
+def show_table(rho):
+  return render_template("table.show.html", fanos=fanos[rho], rho=rho)
+
+
+@app.route("/<int:rho>-<int:ID>")
+def show_entry(rho, ID):
+  try:
+    previous = None
+    try: previous = fanos[rho][ID - 1]
+    except KeyError: pass
+
+    next = None
+    try: next = fanos[rho][ID + 1]
+    except KeyError: pass
+
+    return render_template("entry.show.html", fano=fanos[rho][ID], previous=previous, next=next)
+
+  except KeyError:
+    return render_template("entry.notfound.html", rho=rho, ID=ID)
+
 
 """
 # Naming scheme
@@ -118,6 +142,3 @@ Optional fields:
   - index: if not present, assumed to be 1
 
 """
-
-import fanography.views.entry
-
