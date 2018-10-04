@@ -126,20 +126,20 @@ def show_entry(rho, ID):
 """
 # Naming scheme
 
-The directory data/ contains YAML files
+The file data.yml is a YAML file containing all the information on Fano 3-folds we can display here.
 
-The filename is of the form $rho-$ID.yml, where
-  - $rho refers to the Picard rank, from 1 to 10
-  - $ID refers to the number in the Iskovskikh--Prokhorov table
+The global structure for
 
-
-Obligatory fields:
-  - description
+Obligatory fields for an entry:
+  - description: a human-readable description
   - -KX3
   - h12
-  - moduli
+  - moduli: the number of moduli
 
-Optional fields:
+Optional fields for an entry:
+  - alternative: a different description of the Fano 3-folds
   - index: if not present, assumed to be 1
+  - rational: if not present, assumed to be non-rational, its values can be "yes" or "generic"
+  - unirational: if not present, assumed to be non-unirational (unless rational is present), its values can be "yes" or "some"
 
 """
