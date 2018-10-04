@@ -44,7 +44,7 @@
 
         {% if rho != 10 %}
           <td class="align-middle text-center">
-            {% if fano["blowup"] %}yes{% endif %}
+            {% if fano["blowup"] %}<a href="/{{ fano.identifier() }}#birational">+</a>{% endif %}
           </td>
         {% endif %}
 
@@ -65,8 +65,8 @@
 {% endmacro %}
 
 {# generic component layout #}
-{% macro component(header, content) %}
-<div class="card">
+{% macro component(header, content, id="") %}
+<div id="{{ id }}" class="card">
   <div class="card-header">{{- header }}</div>
 
   <div class="card-body">
