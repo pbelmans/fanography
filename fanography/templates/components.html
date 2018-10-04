@@ -30,7 +30,7 @@
       {% set fano = fanos[ID] %}
 
       <tr>
-        <td class="align-middle row-identifier"><a class="identifier text-nowrap" href="/{{ fano["rho"] }}-{{ fano["ID"] }}">{{ fano["rho"] }}&ndash;{{ fano["ID"] }}</a></td>
+        <td class="align-middle row-identifier"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier(pretty=True) | safe }}</a></td>
 
         <td class="align-middle volume text-center">{{ fano["KX3"] }}</td>
 
@@ -51,7 +51,7 @@
         {% if rho != 1 %}
           <td class="align-middle text-center">
           {% for blowdown in fano["blowdown"] %}
-            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap">{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>
+            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap">{{ blowdown.identifier(pretty=True) | safe }}</a>
           {% endfor %}
           </td>
         {% endif %}
@@ -78,7 +78,7 @@
 
 {# basic information on X #}
 {% macro basic(fano, previous, next) %}
-<h5 class="card-title">Fano variety <span class="identifier">{{ fano['rho'] }}&ndash;{{ fano['ID'] }}</span></h5>
+<h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier(pretty=True)  | safe}}</span></h5>
 <p>{{ fano["description"] | safe }}
 
 <dl class="row">
@@ -95,11 +95,11 @@
 
 <p class="clearfix">
 {% if previous %}
-  <a class="previous float-left identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] - 1}}">{{ fano["rho"] }}&ndash;{{ fano["ID"] - 1 }}</a>
+  <a class="previous float-left identifier" href="/{{ previous.identifier() }}">{{ previous.identifier(pretty=True) | safe }}</a>
 {% endif %}
 
 {% if next %}
-  <a class="next float-right identifier" href="/{{ fano["rho"] }}-{{ fano["ID"] + 1}}">{{ fano["rho"] }}&ndash;{{ fano["ID"] + 1 }}</a>
+  <a class="next float-right identifier" href="/{{ next.identifier() }}">{{ next.identifier(pretty=True) | safe }}</a>
 {% endif %}
 </p>
 {% endmacro %}

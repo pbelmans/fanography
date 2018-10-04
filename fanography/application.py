@@ -66,8 +66,13 @@ class Fano:
   def __eq__(self, other):
     return self.identifier() == other.identifier()
 
-  def identifier(self):
-    return "{}-{}".format(self.rho, self.ID) # TODO use this wherever possible!
+
+  # (pretty) print the identifier
+  def identifier(self, pretty=False):
+    if pretty:
+      return "{}&ndash;{}".format(self.rho, self.ID)
+    else:
+      return "{}-{}".format(self.rho, self.ID)
 
   # process strings
   def __parse(self, string):
