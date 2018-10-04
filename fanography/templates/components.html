@@ -172,10 +172,20 @@
 
 {# information about blowups and blowdowns #}
 {% macro birational(fano) %}
-{% if fano["is_primitive"] %}
-  <p>This Fano variety is primitive.<p>
+{% if fano["is_rational"] %}
+  <p>This variety is rational{% if fano["rationality"] == "generic" %}, at least generically{% endif %}.
+{% elif fano["is_unirational"] %}
+  <p>This variety is not rational but unirational{% if fano["unirationality"] == "some" %}, at least some are{% endif %}.
 {% else %}
-  <p>This Fano variety is the blowup of
+  <p>This variety is not unirational.
+{% endif %}
+
+  <hr>
+
+{% if fano["is_primitive"] %}
+  <p>This variety is primitive.<p>
+{% else %}
+  <p>This variety is the blowup of
   <ul>
     {% for blowdown in fano["blowdown"] %}
       <li><a href="/{{ blowdown.identifier() }}" class="identifier">{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ fano["h12"] - blowdown["h12"] }}
@@ -184,7 +194,7 @@
 {% endif %}
 
 {% if fano["blowup"] %}
-  <p>This Fano variety can be blown up to
+  <p>This variety can be blown up (in a curve) to
   <ul>
     {% for blowup in fano["blowup"] %}
       <li><a href="/{{ blowup.identifier() }}" class="identifier">{{ blowup.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ blowup["h12"] - fano["h12"] }}
