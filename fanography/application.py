@@ -107,7 +107,15 @@ def index():
 
 @app.route("/explained")
 def show_explained():
-  return render_template("explained.html", fanos=fanos)
+  flat = [fano for table in fanos.values() for fano in table.values()]
+  # to count totals (as this is hard in the template)
+  numbers = dict()
+  numbers["total"] = len(flat)
+  numbers["primitive"] = len([fano for fano in flat if fano.is_primitive])
+  numbers["rational"] = len([fano for fano in flat if fano.is_rational])
+  numbers["unirational"] = len([fano for fano in flat if fano.is_unirational])
+
+  return render_template("explained.html", fanos=fanos, numbers=numbers)
 
 
 @app.route("/about")

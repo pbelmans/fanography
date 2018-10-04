@@ -22,7 +22,7 @@
       {% for rho in fanos.keys() | sort %}
       <td>{{ fanos[rho] | length }}</td>
       {% endfor %}
-      <td><em>105</em></td>
+      <td><em>{{ numbers["total"] }}</em></td>
     </tr>
 
     <tr>
@@ -30,7 +30,7 @@
       {% for rho in fanos.keys() | sort %}
       <td>{{ fanos[rho].values() | selectattr("is_primitive") | list | length }}</td>
       {% endfor %}
-      <td><em>31</em></td>
+      <td><em>{{ numbers["primitive"] }}</em></td>
     </tr>
 
     <tr>
@@ -38,7 +38,7 @@
       {% for rho in fanos.keys() | sort %}
       <td>{{ fanos[rho].values() | selectattr("is_rational") | list | length }}</td>
       {% endfor %}
-      <td>0</td>
+      <td><em>{{ numbers["rational"] }}</td>
     </tr>
 
     <tr>
@@ -46,7 +46,7 @@
       {% for rho in fanos.keys() | sort %}
       <td>{{ fanos[rho].values() | selectattr("is_unirational") | list | length }}</td>
       {% endfor %}
-      <td>0</td>
+      <td><em>{{ numbers["unirational"] }}</td>
     </tr>
   </tbody>
 </table>
