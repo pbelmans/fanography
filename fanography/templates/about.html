@@ -4,14 +4,53 @@
 
 {% block content %}
 
-<h2>References</h2>
-
+<h2 id="about">About</h2>
+<p>Fano varieties are a special class of smooth projective varieties, taking up an important role in the classification of all smooth projective varieties. They are defined as the varieties for which the anticanonical bundle $\omega_X^\vee$ is ample. This ensures many nice properties for Fano varieties, such as
 <ul>
-  <li>Iskovskikh&ndash;Prokhorov</li>
+  <li>the higher cohomology of the structure sheaf vanishes
+  <li>$\mathrm{Pic}(X)\cong\mathrm{H}^2(X,\mathbb{Z})$, so the Picard number $\rho$ equals the second Betti number
+  <li>there are only finitely many families of Fano varieties in each dimension
+</ul>
+<p>As they have a prominent role in the minimal model program and are interesting objects from the point of view of mirror symmetry, it makes sense to classify them.
+<dl class="row">
+  <dt class="col-3 text-right">dimension&nbsp;1</dt>
+  <dd class="col-9"><p>There is only the projective line $\mathbb{P}^1$.</dd>
+
+  <dt class="col-3 text-right">dimension&nbsp;2</dt>
+  <dd class="col-9"><p>Fano varieties of dimension 2 (not to be confused with Fano surfaces) are also known as <em>del Pezzo surfaces</em>. They come in 10 families, and the complete list is:
+    <ul>
+      <li>$\mathbb{P}^2$
+      <li>$\mathbb{P}^1\times\mathbb{P}^1$
+      <li>$\mathrm{Bl}_i\mathbb{P}^2$ the blowup of $\mathbb{P}^2$ in $i=1,\ldots,8$ points in general position
+    </ul>
+    <p>Whilst many interesting things can be said about del Pezzo surfaces, their classification is not too complicated.
+</dl>
+<p>This all changes in dimension 3, and the classification of Fano 3-folds is one of the main achievements of algebraic geometry in the last century. It was done in 2 steps:
+<ol>
+  <li>by Iskovskikh, when $\mathrm{Pic}(X)\cong\mathbb{Z}$, see <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=463151">Fano threefolds I, II</a>
+  <li>by Mori&ndash;Mukai when $\rho(X)=B_2(X)\geq 2$, see <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=641971">Classification of Fano 3-folds with $B_2\geq 2$</a> (see also <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1969009">erratum</a>)
+</ol>
+<p>The classification in dimension 4 is currently out of reach, but there are attempts at understanding it through mirror symmetry, see <a href="http://www.fanosearch.net/">fanosearch.net</a>.
+
+<p>By the way, let's assume we are working over $\mathbb{C}$ throughout.
+
+
+<h2 id="references">References</h2>
+<p>The original classification can be found in
+<ul>
+  <li><a href="https://mathscinet.ams.org/mathscinet-getitem?mr=463151">Iskovskikh: Fano threefolds I, II</a>
+  <li><a href="https://mathscinet.ams.org/mathscinet-getitem?mr=641971">Mori&ndash;Mukai: Classification of Fano 3-folds with $B_2\geq 2$</a> (see also <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1969009">erratum</a>)
 </ul>
 
-<h2>How to contribute</h2>
-<p>It is to be expected that there are typos, or suboptimal descriptions. If that is the case you can
+<p>The information on this website is based on
+<ul>
+  <li>the tables at the end of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1668575">Iskovskikh&ndash;Prokhorov: Fano varieties</a>
+  <li>the tables at the end of <a href="https://arxiv.org/abs/1809.09223">Cheltsov&ndash;Przyjalkowski&ndash;Shramov: Fano threefolds with infinite automorphism groups</a>
+</ul>
+
+
+<h2 id="contribute">How to contribute</h2>
+<p>It is to be expected that there are typos, mistakes, or things that should just be better. If that is the case you can
 <ul>
   <li>contact me (see below)
   <li><a href="https://github.com/pbelmans/fanography/issues">create an issue on GitHub</a>
