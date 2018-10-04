@@ -51,7 +51,7 @@
         {% if rho != 1 %}
           <td class="align-middle text-center">
           {% for blowdown in fano["blowdown"] %}
-            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap">{{ blowdown.identifier(pretty=True) | safe }}</a>
+            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap">{{ blowdown.identifier(pretty=True) | safe }}</a>{% if not loop.last %}, {% endif %}
           {% endfor %}
           </td>
         {% endif %}
