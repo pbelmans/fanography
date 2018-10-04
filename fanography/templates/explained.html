@@ -24,6 +24,7 @@
       {% endfor %}
       <td><em>105</em></td>
     </tr>
+
     <tr>
       <th scope="row" class="text-right">number of primitive deformation families</th>
       {% for rho in fanos.keys() | sort %}
@@ -31,8 +32,29 @@
       {% endfor %}
       <td><em>31</em></td>
     </tr>
+
+    <tr>
+      <th scope="row" class="text-right">number of rational deformation families</th>
+      {% for rho in fanos.keys() | sort %}
+      <td>{{ fanos[rho].values() | selectattr("is_rational") | list | length }}</td>
+      {% endfor %}
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-right">number of unirational deformation families</th>
+      {% for rho in fanos.keys() | sort %}
+      <td>{{ fanos[rho].values() | selectattr("is_rational") | list | length }}</td>
+      {% endfor %}
+      <td>0</td>
+    </tr>
   </tbody>
 </table>
+
+
+<h2>Terminology</h2>
+<p>IP99, 2.1.14, genus is dimension of global sections of anticanonical bundle, and $-K_X^3/2 + 1$
+<p>etc. etc.
 
 {% endblock %}
 
