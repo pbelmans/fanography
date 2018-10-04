@@ -13,12 +13,16 @@
     h12: 30
     moduli: -1
 
+    unirational: some
+
 
   3:
     description: $X_{2,3}$ complete intersection of quadric and cubic in $\mathbb{P}^5$
     -KX3: 6
     h12: 20
     moduli: -1
+
+    unirational: yes
 
 
   4:
@@ -27,12 +31,16 @@
     h12: 14
     moduli: -1
 
+    unirational: yes
+
 
   5:
     description: section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 2 subspace and a quadric
     -KX3: 10
     h12: 10
     moduli: -1
+
+    rational: generic
 
 
   6:
@@ -41,12 +49,16 @@
     h12: 7
     moduli: -1
 
+    rational: yes
+
 
   7:
     description: section of Plücker embedding of $\mathrm{Gr}(2,6)$ by codimension 5 subspace
     -KX3: 14
     h12: 5
     moduli: -1
+
+    unirational: yes
 
 
   8:
@@ -55,6 +67,8 @@
     h12: 3
     moduli: -1
 
+    rational: yes
+
 
   9:
     description: $X_{18}$
@@ -62,12 +76,16 @@
     h12: 2
     moduli: -1
 
+    rational: yes
+
 
   10:
     description: $X_{22}$
     -KX3: 22
     h12: 0
     moduli: 6
+
+    rational: yes
 
 
   11:
@@ -87,6 +105,8 @@
 
     index: 2
 
+    unirational: yes
+
 
   13:
     description: $X_3$ cubic in $\mathbb{P}^4$
@@ -95,6 +115,8 @@
     moduli: -1
 
     index: 2
+
+    unirational: yes
 
 
   14:
@@ -105,6 +127,8 @@
 
     index: 2
 
+    rational: yes
+
 
   15:
     description: section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 3 subspace
@@ -113,6 +137,8 @@
     moduli: 0
 
     index: 2
+
+    rational: yes
 
 
   16:
@@ -123,6 +149,8 @@
 
     index: 3
 
+    rational: yes
+
 
   17:
     description: $\mathbb{P}^3$
@@ -131,6 +159,8 @@
     moduli: 0
 
     index: 4
+
+    rational: yes
 
 
 # rank 2
@@ -150,12 +180,16 @@
     h12: 11
     moduli: -1
 
+    unirational: yes
+
 
   3:
     description: blowup of ((1-12)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
     -KX3: 8
     h12: 11
     moduli: -1
+
+    rational: yes
 
     blowdown: ["1-12"]
 
@@ -165,6 +199,8 @@
     -KX3: 10
     h12: 10
     moduli: -1
+
+    rational: yes
 
     blowdown: ["1-17"]
 
@@ -177,6 +213,8 @@
 
     blowdown: ["1-13"]
 
+    unirational: yes
+
 
   6:
     description: a $(2,2)$-divisor on $\mathbb{P}^2\times\mathbb{P}^2$
@@ -184,12 +222,16 @@
     h12: 9
     moduli: -1
 
+    unirational: yes
+
 
   7:
     description: blowup of ((1-16)) along the intersection of two divisors from $|\mathcal{O}_{X_2}(2)|$
     -KX3: 14
     h12: 5
     moduli: -1
+
+    rational: yes
 
     blowdown: ["1-16"]
 
@@ -200,6 +242,8 @@
     h12: 9
     moduli: -1
 
+    unirational: yes
+
     degeneration: intersection with the exceptional divisor is singular but reduced
 
 
@@ -208,6 +252,8 @@
     -KX3: 16
     h12: 5
     moduli: -1
+
+    rational: yes
 
     blowdown: ["1-17"]
 
@@ -218,6 +264,8 @@
     h12: 3
     moduli: -1
 
+    rational: yes
+
     blowdown: ["1-14"]
 
 
@@ -226,6 +274,8 @@
     -KX3: 18
     h12: 5
     moduli: -1
+
+    unirational: yes
 
     blowdown: ["1-13"]
 
@@ -236,6 +286,8 @@
     h12: 3
     moduli: -1
 
+    rational: yes
+
     blowdown: ["1-17"]
 
 
@@ -245,12 +297,16 @@
     h12: 2
     moduli: -1
 
+    rational: yes
+
 
   14:
     description: blowup of ((1-15)) along an elliptic curve which is an intersection of 2 hyperplanes
     -KX3: 20
     h12: 1
     moduli: -1
+
+    rational: yes
 
     blowdown: ["1-15"]
 
@@ -260,6 +316,8 @@
     -KX3: 22
     h12: 4
     moduli: -1
+
+    rational: yes
 
     degeneration: quadric is singular but reduced
 
@@ -272,6 +330,8 @@
     h12: 2
     moduli: -1
 
+    rational: yes
+
     blowdown: ["1-14"]
 
 
@@ -280,6 +340,8 @@
     -KX3: 24
     h12: 1
     moduli: -1
+
+    rational: yes
 
     blowdown: ["1-16", "1-17"]
 
@@ -290,12 +352,16 @@
     h12: 2
     moduli: -1
 
+    rational: yes
+
 
   19:
     description: blowup of ((1-14)) along a line
     -KX3: 26
     h12: 2
     moduli: -1
+
+    rational: yes
 
     blowdown: ["1-14", "1-17"]
 
@@ -306,6 +372,8 @@
     h12: 0
     moduli: 3
 
+    rational: yes
+
     blowdown: ["1-15"]
 
 
@@ -315,6 +383,8 @@
     h12: 0
     moduli: 2
 
+    rational: yes
+
     blowdown: ["1-16", "1-16"]
 
 
@@ -323,6 +393,8 @@
     -KX3: 30
     h12: 0
     moduli: 1
+
+    rational: yes
 
     blowdown: ["1-15", "1-17"]
 
@@ -344,12 +416,16 @@
     h12: 0
     moduli: 1
 
+    rational: yes
+
 
   25:
     description: blowup of ((1-17)) along an elliptic curve which is an intersection of 2 quadrics
     -KX3: 32
     h12: 1
     moduli: -1
+
+    rational: yes
 
     blowdown: ["1-17"]
 
@@ -360,6 +436,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["1-15", "1-16"]
 
 
@@ -368,6 +446,8 @@
     -KX3: 38
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["1-17"]
 
@@ -378,6 +458,8 @@
     h12: 1
     moduli: 1
 
+    rational: yes
+
     blowdown: ["1-17"]
 
 
@@ -386,6 +468,8 @@
     -KX3: 40
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["1-16"]
 
@@ -396,6 +480,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["1-17"]
 
 
@@ -404,6 +490,8 @@
     -KX3: 46
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["1-16"]
 
@@ -416,12 +504,16 @@
 
     index: 2
 
+    rational: yes
+
 
   33:
     description: blowup of ((1-17)) along a line
     -KX3: 54
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["1-17"]
 
@@ -432,12 +524,16 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
 
   35:
     description: $\mathrm{Bl}_p\mathbb{P}^3$
     -KX3: 56
     h12: 0
     moduli: 0
+
+    rational: yes
 
     alternative: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(1))$
 
@@ -450,6 +546,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
 
 # rank 3
 3:
@@ -459,6 +557,8 @@
     h12: 8
     moduli: -1
 
+    unirational: yes
+
 
   2:
     description: a divisor from $|\mathcal{L}^{\otimes 2}\otimes\mathcal{O}(2,3)|$ on the $\mathbb{P}^2$-bundle $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(-1,-1)^{\oplus 2})$ over $\mathbb{P}^1\times\mathbb{P}^1$ such that $X\cap Y$ is irreducible, and $\mathcal{L}$ is the tautological bundle, and $Y\in|\mathcal{L}|$ # TODO better description?!
@@ -466,12 +566,16 @@
     h12: 3
     moduli: -1
 
+    rational: yes
+
 
   3:
     description: a divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$ of degree $(1,1,2)$
     -KX3: 18
     h12: 3
     moduli: -1
+
+    rational: yes
 
     blowdown: ["2-34", "2-34"]
 
@@ -482,6 +586,8 @@
     h12: 2
     moduli: -1
 
+    rational: yes
+
     blowdown: ["2-18"]
 
 
@@ -490,6 +596,8 @@
     -KX3: 20
     h12: 0
     moduli: 5
+
+    rational: yes
 
     blowdown: ["2-34"]
 
@@ -500,6 +608,8 @@
     h12: 1
     moduli: -1
 
+    rational: yes
+
     blowdown: ["2-25", "2-33"]
 
 
@@ -508,6 +618,8 @@
     -KX3: 24
     h12: 1
     moduli: -1
+
+    rational: yes
 
     blowdown: ["2-32", "2-34", "2-34"]
 
@@ -518,6 +630,8 @@
     h12: 0
     moduli: 3
 
+    rational: yes # TODO check: nothing is said in Iskovskikh--Prokhorov? but it's blowup of ((2-34))?
+
     blowdown: ["2-24", "2-34"]
 
 
@@ -526,6 +640,8 @@
     -KX3: 26
     h12: 3
     moduli: 0
+
+    rational: yes
 
     blowdown: ["2-36", "2-36"]
 
@@ -536,6 +652,8 @@
     h12: 0
     moduli: 2
 
+    rational: yes
+
     blowdown: ["2-29", "2-29"]
 
 
@@ -544,6 +662,8 @@
     -KX3: 28
     h12: 1
     moduli: -1
+
+    rational: yes
 
     blowdown: ["2-25", "2-34", "2-35"]
 
@@ -554,6 +674,8 @@
     h12: 0
     moduli: 1
 
+    rational: yes
+
     blowdown: ["2-27", "2-33", "2-34"]
 
 
@@ -562,6 +684,8 @@
     -KX3: 30
     h12: 0
     moduli: 1
+
+    rational: yes
 
     blowdown: ["2-32", "2-32", "2-32"]
 
@@ -572,6 +696,8 @@
     h12: 1
     moduli: 1
 
+    rational: yes
+
     blowdown: ["2-35", "2-36"]
 
 
@@ -580,6 +706,8 @@
     -KX3: 32
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["2-29", "2-31", "2-34"]
 
@@ -590,6 +718,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-27", "2-32", "2-35"]
 
 
@@ -598,6 +728,8 @@
     -KX3: 36
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["2-34", "2-34"]
 
@@ -608,6 +740,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-29", "2-30", "2-33"]
 
 
@@ -616,6 +750,8 @@
     -KX3: 38
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["2-35", "2-35"]
 
@@ -626,6 +762,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-31", "2-31", "2-32"]
 
 
@@ -634,6 +772,8 @@
     -KX3: 38
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["2-34"]
 
@@ -644,6 +784,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-34", "2-36"]
 
 
@@ -652,6 +794,8 @@
     -KX3: 42
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["2-30", "2-31", "2-35"]
 
@@ -662,6 +806,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-32", "2-34"]
 
 
@@ -670,6 +816,8 @@
     -KX3: 44
     h12: 0
     moduli: 0
+
+    rational: yes
 
     alternative: $\mathbb{P}(\mathcal{O}(1,0)\oplus\mathcal{O}(0,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
 
@@ -682,6 +830,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-34", "2-35"]
 
 
@@ -690,6 +840,8 @@
     -KX3: 48
     h12: 0
     moduli: 0
+
+    rational: yes
 
     index: 2
 
@@ -700,6 +852,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-34"]
 
 
@@ -709,6 +863,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-35", "2-35"]
 
   30:
@@ -717,6 +873,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["2-33", "2-35"]
 
   31:
@@ -724,6 +882,8 @@
     -KX3: 52
     h12: 0
     moduli: 0
+
+    rational: yes
 
     alternative: $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
 
@@ -736,6 +896,8 @@
     h12: 1
     moduli: -1
 
+    rational: yes
+
     blowdown: ["3-27", "3-27", "3-27", "3-27"]
 
 
@@ -744,6 +906,8 @@
     -KX3: 28
     h12: 1
     moduli: 1
+
+    rational: yes
 
     blowdown: ["3-31", "3-31"]
 
@@ -754,6 +918,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["3-17", "3-27", "3-28", "3-28"]
 
 
@@ -762,6 +928,8 @@
     -KX3: 32
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["3-18", "3-18", "3-19", "3-30", "3-30"]
 
@@ -772,6 +940,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["3-21", "3-28", "3-31"]
 
 
@@ -780,6 +950,8 @@
     -KX3: 34
     h12: 0
     moduli: 0
+
+    rational: yes
 
     alternative: blowup of ((3-27)) along tridiagonal
 
@@ -792,6 +964,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["3-24", "3-24", "3-28", "3-28"]
 
 
@@ -800,6 +974,8 @@
     -KX3: 38
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["3-27", "3-31"]
 
@@ -810,6 +986,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["3-25", "3-26", "3-28", "3-30"]
 
 
@@ -818,6 +996,8 @@
     -KX3: 42
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["3-27", "3-28", "3-28"]
 
@@ -828,6 +1008,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["3-28", "3-31"]
 
 
@@ -837,6 +1019,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["3-30", "3-30"]
 
 
@@ -845,6 +1029,8 @@
     -KX3: 26
     h12: 0
     moduli: 1
+
+    rational: yes
 
     blowdown: ["3-27", "3-31", "3-31"]
 
@@ -857,6 +1043,8 @@
     h12: 0
     moduli: 0
 
+    rational: yes
+
     blowdown: ["4-4", "4-4", "4-4", "4-12", "4-12", "4-12"]
 
   2:
@@ -864,6 +1052,8 @@
     -KX3: 36
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["4-9", "4-9", "4-11", "4-11", "4-12"]
 
@@ -873,6 +1063,8 @@
     -KX3: 36
     h12: 0
     moduli: 0
+
+    rational: yes
 
     blowdown: ["4-10", "4-10", "4-10", "4-10", "4-10", "4-10"]
 
@@ -885,6 +1077,8 @@
     h12: 0
     moduli: 2
 
+    rational: yes
+
     blowdown: ["5-3"]
 
 
@@ -895,6 +1089,8 @@
     -KX3: 24
     h12: 0
     moduli: 4
+
+    rational: yes
 
     blowdown: ["6-1"]
 
@@ -907,6 +1103,8 @@
     h12: 0
     moduli: 6
 
+    rational: yes
+
     blowdown: ["7-1"]
 
 
@@ -918,6 +1116,8 @@
     h12: 0
     moduli: 8
 
+    rational: yes
+
     blowdown: ["8-1"]
 
 
@@ -928,5 +1128,7 @@
     -KX3: 6
     h12: 0
     moduli: 10
+
+    rational: yes
 
     blowdown: ["9-1"]
