@@ -55,6 +55,13 @@ class Fano:
     elif self.is_rational: self.unirationality = "yes"
     else: self.unirationality = "no"
 
+    # deal with Mori fibre space candidates (= being fibre-like)
+    if self.rho == 1:
+      self.fibrelike = True
+    else:
+      if "fibrelike" in yaml: self.fibrelike = True
+      else: self.fibrelike = False
+
 
   def __eq__(self, other):
     return self.identifier() == other.identifier()

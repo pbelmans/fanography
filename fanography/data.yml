@@ -224,6 +224,8 @@
 
     unirational: yes
 
+    fibrelike: yes
+
 
   7:
     description: blowup of ((1-16)) along the intersection of two divisors from $|\mathcal{O}_{X_2}(2)|$
@@ -389,6 +391,8 @@
 
     rational: yes
 
+    fibrelike: yes
+
     blowdown: ["1-16", "1-16"]
 
 
@@ -510,6 +514,8 @@
 
     rational: yes
 
+    fibrelike: yes
+
 
   33:
     description: blowup of ((1-17)) along a line
@@ -562,6 +568,8 @@
     moduli: -1
 
     unirational: yes
+
+    fibrelike: yes
 
 
   2:
@@ -690,6 +698,8 @@
     moduli: 1
 
     rational: yes
+
+    fibrelike: yes
 
     blowdown: ["2-32", "2-32", "2-32"]
 
@@ -847,6 +857,8 @@
 
     rational: yes
 
+    fibrelike: yes
+
     index: 2
 
 
@@ -901,6 +913,8 @@
     moduli: -1
 
     rational: yes
+
+    fibrelike: yes
 
     blowdown: ["3-27", "3-27", "3-27", "3-27"]
 
