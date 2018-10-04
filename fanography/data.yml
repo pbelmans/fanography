@@ -87,6 +87,8 @@
 
     rational: yes
 
+    Aut: [["\\mathrm{PGL}_2", 0], ["\\mathbb{G}_{\\mathrm{a}}", 0], ["\\mathbb{G}_{\\mathrm{m}}", 1]]
+
 
   11:
     description: hypersurface of degree 6 in $\mathbb{P}(1,1,1,2,3)$
@@ -138,6 +140,8 @@
 
     index: 2
 
+    Aut: [["\\mathrm{PGL}_2", 0]]
+
     rational: yes
 
 
@@ -149,6 +153,8 @@
 
     index: 3
 
+    Aut: [["\\mathrm{PSO}_5", 0]]
+
     rational: yes
 
 
@@ -159,6 +165,8 @@
     moduli: 0
 
     index: 4
+
+    Aut: [["\\mathrm{PGL}_4", 0]]
 
     rational: yes
 
@@ -382,6 +390,8 @@
 
     blowdown: ["1-15"]
 
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+
 
   21:
     description: blowup of ((1-16)) along a twisted quartic
@@ -395,6 +405,8 @@
 
     blowdown: ["1-16", "1-16"]
 
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}", 0], ["\\mathrm{PGL}_2", 0], ["\\mathbb{G}_{\\mathrm{m}}", 1]]
+
 
   22:
     description: blowup of ((1-15)) along a conic
@@ -405,6 +417,8 @@
     rational: yes
 
     blowdown: ["1-15", "1-17"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
 
 
   23:
@@ -418,6 +432,7 @@
     blowdown: ["1-16"]
 
 
+
   24:
     description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(1,2)$
     -KX3: 30
@@ -425,6 +440,8 @@
     moduli: 1
 
     rational: yes
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0], ["\\mathbb{G}_{\\mathrm{m}}^2", 0]]
 
 
   25:
@@ -448,6 +465,8 @@
 
     blowdown: ["1-15", "1-16"]
 
+    Aut: [["\\mathrm{B}", 0], ["\\mathbb{G}_{\\mathrm{m}}", 0]]
+
 
   27:
     description: blowup of ((1-17)) along a twisted cubic
@@ -458,6 +477,8 @@
     rational: yes
 
     blowdown: ["1-17"]
+
+    Aut: [["\\mathrm{PGL}_2", 0]]
 
 
   28:
@@ -470,6 +491,8 @@
 
     blowdown: ["1-17"]
 
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes\\mathbb{G}_{\\mathrm{m}", 1]]
+
 
   29:
     description: blowup of ((1-16)) along a line
@@ -480,6 +503,8 @@
     rational: yes
 
     blowdown: ["1-16"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0]]
 
 
   30:
@@ -492,6 +517,8 @@
 
     blowdown: ["1-17"]
 
+    Aut: [["\\mathrm{PSO}_{5;1}", 0]]
+
 
   31:
     description: blowup of ((1-16)) along a line
@@ -502,6 +529,8 @@
     rational: yes
 
     blowdown: ["1-16"]
+
+    Aut: [["\\mathrm{PSO}_{5;2}", 0]]
 
 
   32:
@@ -514,6 +543,8 @@
 
     rational: yes
 
+    Aut: [["\\mathrm{PGL}_3", 0]]
+
     fibrelike: yes
 
 
@@ -524,6 +555,8 @@
     moduli: 0
 
     rational: yes
+
+    Aut: [["\\mathrm{PGL}_{4;2}", 0]]
 
     blowdown: ["1-17"]
 
@@ -536,6 +569,8 @@
 
     rational: yes
 
+    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_3", 0]]
+
 
   35:
     description: $\mathrm{Bl}_p\mathbb{P}^3$
@@ -547,6 +582,8 @@
 
     alternative: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(1))$
 
+    Aut: [["\\mathrm{PGL}_{4;1}", 0]]
+
     index: 2
 
 
@@ -557,6 +594,8 @@
     moduli: 0
 
     rational: yes
+
+    Aut: [["\\mathrm{Aut}(\\mathbb{P}(1,1,1,2))", 0]]
 
 
 # rank 3
@@ -611,6 +650,8 @@
 
     rational: yes
 
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+
     blowdown: ["2-34"]
 
 
@@ -644,6 +685,8 @@
 
     rational: yes # TODO check: nothing is said in Iskovskikh--Prokhorov? but it's blowup of ((2-34))?
 
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+
     blowdown: ["2-24", "2-34"]
 
 
@@ -654,8 +697,9 @@
     moduli: 6
 
     rational: yes
-
     blowdown: ["2-36", "2-36"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 6]]
 
 
   10:
@@ -665,8 +709,9 @@
     moduli: 2
 
     rational: yes
-
     blowdown: ["2-29", "2-29"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1], ["\\mathbb{G}_{\\mathrm{m}}^2", 0]]
 
 
   11:
@@ -676,7 +721,6 @@
     moduli: -1
 
     rational: yes
-
     blowdown: ["2-25", "2-34", "2-35"]
 
 
@@ -687,8 +731,9 @@
     moduli: 1
 
     rational: yes
-
     blowdown: ["2-27", "2-33", "2-34"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
 
 
   13:
@@ -698,10 +743,12 @@
     moduli: 1
 
     rational: yes
+    blowdown: ["2-32", "2-32", "2-32"]
+
+    Aut: [["\\mathrm{PGL}_2", 0], ["\\mathbb{G}_{\\mathrm{a}}", 0], ["\\mathbb{G}_{\\mathrm{m}}", 1]]
 
     fibrelike: yes
 
-    blowdown: ["2-32", "2-32", "2-32"]
 
 
   14:
@@ -711,8 +758,10 @@
     moduli: 1
 
     rational: yes
-
     blowdown: ["2-35", "2-36"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1]]
+
 
 
   15:
@@ -722,8 +771,10 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-29", "2-31", "2-34"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+
 
 
   16:
@@ -733,8 +784,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-27", "2-32", "2-35"]
+
+    Aut: [["\\mathrm{B}", 0]]
 
 
   17:
@@ -744,8 +796,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-34", "2-34"]
+
+    Aut: [["\\mathrm{PGL}_2", 0]]
 
 
   18:
@@ -755,8 +808,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-29", "2-30", "2-33"]
+
+    Aut: [["\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}}", 0]]
 
 
   19:
@@ -766,8 +820,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-35", "2-35"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0]]
 
 
   20:
@@ -777,8 +832,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-31", "2-31", "2-32"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0]]
 
 
   21:
@@ -788,8 +844,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-34"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^2\\rtimes\\mathbb{G}_{\\mathrm{m}}^2", 0]]
 
 
   22:
@@ -799,8 +856,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-34", "2-36"]
+
+    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0]]
 
 
   23:
@@ -810,8 +868,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-30", "2-31", "2-35"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}})", 0]]
 
 
   24:
@@ -821,21 +880,22 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-32", "2-34"]
+
+    Aut: [["\\mathrm{PGL}_{3;1}", 0]]
 
 
   25:
     description: blowup of ((1-17)) along the disjoint union of two lines
+    alternative: $\mathbb{P}(\mathcal{O}(1,0)\oplus\mathcal{O}(0,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 44
     h12: 0
     moduli: 0
 
     rational: yes
-
-    alternative: $\mathbb{P}(\mathcal{O}(1,0)\oplus\mathcal{O}(0,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
-
     blowdown: ["2-33", "2-33"]
+
+    Aut: [["\\mathrm{PGL}_{3;1}", 0]]
 
 
   26:
@@ -845,8 +905,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-34", "2-35"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}}", 0]]
 
 
   27:
@@ -855,11 +916,13 @@
     h12: 0
     moduli: 0
 
+    index: 2
+
     rational: yes
 
-    fibrelike: yes
+    Aut: [["\\mathrm{PGL}_2^3", 0]]
 
-    index: 2
+    fibrelike: yes
 
 
   28:
@@ -869,8 +932,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-34"]
+
+    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_{3;1}", 0]]
 
 
   29:
@@ -880,8 +944,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-35", "2-35"]
+
+    Aut: [["\\mathrm{PGL}_{4;3,1}", 0]]
 
   30:
     description: blowup of ((2-35)) along the proper transform of a line containing the center of the blowup
@@ -890,18 +955,21 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["2-33", "2-35"]
+
+    Aut: [["\\mathrm{PGL}_{4;2,1}", 0]]
+
 
   31:
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the vertex
+    alternative: $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 52
     h12: 0
     moduli: 0
 
     rational: yes
 
-    alternative: $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
+    Aut: [["\\mathrm{PSO}_{6;1}", 0]]
 
 
 # rank 4
@@ -913,10 +981,9 @@
     moduli: -1
 
     rational: yes
+    blowdown: ["3-27", "3-27", "3-27", "3-27"]
 
     fibrelike: yes
-
-    blowdown: ["3-27", "3-27", "3-27", "3-27"]
 
 
   2:
@@ -926,8 +993,9 @@
     moduli: 1
 
     rational: yes
-
     blowdown: ["3-31", "3-31"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1]]
 
 
   3:
@@ -937,8 +1005,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-17", "3-27", "3-28", "3-28"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
 
 
   4:
@@ -948,8 +1017,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-18", "3-18", "3-19", "3-30", "3-30"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0]]
 
 
   5:
@@ -959,8 +1029,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-21", "3-28", "3-31"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0]]
 
 
   6:
@@ -972,8 +1043,9 @@
     rational: yes
 
     alternative: blowup of ((3-27)) along tridiagonal
-
     blowdown: ["3-25", "3-25", "3-25", "3-27"]
+
+    Aut: [["\\mathrm{PGL}_2", 0]]
 
 
   7:
@@ -983,8 +1055,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-24", "3-24", "3-28", "3-28"]
+
+    Aut: [["\\mathrm{GL}_2", 0]]
 
 
   8:
@@ -994,8 +1067,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-27", "3-31"]
+
+    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0]]
 
 
   9:
@@ -1005,8 +1079,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-25", "3-26", "3-28", "3-30"]
+
+    Aut: [["\\mathrm{PGL}_{(2,2);1}", 0]]
 
 
   10:
@@ -1016,8 +1091,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-27", "3-28", "3-28"]
+
+    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{B}^2", 0]]
 
 
   11:
@@ -1027,8 +1103,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-28", "3-31"]
+
+    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_{3;1}", 0]]
 
 
   12:
@@ -1038,8 +1115,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["3-30", "3-30"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^4\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0]]
 
 
   13:
@@ -1049,8 +1127,9 @@
     moduli: 1
 
     rational: yes
-
     blowdown: ["3-27", "3-31", "3-31"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
 
 
 # rank 5
@@ -1062,8 +1141,10 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["4-4", "4-4", "4-4", "4-12", "4-12", "4-12"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+
 
   2:
     description: blowup of ((3-25)) along the disjoint union of two exceptional lines on the same irreducible component
@@ -1072,8 +1153,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["4-9", "4-9", "4-11", "4-11", "4-12"]
+
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{GL}_2", 0]]
 
 
   3:
@@ -1083,8 +1165,9 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["4-10", "4-10", "4-10", "4-10", "4-10", "4-10"]
+
+    Aut: [["\\mathrm{PGL}_2\\times\\mathbb{G}_{\\mathrm{m}}^2", 0]]
 
 
 # rank 6
@@ -1096,8 +1179,9 @@
     moduli: 2
 
     rational: yes
-
     blowdown: ["5-3"]
+
+    Aut: [["\\mathrm{PGL}_2", 2]]
 
 
 # rank 7
@@ -1109,8 +1193,9 @@
     moduli: 4
 
     rational: yes
-
     blowdown: ["6-1"]
+
+    Aut: [["\\mathrm{PGL}_2", 4]]
 
 
 # rank 8
@@ -1122,8 +1207,9 @@
     moduli: 6
 
     rational: yes
-
     blowdown: ["7-1"]
+
+    Aut: [["\\mathrm{PGL}_2", 6]]
 
 
 # rank 9
@@ -1135,8 +1221,9 @@
     moduli: 8
 
     rational: yes
-
     blowdown: ["8-1"]
+
+    Aut: [["\\mathrm{PGL}_2", 8]]
 
 
 # rank 10
@@ -1148,5 +1235,6 @@
     moduli: 10
 
     rational: yes
-
     blowdown: ["9-1"]
+
+    Aut: [["\\mathrm{PGL}_2", 10]]
