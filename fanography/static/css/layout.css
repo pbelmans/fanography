@@ -89,6 +89,7 @@ h2 a:hover {
 
 .identifier {
   font-family: "Roboto Mono", monospace;
+  white-space: nowrap;
 }
 
 :target::before { /* offsets all # links */
