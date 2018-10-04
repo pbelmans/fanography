@@ -286,7 +286,11 @@
     h12: 3
     moduli: -1
 
+    alternative: intersection of 3 $(1,1)$-divisors in $\mathbb{P}^3\times\mathbb{P}^3$
+
     rational: yes
+
+    fibrelike: yes
 
     blowdown: ["1-17"]
 
@@ -497,7 +501,7 @@
 
 
   32:
-    description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(2,2)$
+    description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(1,1)$
     -KX3: 48
     h12: 0
     moduli: 0
