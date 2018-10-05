@@ -78,7 +78,18 @@
 
 {# basic information on X #}
 {% macro basic(fano, previous, next) %}
+<p class="clearfix">
+{% if previous %}
+  <a class="previous float-left identifier" href="/{{ previous.identifier() }}">{{ previous.identifier(pretty=True) | safe }}</a>
+{% endif %}
+
+{% if next %}
+  <a class="next float-right identifier" href="/{{ next.identifier() }}">{{ next.identifier(pretty=True) | safe }}</a>
+{% endif %}
+</p>
+
 <h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier(pretty=True)  | safe}}</span></h5>
+
 <p>{{ fano["description"] | safe }}
 
 <dl class="row">
@@ -93,15 +104,6 @@
   <dd class="col-6">{{ fano["h12"] }}
 </dl>
 
-<p class="clearfix">
-{% if previous %}
-  <a class="previous float-left identifier" href="/{{ previous.identifier() }}">{{ previous.identifier(pretty=True) | safe }}</a>
-{% endif %}
-
-{% if next %}
-  <a class="next float-right identifier" href="/{{ next.identifier() }}">{{ next.identifier(pretty=True) | safe }}</a>
-{% endif %}
-</p>
 {% endmacro %}
 
 
