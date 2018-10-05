@@ -172,7 +172,7 @@
 {% endmacro %}
 
 
-{# information about blowups and blowdowns #}
+{# information about birational geometry #}
 {% macro birational(fano) %}
 {% if fano["is_rational"] %}
   <p>This variety is rational{% if fano["rationality"] == "generic" %}, at least generically{% endif %}.
@@ -182,7 +182,7 @@
   <p>This variety is not unirational.
 {% endif %}
 
-  <hr>
+<hr>
 
 {% if fano["is_primitive"] %}
   <p>This variety is primitive.<p>
@@ -202,6 +202,12 @@
       <li><a href="/{{ blowup.identifier() }}" class="identifier">{{ blowup.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ blowup["h12"] - fano["h12"] }}
     {% endfor %}
   </ul>
+{% endif %}
+
+{% if fano["fibrelike"] %}
+  <hr>
+
+  <p>This variety is <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3509946">fibre-like</a>, i.e. it can appear as the fibre of a Mori fibre space.</p>
 {% endif %}
 {% endmacro %}
 
