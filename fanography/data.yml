@@ -264,7 +264,9 @@
 
 
   9:
-    description: blowup of ((1-17)) along a curve of degree 7 and genus 5, which is intersection of 2 cubics
+    description: complete intersection of degree $(1,1)$ and $(2,1)$ in $\mathbb{P}^3\times\mathbb{P}^2$
+    alternative:
+      - blowup of ((1-17)) along a curve of degree 7 and genus 5, which is intersection of 3 cubics
     -KX3: 16
     h12: 5
     moduli: -1
@@ -297,12 +299,12 @@
 
 
   12:
-    description: blowup of ((1-17)) along a curve of degree 6 and genus 3 which is an intersection of 2 cubics
+    description: intersection of 3 $(1,1)$-divisors in $\mathbb{P}^3\times\mathbb{P}^3$
+    alternative:
+      - blowup of ((1-17)) along a curve of degree 6 and genus 3 which is an intersection of 4 cubics
     -KX3: 20
     h12: 3
     moduli: -1
-
-    alternative: intersection of 3 $(1,1)$-divisors in $\mathbb{P}^3\times\mathbb{P}^3$
 
     rational: yes
 
@@ -580,13 +582,13 @@
 
   35:
     description: $\mathrm{Bl}_p\mathbb{P}^3$
+    alternative:
+      - $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(1))$
     -KX3: 56
     h12: 0
     moduli: 0
 
     rational: yes
-
-    alternative: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(1))$
 
     Aut: [["\\mathrm{PGL}_{4;1}", 0]]
 
@@ -893,7 +895,8 @@
 
   25:
     description: blowup of ((1-17)) along the disjoint union of two lines
-    alternative: $\mathbb{P}(\mathcal{O}(1,0)\oplus\mathcal{O}(0,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
+    alternative:
+      - $\mathbb{P}(\mathcal{O}(1,0)\oplus\mathcal{O}(0,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 44
     h12: 0
     moduli: 0
@@ -968,7 +971,8 @@
 
   31:
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the vertex
-    alternative: $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
+    alternative:
+      - $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 52
     h12: 0
     moduli: 0
@@ -1042,13 +1046,14 @@
 
   6:
     description: blowup of ((1-17)) along the disjoint union of 3 lines
+    alternative:
+      - blowup of ((3-27)) along tridiagonal
     -KX3: 34
     h12: 0
     moduli: 0
 
     rational: yes
 
-    alternative: blowup of ((3-27)) along tridiagonal
     blowdown: ["3-25", "3-25", "3-25", "3-27"]
 
     Aut: [["\\mathrm{PGL}_2", 0]]
