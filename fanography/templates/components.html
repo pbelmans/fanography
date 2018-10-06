@@ -4,7 +4,9 @@
   <thead>
     <tr>
       <th scope="col" class="text-center">ID</th>
+
       <th scope="col" class="text-center" data-sort-method="number">$-\mathrm{K}_X^3$</th>
+
       <th scope="col" class="text-center" data-sort-method="number">$\mathrm{h}^{1,2}$</th>
 
       {% if rho in [1, 2, 3] %}
@@ -14,6 +16,7 @@
       <th scope="col" class="no-sort" data-sort-method="none">description</th>
 
       {# all these are hidden on smartphone screens #}
+
       {% if rho != 10 %}
         <th scope="col" class="text-center d-none d-lg-table-cell">blowups</th>
       {% endif %}
@@ -23,7 +26,14 @@
       {% endif %}
 
       <th scope="col" class="text-center d-none d-lg-table-cell">rational</th>
+
       <th scope="col" class="text-center d-none d-lg-table-cell">unirational</th>
+
+      {# all of these are hidden on anything that isn't extra large #}
+
+      <th scope="col" class="text-center d-none d-xl-table-cell">moduli</th>
+
+      <th scope="col" class="text-center d-none d-xl-table-cell no-sort" data-sort-method="none">$\mathrm{Aut}^0$</th>
     </tr>
   </thead>
 
@@ -61,15 +71,47 @@
         {% endif %}
 
         <td class="align-middle rationality text-center d-none d-lg-table-cell">{{ fano["rationality"] }}</td>
-        <td class="align-middle rationality text-center d-none d-lg-table-cell">{{ fano["unirationality"] }}</td>
+
+        <td class="align-middle unirationality text-center d-none d-lg-table-cell">{{ fano["unirationality"] }}</td>
+
+        {# all of these are hidden on anything that isn't extra large #}
+
+        <td class="align-middle moduli text-center d-none d-xl-table-cell">{{ fano["moduli"] }}</td>
+
+        <td class="align-middle moduli text-center d-none d-xl-table-cell">
+          {% if fano["Aut"] | length == 1 %}
+            ${{ fano["Aut"][0][0] }}$
+          {% else %}
+            <table class="table-sm mx-auto">
+              <thead>
+                <tr>
+                  <th class="text-center border-0">$\mathrm{Aut}^0(X)$</th>
+                  <th class="text-center border-0">moduli</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {% for tuple in fano["Aut"] if tuple[0] != "0" %}
+                  <tr>
+                    <td class="text-center border-0">${{ tuple[0] }}$</td>
+                    <td class="text-center border-0">{{ tuple[1] }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </td>
+
       </tr>
     {% endfor %}
   </tbody>
 </table>
 
-<script type="text/javascript">
-new Tablesort(document.getElementById("table-{{ rho }}"));
-</script>
+{% if rho < 6 %} {# only makes sense if there are different families #}
+  <script type="text/javascript">
+  new Tablesort(document.getElementById("table-{{ rho }}"));
+  </script>
+{% endif %}
 {% endmacro %}
 
 {# generic component layout #}

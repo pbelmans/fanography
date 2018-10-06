@@ -21,7 +21,6 @@ div#title {
 
 div#content {
   margin: 0 auto;
-  max-width: 1200px;
   padding: 1rem .5rem;
   overflow-x: scroll;
 }
@@ -114,9 +113,16 @@ table.overview tr .index {
   width: 4rem;
 }
 
-table.overview tr .blowup,
-table.overview tr .blowdown,
 table.overview tr .rationality,
+table.overview tr .moduli {
+  width: 5rem;
+}
+
+table.overview tr .blowup,
+table.overview tr .blowdown {
+  width: 6rem;
+}
+
 table.overview tr .unirationality {
   width: 6.5rem;
 }
