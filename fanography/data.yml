@@ -11,7 +11,7 @@
     description: $X_4$ quartic in $\mathbb{P}^4$, or a double cover of the smooth quadric $X_2$ with ramification divisor of degree 8
     -KX3: 4
     h12: 30
-    moduli: -1
+    moduli: 45
 
     unirational: some
 
@@ -114,7 +114,7 @@
     description: $X_3$ cubic in $\mathbb{P}^4$
     -KX3: 24
     h12: 5
-    moduli: -1
+    moduli: 10
 
     index: 2
 
