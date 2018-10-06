@@ -20,9 +20,11 @@ class Fano:
     self.description = self.__parse(yaml["description"])
     self.KX3 = yaml["-KX3"]
     self.h12 = yaml["h12"]
-
-    # deal with moduli and automorphisms
     self.moduli = yaml["moduli"]
+
+    # deal with alternative descriptions
+    if "alternative" in yaml:
+      self.alternative = [self.__parse(alternative) for alternative in yaml["alternative"]]
 
     # by default the index is 1
     if "index" in yaml:
