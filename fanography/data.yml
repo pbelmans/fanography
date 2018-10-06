@@ -6,6 +6,8 @@
     h12: 52
     moduli: -1
 
+    unirational: "?"
+
 
   2:
     description: $X_4$ quartic in $\mathbb{P}^4$, or a double cover of the smooth quadric $X_2$ with ramification divisor of degree 8
@@ -40,7 +42,7 @@
     h12: 10
     moduli: -1
 
-    rational: generic
+    rational: generically non-rational
 
 
   6:
@@ -97,6 +99,8 @@
     moduli: -1
 
     index: 2
+
+    unirational: "?"
 
 
   12:
@@ -179,6 +183,8 @@
     h12: 22
     moduli: -1
 
+    unirational: "?"
+
     blowdown: ["1-11"]
 
 
@@ -197,7 +203,7 @@
     h12: 11
     moduli: -1
 
-    rational: yes
+    unirational: yes
 
     blowdown: ["1-12"]
 
