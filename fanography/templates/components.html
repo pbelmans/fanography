@@ -52,7 +52,17 @@
           <td class="align-middle index text-center" scope="col">{{ fano["index"] }}</td>
         {% endif %}
 
-        <td class="align-middle description">{{ fano["description"] | safe }}</td>
+        <td class="align-middle description">
+          {{ fano["description"] | safe }}
+          {% if fano["alternative"] %}
+            <dl class="d-none d-xl-block mb-0">
+              <dt>alternative</dt>
+              {% for alternative in fano["alternative"] %}
+                <dd class="mb-0 ml-5">{{ alternative | safe }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+        </td>
 
         {# all of these are hidden on smartphone screens #}
 
@@ -84,7 +94,7 @@
           {% else %}
             <table class="table-sm mx-auto">
               <thead>
-                <tr>
+                <tr class="border-bottom">
                   <th class="text-center border-0">$\mathrm{Aut}^0(X)$</th>
                   <th class="text-center border-0">moduli</th>
                 </tr>
@@ -141,6 +151,15 @@
 <h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier(pretty=True)  | safe}}</span></h5>
 
 <p>{{ fano["description"] | safe }}
+
+{% if fano["alternative"] %}
+  <p><strong>Alternative description{% if fano["alternative"] | length > 1 %}s{% endif %}</strong>:
+  <ul>
+    {% for alternative in fano["alternative"] %}
+      <li>{{ alternative | safe }}
+    {% endfor %}
+  </ul>
+{% endif %}
 
 <dl class="row">
   <dt class="col-6 text-right">rank
