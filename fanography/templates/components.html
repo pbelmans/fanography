@@ -224,10 +224,14 @@
 
 {# information about birational geometry #}
 {% macro birational(fano) %}
-{% if fano["is_rational"] %}
-  <p>This variety is rational{% if fano["rationality"] == "generic" %}, at least generically{% endif %}.
-{% elif fano["is_unirational"] %}
-  <p>This variety is not rational but unirational{% if fano["unirationality"] == "some" %}, at least some are{% endif %}.
+{% if fano["rationality"] == "yes" %}
+  <p>This variety is rational.
+{% elif fano["rationality"] == "generically non-rational" %}
+  <p>This variety is known to be generically non-rational.
+{% elif fano["unirationality"] in ["yes", "some"] %}
+  <p>This variety is not rational but {% if fano["unirationality"] == "some" %}at least some are{% endif %} unirational.
+{% elif fano["unirationality"] == "?" %}
+  <p>This variety is not known to be unirational.
 {% else %}
   <p>This variety is not unirational.
 {% endif %}

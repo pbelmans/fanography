@@ -118,11 +118,11 @@ table.overview tr .moduli {
   width: 5rem;
 }
 
-table.overview tr .blowup,
-table.overview tr .blowdown {
+table.overview tr .blowup {
   width: 6rem;
 }
 
+table.overview tr .blowdown,
 table.overview tr .unirationality {
   width: 6.5rem;
 }
