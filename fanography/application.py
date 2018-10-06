@@ -34,7 +34,7 @@ class Fano:
 
     # if rho = 1 and index = 1 then there is also a genus, from -K_X^3
     if self.rho == 1 and self.index == 1:
-      self.genus = (self.KX3 + 2) / 2
+      self.genus = (self.KX3 + 2) // 2
 
     # deal with blowdowns
     self.is_primitive = not "blowdown" in yaml

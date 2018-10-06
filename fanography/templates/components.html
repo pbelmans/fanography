@@ -7,6 +7,10 @@
 
       <th scope="col" class="text-center" data-sort-method="number">$-\mathrm{K}_X^3$</th>
 
+      {% if rho == 1 %}
+        <th scope="col" class="d-none d-lg-table-cell text-center" data-sort-method="number">$g$</th>
+      {% endif %}
+
       <th scope="col" class="text-center" data-sort-method="number">$\mathrm{h}^{1,2}$</th>
 
       {% if rho in [1, 2, 3] %}
@@ -45,6 +49,10 @@
         <td class="align-middle row-identifier" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier(pretty=True) | safe }}</a></td>
 
         <td class="align-middle volume text-center">{{ fano["KX3"] }}</td>
+
+        {% if rho == 1 %}
+          <td class="align-middle genus text-center d-none-d-lg-table-cell">{{ fano["genus"] }}</td>
+        {% endif %}
 
         <td class="align-middle h12 text-center">{{ fano["h12"] }}</td>
 
