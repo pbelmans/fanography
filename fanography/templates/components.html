@@ -1,3 +1,16 @@
+{# deal with description(s) #}
+{% macro description(fano) %}
+{% if fano["description"] | length == 1 %}
+  <p>{{ fano["description"][0] | safe }}
+{% else %}
+  <ol class="description">
+    {% for description in fano["description"] %}
+      <li>{{ description | safe }}
+    {% endfor %}
+  </ol>
+{% endif %}
+{% endmacro %}
+
 {# overview table #}
 {% macro table(fanos, rho) %}
 <table class="overview table table-hover table-sm" id="table-{{ rho }}">
@@ -61,7 +74,8 @@
         {% endif %}
 
         <td class="align-middle description">
-          {{ fano["description"] | safe }}
+          {{ description(fano) }}
+
           {% if fano["alternative"] %}
             <dl class="d-none d-xl-block mb-0">
               <dt>alternative</dt>
@@ -158,10 +172,10 @@
 
 <h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier(pretty=True)  | safe}}</span></h5>
 
-<p>{{ fano["description"] | safe }}
+{{ description(fano) }}
 
 {% if fano["alternative"] %}
-  <p><strong>Alternative description{% if fano["alternative"] | length > 1 %}s{% endif %}</strong>:
+  <p class="mb-0"><strong>Alternative description{% if fano["alternative"] | length > 1 %}s{% endif %}</strong>:
   <ul>
     {% for alternative in fano["alternative"] %}
       <li>{{ alternative | safe }}

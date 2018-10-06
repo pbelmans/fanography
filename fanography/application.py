@@ -17,7 +17,11 @@ class Fano:
     self.rho = rho
     self.ID  = ID
 
-    self.description = self.__parse(yaml["description"])
+    if isinstance(yaml["description"], str):
+      self.description = [self.__parse(yaml["description"])]
+    else:
+      self.description = [self.__parse(description) for description in yaml["description"]]
+
     self.KX3 = yaml["-KX3"]
     self.h12 = yaml["h12"]
     self.moduli = yaml["moduli"]

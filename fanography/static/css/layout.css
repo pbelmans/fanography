@@ -103,7 +103,8 @@ table.overview {
   margin-bottom: 3rem;
 }
 
-table.overview tr .row-identifier {
+table.overview tr .row-identifier,
+table.overview tr .genus {
   width: 2rem;
 }
 
@@ -125,6 +126,25 @@ table.overview tr .blowup {
 table.overview tr .blowdown,
 table.overview tr .unirationality {
   width: 6.5rem;
+}
+
+td.description ol.description,
+td.description p {
+  margin-bottom: 0;
+}
+
+ol.description {
+  counter-reset: list;
+  padding: 0;
+}
+
+ol.description > li {
+  list-style: none;
+}
+
+ol.description > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
 }
 
 th[role=columnheader]:not(.no-sort) {
