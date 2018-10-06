@@ -1,27 +1,29 @@
 {# overview table #}
 {% macro table(fanos, rho) %}
-<table class="overview table table-hover table-sm">
+<table class="overview table table-hover table-sm" id="table-{{ rho }}">
   <thead>
     <tr>
       <th scope="col" class="text-center">ID</th>
-      <th scope="col" class="text-center">$-\mathrm{K}_X^3$</th>
-      <th scope="col" class="text-center">$\mathrm{h}^{1,2}$</th>
+      <th scope="col" class="text-center" data-sort-method="number">$-\mathrm{K}_X^3$</th>
+      <th scope="col" class="text-center" data-sort-method="number">$\mathrm{h}^{1,2}$</th>
 
       {% if rho in [1, 2, 3] %}
-        <th scope="col" class="text-center">index</th>
+        <th scope="col" class="text-center" data-sort-method="number">index</th>
       {% endif %}
-      <th scope="col">description</th>
 
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+
+      {# all these are hidden on smartphone screens #}
       {% if rho != 10 %}
-        <th scope="col" class="text-center"><span class="d-none d-lg-block">blowups</span></th>
+        <th scope="col" class="text-center d-none d-lg-table-cell">blowups</th>
       {% endif %}
 
       {% if rho != 1 %}
-        <th scope="col" class="text-center"><span class="d-none d-lg-block">blowdowns</span></th>
+        <th scope="col" class="text-center d-none d-lg-table-cell">blowdowns</th>
       {% endif %}
 
-      <th scope="col" class="text-center"><span class="d-none d-lg-block">rational</span><span class="d-lg-none">R</span></th>
-      <th scope="col" class="text-center"><span class="d-none d-lg-block">unirational</span><span class="d-lg-none">U</span></th>
+      <th scope="col" class="text-center d-none d-lg-table-cell">rational</th>
+      <th scope="col" class="text-center d-none d-lg-table-cell">unirational</th>
     </tr>
   </thead>
 
@@ -30,7 +32,7 @@
       {% set fano = fanos[ID] %}
 
       <tr>
-        <td class="align-middle row-identifier"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier(pretty=True) | safe }}</a></td>
+        <td class="align-middle row-identifier" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier(pretty=True) | safe }}</a></td>
 
         <td class="align-middle volume text-center">{{ fano["KX3"] }}</td>
 
@@ -40,28 +42,34 @@
           <td class="align-middle index text-center" scope="col">{{ fano["index"] }}</td>
         {% endif %}
 
-        <td class="align-middle">{{ fano["description"] | safe }}</td>
+        <td class="align-middle description">{{ fano["description"] | safe }}</td>
+
+        {# all of these are hidden on smartphone screens #}
 
         {% if rho != 10 %}
-          <td class="align-middle text-center">
+          <td class="align-middle blowup text-center d-none d-lg-table-cell">
             {% if fano["blowup"] %}<a href="/{{ fano.identifier() }}#birational">+</a>{% endif %}
           </td>
         {% endif %}
 
         {% if rho != 1 %}
-          <td class="align-middle text-center">
+          <td class="align-middle blowdown text-center d-none d-lg-table-cell">
           {% for blowdown in fano["blowdown"] %}
             <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap">{{ blowdown.identifier(pretty=True) | safe }}</a>{% if not loop.last %}, {% endif %}
           {% endfor %}
           </td>
         {% endif %}
 
-        <td class="align-middle text-center">{{ fano["rationality"] }}</td>
-        <td class="align-middle text-center">{{ fano["unirationality"] }}</td>
+        <td class="align-middle rationality text-center d-none d-lg-table-cell">{{ fano["rationality"] }}</td>
+        <td class="align-middle rationality text-center d-none d-lg-table-cell">{{ fano["unirationality"] }}</td>
       </tr>
     {% endfor %}
   </tbody>
 </table>
+
+<script type="text/javascript">
+new Tablesort(document.getElementById("table-{{ rho }}"));
+</script>
 {% endmacro %}
 
 {# generic component layout #}
@@ -227,8 +235,9 @@
   <table class="table-sm mx-auto">
     <thead>
       <tr class="border-bottom">
-        <th>$\mathrm{Aut}^0(X)$</th>
-        <th>number of moduli</th>
+        <th class="text-center">$\mathrm{Aut}^0(X)$</th>
+        <th class="text-center">$\dim\mathrm{Aut}^0(X)$</th>
+        <th class="text-center">number of moduli</th>
       </tr>
     </thead>
 
@@ -236,6 +245,7 @@
       {% for tuple in fano["Aut"] %}
         <tr>
           <td class="text-center">${{ tuple[0] }}$</td>
+          <td></td>
           <td class="text-center">{{ tuple[1] }}</td>
         </tr>
       {% endfor %}

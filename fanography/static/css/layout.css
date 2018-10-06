@@ -111,5 +111,51 @@ table.overview tr .row-identifier {
 table.overview tr .volume,
 table.overview tr .h12,
 table.overview tr .index {
-  width: 2rem;
+  width: 4rem;
+}
+
+table.overview tr .blowup,
+table.overview tr .blowdown,
+table.overview tr .rationality,
+table.overview tr .unirationality {
+  width: 6.5rem;
+}
+
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+  white-space: nowrap;
+}
+
+th[role=columnheader]:not(.no-sort) * {
+}
+
+th[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+  white-space: nowrap;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: #404040 transparent;
+	visibility: hidden;
+	opacity: 0;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+th[aria-sort=ascending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 4px 4px 0;
+}
+
+th[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: 0.4;
+}
+
+th[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
 }
