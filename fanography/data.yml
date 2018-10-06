@@ -4,7 +4,7 @@
     description: double cover of $\mathbb{P}^3$ with ramification divisor of degree 6
     -KX3: 2
     h12: 52
-    moduli: -1
+    moduli: 68
 
     unirational: "?"
 
@@ -22,7 +22,7 @@
     description: $X_{2,3}$ complete intersection of quadric and cubic in $\mathbb{P}^5$
     -KX3: 6
     h12: 20
-    moduli: -1
+    moduli: 34
 
     unirational: yes
 
@@ -31,7 +31,7 @@
     description: $X_{2,2,2}$ complete intersection of 3 quadrics in $\mathbb{P}^6$
     -KX3: 8
     h12: 14
-    moduli: -1
+    moduli: 27
 
     unirational: yes
 
@@ -40,7 +40,7 @@
     description: section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 2 subspace and a quadric, or a double cover of ((1-15)) with ramification divisor a quadric
     -KX3: 10
     h12: 10
-    moduli: -1
+    moduli: 22
 
     rational: generically non-rational
 
@@ -49,7 +49,7 @@
     description: section of half-spinor embedding of a connected component of $\mathrm{OGr}_+(5,10)$ by codimension 7 subspace
     -KX3: 12
     h12: 7
-    moduli: -1
+    moduli: 18
 
     rational: yes
 
@@ -58,7 +58,7 @@
     description: section of Plücker embedding of $\mathrm{Gr}(2,6)$ by codimension 5 subspace
     -KX3: 14
     h12: 5
-    moduli: -1
+    moduli: 15
 
     unirational: yes
 
@@ -67,7 +67,7 @@
     description: section of Plücker embedding of $\mathrm{SGr}(3,6)$ by codimension 3 subspace
     -KX3: 16
     h12: 3
-    moduli: -1
+    moduli: 12
 
     rational: yes
 
@@ -76,7 +76,7 @@
     description: section of the $\mathrm{G}_2$-Grassmannian $\mathrm{G}_2\mathrm{Gr}(2,7)$ by codimension 2 subspace
     -KX3: 18
     h12: 2
-    moduli: -1
+    moduli: 10
 
     rational: yes
 
@@ -96,7 +96,7 @@
     description: hypersurface of degree 6 in $\mathbb{P}(1,1,1,2,3)$
     -KX3: 8
     h12: 21
-    moduli: -1
+    moduli: 24
 
     index: 2
 
@@ -107,7 +107,7 @@
     description: a double cover of $\mathbb{P}^3$ ramified along a smooth quartic surface
     -KX3: 16
     h12: 10
-    moduli: -1
+    moduli: 19
 
     index: 2
 
