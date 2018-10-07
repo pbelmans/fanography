@@ -676,7 +676,7 @@
 
 
   6:
-    description: blowup of ((1-17)) along the disjoint union of a line and an elliptic curve of degre 4
+    description: blowup of ((1-17)) along the disjoint union of a line and an elliptic curve of degree 4
     -KX3: 22
     h12: 1
     moduli: -1
