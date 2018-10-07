@@ -22,6 +22,12 @@ class Fano:
     else:
       self.description = [self.__parse(description) for description in yaml["description"]]
 
+    # now do a plaintext version
+    if isinstance(yaml["description"], str):
+      self.plaintext = self.__parse(yaml["description"], clean=True)
+    else:
+      self.plaintext = ", ".join([self.__parse(description, clean=True) for description in yaml["description"]])
+
     self.KX3 = yaml["-KX3"]
     self.h12 = yaml["h12"]
     self.moduli = yaml["moduli"]
@@ -93,10 +99,15 @@ class Fano:
       return "{}-{}".format(self.rho, self.ID)
 
   # process strings
-  def __parse(self, string):
+  def __parse(self, string, clean=False):
+    if clean:
+      replacement = r'\1&ndash;\2'
+    else:
+      replacement = r'<a class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title="\1-\2" href="/\1-\2">\1&ndash;\2</a>'
+
     # weird workaround to deal with ((i-jk))
-    string = re.sub(r"\(\((\d)-(\d\d)\)\)", r'<a class="identifier" href="/\1-\2">\1&ndash;\2</a>', string)
-    return re.sub(r"\(\((\d){1}-(\d){1}\)\)", r'<a class="identifier" href="/\1-\2">\1&ndash;\2</a>', string)
+    string = re.sub(r"\(\((\d)-(\d\d)\)\)", replacement, string)
+    return re.sub(r"\(\((\d){1}-(\d){1}\)\)", replacement, string)
 
 
 # create the dictionary of all deformation families of Fano 3-folds
