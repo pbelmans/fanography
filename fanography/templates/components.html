@@ -162,11 +162,11 @@
 {% macro basic(fano, previous, next) %}
 <p class="clearfix">
 {% if previous %}
-  <a class="previous float-left identifier" href="/{{ previous.identifier() }}">{{ previous.identifier(pretty=True) | safe }}</a>
+  <a class="previous float-left identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ previous["plaintext"] }}' href="/{{ previous.identifier() }}">{{ previous.identifier(pretty=True) | safe }}</a>
 {% endif %}
 
 {% if next %}
-  <a class="next float-right identifier" href="/{{ next.identifier() }}">{{ next.identifier(pretty=True) | safe }}</a>
+  <a class="next float-right identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ next["plaintext"] }}' href="/{{ next.identifier() }}">{{ next.identifier(pretty=True) | safe }}</a>
 {% endif %}
 </p>
 
