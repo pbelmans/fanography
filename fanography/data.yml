@@ -185,7 +185,7 @@
     description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_{V_1}|$
     -KX3: 4
     h12: 22
-    moduli: -1
+    moduli: 26
 
     unirational: "?"
 
@@ -196,7 +196,7 @@
     description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ whose branch locus is a $(2,4)$-divisor
     -KX3: 8
     h12: 11
-    moduli: -1
+    moduli: 33
 
     unirational: yes
 
@@ -205,7 +205,7 @@
     description: blowup of ((1-12)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
     -KX3: 8
     h12: 11
-    moduli: -1
+    moduli: 23
 
     unirational: yes
 
@@ -216,7 +216,7 @@
     description: blowup of ((1-17)) in the intersection of two cubics
     -KX3: 10
     h12: 10
-    moduli: -1
+    moduli: 21
 
     rational: yes
 
@@ -227,11 +227,10 @@
     description: blowup of ((1-13)) along a plane cubic
     -KX3: 12
     h12: 6
-    moduli: -1
-
-    blowdown: ["1-13"]
+    moduli: 16
 
     unirational: yes
+    blowdown: ["1-13"]
 
 
   6:
@@ -240,7 +239,7 @@
       - a double cover of ((2-32)) whose branch locus is an anticanonical divisor
     -KX3: 12
     h12: 9
-    moduli: -1
+    moduli: 19
 
     unirational: yes
 
@@ -251,10 +250,9 @@
     description: blowup of ((1-16)) along the intersection of two divisors from $|\mathcal{O}_{X_2}(2)|$
     -KX3: 14
     h12: 5
-    moduli: -1
+    moduli: 14
 
     rational: yes
-
     blowdown: ["1-16"]
 
 
@@ -264,11 +262,9 @@
       - double cover of ((2-35)) with branch locus an anticanonical divisor such that the intersection with the exceptional divisor is singular but reduced
     -KX3: 14
     h12: 9
-    moduli: -1
+    moduli: 18
 
     unirational: yes
-
-    degeneration: intersection with the exceptional divisor is singular but reduced
 
 
   9:
@@ -277,10 +273,9 @@
       - blowup of ((1-17)) along a curve of degree 7 and genus 5, which is intersection of 3 cubics
     -KX3: 16
     h12: 5
-    moduli: -1
+    moduli: 13
 
     rational: yes
-
     blowdown: ["1-17"]
 
 
@@ -288,10 +283,9 @@
     description: blowup of ((1-14)) along an elliptic curve which is intersection of 2 hyperplanes
     -KX3: 16
     h12: 3
-    moduli: -1
+    moduli: 11
 
     rational: yes
-
     blowdown: ["1-14"]
 
 
@@ -299,10 +293,9 @@
     description: blowup of ((1-13)) along a line
     -KX3: 18
     h12: 5
-    moduli: -1
+    moduli: 12
 
     unirational: yes
-
     blowdown: ["1-13"]
 
 
@@ -312,20 +305,19 @@
       - blowup of ((1-17)) along a curve of degree 6 and genus 3 which is an intersection of 4 cubics
     -KX3: 20
     h12: 3
-    moduli: -1
+    moduli: 8
 
     rational: yes
+    blowdown: ["1-17"]
 
     fibrelike: yes
-
-    blowdown: ["1-17"]
 
 
   13:
     description: blowup of ((1-16)) along a curve of degree 6 and genus 2
     -KX3: 20
     h12: 2
-    moduli: -1
+    moduli: 7
 
     rational: yes
 
@@ -334,10 +326,9 @@
     description: blowup of ((1-15)) along an elliptic curve which is an intersection of 2 hyperplanes
     -KX3: 20
     h12: 1
-    moduli: -1
+    moduli: 7
 
     rational: yes
-
     blowdown: ["1-15"]
 
 
@@ -347,11 +338,9 @@
       - blowup of ((1-17)) along the intersection of a quadric and a cubic where the quadric is singular but reduced
     -KX3: 22
     h12: 4
-    moduli: -1
+    moduli: 9
 
     rational: yes
-
-    degeneration: quadric is singular but reduced
 
     blowdown: ["1-17"]
 
@@ -360,10 +349,9 @@
     description: blowup of ((1-14)) along a conic
     -KX3: 22
     h12: 2
-    moduli: -1
+    moduli: 7
 
     rational: yes
-
     blowdown: ["1-14"]
 
 
@@ -371,10 +359,9 @@
     description: blowup of ((1-16)) along an elliptic curve of degree 5
     -KX3: 24
     h12: 1
-    moduli: -1
+    moduli: 5
 
     rational: yes
-
     blowdown: ["1-16", "1-17"]
 
 
@@ -382,7 +369,7 @@
     description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ with ramification divisor of degree $(2,2)$
     -KX3: 24
     h12: 2
-    moduli: -1
+    moduli: 6
 
     rational: yes
 
@@ -391,10 +378,9 @@
     description: blowup of ((1-14)) along a line
     -KX3: 26
     h12: 2
-    moduli: -1
+    moduli: 5
 
     rational: yes
-
     blowdown: ["1-14", "1-17"]
 
 
@@ -405,7 +391,6 @@
     moduli: 3
 
     rational: yes
-
     blowdown: ["1-15"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
@@ -418,10 +403,9 @@
     moduli: 2
 
     rational: yes
+    blowdown: ["1-16", "1-16"]
 
     fibrelike: yes
-
-    blowdown: ["1-16", "1-16"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}", 0], ["\\mathrm{PGL}_2", 0], ["\\mathbb{G}_{\\mathrm{m}}", 1]]
 
@@ -433,7 +417,6 @@
     moduli: 1
 
     rational: yes
-
     blowdown: ["1-15", "1-17"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
@@ -445,9 +428,7 @@
       - blowup of ((1-16)) along an intersection of $A\in|\mathcal{O}_Q(1)|$ and $B\in|\mathcal{O}_Q(2)|$ such that $A$ is singular
     -KX3: 30
     h12: 1
-    moduli: -1
-
-    degeneration: $A$ is singular
+    moduli: 2
 
     blowdown: ["1-16"]
 
@@ -468,10 +449,9 @@
     description: blowup of ((1-17)) along an elliptic curve which is an intersection of 2 quadrics
     -KX3: 32
     h12: 1
-    moduli: -1
+    moduli: 1
 
     rational: yes
-
     blowdown: ["1-17"]
 
 
@@ -482,7 +462,6 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["1-15", "1-16"]
 
     Aut: [["\\mathrm{B}", 0], ["\\mathbb{G}_{\\mathrm{m}}", 0]]
@@ -495,7 +474,6 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["1-17"]
 
     Aut: [["\\mathrm{PGL}_2", 0]]
@@ -508,7 +486,6 @@
     moduli: 1
 
     rational: yes
-
     blowdown: ["1-17"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes\\mathbb{G}_{\\mathrm{m}}", 1]]
@@ -521,7 +498,6 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["1-16"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0]]
@@ -534,7 +510,6 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["1-17"]
 
     Aut: [["\\mathrm{PSO}_{5;1}", 0]]
@@ -547,7 +522,6 @@
     moduli: 0
 
     rational: yes
-
     blowdown: ["1-16"]
 
     Aut: [["\\mathrm{PSO}_{5;2}", 0]]
@@ -575,10 +549,9 @@
     moduli: 0
 
     rational: yes
+    blowdown: ["1-17"]
 
     Aut: [["\\mathrm{PGL}_{4;2}", 0]]
-
-    blowdown: ["1-17"]
 
 
   34:
