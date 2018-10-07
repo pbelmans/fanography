@@ -97,7 +97,7 @@
         {% if rho != 1 %}
           <td class="align-middle blowdown text-center d-none d-lg-table-cell">
           {% for blowdown in fano["blowdown"] %}
-            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap">{{ blowdown.identifier(pretty=True) | safe }}</a>{% if not loop.last %}, {% endif %}
+            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowdown["plaintext"] }}'>{{ blowdown.identifier(pretty=True) | safe }}</a>{% if not loop.last %}, {% endif %}
           {% endfor %}
           </td>
         {% endif %}
@@ -285,7 +285,7 @@
   <p>This variety is the blowup of
   <ul>
     {% for blowdown in fano["blowdown"] %}
-      <li><a href="/{{ blowdown.identifier() }}" class="identifier">{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ fano["h12"] - blowdown["h12"] }}
+      <li><a href="/{{ blowdown.identifier() }}" class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowdown["plaintext"] }}'>{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ fano["h12"] - blowdown["h12"] }}
     {% endfor %}
   </ul>
 {% endif %}
@@ -294,7 +294,7 @@
   <p>This variety can be blown up (in a curve) to
   <ul>
     {% for blowup in fano["blowup"] %}
-      <li><a href="/{{ blowup.identifier() }}" class="identifier">{{ blowup.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ blowup["h12"] - fano["h12"] }}
+      <li><a href="/{{ blowup.identifier() }}" class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowup["plaintext"] }}'>{{ blowup.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ blowup["h12"] - fano["h12"] }}
     {% endfor %}
   </ul>
 {% endif %}

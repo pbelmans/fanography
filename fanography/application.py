@@ -130,6 +130,15 @@ with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "data.yml"),
     for ID in fanos[rho].keys():
       fanos[rho][ID].blowdown = [fanos[rho - 1][i] for i in fanos[rho - 1] if "{}-{}".format(rho - 1, i) in fanos[rho][ID].blowdown]
 
+  # postprocessing step to add plaintext tooltips to descriptions
+  for rho in fanos.keys():
+    for ID in fanos[rho].keys():
+      for i in range(len(fanos[rho][ID].description)):
+        for match in re.findall("title=\"(\d+)-(\d+)\"", fanos[rho][ID].description[i]):
+          fanos[rho][ID].description[i] = fanos[rho][ID].description[i].replace("title=\"%d-%d\"" % (int(match[0]), int(match[1])), "title='%s'" % fanos[int(match[0])][int(match[1])].plaintext)
+
+
+
   # determine which Fano varieties can be blown up in an irreducible curve and remain Fano
   for rho in fanos.keys():
     # these cannot be blown up

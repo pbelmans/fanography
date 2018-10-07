@@ -134,6 +134,12 @@ table.overview tr .unirationality {
   width: 6.5rem;
 }
 
+div.tooltip div.arrow {
+  display: none;
+}
+
+div.tooltip ol.description,
+div.tooltip p,
 td.description ol.description,
 td.description p {
   margin-bottom: 0;
