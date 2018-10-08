@@ -30,7 +30,10 @@ class Fano:
 
     self.KX3 = yaml["-KX3"]
     self.h12 = yaml["h12"]
-    self.moduli = yaml["moduli"]
+    if isinstance(yaml["moduli"], int):
+      self.moduli = [yaml["moduli"]]
+    else:
+      self.moduli = yaml["moduli"]
 
     # deal with alternative descriptions
     if "alternative" in yaml:
@@ -76,15 +79,15 @@ class Fano:
 
     # deal with Aut^0
     if "Aut" not in yaml:
-      self.Aut = [("0", self.moduli)]
+      self.Aut = [("0", self.moduli[0])]
     else:
       # always read in the Aut
       self.Aut = yaml["Aut"]
 
       # if the number of moduli for the family is equal to the maximal we assume that there are no trivial Aut^0's in the family
       moduli = [pair[1] for pair in self.Aut]
-      if not self.moduli == max(moduli):
-        self.Aut.append(("0", self.moduli),)
+      if not self.moduli[0] == max(moduli):
+        self.Aut.append(("0", self.moduli[0]),)
 
 
   def __eq__(self, other):

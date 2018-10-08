@@ -15,7 +15,7 @@
       - a double cover of the smooth quadric $X_2$ with ramification divisor of degree 8
     -KX3: 4
     h12: 30
-    moduli: 45
+    moduli: [45, 44]
 
     unirational: some
 
@@ -44,7 +44,7 @@
       - a double cover of ((1-15)) with ramification divisor an anticanonical divisor
     -KX3: 10
     h12: 10
-    moduli: 22
+    moduli: [22, -1]
 
     rational: generically non-rational
 
@@ -239,7 +239,7 @@
       - a double cover of ((2-32)) whose branch locus is an anticanonical divisor
     -KX3: 12
     h12: 9
-    moduli: 19
+    moduli: [19, -1]
 
     unirational: yes
 
@@ -262,7 +262,7 @@
       - double cover of ((2-35)) with branch locus an anticanonical divisor such that the intersection with the exceptional divisor is singular but reduced
     -KX3: 14
     h12: 9
-    moduli: 18
+    moduli: [18, -1]
 
     unirational: yes
 
@@ -338,7 +338,7 @@
       - blowup of ((1-17)) along the intersection of a quadric and a cubic where the quadric is singular but reduced
     -KX3: 22
     h12: 4
-    moduli: 9
+    moduli: [9, -1]
 
     rational: yes
 
@@ -428,7 +428,7 @@
       - blowup of ((1-16)) along an intersection of $A\in|\mathcal{O}_Q(1)|$ and $B\in|\mathcal{O}_Q(2)|$ such that $A$ is singular
     -KX3: 30
     h12: 1
-    moduli: 2
+    moduli: [2, -1]
 
     blowdown: ["1-16"]
 
