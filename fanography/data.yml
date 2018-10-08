@@ -600,7 +600,7 @@
     description: a double cover of $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$ ramified in a divisor of degree $(2,2,2)$
     -KX3: 12
     h12: 8
-    moduli: -1
+    moduli: 17
 
     unirational: yes
 
@@ -611,7 +611,7 @@
     description: a divisor from $|\mathcal{L}^{\otimes 2}\otimes\mathcal{O}(2,3)|$ on the $\mathbb{P}^2$-bundle $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(-1,-1)^{\oplus 2})$ over $\mathbb{P}^1\times\mathbb{P}^1$ such that $X\cap Y$ is irreducible, and $\mathcal{L}$ is the tautological bundle, and $Y\in|\mathcal{L}|$
     -KX3: 14
     h12: 3
-    moduli: -1
+    moduli: 11
 
     rational: yes
 
@@ -620,7 +620,7 @@
     description: a divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$ of degree $(1,1,2)$
     -KX3: 18
     h12: 3
-    moduli: -1
+    moduli: 9
 
     rational: yes
 
@@ -631,7 +631,7 @@
     description: blowup of ((2-18)) along smooth fiber of the composition of the projection to $\mathbb{P}^1\times\mathbb{P}^2$ with the projection to $\mathbb{P}^2$ of the double cover with the projection
     -KX3: 18
     h12: 2
-    moduli: -1
+    moduli: 8
 
     rational: yes
 
@@ -655,7 +655,7 @@
     description: blowup of ((1-17)) along the disjoint union of a line and an elliptic curve of degree 4
     -KX3: 22
     h12: 1
-    moduli: -1
+    moduli: 5
 
     rational: yes
 
@@ -666,7 +666,7 @@
     description: blowup of ((2-32)) along an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_W|$
     -KX3: 24
     h12: 1
-    moduli: -1
+    moduli: 4
 
     rational: yes
 
@@ -714,7 +714,7 @@
     description: blowup of ((2-35)) along an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_{V_7}|$
     -KX3: 28
     h12: 1
-    moduli: -1
+    moduli: 2
 
     rational: yes
     blowdown: ["2-25", "2-34", "2-35"]
@@ -736,7 +736,7 @@
     description: blowup of ((2-32)) along a curve $C$ of bidegree $(2,2)$ such that the composition $C\hookrightarrow W\hookrightarrow\mathbb{P}^2\times\mathbb{P}^2\overset{p_i}{\to}\mathbb{P}^2$ is an embedding for $i=1,2$
     -KX3: 30
     h12: 0
-    moduli: 1
+    moduli: 1 # TODO Sasha's computation disagrees with Aut^0 paper
 
     rational: yes
     blowdown: ["2-32", "2-32", "2-32"]
@@ -976,7 +976,7 @@
     description: divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$ of degree $(1,1,1,1)$
     -KX3: 24
     h12: 1
-    moduli: -1
+    moduli: 3
 
     rational: yes
     blowdown: ["3-27", "3-27", "3-27", "3-27"]
