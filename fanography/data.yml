@@ -1177,7 +1177,7 @@
     rational: yes
     blowdown: ["5-3"]
 
-    Aut: [["\\mathrm{PGL}_2", 2]]
+    Aut: [["\\mathrm{PGL}_2", 0]]
 
 
 # rank 7
@@ -1191,7 +1191,7 @@
     rational: yes
     blowdown: ["6-1"]
 
-    Aut: [["\\mathrm{PGL}_2", 4]]
+    Aut: [["\\mathrm{PGL}_2", 2]]
 
 
 # rank 8
@@ -1205,7 +1205,7 @@
     rational: yes
     blowdown: ["7-1"]
 
-    Aut: [["\\mathrm{PGL}_2", 6]]
+    Aut: [["\\mathrm{PGL}_2", 4]]
 
 
 # rank 9
@@ -1219,7 +1219,7 @@
     rational: yes
     blowdown: ["8-1"]
 
-    Aut: [["\\mathrm{PGL}_2", 8]]
+    Aut: [["\\mathrm{PGL}_2", 6]]
 
 
 # rank 10
@@ -1233,4 +1233,4 @@
     rational: yes
     blowdown: ["9-1"]
 
-    Aut: [["\\mathrm{PGL}_2", 10]]
+    Aut: [["\\mathrm{PGL}_2", 8]]
