@@ -1172,7 +1172,7 @@
     description: $\mathbb{P}^1\times\mathrm{Bl}_4\mathbb{P}^2$
     -KX3: 30
     h12: 0
-    moduli: 2
+    moduli: 0
 
     rational: yes
     blowdown: ["5-3"]
@@ -1186,7 +1186,7 @@
     description: $\mathbb{P}^1\times\mathrm{Bl}_5\mathbb{P}^2$
     -KX3: 24
     h12: 0
-    moduli: 4
+    moduli: 2
 
     rational: yes
     blowdown: ["6-1"]
@@ -1200,7 +1200,7 @@
     description: $\mathbb{P}^1\times\mathrm{Bl}_6\mathbb{P}^2$
     -KX3: 18
     h12: 0
-    moduli: 6
+    moduli: 4
 
     rational: yes
     blowdown: ["7-1"]
@@ -1214,7 +1214,7 @@
     description: $\mathbb{P}^1\times\mathrm{Bl}_7\mathbb{P}^2$
     -KX3: 12
     h12: 0
-    moduli: 8
+    moduli: 6
 
     rational: yes
     blowdown: ["8-1"]
@@ -1228,7 +1228,7 @@
     description: $\mathbb{P}^1\times\mathrm{Bl}_8\mathbb{P}^2$
     -KX3: 6
     h12: 0
-    moduli: 10
+    moduli: 8
 
     rational: yes
     blowdown: ["9-1"]
