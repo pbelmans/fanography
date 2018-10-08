@@ -529,6 +529,9 @@
 
   32:
     description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(1,1)$
+    alternative:
+      - $\mathbb{P}(\mathrm{T}_{\mathbb{P}^2})$
+      - the complete flag variety for $\mathbb{P}^2$
     -KX3: 48
     h12: 0
     moduli: 0
