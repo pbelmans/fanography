@@ -1,7 +1,7 @@
 # rank 1
 1:
   1:
-    description: double cover of $\mathbb{P}^3$ with ramification divisor of degree 6
+    description: double cover of $\mathbb{P}^3$ with branch locus a divisor of degree 6
     -KX3: 2
     h12: 52
     moduli: 68
@@ -12,7 +12,7 @@
   2:
     description:
       - $X_4$ quartic in $\mathbb{P}^4$
-      - a double cover of the smooth quadric $X_2$ with ramification divisor of degree 8
+      - a double cover of the smooth quadric $X_2$ with branch locus a divisor of degree 8
     -KX3: 4
     h12: 30
     moduli: [45, 44]
@@ -41,7 +41,7 @@
   5:
     description:
       - section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 2 subspace and a quadric
-      - a double cover of ((1-15)) with ramification divisor an anticanonical divisor
+      - a double cover of ((1-15)) with branch locus an anticanonical divisor
     -KX3: 10
     h12: 10
     moduli: [22, -1]
@@ -366,7 +366,7 @@
 
 
   18:
-    description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ with ramification divisor of degree $(2,2)$
+    description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ with branch locus a divisor of degree $(2,2)$
     -KX3: 24
     h12: 2
     moduli: 6
