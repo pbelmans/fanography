@@ -94,19 +94,16 @@ class Fano:
     return self.identifier() == other.identifier()
 
 
-  # (pretty) print the identifier
-  def identifier(self, pretty=False):
-    if pretty:
-      return "{}&ndash;{}".format(self.rho, self.ID)
-    else:
-      return "{}-{}".format(self.rho, self.ID)
+  # returns the the identifier
+  def identifier(self):
+    return "{}-{}".format(self.rho, self.ID)
 
   # process strings
   def __parse(self, string, clean=False):
     if clean:
-      replacement = r'\1&ndash;\2'
+      replacement = r'\1-\2'
     else:
-      replacement = r'<a class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title="\1-\2" href="/\1-\2">\1&ndash;\2</a>'
+      replacement = r'<a class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title="\1-\2" href="/\1-\2">\1-\2</a>'
 
     # weird workaround to deal with ((i-jk))
     string = re.sub(r"\(\((\d)-(\d\d)\)\)", replacement, string)

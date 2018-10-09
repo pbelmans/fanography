@@ -59,7 +59,7 @@
       {% set fano = fanos[ID] %}
 
       <tr>
-        <td class="align-middle row-identifier" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier(pretty=True) | safe }}</a></td>
+        <td class="align-middle row-identifier" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></td>
 
         <td class="align-middle volume text-center">{{ fano["KX3"] }}</td>
 
@@ -97,7 +97,7 @@
         {% if rho != 1 %}
           <td class="align-middle blowdown text-center d-none d-lg-table-cell">
           {% for blowdown in fano["blowdown"] %}
-            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowdown["plaintext"] }}'>{{ blowdown.identifier(pretty=True) | safe }}</a>{% if not loop.last %}, {% endif %}
+            <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowdown["plaintext"] }}'>{{ blowdown.identifier() }}</a>{% if not loop.last %}, {% endif %}
           {% endfor %}
           </td>
         {% endif %}
@@ -165,15 +165,15 @@
 {% macro basic(fano, previous, next) %}
 <p class="clearfix">
 {% if previous %}
-  <a class="previous float-left identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ previous["plaintext"] }}' href="/{{ previous.identifier() }}">{{ previous.identifier(pretty=True) | safe }}</a>
+  <a class="previous float-left identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ previous["plaintext"] }}' href="/{{ previous.identifier() }}">{{ previous.identifier() }}</a>
 {% endif %}
 
 {% if next %}
-  <a class="next float-right identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ next["plaintext"] }}' href="/{{ next.identifier() }}">{{ next.identifier(pretty=True) | safe }}</a>
+  <a class="next float-right identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ next["plaintext"] }}' href="/{{ next.identifier() }}">{{ next.identifier() }}</a>
 {% endif %}
 </p>
 
-<h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier(pretty=True)  | safe}}</span></h5>
+<h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier() }}</span></h5>
 
 {{ description(fano) }}
 
@@ -288,7 +288,7 @@
   <p>This variety is the blowup of
   <ul>
     {% for blowdown in fano["blowdown"] %}
-      <li><a href="/{{ blowdown.identifier() }}" class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowdown["plaintext"] }}'>{{ blowdown.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ fano["h12"] - blowdown["h12"] }}
+      <li><a href="/{{ blowdown.identifier() }}" class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowdown["plaintext"] }}'>{{ blowdown.identifier() }}</a>, in a curve of genus {{ fano["h12"] - blowdown["h12"] }}
     {% endfor %}
   </ul>
 {% endif %}
@@ -297,7 +297,7 @@
   <p>This variety can be blown up (in a curve) to
   <ul>
     {% for blowup in fano["blowup"] %}
-      <li><a href="/{{ blowup.identifier() }}" class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowup["plaintext"] }}'>{{ blowup.identifier() | replace("-", "&ndash;") | safe }}</a>, in a curve of genus {{ blowup["h12"] - fano["h12"] }}
+      <li><a href="/{{ blowup.identifier() }}" class="identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowup["plaintext"] }}'>{{ blowup.identifier() }}</a>, in a curve of genus {{ blowup["h12"] - fano["h12"] }}
     {% endfor %}
   </ul>
 {% endif %}
