@@ -170,9 +170,10 @@ ol.description > li:before {
 
   th[role=columnheader]:not(.no-sort):after {
   	content: '';
-  	float: right;
+    display: inline-block;
     white-space: nowrap;
-  	margin-top: 7px;
+    margin-bottom: 4px;
+    margin-left: 3px;
   	border-width: 0 4px 4px;
   	border-style: solid;
   	border-color: #404040 transparent;
