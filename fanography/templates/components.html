@@ -35,22 +35,22 @@
       {# all these are hidden on smartphone screens #}
 
       {% if rho != 10 %}
-        <th scope="col" class="text-center d-none d-lg-table-cell">blowups</th>
+        <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">blowups</th>
       {% endif %}
 
       {% if rho != 1 %}
-        <th scope="col" class="text-center d-none d-lg-table-cell">blowdowns</th>
+        <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">blowdowns</th>
       {% endif %}
 
-      <th scope="col" class="text-center d-none d-lg-table-cell">rational</th>
+      <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">rational</th>
 
-      <th scope="col" class="text-center d-none d-lg-table-cell">unirational</th>
+      <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">unirational</th>
 
       {# all of these are hidden on anything that isn't extra large #}
 
-      <th scope="col" class="text-center d-none d-xl-table-cell">moduli</th>
+      <th scope="col" class="text-center d-none d-xl-table-cell d-print-table-cell">moduli</th>
 
-      <th scope="col" class="text-center d-none d-xl-table-cell no-sort" data-sort-method="none">$\mathrm{Aut}^0$</th>
+      <th scope="col" class="text-center d-none d-xl-table-cell d-print-table-cell no-sort" data-sort-method="none">$\mathrm{Aut}^0$</th>
     </tr>
   </thead>
 
@@ -77,7 +77,7 @@
           {{ description(fano) }}
 
           {% if fano["alternative"] %}
-            <dl class="d-none d-xl-block mb-0">
+            <dl class="d-none d-xl-block d-print-block mb-0">
               <dt>alternative</dt>
               {% for alternative in fano["alternative"] %}
                 <dd class="mb-0 ml-5">{{ alternative | safe }}</dd>
@@ -89,31 +89,31 @@
         {# all of these are hidden on smartphone screens #}
 
         {% if rho != 10 %}
-          <td class="align-middle blowup text-center d-none d-lg-table-cell">
+          <td class="align-middle blowup text-center d-none d-lg-table-cell d-print-table-cell">
             {% if fano["blowup"] %}<a href="/{{ fano.identifier() }}#birational">+</a>{% endif %}
           </td>
         {% endif %}
 
         {% if rho != 1 %}
-          <td class="align-middle blowdown text-center d-none d-lg-table-cell">
+          <td class="align-middle blowdown text-center d-none d-lg-table-cell d-print-table-cell">
           {% for blowdown in fano["blowdown"] %}
             <a href="/{{ blowdown.identifier() }}" class="identifier text-nowrap" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ blowdown["plaintext"] }}'>{{ blowdown.identifier() }}</a>{% if not loop.last %}, {% endif %}
           {% endfor %}
           </td>
         {% endif %}
 
-        <td class="align-middle rationality text-center d-none d-lg-table-cell">{{ fano["rationality"] }}</td>
+        <td class="align-middle rationality text-center d-none d-lg-table-cell d-print-table-cell">{{ fano["rationality"] }}</td>
 
-        <td class="align-middle unirationality text-center d-none d-lg-table-cell">{{ fano["unirationality"] }}</td>
+        <td class="align-middle unirationality text-center d-none d-lg-table-cell d-print-table-cell">{{ fano["unirationality"] }}</td>
 
         {# all of these are hidden on anything that isn't extra large #}
 
-        <td class="align-middle moduli text-center d-none d-xl-table-cell" data-sort="{{ fano["moduli"][0] }}">
+        <td class="align-middle moduli text-center d-none d-xl-table-cell d-print-table-cell" data-sort="{{ fano["moduli"][0] }}">
           {% if fano["moduli"] | length == 1 %}{{ fano["moduli"][0] }}
           {% else %}{{ fano["moduli"][0] }} ({{ fano["moduli"][1] }}){% endif %}
         </td>
 
-        <td class="align-middle moduli text-center d-none d-xl-table-cell">
+        <td class="align-middle moduli text-center d-none d-xl-table-cell d-print-table-cell">
           {% if fano["Aut"] | length == 1 %}
             ${{ fano["Aut"][0][0] }}$
           {% else %}
