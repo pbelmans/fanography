@@ -194,8 +194,8 @@
 
   2:
     description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ whose branch locus is a $(2,4)$-divisor
-    -KX3: 8
-    h12: 11
+    -KX3: 6
+    h12: 20
     moduli: 33
 
     unirational: yes
