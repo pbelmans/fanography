@@ -133,9 +133,15 @@ with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "data.yml"),
   # postprocessing step to add plaintext tooltips to descriptions
   for rho in fanos.keys():
     for ID in fanos[rho].keys():
+      # descriptions
       for i in range(len(fanos[rho][ID].description)):
         for match in re.findall("title=\"(\d+)-(\d+)\"", fanos[rho][ID].description[i]):
           fanos[rho][ID].description[i] = fanos[rho][ID].description[i].replace("title=\"%d-%d\"" % (int(match[0]), int(match[1])), "title='%s'" % fanos[int(match[0])][int(match[1])].plaintext)
+      # alternatives
+      if hasattr(fanos[rho][ID], "alternative"):
+        for i in range(len(fanos[rho][ID].alternative)):
+          for match in re.findall("title=\"(\d+)-(\d+)\"", fanos[rho][ID].alternative[i]):
+            fanos[rho][ID].alternative[i] = fanos[rho][ID].alternative[i].replace("title=\"%d-%d\"" % (int(match[0]), int(match[1])), "title='%s'" % fanos[int(match[0])][int(match[1])].plaintext)
 
 
 
