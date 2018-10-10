@@ -140,6 +140,7 @@ div.tooltip div.arrow {
 
 div.tooltip ol.description,
 div.tooltip p,
+td.moduli ol.description,
 td.description ol.description,
 td.description p {
   margin-bottom: 0;

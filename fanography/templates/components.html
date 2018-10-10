@@ -110,7 +110,7 @@
 
         <td class="align-middle moduli text-center d-none d-xl-table-cell d-print-table-cell" data-sort="{{ fano["moduli"][0] }}">
           {% if fano["moduli"] | length == 1 %}{{ fano["moduli"][0] }}
-          {% else %}{{ fano["moduli"][0] }} ({{ fano["moduli"][1] }}){% endif %}
+          {% else %}<ol class="description"><li>{{ fano["moduli"][0] }}<li>{{ fano["moduli"][1] }}</ol>{% endif %}
         </td>
 
         <td class="align-middle moduli text-center d-none d-xl-table-cell d-print-table-cell">
@@ -315,9 +315,8 @@
   <dt class="col-6 text-right">number of moduli</dt>
   <dd class="col-6">
     {% if fano["moduli"] | length == 1 %}{{ fano["moduli"][0] }}
-    {% else %}{{ fano["moduli"][0] }} ({{ fano["moduli"][1] }}){% endif %}
+    {% else %}<ol class="description"><li>{{ fano["moduli"][0] }}<li>{{ fano["moduli"][1] }}</ol>{% endif %}
   </dd>
-  {# TODO remove this eventually #}
   {% if -1 in fano["moduli"] %}
     <p class="alert alert-warning">The value -1 means that I don't know the correct value yet.</p>
   {% endif %}
