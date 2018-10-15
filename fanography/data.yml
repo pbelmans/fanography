@@ -321,6 +321,7 @@
     moduli: 7
 
     rational: yes
+    blowdown: ["1-16"]
 
 
   14:
