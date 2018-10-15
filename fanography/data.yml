@@ -671,12 +671,12 @@
 
 
   8:
-    description: divisor from from the linear system $|(\alpha\circ\pi_1)^*(\mathcal{O}_{\mathbb{P}^2}(1)\otimes\pi_2^*(\mathcal{O}_{\mathbb{P}^2}(2))|$ where $\pi_i\colon\mathrm{Bl}_1\times\mathbb{P}^2$ are the projections, and $\alpha\colon\mathrm{Bl}_1\mathbb{P}^2\to\mathbb{P}^2$ is the blowup
+    description: divisor from the linear system $|(\alpha\circ\pi_1)^*(\mathcal{O}_{\mathbb{P}^2}(1)\otimes\pi_2^*(\mathcal{O}_{\mathbb{P}^2}(2))|$ where $\pi_i\colon\mathrm{Bl}_1\times\mathbb{P}^2$ are the projections, and $\alpha\colon\mathrm{Bl}_1\mathbb{P}^2\to\mathbb{P}^2$ is the blowup
     -KX3: 24
     h12: 0
     moduli: 3
 
-    rational: yes # TODO check: nothing is said in Iskovskikh--Prokhorov? but it's blowup of ((2-34))?
+    rational: yes
     blowdown: ["2-24", "2-34"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
