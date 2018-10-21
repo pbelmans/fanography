@@ -207,6 +207,22 @@
   <dt class="col-6 text-right">index</dt>
   <dd class="col-6">{{ fano["index"] }}</dd>
 
+  {% if fano["index"] == 2 or fano["index"] == 4 %}
+    {% set degree = fano["KX3"] // 8 %}
+    <dt class="col-6 text-right"><a href="/explained#del-pezzo">del Pezzo of degree {{ degree }}</a></dt>
+    <dd class="col-6">
+      {% if degree == 1 %}
+        $X\to\mathbb{P}^2$
+      {% elif degree == 2 %}
+        $X\overset{2:1}{\to}\mathbb{P}^3$
+      {% elif fano["index"] == 4 %}
+        $\mathbb{P}^3\hookrightarrow\mathbb{P}^9$, Veronese embedding
+      {% else %}
+        $X\hookrightarrow\mathbb{P}^{% raw %}{{% endraw %}{{ degree + 1 }}{% raw %}}{% endraw %}$
+      {% endif %}
+    </dd>
+  {% endif %}
+
   <dt class="col-6 text-right">$\dim\mathrm{H}^0(X,\omega_X^\vee)$</dt>
   <dd class="col-6">{{ fano["KX3"] // 2 + 3 }}</dd>
 
