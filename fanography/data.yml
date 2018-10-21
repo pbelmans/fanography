@@ -432,6 +432,7 @@
     h12: 1
     moduli: [2, 1]
 
+    rational: yes
     blowdown: ["1-16"]
 
 
