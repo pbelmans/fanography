@@ -95,7 +95,7 @@
 
     rational: yes
 
-    Aut: [["\\mathrm{PGL}_2", 0], ["\\mathbb{G}_{\\mathrm{a}}", 0], ["\\mathbb{G}_{\\mathrm{m}}", 1]]
+    Aut: [["\\mathrm{PGL}_2", 0, 3], ["\\mathbb{G}_{\\mathrm{a}}", 0, 1], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
 
   11:
@@ -152,7 +152,7 @@
 
     index: 2
 
-    Aut: [["\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
     rational: yes
 
@@ -165,7 +165,7 @@
 
     index: 3
 
-    Aut: [["\\mathrm{PSO}_5", 0]]
+    Aut: [["\\mathrm{PSO}_5", 0, 10]]
 
     rational: yes
 
@@ -178,7 +178,7 @@
 
     index: 4
 
-    Aut: [["\\mathrm{PGL}_4", 0]]
+    Aut: [["\\mathrm{PGL}_4", 0, 15]]
 
     rational: yes
 
@@ -395,7 +395,7 @@
     rational: yes
     blowdown: ["1-15"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   21:
@@ -409,7 +409,7 @@
 
     fibrelike: yes
 
-    Aut: [["\\mathbb{G}_{\\mathrm{a}}", 0], ["\\mathrm{PGL}_2", 0], ["\\mathbb{G}_{\\mathrm{m}}", 1]]
+    Aut: [["\\mathrm{PGL}_2", 0, 3], ["\\mathbb{G}_{\\mathrm{a}}", 0, 1], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
 
   22:
@@ -421,7 +421,7 @@
     rational: yes
     blowdown: ["1-15", "1-17"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   23:
@@ -445,7 +445,7 @@
 
     rational: yes
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0], ["\\mathbb{G}_{\\mathrm{m}}^2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   25:
@@ -467,7 +467,7 @@
     rational: yes
     blowdown: ["1-15", "1-16"]
 
-    Aut: [["\\mathrm{B}", 0], ["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathrm{B}", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   27:
@@ -479,7 +479,7 @@
     rational: yes
     blowdown: ["1-17"]
 
-    Aut: [["\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
 
   28:
@@ -491,7 +491,7 @@
     rational: yes
     blowdown: ["1-17"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes\\mathbb{G}_{\\mathrm{m}}", 1]]
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes\\mathbb{G}_{\\mathrm{m}}", 1, 4]]
 
 
   29:
@@ -503,7 +503,7 @@
     rational: yes
     blowdown: ["1-16"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
 
   30:
@@ -515,7 +515,7 @@
     rational: yes
     blowdown: ["1-17"]
 
-    Aut: [["\\mathrm{PSO}_{5;1}", 0]]
+    Aut: [["\\mathrm{PSO}_{5;1}", 0, 7]]
 
 
   31:
@@ -527,7 +527,7 @@
     rational: yes
     blowdown: ["1-16"]
 
-    Aut: [["\\mathrm{PSO}_{5;2}", 0]]
+    Aut: [["\\mathrm{PSO}_{5;2}", 0, "?"]]
 
 
   32:
@@ -543,7 +543,7 @@
 
     rational: yes
 
-    Aut: [["\\mathrm{PGL}_3", 0]]
+    Aut: [["\\mathrm{PGL}_3", 0, 8]]
 
     fibrelike: yes
 
@@ -557,7 +557,7 @@
     rational: yes
     blowdown: ["1-17"]
 
-    Aut: [["\\mathrm{PGL}_{4;2}", 0]]
+    Aut: [["\\mathrm{PGL}_{4;2}", 0, 11]]
 
 
   34:
@@ -568,7 +568,7 @@
 
     rational: yes
 
-    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_3", 0]]
+    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_3", 0, 11]]
 
 
   35:
@@ -581,7 +581,7 @@
 
     rational: yes
 
-    Aut: [["\\mathrm{PGL}_{4;1}", 0]]
+    Aut: [["\\mathrm{PGL}_{4;1}", 0, 12]]
 
     index: 2
 
@@ -594,7 +594,7 @@
 
     rational: yes
 
-    Aut: [["\\mathrm{Aut}(\\mathbb{P}(1,1,1,2))", 0]]
+    Aut: [["\\mathrm{Aut}(\\mathbb{P}(1,1,1,2))", 0, 15]]
 
 
 # rank 3
@@ -648,7 +648,7 @@
     rational: yes
     blowdown: ["2-34"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   6:
@@ -680,7 +680,7 @@
     rational: yes
     blowdown: ["2-24", "2-34"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   9:
@@ -692,7 +692,7 @@
     rational: yes
     blowdown: ["2-36", "2-36"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 6]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 6, 1]]
 
 
   10:
@@ -704,7 +704,7 @@
     rational: yes
     blowdown: ["2-29", "2-29"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1], ["\\mathbb{G}_{\\mathrm{m}}^2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
 
   11:
@@ -726,7 +726,7 @@
     rational: yes
     blowdown: ["2-27", "2-33", "2-34"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   13:
@@ -738,7 +738,7 @@
     rational: yes
     blowdown: ["2-32", "2-32", "2-32"]
 
-    Aut: [["\\mathrm{PGL}_2", 0], ["\\mathbb{G}_{\\mathrm{a}}", 0], ["\\mathbb{G}_{\\mathrm{m}}", 1]]
+    Aut: [["\\mathrm{PGL}_2", 0, 3], ["\\mathbb{G}_{\\mathrm{a}}", 0, 1], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
     fibrelike: yes
 
@@ -753,7 +753,7 @@
     rational: yes
     blowdown: ["2-35", "2-36"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
 
 
@@ -766,7 +766,7 @@
     rational: yes
     blowdown: ["2-29", "2-31", "2-34"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
 
@@ -779,7 +779,7 @@
     rational: yes
     blowdown: ["2-27", "2-32", "2-35"]
 
-    Aut: [["\\mathrm{B}", 0]]
+    Aut: [["\\mathrm{B}", 0, 2]]
 
 
   17:
@@ -791,7 +791,7 @@
     rational: yes
     blowdown: ["2-34", "2-34"]
 
-    Aut: [["\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
 
   18:
@@ -803,7 +803,7 @@
     rational: yes
     blowdown: ["2-29", "2-30", "2-33"]
 
-    Aut: [["\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}}", 0, 3]]
 
 
   19:
@@ -815,7 +815,7 @@
     rational: yes
     blowdown: ["2-35", "2-35"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
 
   20:
@@ -827,7 +827,7 @@
     rational: yes
     blowdown: ["2-31", "2-31", "2-32"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
 
   21:
@@ -839,7 +839,7 @@
     rational: yes
     blowdown: ["2-34"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{a}}^2\\rtimes\\mathbb{G}_{\\mathrm{m}}^2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^2\\rtimes\\mathbb{G}_{\\mathrm{m}}^2", 0, 4]]
 
 
   22:
@@ -851,7 +851,7 @@
     rational: yes
     blowdown: ["2-34", "2-36"]
 
-    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0, 5]]
 
 
   23:
@@ -863,7 +863,7 @@
     rational: yes
     blowdown: ["2-30", "2-31", "2-35"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}})", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}})", 0, 6]]
 
 
   24:
@@ -875,7 +875,7 @@
     rational: yes
     blowdown: ["2-32", "2-34"]
 
-    Aut: [["\\mathrm{PGL}_{3;1}", 0]]
+    Aut: [["\\mathrm{PGL}_{3;1}", 0, 6]]
 
 
   25:
@@ -889,7 +889,7 @@
     rational: yes
     blowdown: ["2-33", "2-33"]
 
-    Aut: [["\\mathrm{PGL}_{3;1}", 0]]
+    Aut: [["\\mathrm{PGL}_{3;1}", 0, 6]]
 
 
   26:
@@ -901,7 +901,7 @@
     rational: yes
     blowdown: ["2-34", "2-35"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0, 8]]
 
 
   27:
@@ -914,7 +914,7 @@
 
     rational: yes
 
-    Aut: [["\\mathrm{PGL}_2^3", 0]]
+    Aut: [["\\mathrm{PGL}_2^3", 0, 9]]
 
     fibrelike: yes
 
@@ -928,7 +928,7 @@
     rational: yes
     blowdown: ["2-34"]
 
-    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_{3;1}", 0]]
+    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_{3;1}", 0, 9]]
 
 
   29:
@@ -940,7 +940,7 @@
     rational: yes
     blowdown: ["2-35", "2-35"]
 
-    Aut: [["\\mathrm{PGL}_{4;3,1}", 0]]
+    Aut: [["\\mathrm{PGL}_{4;3,1}", 0, 10]]
 
   30:
     description: blowup of ((2-35)) in the proper transform of a line containing the center of the blowup
@@ -951,7 +951,7 @@
     rational: yes
     blowdown: ["2-33", "2-35"]
 
-    Aut: [["\\mathrm{PGL}_{4;2,1}", 0]]
+    Aut: [["\\mathrm{PGL}_{4;2,1}", 0, 10]]
 
 
   31:
@@ -964,7 +964,7 @@
 
     rational: yes
 
-    Aut: [["\\mathrm{PSO}_{6;1}", 0]]
+    Aut: [["\\mathrm{PSO}_{6;1}", 0, 11]]
 
 
 # rank 4
@@ -990,7 +990,7 @@
     rational: yes
     blowdown: ["3-31", "3-31"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
 
   3:
@@ -1002,7 +1002,7 @@
     rational: yes
     blowdown: ["3-17", "3-27", "3-28", "3-28"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   4:
@@ -1014,7 +1014,7 @@
     rational: yes
     blowdown: ["3-18", "3-18", "3-19", "3-30", "3-30"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2]]
 
 
   5:
@@ -1026,7 +1026,7 @@
     rational: yes
     blowdown: ["3-21", "3-28", "3-31"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2]]
 
 
   6:
@@ -1041,7 +1041,7 @@
 
     blowdown: ["3-25", "3-25", "3-25", "3-27"]
 
-    Aut: [["\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
 
   7:
@@ -1053,7 +1053,7 @@
     rational: yes
     blowdown: ["3-24", "3-24", "3-28", "3-28"]
 
-    Aut: [["\\mathrm{GL}_2", 0]]
+    Aut: [["\\mathrm{GL}_2", 0, 4]]
 
 
   8:
@@ -1065,7 +1065,7 @@
     rational: yes
     blowdown: ["3-27", "3-31"]
 
-    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0, 5]]
 
 
   9:
@@ -1077,7 +1077,7 @@
     rational: yes
     blowdown: ["3-25", "3-26", "3-28", "3-30"]
 
-    Aut: [["\\mathrm{PGL}_{(2,2);1}", 0]]
+    Aut: [["\\mathrm{PGL}_{(2,2);1}", 0, 7]]
 
 
   10:
@@ -1089,7 +1089,7 @@
     rational: yes
     blowdown: ["3-27", "3-28", "3-28"]
 
-    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{B}^2", 0]]
+    Aut: [["\\mathrm{PGL}_2\\times\\mathrm{B}^2", 0, 7]]
 
 
   11:
@@ -1101,7 +1101,7 @@
     rational: yes
     blowdown: ["3-28", "3-31"]
 
-    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_{3;1}", 0]]
+    Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_{3;1}", 0, 6]]
 
 
   12:
@@ -1113,7 +1113,7 @@
     rational: yes
     blowdown: ["3-30", "3-30"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{a}}^4\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{a}}^4\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0, 9]]
 
 
   13:
@@ -1125,7 +1125,7 @@
     rational: yes
     blowdown: ["3-27", "3-31", "3-31"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
 # rank 5
@@ -1139,7 +1139,7 @@
     rational: yes
     blowdown: ["4-4", "4-4", "4-4", "4-12", "4-12", "4-12"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
 
   2:
@@ -1151,7 +1151,7 @@
     rational: yes
     blowdown: ["4-9", "4-9", "4-11", "4-11", "4-12"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{GL}_2", 0]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{GL}_2", 0, 5]]
 
 
   3:
@@ -1163,7 +1163,7 @@
     rational: yes
     blowdown: ["4-10", "4-10", "4-10", "4-10", "4-10", "4-10"]
 
-    Aut: [["\\mathrm{PGL}_2\\times\\mathbb{G}_{\\mathrm{m}}^2", 0]]
+    Aut: [["\\mathrm{PGL}_2\\times\\mathbb{G}_{\\mathrm{m}}^2", 0, 5]]
 
 
 # rank 6
@@ -1177,7 +1177,7 @@
     rational: yes
     blowdown: ["5-3"]
 
-    Aut: [["\\mathrm{PGL}_2", 0]]
+    Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
 
 # rank 7
@@ -1191,7 +1191,7 @@
     rational: yes
     blowdown: ["6-1"]
 
-    Aut: [["\\mathrm{PGL}_2", 2]]
+    Aut: [["\\mathrm{PGL}_2", 2, 3]]
 
 
 # rank 8
@@ -1205,7 +1205,7 @@
     rational: yes
     blowdown: ["7-1"]
 
-    Aut: [["\\mathrm{PGL}_2", 4]]
+    Aut: [["\\mathrm{PGL}_2", 4, 3]]
 
 
 # rank 9
@@ -1219,7 +1219,7 @@
     rational: yes
     blowdown: ["8-1"]
 
-    Aut: [["\\mathrm{PGL}_2", 6]]
+    Aut: [["\\mathrm{PGL}_2", 6, 3]]
 
 
 # rank 10
@@ -1233,4 +1233,4 @@
     rational: yes
     blowdown: ["9-1"]
 
-    Aut: [["\\mathrm{PGL}_2", 8]]
+    Aut: [["\\mathrm{PGL}_2", 8, 3]]
