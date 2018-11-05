@@ -46,7 +46,7 @@
       - double cover of ((1-15)) with branch locus an anticanonical divisor
     -KX3: 10
     h12: 10
-    moduli: [22, 21]
+    moduli: [22, 19]
 
     rational: generically non-rational
 
@@ -306,7 +306,7 @@
       - blowup of ((1-17)) in a curve of degree 6 and genus 3 which is an intersection of 4 cubics
     -KX3: 20
     h12: 3
-    moduli: 8
+    moduli: 9
 
     rational: yes
     blowdown: ["1-17"]
@@ -318,7 +318,7 @@
     description: blowup of ((1-16)) in a curve of degree 6 and genus 2
     -KX3: 20
     h12: 2
-    moduli: 7
+    moduli: 8
 
     rational: yes
     blowdown: ["1-16"]
