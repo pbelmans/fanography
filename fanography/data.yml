@@ -79,7 +79,7 @@
 
 
   9:
-    description: section of the $\mathrm{G}_2$-Grassmannian $\mathrm{G}_2\mathrm{Gr}(2,7)$ by codimension 2 subspace
+    description: section of the adjoint $\mathrm{G}_2$-Grassmannian $\mathrm{G}_2\mathrm{Gr}(2,7)$ by codimension 2 subspace
     -KX3: 18
     h12: 2
     moduli: 10
@@ -186,7 +186,7 @@
 # rank 2
 2:
   1:
-    description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_{V_1}|$
+    description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
     -KX3: 4
     h12: 22
     moduli: 26
@@ -495,7 +495,7 @@
 
 
   29:
-    description: blowup of ((1-16)) in a line
+    description: blowup of ((1-16)) in a conic
     -KX3: 40
     h12: 0
     moduli: 0
