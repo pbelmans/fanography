@@ -17,6 +17,9 @@ class Fano:
     self.rho = rho
     self.ID  = ID
 
+    if "name" in yaml:
+      self.name = yaml["name"]
+
     if isinstance(yaml["description"], str):
       self.description = [self.__parse(yaml["description"])]
     else:

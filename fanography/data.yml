@@ -41,6 +41,7 @@
 
 
   5:
+    name: Gushel--Mukai 3-fold
     description:
       - section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 2 subspace and a quadric
       - double cover of ((1-15)) with branch locus an anticanonical divisor
@@ -235,6 +236,7 @@
 
 
   6:
+    name: Verra 3-fold
     description:
       - $(2,2)$-divisor on $\mathbb{P}^2\times\mathbb{P}^2$
       - double cover of ((2-32)) with branch locus an anticanonical divisor

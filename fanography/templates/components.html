@@ -74,6 +74,10 @@
         {% endif %}
 
         <td class="align-middle description">
+          {% if fano["name"] %}
+            <strong>{{ fano["name"] }}</strong>
+          {% endif %}
+
           {{ description(fano) }}
 
           {% if fano["alternative"] %}
@@ -173,7 +177,7 @@
 {% endif %}
 </p>
 
-<h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier() }}</span></h5>
+<h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier() }}</span>{% if fano["name"] %}: {{ fano["name"] }}{% endif %}</h5>
 
 {{ description(fano) }}
 
