@@ -220,6 +220,8 @@
 
   4:
     description: blowup of ((1-17)) in the intersection of two cubics
+    alternative:
+      - $(1,3)$-divisor on $\mathbb{P}^1\times\mathbb{P}^3$
     -KX3: 10
     h12: 10
     moduli: 21
@@ -455,6 +457,8 @@
 
   25:
     description: blowup of ((1-17)) in an elliptic curve which is an intersection of 2 quadrics
+    alternative:
+      - $(1,2)$-divisor on $\mathbb{P}^1\times\mathbb{P}^3$
     -KX3: 32
     h12: 1
     moduli: 1
@@ -658,6 +662,8 @@
 
   6:
     description: blowup of ((1-17)) in the disjoint union of a line and an elliptic curve of degree 4
+    alternative:
+      - complete intersection of degree $(1,0,2)$ and $(0,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^3$
     -KX3: 22
     h12: 1
     moduli: 5
@@ -702,6 +708,8 @@
 
   10:
     description: blowup of ((1-16)) in the disjoint union of 2 conics
+    alternative:
+      - complete intersection of degree $(1,0,1)$, $(0,1,1)$ and $(0,0,2)$ in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^4$
     -KX3: 26
     h12: 0
     moduli: 2
@@ -861,6 +869,8 @@
 
   23:
     description: blowup of ((2-35)) in the proper transform of a conic containing the center of the blowup
+    alternative:
+      - complete intersection of degree $(1,1,0)$ and $(0,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^2\times\mathbb{P}^2$
     -KX3: 42
     h12: 0
     moduli: 0
