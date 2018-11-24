@@ -98,6 +98,9 @@
 
     Aut: [["\\mathrm{PGL}_2", 0, 3], ["\\mathbb{G}_{\\mathrm{a}}", 0, 1], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
+    remarks:
+      - The unique such threefold where $\mathrm{Aut}(X)\cong\mathrm{PGL}_2$ is called the <em>Mukai&ndash;Umemura 3-fold</em>
+
 
   11:
     description: hypersurface of degree 6 in $\mathbb{P}(1,1,1,2,3)$

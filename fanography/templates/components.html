@@ -202,6 +202,13 @@
   <dd class="col-6">{{ fano["h12"] }}
 </dl>
 
+{% if fano["remarks"] %}
+  <h5>Remarks</h5>
+  {% for remark in fano["remarks"] %}
+    <p>{{ remark | safe }}</p>
+  {% endfor %}
+{% endif %}
+
 {% endmacro %}
 
 

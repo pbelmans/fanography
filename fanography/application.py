@@ -31,6 +31,9 @@ class Fano:
     else:
       self.plaintext = ", ".join([self.__parse(description, clean=True) for description in yaml["description"]])
 
+    if "remarks" in yaml:
+      self.remarks = yaml["remarks"]
+
     self.KX3 = yaml["-KX3"]
     self.h12 = yaml["h12"]
     if isinstance(yaml["moduli"], int):
