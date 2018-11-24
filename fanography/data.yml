@@ -200,7 +200,7 @@
 
 
   2:
-    description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ with branch locus a $(2,4)$-divisor
+    description: double cover of ((2-34)) with branch locus a $(2,4)$-divisor
     -KX3: 6
     h12: 20
     moduli: 33
@@ -373,7 +373,7 @@
 
 
   18:
-    description: double cover of $\mathbb{P}^1\times\mathbb{P}^2$ with branch locus a divisor of degree $(2,2)$
+    description: double cover of ((2-34)) with branch locus a divisor of degree $(2,2)$
     -KX3: 24
     h12: 2
     moduli: 6
@@ -605,7 +605,7 @@
 # rank 3
 3:
   1:
-    description: double cover of $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$ with branch locus a divisor of degree $(2,2,2)$
+    description: double cover of ((3-27)) with branch locus a divisor of degree $(2,2,2)$
     -KX3: 12
     h12: 8
     moduli: 17
