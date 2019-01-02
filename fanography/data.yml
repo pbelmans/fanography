@@ -186,6 +186,8 @@
 
     rational: yes
 
+    toric: 23
+
 
 # rank 2
 2:
@@ -568,6 +570,8 @@
 
     Aut: [["\\mathrm{PGL}_{4;2}", 0, 11]]
 
+    toric: 19
+
 
   34:
     description: $\mathbb{P}^1\times\mathbb{P}^2$
@@ -578,6 +582,8 @@
     rational: yes
 
     Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_3", 0, 11]]
+
+    toric: 22
 
 
   35:
@@ -594,6 +600,8 @@
 
     index: 2
 
+    toric: 20
+
 
   36:
     description: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(2))$
@@ -604,6 +612,8 @@
     rational: yes
 
     Aut: [["\\mathrm{Aut}(\\mathbb{P}(1,1,1,2))", 0, 15]]
+
+    toric: 7
 
 
 # rank 3
@@ -906,9 +916,13 @@
 
     Aut: [["\\mathrm{PGL}_{3;1}", 0, 6]]
 
+    toric: 18
+
 
   26:
     description: blowup of ((1-17)) in the disjoint union of a point and a line
+    alternative:
+      - blowup of line on a plane which is section of ((2-34)) mapping to $\mathbb{P}^2$
     -KX3: 46
     h12: 0
     moduli: 0
@@ -917,6 +931,8 @@
     blowdown: ["2-34", "2-35"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0, 8]]
+
+    toric: 16
 
 
   27:
@@ -933,6 +949,8 @@
 
     fibrelike: yes
 
+    toric: 21
+
 
   28:
     description: $\mathbb{P}^1\times\mathrm{Bl}_p\mathbb{P}^2$
@@ -944,6 +962,8 @@
     blowdown: ["2-34"]
 
     Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_{3;1}", 0, 9]]
+
+    toric: 17
 
 
   29:
@@ -957,8 +977,12 @@
 
     Aut: [["\\mathrm{PGL}_{4;3,1}", 0, 10]]
 
+    toric: 6
+
   30:
     description: blowup of ((2-35)) in the proper transform of a line containing the center of the blowup
+    alternative:
+      - $\mathbb{P}_{\mathbb{F}_1}(\mathcal{O}\oplus\mathcal{O}(\ell))$ where $\ell^2=1$
     -KX3: 50
     h12: 0
     moduli: 0
@@ -967,6 +991,8 @@
     blowdown: ["2-33", "2-35"]
 
     Aut: [["\\mathrm{PGL}_{4;2,1}", 0, 10]]
+
+    toric: 12
 
 
   31:
@@ -980,6 +1006,8 @@
     rational: yes
 
     Aut: [["\\mathrm{PSO}_{6;1}", 0, 11]]
+
+    toric: 11
 
 
 # rank 4
@@ -1094,6 +1122,8 @@
 
     Aut: [["\\mathrm{PGL}_{(2,2);1}", 0, 7]]
 
+    toric: 13
+
 
   10:
     description: $\mathbb{P}^1\times\mathrm{Bl}_2\mathbb{P}^2$
@@ -1105,6 +1135,8 @@
     blowdown: ["3-27", "3-28", "3-28"]
 
     Aut: [["\\mathrm{PGL}_2\\times\\mathrm{B}^2", 0, 7]]
+
+    toric: 14
 
 
   11:
@@ -1118,6 +1150,8 @@
 
     Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_{3;1}", 0, 6]]
 
+    toric: 10
+
 
   12:
     description: blowup of ((2-33)) in the disjoint union of two exceptional lines of the blowup
@@ -1129,6 +1163,8 @@
     blowdown: ["3-30", "3-30"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^4\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0, 9]]
+
+    toric: 8
 
 
   13:
@@ -1168,6 +1204,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{GL}_2", 0, 5]]
 
+    toric: 15
+
 
   3:
     description: $\mathbb{P}^1\times\mathrm{Bl}_3\mathbb{P}^2$
@@ -1179,6 +1217,8 @@
     blowdown: ["4-10", "4-10", "4-10", "4-10", "4-10", "4-10"]
 
     Aut: [["\\mathrm{PGL}_2\\times\\mathbb{G}_{\\mathrm{m}}^2", 0, 5]]
+
+    toric: 9
 
 
 # rank 6
