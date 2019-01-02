@@ -83,6 +83,13 @@ class Fano:
       if "fibrelike" in yaml: self.fibrelike = True
       else: self.fibrelike = False
 
+    # deal with toric varieties
+    if "toric" in yaml:
+      self.toric = True
+      self.grdb = yaml["toric"]
+    else:
+      self.toric = False
+
     # deal with Aut^0: (description of group, number of moduli with this group, dimension of group)
     if "Aut" not in yaml:
       self.Aut = [("0", self.moduli[0], 0)]
@@ -208,6 +215,14 @@ def show_entry(rho, ID):
     return render_template("entry.notfound.html", rho=rho, ID=ID)
 
 
+@app.route("/toric")
+def show_toric():
+  # let's hardcode the order from Iskovskikh--Prokhorov (this therefore acts as the filtering)
+  order = [(1, 17), (2, 36), (2, 35), (2, 33), (2, 34), (3, 31), (3, 29), (3, 30), (3, 27), (3, 28), (3, 26), (3, 25), (4, 12), (4, 11), (4, 10), (4, 9), (5, 3), (5, 2)]
+
+  return render_template("toric.html", fanos=fanos, order=order)
+
+
 """
 # Naming scheme
 
@@ -226,5 +241,6 @@ Optional fields for an entry:
   - index: if not present, assumed to be 1
   - rational: if not present, assumed to be non-rational, its values can be "yes" or "generic"
   - unirational: if not present, assumed to be non-unirational (unless rational is present), its values can be "yes" or "some"
+  - toric: if present it refers to the database of smooth toric Fanos on grdb.co.uk
 
 """

@@ -153,6 +153,60 @@
 {% endif %}
 {% endmacro %}
 
+
+{# toric table #}
+{% macro torictable(fanos, order) %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">$\rho$</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">$g$</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">index</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for (rho, ID) in order %}
+      {% set fano = fanos[rho][ID] %}
+
+      <tr>
+        <td class="align-middle row-identifier" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></td>
+
+        <td class="align-middle rank text-center">{{ fano["rho"] }}</td>
+
+        <td class="align-middle genus text-center">{{ (fano["KX3"] + 2) // 2 }}</td>
+
+        <td class="align-middle rank text-center">{{ fano["rho"] }}</td>
+
+        <td class="align-middle description">
+          {% if fano["name"] %}
+            <strong>{{ fano["name"] }}</strong>
+          {% endif %}
+
+          {{ description(fano) }}
+
+          {% if fano["alternative"] %}
+            <dl class="d-none d-xl-block d-print-block mb-0">
+              <dt>alternative</dt>
+              {% for alternative in fano["alternative"] %}
+                <dd class="mb-0 ml-5">{{ alternative | safe }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endmacro %}
+
+
 {# generic component layout #}
 {% macro component(header, content, id="") %}
 <div id="{{ id }}" class="card">
@@ -298,6 +352,14 @@
 
   <span>1</span><br style="clear: both">
 </div>
+{% endmacro %}
+
+
+{# information about toric geometry #}
+{% macro toric(fano) %}
+<p>This variety is <a href="/explained#toric">toric</a>.
+
+<p>It corresponds to <a href="http://www.grdb.co.uk/search/toricsmooth?id_cmp=in&id={{ fano.grdb }}">ID #{{ fano.grdb }} on grdb.co.uk</a>.
 {% endmacro %}
 
 
