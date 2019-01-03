@@ -21,6 +21,8 @@
 
     unirational: some
 
+    period: 165, 15
+
 
   3:
     description: complete intersection of quadric and cubic in $\mathbb{P}^5$
@@ -30,6 +32,8 @@
 
     unirational: yes
 
+    period: 164, 19
+
 
   4:
     description: complete intersection of 3 quadrics in $\mathbb{P}^6$
@@ -38,6 +42,8 @@
     moduli: 27
 
     unirational: yes
+
+    period: 163, 5
 
 
   5:
@@ -51,6 +57,8 @@
 
     rational: generically non-rational
 
+    period: 160, 9
+
 
   6:
     description: section of half-spinor embedding of a connected component of $\mathrm{OGr}_+(5,10)$ by codimension 7 subspace
@@ -59,6 +67,8 @@
     moduli: 18
 
     rational: yes
+
+    period: 150, 7
 
 
   7:
@@ -69,6 +79,8 @@
 
     unirational: yes
 
+    period: 147, 18
+
 
   8:
     description: section of Plücker embedding of $\mathrm{SGr}(3,6)$ by codimension 3 subspace
@@ -78,6 +90,8 @@
 
     rational: yes
 
+    period: 143, 20
+
 
   9:
     description: section of the adjoint $\mathrm{G}_2$-Grassmannian $\mathrm{G}_2\mathrm{Gr}(2,7)$ by codimension 2 subspace
@@ -86,6 +100,8 @@
     moduli: 10
 
     rational: yes
+
+    period: 124, 10
 
 
   10:
@@ -100,6 +116,8 @@
 
     remarks:
       - The unique such threefold where $\mathrm{Aut}(X)\cong\mathrm{PGL}_2$ is called the <em>Mukai&ndash;Umemura 3-fold</em>
+
+    period: 113, 17
 
 
   11:
@@ -125,6 +143,8 @@
 
     unirational: yes
 
+    period: 140, 1
+
 
   13:
     description: hypersurface of degree 3 in $\mathbb{P}^4$
@@ -136,6 +156,8 @@
 
     unirational: yes
 
+    period: 106, 0
+
 
   14:
     description: complete intersection of 2 quadrics in $\mathbb{P}^5$
@@ -146,6 +168,8 @@
     index: 2
 
     rational: yes
+
+    period: 75, 2
 
 
   15:
@@ -160,6 +184,8 @@
 
     rational: yes
 
+    period: 46, 14
+
 
   16:
     description: hypersurface of degree 2 in $\mathbb{P}^4$
@@ -172,6 +198,8 @@
     Aut: [["\\mathrm{PSO}_5", 0, 10]]
 
     rational: yes
+
+    period: 2, 4
 
 
   17:
@@ -187,6 +215,8 @@
     rational: yes
 
     toric: 23
+
+    period: 1, 12
 
 
 # rank 2
@@ -231,6 +261,8 @@
     rational: yes
     blowdown: ["1-17"]
 
+    period: 161, 49
+
 
   5:
     description: blowup of ((1-13)) in a plane cubic
@@ -240,6 +272,8 @@
 
     unirational: yes
     blowdown: ["1-13"]
+
+    period: 158, 34
 
 
   6:
@@ -255,6 +289,8 @@
 
     fibrelike: yes
 
+    period: 149, 11
+
 
   7:
     description: blowup of ((1-16)) in the intersection of two divisors from $|\mathcal{O}_{X_2}(2)|$
@@ -264,6 +300,8 @@
 
     rational: yes
     blowdown: ["1-16"]
+
+    period: 148, 51
 
 
   8:
@@ -275,6 +313,8 @@
     moduli: [18, 17]
 
     unirational: yes
+
+    period: 144, 26
 
 
   9:
@@ -288,6 +328,8 @@
     rational: yes
     blowdown: ["1-17"]
 
+    period: 139, 62
+
 
   10:
     description: blowup of ((1-14)) in an elliptic curve which is intersection of 2 hyperplanes
@@ -298,6 +340,8 @@
     rational: yes
     blowdown: ["1-14"]
 
+    period: 145, 40
+
 
   11:
     description: blowup of ((1-13)) in a line
@@ -307,6 +351,8 @@
 
     unirational: yes
     blowdown: ["1-13"]
+
+    period: 120, 56
 
 
   12:
@@ -322,6 +368,8 @@
 
     fibrelike: yes
 
+    period: 118, 13
+
 
   13:
     description: blowup of ((1-16)) in a curve of degree 6 and genus 2
@@ -332,6 +380,8 @@
     rational: yes
     blowdown: ["1-16"]
 
+    period: 119, 52
+
 
   14:
     description: blowup of ((1-15)) in an elliptic curve which is an intersection of 2 hyperplanes
@@ -341,6 +391,8 @@
 
     rational: yes
     blowdown: ["1-15"]
+
+    period: 122, 39 # see comments of http://coates.ma.ic.ac.uk/fanosearch/?page_id=175
 
 
   15:
@@ -355,6 +407,8 @@
 
     blowdown: ["1-17"]
 
+    period: 109, 35
+
 
   16:
     description: blowup of ((1-14)) in a conic
@@ -364,6 +418,8 @@
 
     rational: yes
     blowdown: ["1-14"]
+
+    period: 104, 59
 
 
   17:
@@ -375,6 +431,8 @@
     rational: yes
     blowdown: ["1-16", "1-17"]
 
+    period: 101, 38
+
 
   18:
     description: double cover of ((2-34)) with branch locus a divisor of degree $(2,2)$
@@ -383,6 +441,8 @@
     moduli: 6
 
     rational: yes
+
+    period: 74, 60
 
 
   19:
@@ -393,6 +453,8 @@
 
     rational: yes
     blowdown: ["1-14", "1-17"]
+
+    period: 86, 55
 
 
   20:
@@ -405,6 +467,8 @@
     blowdown: ["1-15"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
+
+    period: 87, 46
 
 
   21:
@@ -420,6 +484,8 @@
 
     Aut: [["\\mathrm{PGL}_2", 0, 3], ["\\mathbb{G}_{\\mathrm{a}}", 0, 1], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
+    period: 84, 8
+
 
   22:
     description: blowup of ((1-15)) in a conic
@@ -431,6 +497,8 @@
     blowdown: ["1-15", "1-17"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
+
+    period: 69, 50
 
 
   23:
@@ -444,6 +512,7 @@
     rational: yes
     blowdown: ["1-16"]
 
+    period: 78, 29
 
 
   24:
@@ -455,6 +524,8 @@
     rational: yes
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
+
+    period: 44, 66
 
 
   25:
@@ -468,6 +539,8 @@
     rational: yes
     blowdown: ["1-17"]
 
+    period: 43, 28
+
 
   26:
     description: blowup of ((1-15)) in a line
@@ -479,6 +552,8 @@
     blowdown: ["1-15", "1-16"]
 
     Aut: [["\\mathrm{B}", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
+
+    period: 58, 47
 
 
   27:
@@ -492,6 +567,8 @@
 
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
+    period: 19, 61
+
 
   28:
     description: blowup of ((1-17)) in a plane cubic
@@ -503,6 +580,8 @@
     blowdown: ["1-17"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes\\mathbb{G}_{\\mathrm{m}}", 1, 4]]
+
+    period: 5, 33
 
 
   29:
@@ -516,6 +595,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
+    period: 35, 42
+
 
   30:
     description: blowup of ((1-17)) in a conic
@@ -528,6 +609,8 @@
 
     Aut: [["\\mathrm{PSO}_{5;1}", 0, 7]]
 
+    period: 4, 70
+
 
   31:
     description: blowup of ((1-16)) in a line
@@ -539,6 +622,8 @@
     blowdown: ["1-16"]
 
     Aut: [["\\mathrm{PSO}_{5;2}", 0, "?"]]
+
+    period: 15, 48
 
 
   32:
@@ -558,6 +643,8 @@
 
     fibrelike: yes
 
+    period: 24, 6
+
 
   33:
     description: blowup of ((1-17)) in a line
@@ -572,6 +659,8 @@
 
     toric: 19
 
+    period: 2, 54
+
 
   34:
     description: $\mathbb{P}^1\times\mathbb{P}^2$
@@ -584,6 +673,8 @@
     Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_3", 0, 11]]
 
     toric: 22
+
+    period: 10, 44
 
 
   35:
@@ -602,6 +693,8 @@
 
     toric: 20
 
+    period: 7, 30
+
 
   36:
     description: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(2))$
@@ -614,6 +707,8 @@
     Aut: [["\\mathrm{Aut}(\\mathbb{P}(1,1,1,2))", 0, 15]]
 
     toric: 7
+
+    period: 6, 58
 
 
 # rank 3
@@ -628,6 +723,8 @@
 
     fibrelike: yes
 
+    period: 154, 22
+
 
   2:
     description: divisor from $|\mathcal{L}^{\otimes 2}\otimes\mathcal{O}(2,3)|$ on the $\mathbb{P}^2$-bundle $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(-1,-1)^{\oplus 2})$ over $\mathbb{P}^1\times\mathbb{P}^1$ such that $X\cap Y$ is irreducible, and $\mathcal{L}$ is the tautological bundle, and $Y\in|\mathcal{L}|$
@@ -636,6 +733,8 @@
     moduli: 11
 
     rational: yes
+
+    period: 157, 97
 
 
   3:
@@ -647,6 +746,8 @@
     rational: yes
     blowdown: ["2-34", "2-34"]
 
+    period: 135, 31
+
 
   4:
     description: blowup of ((2-18)) in a smooth fiber of the composition of the projection to $\mathbb{P}^1\times\mathbb{P}^2$ with the projection to $\mathbb{P}^2$ of the double cover with the projection
@@ -656,6 +757,8 @@
 
     rational: yes
     blowdown: ["2-18"]
+
+    period: 142, 151
 
 
   5:
@@ -669,6 +772,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
+    period: 138, 109
+
 
   6:
     description: blowup of ((1-17)) in the disjoint union of a line and an elliptic curve of degree 4
@@ -681,6 +786,8 @@
     rational: yes
     blowdown: ["2-25", "2-33"]
 
+    period: 117, 146
+
 
   7:
     description: blowup of ((2-32)) in an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_W|$
@@ -690,6 +797,8 @@
 
     rational: yes
     blowdown: ["2-32", "2-34", "2-34"]
+
+    period: 103, 36
 
 
   8:
@@ -703,6 +812,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
+    period: 112, 85
+
 
   9:
     description: blowup of the cone over the Veronese of $\mathbb{P}^2$ in $\mathbb{P}^5$ with center the disjoint union of the vertex and a quartic curve on $\mathbb{P}^2$
@@ -714,6 +825,8 @@
     blowdown: ["2-36", "2-36"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 6, 1]]
+
+    period: 22, 68
 
 
   10:
@@ -729,6 +842,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
+    period: 99, 67
+
 
   11:
     description: blowup of ((2-35)) in an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_{V_7}|$
@@ -738,6 +853,8 @@
 
     rational: yes
     blowdown: ["2-25", "2-34", "2-35"]
+
+    period: 72, 107
 
 
   12:
@@ -750,6 +867,8 @@
     blowdown: ["2-27", "2-33", "2-34"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
+
+    period: 85, 144
 
 
   13:
@@ -765,6 +884,8 @@
 
     fibrelike: yes
 
+    period: 70, 16
+
 
 
   14:
@@ -777,6 +898,8 @@
     blowdown: ["2-35", "2-36"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
+
+    period: 21, 98
 
 
 
@@ -791,6 +914,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
+    period: 67, 112
+
 
 
   16:
@@ -804,6 +929,8 @@
 
     Aut: [["\\mathrm{B}", 0, 2]]
 
+    period: 42, 119
+
 
   17:
     description: divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$ of degree $(1,1,1)$
@@ -815,6 +942,8 @@
     blowdown: ["2-34", "2-34"]
 
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
+
+    period: 39, 37
 
 
   18:
@@ -828,6 +957,8 @@
 
     Aut: [["\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}}", 0, 3]]
 
+    period: 41, 160
+
 
   19:
     description: blowup of ((1-16)) in two non-collinear points
@@ -839,6 +970,8 @@
     blowdown: ["2-35", "2-35"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
+
+    period: 18, 57
 
 
   20:
@@ -852,6 +985,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
+    period: 38, 63
+
 
   21:
     description: blowup of ((2-34)) in a curve of degree $(2,1)$
@@ -864,6 +999,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^2\\rtimes\\mathbb{G}_{\\mathrm{m}}^2", 0, 4]]
 
+    period: 49, 98
+
 
   22:
     description: blowup of ((2-34)) in a conic on $\{x\}\times\mathbb{P}^2$, $x\in\mathbb{P}^1$
@@ -875,6 +1012,8 @@
     blowdown: ["2-34", "2-36"]
 
     Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0, 5]]
+
+    period: 13, 152
 
 
   23:
@@ -890,6 +1029,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}})", 0, 6]]
 
+    period: 17, 158
+
 
   24:
     description: the fiber product of ((2-32)) with $\mathrm{Bl}_p\mathbb{P}^2$ over $\mathbb{P}^2$
@@ -901,6 +1042,8 @@
     blowdown: ["2-32", "2-34"]
 
     Aut: [["\\mathrm{PGL}_{3;1}", 0, 6]]
+
+    period: 31, 86
 
 
   25:
@@ -918,6 +1061,8 @@
 
     toric: 18
 
+    period: 16, 41
+
 
   26:
     description: blowup of ((1-17)) in the disjoint union of a point and a line
@@ -933,6 +1078,8 @@
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0, 8]]
 
     toric: 16
+
+    period: 12, 113
 
 
   27:
@@ -951,6 +1098,8 @@
 
     toric: 21
 
+    period: 45, 21
+
 
   28:
     description: $\mathbb{P}^1\times\mathrm{Bl}_p\mathbb{P}^2$
@@ -965,6 +1114,8 @@
 
     toric: 17
 
+    period: 28, 90
+
 
   29:
     description: blowup of ((2-35)) in a line on the exceptional divisor
@@ -978,6 +1129,9 @@
     Aut: [["\\mathrm{PGL}_{4;3,1}", 0, 10]]
 
     toric: 6
+
+    period: 8, 163
+
 
   30:
     description: blowup of ((2-35)) in the proper transform of a line containing the center of the blowup
@@ -994,6 +1148,8 @@
 
     toric: 12
 
+    period: 11, 84
+
 
   31:
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the vertex
@@ -1009,6 +1165,8 @@
 
     toric: 11
 
+    period: 14, 53
+
 
 # rank 4
 4:
@@ -1023,6 +1181,8 @@
 
     fibrelike: yes
 
+    period: 111, 3
+
 
   2:
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the disjoint union of the vertex and an elliptic curve on the quadric
@@ -1034,6 +1194,8 @@
     blowdown: ["3-31", "3-31"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
+
+    period: 110, 88 # there is an issue with the labeling on http://coates.ma.ic.ac.uk/fanosearch/?page_id=277
 
 
   3:
@@ -1047,6 +1209,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
+    period: 83, 122
+
 
   4:
     description: blowup of ((3-19)) in the proper transform of a conic through the points
@@ -1059,6 +1223,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2]]
 
+    period: 68, 103
+
 
   5:
     description: blowup of ((2-34)) in the disjoint union of a curve of degree $(2,1)$ and a curve of degree $(1,0)$
@@ -1070,6 +1236,8 @@
     blowdown: ["3-21", "3-28", "3-31"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2]]
+
+    period: 81, 147
 
 
   6:
@@ -1086,6 +1254,8 @@
 
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
+    period: 65, 65
+
 
   7:
     description: blowup of ((2-32)) in the disjoint union of a curve of degree $(0,1)$ and a curve of degree $(1,0)$
@@ -1098,6 +1268,8 @@
 
     Aut: [["\\mathrm{GL}_2", 0, 4]]
 
+    period: 57, 69
+
 
   8:
     description: blowup of ((3-27)) in a curve of degree $(0,1,1)$
@@ -1109,6 +1281,8 @@
     blowdown: ["3-27", "3-31"]
 
     Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0, 5]]
+
+    period: 54, 105
 
 
   9:
@@ -1124,6 +1298,8 @@
 
     toric: 13
 
+    period: 37, 102
+
 
   10:
     description: $\mathbb{P}^1\times\mathrm{Bl}_2\mathbb{P}^2$
@@ -1137,6 +1313,8 @@
     Aut: [["\\mathrm{PGL}_2\\times\\mathrm{B}^2", 0, 7]]
 
     toric: 14
+
+    period: 48, 142
 
 
   11:
@@ -1152,6 +1330,8 @@
 
     toric: 10
 
+    period: 34, 93
+
 
   12:
     description: blowup of ((2-33)) in the disjoint union of two exceptional lines of the blowup
@@ -1166,6 +1346,8 @@
 
     toric: 8
 
+    period: 29, 150
+
 
   13:
     description: blowup of ((3-27)) in a curve of degree $(1,1,3)$
@@ -1177,6 +1359,8 @@
     blowdown: ["3-27", "3-31", "3-31"]
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
+
+    period: 88, 32
 
 
 # rank 5
@@ -1192,6 +1376,8 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
+    period: 100, 114
+
 
   2:
     description: blowup of ((3-25)) in the disjoint union of two exceptional lines on the same irreducible component
@@ -1205,6 +1391,8 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{GL}_2", 0, 5]]
 
     toric: 15
+
+    period: 64, 87
 
 
   3:
@@ -1220,6 +1408,8 @@
 
     toric: 9
 
+    period: 76, 43
+
 
 # rank 6
 6:
@@ -1233,6 +1423,8 @@
     blowdown: ["5-3"]
 
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
+
+    period: 107, 64
 
 
 # rank 7
@@ -1248,6 +1440,8 @@
 
     Aut: [["\\mathrm{PGL}_2", 2, 3]]
 
+    period: 136, 71
+
 
 # rank 8
 8:
@@ -1261,6 +1455,8 @@
     blowdown: ["7-1"]
 
     Aut: [["\\mathrm{PGL}_2", 4, 3]]
+
+    period: 155, 45
 
 
 # rank 9
