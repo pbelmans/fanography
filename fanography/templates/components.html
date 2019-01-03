@@ -407,6 +407,7 @@
 {% endmacro %}
 
 
+{# information about deformation theory #}
 {% macro deformations(fano) %}
 <dl class="row">
   <dt class="col-6 text-right">number of moduli</dt>
@@ -440,4 +441,21 @@
     </tbody>
   </table>
 </dl>
+{% endmacro %}
+
+
+{# information about period sequences #}
+{% macro period(fano) %}
+{% if fano.period %}
+  <p>The following period sequences are associated to this Fano 3-fold:</p>
+  <dl class="row">
+    <dt class="col-6 text-right">GRDB</dt>
+    <dd class="col-6"><a href="http://www.grdb.co.uk/search/period3?id={{ fano.period_grdb }}">#{{ fano.period_grdb }}</a>
+
+    <dt class="col-6 text-right">Fanosearch</dt>
+    <dd class="col-6"><a href="http://coates.ma.ic.ac.uk/3DMinkowskiPeriodSequences.html#{{ fano.period_fanosearch }}">#{{ fano.period_fanosearch }}</a>
+  </dl>
+{% else %}
+  <p>There is no period sequence associated to this Fano 3-fold.
+{% endif %}
 {% endmacro %}

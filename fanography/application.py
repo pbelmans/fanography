@@ -90,6 +90,14 @@ class Fano:
     else:
       self.toric = False
 
+    # dealing with (links to) period sequences
+    if "period" in yaml:
+      self.period = True
+      self.period_grdb = yaml["period"].split(", ")[0]
+      self.period_fanosearch = yaml["period"].split(", ")[1]
+    else:
+      self.period = False
+
     # deal with Aut^0: (description of group, number of moduli with this group, dimension of group)
     if "Aut" not in yaml:
       self.Aut = [("0", self.moduli[0], 0)]

@@ -11,6 +11,7 @@
   {{ components.component("Anticanonical bundle", components.anticanonical(fano)) }}
   {{ components.component("Birational geometry", components.birational(fano), id="birational") }}
   {{ components.component("Deformation theory", components.deformations(fano)) }}
+  {{ components.component("Period sequence", components.period(fano)) }}
 
   {% if fano.toric %}
     {{ components.component("Toric geometry", components.toric(fano)) }}
