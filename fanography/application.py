@@ -231,6 +231,14 @@ def show_toric():
   return render_template("toric.html", fanos=fanos, order=order)
 
 
+@app.route("/delpezzo")
+def show_delpezzo():
+  # let's hardcode the order from Iskovskikh--Prokhorov (this therefore acts as the filtering)
+  order = [(1, 11, -1), (1, 12, -1), (1, 13, -1), (1, 14, -1), (1, 15, "\leq 6"), (3, 27, 3), (2, 32, "\leq 4"), (2, 35, 3)]
+
+  return render_template("delpezzo.html", fanos=fanos, order=order)
+
+
 """
 # Naming scheme
 
