@@ -9,6 +9,7 @@
 <h2>del Pezzo surface: {{ delpezzo.label }}</h2>
 
   <div class="card-columns">
+    {{ components.component("Identification", components.delpezzo_basic(delpezzo, previous, next)) }}
     {{ components.component("Hodge diamond", components.delpezzo_diamond(delpezzo)) }}
     {{ components.component("Deformation theory", components.delpezzo_deformations(delpezzo)) }}
 

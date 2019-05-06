@@ -550,7 +550,7 @@
   <span>0</span><br style="clear: both">
 
   <span>0</span>
-  <span>{{ 10 - delpezzo.degree }}</span>
+  <span>{{ delpezzo.rank }}</span>
   <span>0</span><br style="clear: both">
 
   <span>0</span>
@@ -568,5 +568,29 @@
   <dd class="col-6">{{ delpezzo["index"] }}</dd>
 
 
+</dl>
+{% endmacro %}
+
+
+{# basic information on a del Pezzo surface#}
+{% macro delpezzo_basic(delpezzo, previous, next) %}
+<p class="clearfix">
+{% if previous %}
+  <a class="previous float-left identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ previous.ID }}' href="/delpezzos/{{ previous.ID }}">{{ previous.label }}</a>
+{% endif %}
+
+{% if next %}
+  <a class="next float-right identifier" data-toggle="tooltip" data-placement="bottom" data-html="true" title='{{ next.ID }}' href="/delpezzos/{{ next.ID }}">{{ next.label }}</a>
+{% endif %}
+</p>
+
+<h5 class="card-title">del Pezzo surface <span class="identifier">{{ delpezzo.label }}</span>{% if delpezzo["name"] %}: {{ delpezzo["name"] }}{% endif %}</h5>
+
+<dl class="row">
+  <dt class="col-6 text-right">rank
+  <dd class="col-6">{{ delpezzo.rank }}
+
+  <dt class="col-6 text-right">$-\mathrm{K}_X^2$
+  <dd class="col-6">{{ delpezzo.degree }}
 </dl>
 {% endmacro %}

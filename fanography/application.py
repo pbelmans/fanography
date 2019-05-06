@@ -149,6 +149,7 @@ class delPezzo:
 
     # number of exceptional curves
     self.exceptional = yaml["exceptional"]
+    self.rank = 10 - self.degree
 
     # deal with moduli
     if self.degree >= 5:
@@ -220,6 +221,8 @@ with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "data.yml"),
 
 # create the dictionary of all deformation families of del Pezzo surfaces
 delpezzos = dict()
+
+delpezzos_order = ["dP9", "P1xP1", "dP8", "dP7", "dP6", "dP5", "dP4", "dP3", "dP2", "dP1"]
 
 with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzos.yml"), "r") as f:
   data = yaml.load(f)
@@ -298,10 +301,19 @@ def show_delpezzosurfaces():
 
 @app.route("/delpezzos/<string:ID>")
 def show_delpezzosurface(ID):
-  if ID not in delpezzos:
-    return render_template("delpezzo.notfound.html", delpezzos=delpezzos, ID=ID)
+  try:
+    previous = None
+    if delpezzos_order.index(ID) > 0:
+      previous = delpezzos[delpezzos_order[delpezzos_order.index(ID) - 1]]
 
-  return render_template("delpezzo.show.html", delpezzo=delpezzos[ID])
+    next = None
+    if delpezzos_order.index(ID) < 9:
+      next = delpezzos[delpezzos_order[delpezzos_order.index(ID) + 1]]
+
+    return render_template("delpezzo.show.html", delpezzo=delpezzos[ID], previous=previous, next=next)
+
+  except KeyError:
+    return render_template("delpezzo.notfound.html", delpezzos=delpezzos, ID=ID)
 
 
 """
