@@ -131,6 +131,47 @@ class Fano:
     return re.sub(r"\(\((\d){1}-(\d){1}\)\)", replacement, string)
 
 
+class delPezzo:
+  def __init__(self, ID, yaml):
+    self.ID  = ID
+
+    self.label = yaml["label"]
+    self.degree = int(ID[2]) if ID[0:2] == "dP" else 8
+
+    self.name = yaml["name"] if "name" in yaml else ""
+
+    # deal with constructions
+    self.anticanonical = yaml["anticanonical"]
+
+    self.intersections = []
+    if "intersections" in yaml:
+      self.intersections.extend(yaml["intersections"])
+
+    # number of exceptional curves
+    self.exceptional = yaml["exceptional"]
+
+    # deal with moduli
+    if self.degree >= 5:
+      self.moduli = 0
+    else:
+      self.moduli = (5 - self.degree) * 2
+
+    # deal with automorphism groups: degree 5 and higher is rigid, so there is a unique automorphism group, for lower degrees: it varies in moduli
+    if self.degree >= 6:
+      self.automorphisms = yaml["Aut"]
+    else:
+      self.automorphisms = ["finite", 0]
+
+      # deal with the possible finite automorphism groups
+      if self.degree <= 4:
+        self.groups = yaml["Aut"]["groups"]
+
+    # the anticanonical bundle
+    self.index = yaml["index"]
+    self.very_ample_power = 1 if self.degree >= 7 else (2 if self.degree == 8 else 3) # evidently I am ambivalent of what is explicit and what not...
+
+
+
 # create the dictionary of all deformation families of Fano 3-folds
 fanos = {i: dict() for i in range(1, 11)}
 
@@ -175,6 +216,17 @@ with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "data.yml"),
 
     for ID in fanos[rho].keys():
       fanos[rho][ID].blowup = [fano for fano in fanos[rho + 1].values() if "{}-{}".format(rho, ID) in [blowdown.identifier() for blowdown in fano.blowdown]]
+
+
+# create the dictionary of all deformation families of del Pezzo surfaces
+delpezzos = dict()
+
+with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzos.yml"), "r") as f:
+  data = yaml.load(f)
+
+  # read in the data
+  for ID in data.keys():
+    delpezzos[ID] = delPezzo(ID, data[ID])
 
 
 @app.route("/")
@@ -228,15 +280,28 @@ def show_toric():
   # let's hardcode the order from Iskovskikh--Prokhorov (this therefore acts as the filtering)
   order = [(1, 17), (2, 36), (2, 35), (2, 33), (2, 34), (3, 31), (3, 29), (3, 30), (3, 27), (3, 28), (3, 26), (3, 25), (4, 12), (4, 11), (4, 10), (4, 9), (5, 3), (5, 2)]
 
-  return render_template("toric.html", fanos=fanos, order=order)
+  return render_template("table.toric.html", fanos=fanos, order=order)
 
 
-@app.route("/delpezzo")
-def show_delpezzo():
+@app.route("/delpezzo-varieties")
+def show_delpezzovarieties():
   # let's hardcode the order from Iskovskikh--Prokhorov (this therefore acts as the filtering)
   order = [(1, 11, -1), (1, 12, -1), (1, 13, -1), (1, 14, -1), (1, 15, "\leq 6"), (3, 27, 3), (2, 32, "\leq 4"), (2, 35, 3)]
 
-  return render_template("delpezzo.html", fanos=fanos, order=order)
+  return render_template("table.delpezzo-varieties.html", fanos=fanos, order=order)
+
+
+@app.route("/delpezzos")
+def show_delpezzosurfaces():
+  return render_template("table.delpezzo-surfaces.html", delpezzos=delpezzos)
+
+
+@app.route("/delpezzos/<string:ID>")
+def show_delpezzosurface(ID):
+  if ID not in delpezzos:
+    return render_template("delpezzo.notfound.html", delpezzos=delpezzos, ID=ID)
+
+  return render_template("delpezzo.show.html", delpezzo=delpezzos[ID])
 
 
 """

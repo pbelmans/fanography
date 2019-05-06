@@ -207,8 +207,8 @@
 {% endmacro %}
 
 
-{# del Pezzo table #}
-{% macro delpezzotable(fanos, order) %}
+{# del Pezzo varieties table #}
+{% macro delpezzovarieties(fanos, order) %}
 <table class="table">
   <thead>
     <tr>
@@ -512,4 +512,61 @@
 {% else %}
   <p>There is no period sequence associated to this Fano 3-fold.
 {% endif %}
+{% endmacro %}
+
+
+{# information about deformations and automorphism groups of a del Pezzo surface #}
+{% macro delpezzo_deformations(delpezzo) %}
+<dl class="row">
+  <dt class="col-6 text-right">number of moduli</dt>
+  <dd class="col-6">{{ delpezzo.moduli }}</dd>
+
+  {% if delpezzo.degree == 3 %}
+    <table>
+      <tr>
+        <th class="text-center">type</th>
+        <th class="text-center">order</th>
+        <th class="text-center">structure</th>
+      </tr>
+      {% for group in delpezzo.groups %}
+        <tr>
+          <td class="text-center">{{ group[0] }}</td>
+          <td class="text-center">{{ group[1] }}</td>
+          <td class="text-center">{{ group[2] }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+</dl>
+{% endmacro %}
+
+
+{# Hodge diamond for a del Pezzo surface #}
+{% macro delpezzo_diamond(delpezzo) %}
+<div class="diamond">
+  <span>1</span><br style="clear: both">
+
+  <span>0</span>
+  <span>0</span><br style="clear: both">
+
+  <span>0</span>
+  <span>{{ 10 - delpezzo.degree }}</span>
+  <span>0</span><br style="clear: both">
+
+  <span>0</span>
+  <span>0</span><br style="clear: both">
+
+  <span>1</span><br style="clear: both">
+</div>
+{% endmacro %}
+
+
+{# information about the anticanonical bundle of a del Pezzo surface #}
+{% macro delpezzo_anticanonical(delpezzo) %}
+<dl class="row">
+  <dt class="col-6 text-right">index</dt>
+  <dd class="col-6">{{ delpezzo["index"] }}</dd>
+
+
+</dl>
 {% endmacro %}

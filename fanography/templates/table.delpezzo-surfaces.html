@@ -1,0 +1,82 @@
+{% extends "page.html" %}
+
+{% import "components.html" as components %}
+
+{% block title %}List of del Pezzo surfaces{% endblock %}
+
+{% block content %}
+
+{# del Pezzo surfaces #}
+<table class="table table-hover table-sm">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">description</th>
+
+      <th scope="col" class="text-center">degree</th>
+
+      <th scope="col">description</th>
+
+      <th scope="col" class="text-center">number of exceptional lines</th>
+
+      <th scope="col" class="text-center">moduli</th>
+
+      <th scope="col" class="text-center">$\dim\mathrm{Aut}$</th>
+
+      <th scope="col" class="text-center">automorphism group</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for ID in delpezzos %}
+      {% set delpezzo = delpezzos[ID] %}
+
+      <tr>
+        <td class="text-center"><a href="/delpezzos/{{ ID }}">{{ delpezzo.label }}</a></td>
+
+        <td class="text-center">{{ delpezzo.degree }}</td>
+
+        <td>
+          <strong>{{ delpezzo.name }}</strong>
+
+          {% if delpezzo["intersections"] %}
+            <dl class="d-none d-xl-block d-print-block mb-0">
+              <dt>as complete intersection</dt>
+              {% for intersection in delpezzo["intersections"] %}
+                <dd class="mb-0 ml-5">{{ intersection }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+
+        </td>
+
+        <td class="text-center">{{ delpezzo.exceptional }}</td>
+
+        <td class="text-center">{{ delpezzo.moduli }}</td>
+
+        <td class="text-center">{{ delpezzo.automorphisms[1] }}</td>
+
+        <td class="text-center">{{ delpezzo.automorphisms[0] }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+<h2>General position</h2>
+<!-- TODO have this also on the description page for each surface -->
+
+<ul>
+  <li>no three are collinear
+  <li>no six on the same conic
+  <li>no eight on a cubic with a double point at one of them
+</ul>
+
+<h2>The great debate</h2>
+<p>Regarding the spelling of <em>del Pezzo</em> (some authors write Del Pezzo), Miles Reid writes the following in &sect;0.7 of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1311389">Nonnormal del Pezzo varieties</a>:
+
+<blockquote>Rend, del circolo matematico di Palermo <strong>1</strong> (1887), p. 382 records the admission to the circle of <em>dottore Pasquale del Pezzo, marchese di Campodisola</em>. It would be interesting to know why Corrado Segre writing in the same volume (p. 218, 220, 221), along with every subsequent Italian writer, spells the Marquis' name incorrectly with a capital D.
+
+
+{% endblock %}
+

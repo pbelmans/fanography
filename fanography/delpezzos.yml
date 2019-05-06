@@ -1,0 +1,163 @@
+# TODO: determine which hyperplane sections of index at least 2 Fano 3-folds appear as which del Pezzo surface
+# TODO: see also notion of strain by Sergey
+# 1-17: P^2
+# 1-16: P^1xP^1
+# 1-15: Bl_4 P^2
+# 1-14: Bl_5 P^2 (intersection of quadrics)
+# 1-13: Bl_6 P^2 (cubic surface)
+# 1-12: Bl_7 P^2 (ramified along quartic)
+# 1-11: Bl_8 P^2 (?)
+#
+# 2-32: (1,1) divisor on P^2xP^2 = ?
+# 2-35: Bl_p P^3                 = ?
+# 3-27: P^1xP^1xP^1              = ?
+# is there a relationship between -K_X^3 and K_S^2? adjunction formula?
+# TODO exercise 8.15 in Dolgachev?
+
+
+# TODO: include a toric picture for 9, 8a, 8b, 7, 6
+# include polyvector parallelogram
+#
+#
+#
+# TODO Demazure, page 34 has some tables!
+#
+#
+# 2.2.2. of https://arxiv.org/pdf/1901.01748.pdf for descriptions
+
+dP9:
+  label: $\mathbb{P}^2$
+  name: projective plane
+  anticanonical: Segre embedding of degree $3$ for $\mathbb{P}^2$ in $\mathbb{P}^9$
+
+  index: 3
+
+  exceptional: 0
+  Aut: ['$\mathrm{PGL}_3$', 8]
+
+P1xP1:
+  label: $\mathbb{P}^1\times\mathbb{P}^1$
+  name: quadric surface
+  anticanonical: Veronese embedding of $\mathbb{P}^1\times\mathbb{P}^1$ in $\mathbb{P}^8$
+
+  index: 2
+
+  exceptional: 0
+  Aut: ['$(\mathrm{PGL}_2\times\mathrm{PGL}_2)\rtimes\mathbb{Z}/2\mathbb{Z}$', 6]
+
+dP8:
+  label: $\mathrm{Bl}_1\mathbb{P}^2$
+  anticanonical: TODO in $\mathbb{P}^8
+  intersections:
+    - divisor of degree $(1,1)$ in $\mathbb{P}^1\times\mathbb{P}^2$
+
+  index: 1
+
+  exceptional: 1
+  Aut: [TODO, 6]
+
+dP7:
+  label: $\mathrm{Bl}_2\mathbb{P}^2$
+  anticanonical: TODO in $\mathbb{P}^7
+  intersections:
+    - complete intersection of $(1,0,1)$- and $(0,1,1)$-divisor in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$
+
+  index: 1
+
+  exceptional: 3
+  Aut: [TODO, 4]
+
+dP6:
+  label: $\mathrm{Bl}_3\mathbb{P}^2$
+  anticanonical: TODO in $\mathbb{P}^6
+  intersections:
+    - divisor of degree $(1,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$
+    - complete intersection of two $(1,1)$-divisors in $\mathbb{P}^2\times\mathbb{P}^2$
+
+  index: 1
+
+  exceptional: 6
+  Aut: ['$(\mathbb{G}_{\mathrm{m}}^2\rtimes\mathrm{Sym}_3)\times\mathrm{Sym}_2$', 2] # theorem 8.4.2 of Dolgachev, CAG
+
+dP5:
+  label: $\mathrm{Bl}_4\mathbb{P}^2$
+  anticanonical: TODO in $\mathbb{P}^5
+  intersections:
+    - divisor of degree $(1,2)$ in $\mathbb{P}^1\times\mathbb{P}^2$
+    - section of $\mathrm{Gr}(2,5)$ in $\mathbb{P}^9$ by a codimension 4 linear subspace # proposition 8.5.1 of Dolgachev, CAG
+
+  index: 1
+
+  exceptional: 10
+  Aut:
+    description: $\mathrm{Sym}_5$ # theorem 8.5.6 of Dolgachev, CAG
+
+dP4:
+  name: "Segre surface"
+  label: $\mathrm{Bl}_5\mathbb{P}^2$
+  anticanonical: intersection of 2 quadrics in $\mathbb{P}^4$, also known as a Segre quartic surface
+
+  index: 1
+
+  exceptional: 16
+  Aut:
+    description: normal subgroup of the Weyl group of type $\mathrm{D}_5$, which is isomorphic to $(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5$ with quotient isomorphic to $\mathrm{Cyc}_2$, $\mathrm{Cyc}_4$, $\mathrm{Dih}_6$ or $\mathrm{Dih}_{10}$ # proposition 8.6.5 of Dolgachev, CAG, see also theorem 8.6.6
+    groups: TODO
+
+dP3:
+  name: "cubic surface"
+  label: $\mathrm{Bl}_6\mathbb{P}^2$
+  anticanonical: cubic surface in $\mathbb{P}^3$
+  intersections:
+    - triple cover of $\mathbb{P}^2$ branched along a sextic with six cusps lying on a smooth conic
+    - conic bundle over $\mathbb{P}^1$ ramified in 5 points
+
+  index: 1
+
+  exceptional: 27
+  Aut:
+    description: subgroup of the Weyl group of type $\mathrm{E}_6$ # proposition 8.7.3 of Dolgachev, CAG, see also table 9.6
+    groups:
+      - [I, 648, '$3^3:\mathrm{Sym}_4$', $t_0^3 + t_1^3 + t_2^3 + t_3^3$]
+      - [II, 120, '$\mathrm{Sym}_5$']
+      - [III, 108, '$\mathcal{H}_3(3):4$']
+      - [IV, 54, '$\mathcal{H}_3(3):2$']
+      - [V, 24, '$\mathrm{Sym}_4$']
+      - [VI, 12, '$\mathrm{Sym}_3\times 2$']
+      - [VII, 8, $8$]
+      - [VIII, 6, '$\mathrm{Sym}_3$']
+      - [IX, 4, $4$]
+      - [IX, 4, $2^2$]
+      - [XI, 2, $2$, $t_0^2(t_1+bt_2+ct_3) + t_1^3 + t_2^3 + t_3^3 + 6at_1t_2t_3$]
+
+dP2:
+  name: "del Pezzo double plane"
+  label: $\mathrm{Bl}_7\mathbb{P}^2$
+  anticanonical: double cover of $\mathbb{P}^2$ branched along a quartic curve
+  intersections:
+    - quartic surface in $\mathbb{P}(1,1,1,2)$ # this is tautological from the previous construction
+
+  index: 1
+
+  exceptional: 56
+  Aut:
+    description: subgroup of the Weyl group of type $\mathrm{E}_7$ # proposition 8.7.3 of Dolgachev, CAG, see also table 8.9
+    groups: TODO
+
+dP1:
+  label: $\mathrm{Bl}_8\mathbb{P}^2$
+  anticanonical: $\mathbb{P}^1$
+  bianticanonical: double cover of quadric cone in $\mathbb{P}^3$ branched of nonsingular genus 4 curve cut out by cubic surface
+  intersections:
+    - sextic surface in $\mathbb{P}(1,1,2,3)$
+
+  index: 1
+
+  exceptional: 240
+  Aut:
+    description: TODO # is this not a subgroup of W(E_8)?! see also table 8.14
+    groups: TODO
+
+# lines on del Pezzo surface:
+# degree 5: figure 8.4 in Dolgachev, Petersen graph
+# degree 4: figure 8.5 in Dolgachev

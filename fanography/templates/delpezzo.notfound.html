@@ -1,0 +1,17 @@
+{% extends "page.html" %}
+
+{% block title %}Entry not found{% endblock %}
+
+{% block content %}
+<h2>Entry <span class="identifier">{{ ID }}</span> not found.</h2>
+
+<p>There aren't many del Pezzo surfaces. Are you maybe looking for one of these?
+
+<ul>
+  {% for ID in delpezzos %}
+  <li><a href="/delpezzos/{{ ID }}">{{ delpezzos[ID].label }}</a>
+  {% endfor %}
+</ul>
+
+{% endblock %}
+
