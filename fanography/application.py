@@ -224,7 +224,7 @@ delpezzos = dict()
 
 delpezzos_order = ["dP9", "P1xP1", "dP8", "dP7", "dP6", "dP5", "dP4", "dP3", "dP2", "dP1"]
 
-with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzos.yml"), "r") as f:
+with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-surfaces.yml"), "r") as f:
   data = yaml.load(f)
 
   # read in the data
@@ -290,6 +290,13 @@ def show_toric():
 def show_delpezzovarieties():
   # let's hardcode the order from Iskovskikh--Prokhorov (this therefore acts as the filtering)
   order = [(1, 11, -1), (1, 12, -1), (1, 13, -1), (1, 14, -1), (1, 15, "\leq 6"), (3, 27, 3), (2, 32, "\leq 4"), (2, 35, 3)]
+
+  with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-varieties.yml"), "r") as f:
+    data = yaml.load(f)
+
+    # read in the data
+    for ID in data.keys():
+      order[ID] = (order[ID][0], order[ID][1], order[ID][2], data[ID])
 
   return render_template("table.delpezzo-varieties.html", fanos=fanos, order=order)
 

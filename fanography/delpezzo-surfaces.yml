@@ -38,7 +38,7 @@ dP9:
 P1xP1:
   label: $\mathbb{P}^1\times\mathbb{P}^1$
   name: quadric surface
-  anticanonical: Veronese embedding of $\mathbb{P}^1\times\mathbb{P}^1$ in $\mathbb{P}^8$
+  anticanonical: Segre embedding of degree $2$ for $\mathbb{P}^3$ in $\mathbb{P}^8$ restricted to $\mathbb{P}^1\times\mathbb{P}^1$
 
   index: 2
 
@@ -93,9 +93,9 @@ dP5:
     description: $\mathrm{Sym}_5$ # theorem 8.5.6 of Dolgachev, CAG
 
 dP4:
-  name: "Segre surface"
+  name: "Segre quartic surface"
   label: $\mathrm{Bl}_5\mathbb{P}^2$
-  anticanonical: intersection of 2 quadrics in $\mathbb{P}^4$, also known as a Segre quartic surface
+  anticanonical: intersection of 2 quadrics in $\mathbb{P}^4$
 
   index: 1
 

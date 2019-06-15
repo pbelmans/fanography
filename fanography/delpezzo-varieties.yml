@@ -1,0 +1,25 @@
+0:
+  description: hypersurface of degree 6 in $\mathbb{P}(1,\ldots,1,2,3)$
+
+1:
+  description: double cover of $\mathbb{P}^n$ with branch locus a smooth quartic hypersurface
+
+2:
+  description: cubic hypersurface
+
+3:
+  description: complete intersection of two quadrics
+
+4:
+  description: linear section of Plücker embedding of $\mathrm{Gr}(2,5)$
+
+5:
+  # let's omit it to avoid repetition
+  #description: $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$
+
+6:
+  description: linear section of Segre embedding of $\mathbb{P}^2\times\mathbb{P}^2$
+
+7:
+  # let's omit it to avoid repetition
+  #description: $\mathrm{Bl}_p\mathbb{P}^3$

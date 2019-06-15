@@ -212,19 +212,21 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col" class="text-center">ID</th>
+      <th scope="col" class="text-center">Fano 3-fold</th>
 
-      <th scope="col" class="text-center" data-sort-method="number">$H^3$</th>
+      <th scope="col" class="text-center" data-sort-method="number">$H^{\dim X}$</th>
 
       <th scope="col" class="text-center" data-sort-method="number">$\rho$</th>
 
       <th scope="col" class="text-center">dimension</th>
 
+      <th scope="col" class="no-sort" data-sort-method="none">description in dimension 3</th>
+
       <th scope="col" class="no-sort" data-sort-method="none">description</th>
     </tr>
   </thead>
   <tbody>
-    {% for (rho, ID, dimension) in order %}
+    {% for (rho, ID, dimension, data) in order %}
       {% set fano = fanos[rho][ID] %}
 
       <tr>
@@ -253,6 +255,10 @@
               {% endfor %}
             </dl>
           {% endif %}
+        </td>
+
+        <td class="align-middle description">
+          {{ data["description"] }}
         </td>
       </tr>
     {% endfor %}
