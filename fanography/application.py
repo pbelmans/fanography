@@ -169,7 +169,7 @@ class delPezzo:
 
     # the anticanonical bundle
     self.index = yaml["index"]
-    self.very_ample_power = 1 if self.degree >= 7 else (2 if self.degree == 8 else 3) # evidently I am ambivalent of what is explicit and what not...
+    self.very_ample_power = 1 if self.degree >= 7 else (2 if self.degree == 2 else 3) # evidently I am ambivalent of what is explicit and what not...
 
 
 

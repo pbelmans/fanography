@@ -305,7 +305,7 @@
 {% endif %}
 
 <dl class="row">
-  <dt class="col-6 text-right">rank
+  <dt class="col-6 text-right">Picard rank
   <dd class="col-6">{{ fano["rho"] }}
   {% if fano["rho"] in [1, 2, 3, 4, 5] %}(<a href="/{{ fano["rho"] }}">others</a>){% endif %}
 
@@ -521,19 +521,47 @@
 {% endmacro %}
 
 
-{# information about deformations and automorphism groups of a del Pezzo surface #}
+{# information about anticanonical bundle of a del Pezzo surface #}
+{% macro delpezzo_anticanonical(delpezzo) %}
+<dl class="row">
+  <dt class="col-6 text-right">index</dt>
+  <dd class="col-6">{{ delpezzo["index"] }}</dd>
+
+  <dt class="col-6 text-right">$\dim\mathrm{H}^0(S,\omega_S^\vee)$</dt>
+  <dd class="col-6">{{ delpezzo["degree"] + 1}}</dd>
+
+  <dt class="col-6 text-right">$-\mathrm{K}_S$ very ample?</dt>
+  <dd class="col-6">
+    {% if delpezzo["degree"] >= 3 %}yes
+    {% elif delpezzo["degree"] == 2 %}no, but $-2\mathrm{K}_S$ is
+    {% elif delpezzo["degree"] == 1 %}no, but $-3\mathrm{K}_S$ is
+    {% endif %}
+</dl>
+{% endmacro %}
+
+
+{# information about deformations of a del Pezzo surface #}
 {% macro delpezzo_deformations(delpezzo) %}
 <dl class="row">
   <dt class="col-6 text-right">number of moduli</dt>
   <dd class="col-6">{{ delpezzo.moduli }}</dd>
+</dl>
+{% endmacro %}
 
+{# information about automorphism groups of a del Pezzo surface #}
+{% macro delpezzo_automorphisms(delpezzo) %}
+<dl class="row">
   {% if delpezzo.degree == 3 %}
-    <table>
-      <tr>
-        <th class="text-center">type</th>
-        <th class="text-center">order</th>
-        <th class="text-center">structure</th>
-      </tr>
+    <table class="table-sm mx-auto">
+      <thead>
+        <tr class="border-bottom">
+          <th class="text-center">type</th>
+          <th class="text-center">order</th>
+          <th class="text-center">structure</th>
+        </tr>
+      </thead>
+
+      <tbody>
       {% for group in delpezzo.groups %}
         <tr>
           <td class="text-center">{{ group[0] }}</td>
@@ -541,6 +569,7 @@
           <td class="text-center">{{ group[2] }}</td>
         </tr>
       {% endfor %}
+      </tbody>
     </table>
   {% endif %}
 </dl>
@@ -567,16 +596,6 @@
 {% endmacro %}
 
 
-{# information about the anticanonical bundle of a del Pezzo surface #}
-{% macro delpezzo_anticanonical(delpezzo) %}
-<dl class="row">
-  <dt class="col-6 text-right">index</dt>
-  <dd class="col-6">{{ delpezzo["index"] }}</dd>
-
-
-</dl>
-{% endmacro %}
-
 
 {# basic information on a del Pezzo surface#}
 {% macro delpezzo_basic(delpezzo, previous, next) %}
@@ -593,7 +612,7 @@
 <h5 class="card-title">del Pezzo surface <span class="identifier">{{ delpezzo.label }}</span>{% if delpezzo["name"] %}: {{ delpezzo["name"] }}{% endif %}</h5>
 
 <dl class="row">
-  <dt class="col-6 text-right">rank
+  <dt class="col-6 text-right">Picard rank
   <dd class="col-6">{{ delpezzo.rank }}
 
   <dt class="col-6 text-right">$-\mathrm{K}_X^2$

@@ -11,7 +11,9 @@
   <div class="card-columns">
     {{ components.component("Identification", components.delpezzo_basic(delpezzo, previous, next)) }}
     {{ components.component("Hodge diamond", components.delpezzo_diamond(delpezzo)) }}
+    {{ components.component("Anticanonical bundle", components.delpezzo_anticanonical(delpezzo)) }}
     {{ components.component("Deformation theory", components.delpezzo_deformations(delpezzo)) }}
+    {{ components.component("Automorphism groups", components.delpezzo_automorphisms(delpezzo)) }}
 
     {#
     {% if fano.toric %}
