@@ -88,8 +88,7 @@ dP5:
   index: 1
 
   exceptional: 10
-  Aut:
-    description: $\mathrm{Sym}_5$ # theorem 8.5.6 of Dolgachev, CAG
+  Aut: ['$\mathrm{Sym}_5$', 0] # theorem 8.5.6 of Dolgachev, CAG
 
 dP4:
   name: "Segre quartic surface"
@@ -101,7 +100,12 @@ dP4:
   exceptional: 16
   Aut:
     description: normal subgroup of the Weyl group of type $\mathrm{D}_5$, which is isomorphic to $(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5$ with quotient isomorphic to $\mathrm{Cyc}_2$, $\mathrm{Cyc}_4$, $\mathrm{Dih}_6$ or $\mathrm{Dih}_{10}$ # proposition 8.6.5 of Dolgachev, CAG, see also theorem 8.6.6
-    groups: TODO
+    groups:
+      - [I, 960, '$0\to\mathrm{Aut}(S)\to(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5\to\mathbb{Z}/2\mathbb{Z}\to 0$']
+      - [II, 480, '$0\to\mathrm{Aut}(S)\to(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5\to\mathbb{Z}/4\mathbb{Z}\to 0$']
+      - [III, 320, '$0\to\mathrm{Aut}(S)\to(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5\to\mathrm{Sym}_3\to 0$']
+      - [IV, 192, '$0\to\mathrm{Aut}(S)\to(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5\to\mathrm{Dih}_{10}\to 0$']
+
 
 dP3:
   name: "cubic surface"
@@ -141,7 +145,20 @@ dP2:
   exceptional: 56
   Aut:
     description: subgroup of the Weyl group of type $\mathrm{E}_7$ # proposition 8.7.3 of Dolgachev, CAG, see also table 8.9
-    groups: TODO
+    groups: # TODO include ramification curve
+      - [I, 336, '$\mathbb{Z}/2\mathbb{Z}\times\mathrm{PSL}_2(\mathbb{F}_7)$', $t_3^2 + t_0^3t_1 + t_1^3t_2 + t_2^3t_0$]
+      - [II, 192, '$\mathbb{Z}/2\mathbb{Z}\times((\mathbb{Z}/4\mathbb{Z})^2\rtimes\mathrm{Sym}_3)$']
+      - [III, 96, '$\mathbb{Z}/2\mathbb{Z}\times(\mathrm{Alt}_4)^4$']
+      - [IV, 48, '$\mathbb{Z}/2\mathbb{Z}\times\mathrm{Sym}_4$']
+      - [V, 32, '$\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/4\mathbb{Z}\times(\mathbb{Z}/2\mathbb{Z})^2$']
+      - [VI, 18, '$\mathbb{Z}/18\mathbb{Z}$']
+      - [VII, 16, '$\mathbb{Z}/2\mathbb{Z}\times\mathrm{Dih}_8$']
+      - [VIII, 12, '$\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/6\mathbb{Z}$']
+      - [IX, 12, '$\mathbb{Z}/2\mathbb{Z}\times\mathrm{Sym}_3$']
+      - [X, 8, '$(\mathbb{Z}/2\mathbb{Z})^3$']
+      - [XI, 6, '$\mathbb{Z}/6\mathbb{Z}$']
+      - [XII, 4, '$(\mathbb{Z}/2\mathbb{Z})^2$']
+      - [XIII, 2, '$\mathbb{Z}/2\mathbb{Z}$']
 
 dP1:
   label: $\mathrm{Bl}_8\mathbb{P}^2$
@@ -155,7 +172,28 @@ dP1:
   exceptional: 240
   Aut:
     description: TODO # is this not a subgroup of W(E_8)?! see also table 8.14
-    groups: TODO
+    groups:
+      - [I, 144, '']
+      - [II, 72, '']
+      - [III, 36, '']
+      - [IV, 30, '']
+      - [V, 24, '']
+      - [VI, 24, '']
+      - [VII, 24, '']
+      - [VIII, 20, '']
+      - [IX, 16, '']
+      - [X, 12, '']
+      - [XI, 12, '']
+      - [XII, 12, '']
+      - [XIII, 10, '']
+      - [XIV, 8, '']
+      - [XV, 8, '']
+      - [XVI, 8, '']
+      - [XVII, 6, '']
+      - [XVIII, 6, '']
+      - [XIX, 4, '']
+      - [XX, 4, '']
+      - [XXI, 2, '']
 
 # lines on del Pezzo surface:
 # degree 5: figure 8.4 in Dolgachev, Petersen graph

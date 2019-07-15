@@ -158,7 +158,7 @@ class delPezzo:
       self.moduli = (5 - self.degree) * 2
 
     # deal with automorphism groups: degree 5 and higher is rigid, so there is a unique automorphism group, for lower degrees: it varies in moduli
-    if self.degree >= 6:
+    if self.degree >= 5:
       self.automorphisms = yaml["Aut"]
     else:
       self.automorphisms = ["finite", 0]

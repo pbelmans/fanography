@@ -551,7 +551,7 @@
 {# information about automorphism groups of a del Pezzo surface #}
 {% macro delpezzo_automorphisms(delpezzo) %}
 <dl class="row">
-  {% if delpezzo.degree == 3 %}
+  {% if delpezzo.degree in [1, 2, 3, 4] %}
     <table class="table-sm mx-auto">
       <thead>
         <tr class="border-bottom">
@@ -571,6 +571,19 @@
       {% endfor %}
       </tbody>
     </table>
+  {% else %}
+    <table class="table-sm mx-auto">
+      <thead>
+        <tr class="border-bottom">
+          <td>group</td>
+          <td>dimension</td>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="text-center">{{ delpezzo["automorphisms"][0] }}</td>
+        <td class="text-center">{{ delpezzo["automorphisms"][1] }}</td>
+        <td class="text-center">
   {% endif %}
 </dl>
 {% endmacro %}
