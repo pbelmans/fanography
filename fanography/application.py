@@ -141,7 +141,7 @@ class delPezzo:
     self.name = yaml["name"] if "name" in yaml else ""
 
     # deal with constructions
-    self.anticanonical = yaml["anticanonical"]
+    self.anticanonical = yaml["anticanonical"] if yaml["anticanonical"] else ""
 
     self.intersections = []
     if "intersections" in yaml:

@@ -1,5 +1,4 @@
-# TODO: determine which hyperplane sections of index at least 2 Fano 3-folds appear as which del Pezzo surface
-# TODO: see also notion of strain by Sergey
+# see also notion of strain by Sergey
 # 1-17: P^2
 # 1-16: P^1xP^1
 # 1-15: Bl_4 P^2
@@ -47,29 +46,29 @@ P1xP1:
 
 dP8:
   label: $\mathrm{Bl}_1\mathbb{P}^2$
-  anticanonical: TODO in $\mathbb{P}^8
+  anticanonical: #TODO in $\mathbb{P}^8
   intersections:
     - divisor of degree $(1,1)$ in $\mathbb{P}^1\times\mathbb{P}^2$
 
   index: 1
 
   exceptional: 1
-  Aut: [TODO, 6]
+  Aut: ['$\mathbb{G}_{\mathrm{m}}^2\rtimes\mathrm{GL}_2$', 6] # Dolgachev, proposition 8.2.31
 
 dP7:
   label: $\mathrm{Bl}_2\mathbb{P}^2$
-  anticanonical: TODO in $\mathbb{P}^7
+  anticanonical: #TODO in $\mathbb{P}^7
   intersections:
     - complete intersection of $(1,0,1)$- and $(0,1,1)$-divisor in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$
 
   index: 1
 
   exceptional: 3
-  Aut: [TODO, 4]
+  Aut: ['$\left\{ \Bigl( \begin{smallmatrix} 1 & 0 & * \\ 0 & * & * \\ 0 & 0 & * \end{smallmatrix} \Bigr) \right\}\rtimes\mathrm{Sym}_2$', 4]
 
 dP6:
   label: $\mathrm{Bl}_3\mathbb{P}^2$
-  anticanonical: TODO in $\mathbb{P}^6
+  anticanonical: #TODO in $\mathbb{P}^6
   intersections:
     - divisor of degree $(1,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$
     - complete intersection of two $(1,1)$-divisors in $\mathbb{P}^2\times\mathbb{P}^2$
@@ -81,7 +80,7 @@ dP6:
 
 dP5:
   label: $\mathrm{Bl}_4\mathbb{P}^2$
-  anticanonical: TODO in $\mathbb{P}^5
+  anticanonical: #TODO in $\mathbb{P}^5
   intersections:
     - divisor of degree $(1,2)$ in $\mathbb{P}^1\times\mathbb{P}^2$
     - section of $\mathrm{Gr}(2,5)$ in $\mathbb{P}^9$ by a codimension 4 linear subspace # proposition 8.5.1 of Dolgachev, CAG

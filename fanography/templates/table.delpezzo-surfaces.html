@@ -16,6 +16,8 @@
 
       <th scope="col">description</th>
 
+      <th scope="col">anticanonical model</th>
+
       <th scope="col" class="text-center">number of exceptional lines</th>
 
       <th scope="col" class="text-center">moduli</th>
@@ -38,8 +40,6 @@
         <td>
           <strong>{{ delpezzo.name }}</strong>
 
-          <p>{{ delpezzo.anticanonical }}
-
           {% if delpezzo["intersections"] %}
             <dl class="d-none d-xl-block d-print-block mb-0">
               <dt>as complete intersection</dt>
@@ -48,7 +48,10 @@
               {% endfor %}
             </dl>
           {% endif %}
+        </td>
 
+        <td>
+          <p>{{ delpezzo.anticanonical }}
         </td>
 
         <td class="text-center">{{ delpezzo.exceptional }}</td>
