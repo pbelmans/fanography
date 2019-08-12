@@ -93,8 +93,8 @@ class Fano:
     # dealing with (links to) period sequences
     if "period" in yaml:
       self.period = True
-      self.period_grdb = yaml["period"].split(", ")[0]
-      self.period_fanosearch = yaml["period"].split(", ")[1]
+      self.period_grdb = int(yaml["period"].split(", ")[0])
+      self.period_fanosearch = int(yaml["period"].split(", ")[1])
     else:
       self.period = False
 
