@@ -75,7 +75,7 @@
 
         <td class="align-middle description">
           {% if fano["name"] %}
-            <strong>{{ fano["name"] }}</strong>
+            <strong>{{ fano["name"] | safe }}</strong>
           {% endif %}
 
           {{ description(fano) }}
