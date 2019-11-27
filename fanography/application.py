@@ -225,7 +225,7 @@ delpezzos = dict()
 delpezzos_order = ["dP9", "P1xP1", "dP8", "dP7", "dP6", "dP5", "dP4", "dP3", "dP2", "dP1"]
 
 with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-surfaces.yml"), "r") as f:
-  data = yaml.load(f, loader=yaml.FullLoader)
+  data = yaml.load(f, Loader=yaml.FullLoader)
 
   # read in the data
   for ID in data.keys():
