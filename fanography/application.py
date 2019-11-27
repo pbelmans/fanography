@@ -258,7 +258,7 @@ def show_about():
 
 @app.route("/<int:rho>")
 def show_table(rho):
-  return render_template("table.show.html", fanos=fanos[rho], rho=rho)
+  return render_template("table.fanos.html", fanos=fanos[rho], rho=rho)
 
 
 @app.route("/<int:rho>-<int:ID>")
