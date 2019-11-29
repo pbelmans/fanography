@@ -266,11 +266,17 @@ def show_entry(rho, ID):
   try:
     previous = None
     try: previous = fanos[rho][ID - 1]
-    except KeyError: pass
+    except KeyError:
+      try:
+        previous = fanos[rho - 1][max(fanos[rho - 1].keys())]
+      except KeyError: pass
 
     next = None
     try: next = fanos[rho][ID + 1]
-    except KeyError: pass
+    except KeyError:
+      try:
+        next = fanos[rho + 1][1]
+      except KeyError: pass
 
     return render_template("entry.show.html", fano=fanos[rho][ID], previous=previous, next=next)
 
