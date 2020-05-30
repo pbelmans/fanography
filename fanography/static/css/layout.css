@@ -5,10 +5,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-div#menu {
-  background-color: black;
-  text-align: center;
-  height: 2.5rem;
+nav#menu {
+  font-size: 14px;
+}
+
+nav#menu a {
+  color: #81c3fc;
+}
+
+nav#menu a:hover {
+  color: #d9edf7;
+  text-decoration: none;
 }
 
 div#title {
@@ -27,23 +34,6 @@ div#content {
 
 div#content::-webkit-scrollbar {
   display: none;
-}
-
-div#menu ul {
-  padding-top: .5rem;
-}
-
-div#menu ul li {
-  margin: 0 1rem;
-}
-
-div#menu a {
-  color: #337ab7;
-}
-
-div#menu a:hover {
-  color: #d9edf7;
-  text-decoration: none;
 }
 
 h1 {
