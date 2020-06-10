@@ -99,12 +99,13 @@ dP4:
 
   exceptional: 16
   Aut:
-    description: normal subgroup of the Weyl group of type $\mathrm{D}_5$, which is isomorphic to $(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5$ with quotient isomorphic to $\mathrm{Cyc}_2$, $\mathrm{Cyc}_4$, $\mathrm{Dih}_6$ or $\mathrm{Dih}_{10}$ # proposition 8.6.5 of Dolgachev, CAG, see also theorem 8.6.6
+    description: semidirect product of $(\mathbb{Z}/2\mathbb{Z})^{\oplus4}$ coming from the geometry of lines, and a subgroup of $\mathrm{Aut}(\mathbb{P}^1)$ leaving 5 points invariant # see theorem 3.1 of 1712.01167
     groups:
-      - [I, 960, '$0\to\mathrm{Aut}(S)\to(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5\to\mathbb{Z}/2\mathbb{Z}\to 0$']
-      - [II, 480, '$0\to\mathrm{Aut}(S)\to(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5\to\mathbb{Z}/4\mathbb{Z}\to 0$']
-      - [III, 320, '$0\to\mathrm{Aut}(S)\to(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5\to\mathrm{Sym}_3\to 0$']
-      - [IV, 192, '$0\to\mathrm{Aut}(S)\to(\mathbb{Z}/2\mathbb{Z})^4\rtimes\mathrm{Sym}_5\to\mathrm{Dih}_{10}\to 0$']
+      - [I, 160, '$(\mathbb{Z}/2\mathbb{Z})^{\oplus4}\rtimes\mathrm{Dih}_{5}$']
+      - [II, 96, '$(\mathbb{Z}/2\mathbb{Z})^{\oplus4}\rtimes\mathrm{Sym}_3$']
+      - [III, 64, '$(\mathbb{Z}/2\mathbb{Z})^{\oplus4}\rtimes\mathbb{Z}/4\mathbb{Z}$']
+      - [IV, 32, '$(\mathbb{Z}/2\mathbb{Z})^{\oplus4}\rtimes\mathbb{Z}/2\mathbb{Z}$']
+      - [V, 16, '$(\mathbb{Z}/2\mathbb{Z})^{\oplus4}$']
 
 
 dP3:
