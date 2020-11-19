@@ -110,6 +110,44 @@ class Fano:
       if not self.moduli[0] == max(moduli):
         self.Aut.append(("0", self.moduli[0], 0),)
 
+    # deal with exceptional collections
+    if "exceptional" in yaml:
+      self.exceptional = yaml["exceptional"]
+    # if h^{1,2} but no data present: use Orlov's blowup or projective bundle formula
+    elif self.h12 == 0:
+      if self.rho == 2 and self.ID in [24, 32, 34, 35, 36]:
+        self.exceptional = ["Orlov's projective bundle formula"]
+      elif self.rho == 3 and self.ID in [27, 31]:
+        self.exceptional = ["Orlov's projective bundle formula"]
+      else:
+        self.exceptional = ["Orlov's blowup formula"]
+
+    # extremal contractions (only partial information for now)
+    self.MMP = []
+    if "MMP" in yaml:
+      self.MMP = yaml["MMP"]
+
+    # deal with quantum cohomology
+    self.qh = []
+    if self.h12 == 0:
+      # rank 1: TODO figure out good references
+      if self.identifier() in ["1-10", "1-15", "1-16", "1-17"]:
+          self.qh.append(["small", "someone", "at some point", "?"])
+
+      # Ciolli's one or two curve blowups of P^3 and Q^3
+      if self.identifier() in ["2-21", "2-22", "2-26", "2-27", "2-29", "2-30", "2-33", "3-10", "3-12", "3-15", "3-18", "3-20", "3-25"]:
+        self.qh.append(["small", "Ciolli", 2005, "MR2168069", "the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$"])
+
+      # Iritani shows (implicitly) semisimplicity of small quantum for Fano toric
+      if self.toric:
+        self.qh.append(["small", "Iritani", 2007, "MR2359850", "toric geometry"])
+
+      # for P^1-bundles Ciolli claims semisimplicity
+      if any([contraction[0] == "P1" for contraction in self.MMP]):
+        self.qh.append(["small", "Ciolli", 2005, "MR2168069", "the description of quantum cohomology of a $\mathbb{P}^1$-bundle"])
+
+    print(self.identifier(), self.qh)
+
 
   def __eq__(self, other):
     return self.identifier() == other.identifier()
@@ -232,6 +270,17 @@ with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-su
     delpezzos[ID] = delPezzo(ID, data[ID])
 
 
+flat = [fano for table in fanos.values() for fano in table.values()]
+# to count totals (as this is hard in the template)
+numbers = dict()
+numbers["total"] = len(flat)
+numbers["primitive"] = len([fano for fano in flat if fano.is_primitive])
+numbers["rational"] = len([fano for fano in flat if fano.is_rational])
+numbers["unirational"] = len([fano for fano in flat if fano.is_unirational])
+numbers["exceptional"] = len([fano for fano in flat if fano.h12 == 0])
+numbers["semisimple"] = len([fano for fano in flat if fano.h12 == 0 and len(fano.qh) > 0])
+
+
 @app.route("/")
 def index():
   return render_template("index.html", fanos=fanos)
@@ -239,14 +288,6 @@ def index():
 
 @app.route("/explained")
 def show_explained():
-  flat = [fano for table in fanos.values() for fano in table.values()]
-  # to count totals (as this is hard in the template)
-  numbers = dict()
-  numbers["total"] = len(flat)
-  numbers["primitive"] = len([fano for fano in flat if fano.is_primitive])
-  numbers["rational"] = len([fano for fano in flat if fano.is_rational])
-  numbers["unirational"] = len([fano for fano in flat if fano.is_unirational])
-
   return render_template("explained.html", fanos=fanos, numbers=numbers)
 
 
@@ -305,6 +346,11 @@ def show_delpezzovarieties():
       order[ID] = (order[ID][0], order[ID][1], order[ID][2], data[ID])
 
   return render_template("table.delpezzo-varieties.html", fanos=fanos, order=order)
+
+
+@app.route("/dubrovin")
+def show_dubrovin():
+  return render_template("table.dubrovin.html", fanos=fanos, numbers=numbers)
 
 
 @app.route("/delpezzos")

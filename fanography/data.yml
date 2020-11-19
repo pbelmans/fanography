@@ -120,6 +120,8 @@
 
     period: 113, 17
 
+    exceptional: ["Kuznetsov", 1996, "MR1445274"]
+
 
   11:
     description: hypersurface of degree 6 in $\mathbb{P}(1,1,1,2,3)$
@@ -187,6 +189,8 @@
 
     period: 46, 14
 
+    exceptional: ["Orlov", 1991, "MR1294662"]
+
 
   16:
     description: hypersurface of degree 2 in $\mathbb{P}^4$
@@ -201,6 +205,8 @@
     rational: yes
 
     period: 3, 4
+
+    exceptional: ["Kapranov", 1986, "MR0847146"]
 
 
   17:
@@ -218,6 +224,8 @@
     toric: 23
 
     period: 1, 12
+
+    exceptional: ["Beilinson", 1978, "MR0509388"]
 
 
 # rank 2
@@ -527,6 +535,9 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 44, 66
+ 
+    MMP: 
+      - ["P1", "\\mathbb{P}^2", "0\\to\\mathcal{O}_{\\mathbb{P}^2}(-2)\\to\\mathcal{O}_{\\mathbb{P}^2}^{\\oplus3}\\to\\mathcal{E}(1)\\to 0"]
 
 
   25:
@@ -569,6 +580,9 @@
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
     period: 19, 61
+
+    MMP: 
+      - ["P1", "\\mathbb{P}^2", "0\\to\\mathcal{O}_{\\mathbb{P}^2}(-1)^{\\oplus2}\\to\\mathcal{O}_{\\mathbb{P}^2}^{\\oplus4}\\to\\mathcal{E}(1)\\to 0"]
 
 
   28:
@@ -626,6 +640,9 @@
 
     period: 15, 48
 
+    MMP:
+      - ["P1", "\\mathbb{P}^2", "0\\to\\mathcal{O}_{\\mathbb{P}^2}\\to\\mathcal{E}\\to\\mathcal{J}_x\\to0"]
+
 
   32:
     description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(1,1)$
@@ -645,6 +662,9 @@
     fibrelike: yes
 
     period: 24, 6
+
+    MMP:
+      - ["P1", "\\mathbb{P}^2", "\\mathrm{T}_{\\mathbb{P}^2}"]
 
 
   33:
@@ -677,6 +697,9 @@
 
     period: 10, 44
 
+    MMP:
+      - ["P1", "\\mathbb{P}^2", "\\mathcal{O}_{\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathbb{P}^2}"]
+
 
   35:
     description: $\mathrm{Bl}_p\mathbb{P}^3$
@@ -696,6 +719,9 @@
 
     period: 7, 30
 
+    MMP:
+      - ["P1", "\\mathbb{P}^2", "\\mathcal{O}_{\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathbb{P}^2}(1)"]
+
 
   36:
     description: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(2))$
@@ -710,6 +736,9 @@
     toric: 7
 
     period: 6, 58
+
+    MMP:
+      - ["P1", "\\mathbb{P}^2", "\\mathcal{O}_{\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathbb{P}^2}(2)"]
 
 
 # rank 3
@@ -946,6 +975,9 @@
 
     period: 39, 37
 
+    MMP: 
+      - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "0\\to\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(-1,-1)\\to\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}^{\\oplus3}\\to\\mathcal{E}(1,1)\\to0"]
+
 
   18:
     description: blowup of ((1-17)) in the disjoint union of a line and a conic
@@ -1046,6 +1078,9 @@
 
     period: 31, 86
 
+    MMP:
+      - ["P1", "\\mathbb{F}_1", "\\pi^*(\\mathrm{T}_{\\mathbb{P}^2})"]
+
 
   25:
     description: blowup of ((1-17)) in the disjoint union of two lines
@@ -1063,6 +1098,9 @@
     toric: 18
 
     period: 16, 41
+
+    MMP: 
+      - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(1,0)\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(0,1)"]
 
 
   26:
@@ -1101,6 +1139,9 @@
 
     period: 45, 21
 
+    MMP:
+      - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}"]
+
 
   28:
     description: $\mathbb{P}^1\times\mathrm{Bl}_p\mathbb{P}^2$
@@ -1116,6 +1157,10 @@
     toric: 17
 
     period: 28, 90
+
+    MMP:
+      - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(0,1)"]
+      - ["P1", "\\mathbb{F}_1", "\\mathcal{O}_{\\mathbb{F}_1}\\oplus\\mathcal{O}_{\\mathbb{F}_1}"]
 
 
   29:
@@ -1151,6 +1196,9 @@
 
     period: 11, 84
 
+    MMP:
+      - ["P1", "\\mathbb{F}_1", "\\pi^*(\\mathcal{O}_{\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathbb{P}^2}(1))"]
+
 
   31:
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the vertex
@@ -1167,6 +1215,9 @@
     toric: 11
 
     period: 14, 53
+
+    MMP:
+      - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(1,1)"]
 
 
 # rank 4
@@ -1317,6 +1368,9 @@
 
     period: 48, 142
 
+    MMP:
+      - ["P1", "\\mathrm{Bl}_2\\mathbb{P}^2", "\\mathcal{O}_{\\mathrm{Bl}_2\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathrm{Bl}_2\\mathbb{P}^2}"]
+
 
   11:
     description: blowup of ((3-28)) in $\{x\}\times E$, $x\in\mathbb{P}^1$ and $E$ the $(-1)$-curve
@@ -1411,6 +1465,9 @@
 
     period: 76, 43
 
+    MMP:
+      - ["P1", "\\mathrm{Bl}_3\\mathbb{P}^2", "\\mathcal{O}_{\\mathrm{Bl}_3\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathrm{Bl}_3\\mathbb{P}^2}"]
+
 
 # rank 6
 6:
@@ -1426,6 +1483,9 @@
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
     period: 107, 64
+
+    MMP:
+      - ["P1", "\\mathrm{Bl}_4\\mathbb{P}^2", "\\mathcal{O}_{\\mathrm{Bl}_4\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathrm{Bl}_4\\mathbb{P}^2}"]
 
 
 # rank 7
@@ -1443,6 +1503,9 @@
 
     period: 136, 71
 
+    MMP:
+      - ["P1", "\\mathrm{Bl}_5\\mathbb{P}^2", "\\mathcal{O}_{\\mathrm{Bl}_5\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathrm{Bl}_5\\mathbb{P}^2}"]
+
 
 # rank 8
 8:
@@ -1459,6 +1522,9 @@
 
     period: 155, 45
 
+    MMP:
+      - ["P1", "\\mathrm{Bl}_6\\mathbb{P}^2", "\\mathcal{O}_{\\mathrm{Bl}_6\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathrm{Bl}_6\\mathbb{P}^2}"]
+
 
 # rank 9
 9:
@@ -1473,6 +1539,9 @@
 
     Aut: [["\\mathrm{PGL}_2", 6, 3]]
 
+    MMP:
+      - ["P1", "\\mathrm{Bl}_7\\mathbb{P}^2", "\\mathcal{O}_{\\mathrm{Bl}_7\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathrm{Bl}_7\\mathbb{P}^2}"]
+
 
 # rank 10
 10:
@@ -1486,3 +1555,6 @@
     blowdown: ["9-1"]
 
     Aut: [["\\mathrm{PGL}_2", 8, 3]]
+
+    MMP:
+      - ["P1", "\\mathrm{Bl}_8\\mathbb{P}^2", "\\mathcal{O}_{\\mathrm{Bl}_8\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathrm{Bl}_8\\mathbb{P}^2}"]

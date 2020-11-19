@@ -12,6 +12,11 @@
     {{ components.component("Birational geometry", components.birational(fano), id="birational") }}
     {{ components.component("Deformation theory", components.deformations(fano)) }}
     {{ components.component("Period sequence", components.period(fano)) }}
+    {% if fano.rho != 1 %}
+      {{ components.component("Extremal contractions", components.mmp(fano)) }}
+    {% endif %}
+    {{ components.component("Semiorthogonal decompositions", components.sod(fano)) }}
+    {{ components.component("Structure of quantum cohomology", components.qh(fano)) }}
 
     {% if fano.toric %}
       {{ components.component("Toric geometry", components.toric(fano)) }}

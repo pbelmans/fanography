@@ -11,6 +11,10 @@
 {% endif %}
 {% endmacro %}
 
+{% macro MR(identifier) %}
+[<a href="https://mathscinet.ams.org/mathscinet-getitem?mr={{ identifier }}">{{ identifier }}</a>]
+{% endmacro %}
+
 {# overview table #}
 {% macro table(fanos, rho) %}
 <table class="overview table table-hover table-sm" id="table-{{ rho }}">
@@ -517,6 +521,51 @@
   </dl>
 {% else %}
   <p>There is no period sequence associated to this Fano 3-fold.
+{% endif %}
+{% endmacro %}
+
+
+{# information about MMP #}
+{% macro mmp(fano) %}
+{% for contraction in fano.MMP %}
+  {% if contraction[0] == "P1" %}
+    <p>$\mathbb{P}^1$-bundle over ${{ contraction[1] }}$, for the vector bundle ${{ contraction[2] }}$.
+  {% endif %}
+{% endfor %}
+{% endmacro %}
+
+
+{# information about semiorthogonal decompositions #}
+{% macro sod(fano) %}
+{% if fano.h12 == 0 %} 
+  {% if fano.exceptional | length == 1 %}
+    <p>A full exceptional collection can be constructed using {{ fano.exceptional[0] }}.
+  {% else %}
+  <p>A full exceptional collection was constructed by <strong>{{ fano.exceptional[0] }}</strong> in <strong>{{ fano.exceptional[1] }}</strong>, see {{ MR(fano.exceptional[2]) }}.
+  {% endif %}
+
+  {% if fano.toric %}
+    <p>Alternatively, Kawamata has constructed a full exceptional collection for every smooth projective toric variety.
+  {% endif %}
+{% else %}
+  <p><em>There exist interesting semiorthogonal decompositions, but this data is not yet added.</em>
+{% endif %}
+{% endmacro %}
+
+
+{# information about quantum cohomology #}
+{% macro qh(fano) %}
+{% if fano.h12 != 0 %}
+  <p>By Hertling&ndash;Manin&ndash;Teleman we have that quantum cohomology cannot be generically semisimple, as $\mathrm{h}^{1,2}\neq 0$.
+{% else %} {# should be semisimple, but when is this known? #}
+  {% if fano.qh | length > 0 %}
+    <p>Generic semisimplicity of:
+    <ul>
+    {% for reference in fano.qh %}
+    <li>{{ reference[0] }} quantum cohomology, proved by {{ reference[1] }} in {{ reference[2] }}, see {{ MR(reference[3]) }}, using {{ reference[4] }}
+    {% endfor %}
+    </ul>
+  {% endif %}
 {% endif %}
 {% endmacro %}
 

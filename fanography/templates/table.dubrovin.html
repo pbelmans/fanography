@@ -1,0 +1,121 @@
+{% extends "page.html" %}
+
+{% import "components.html" as components %}
+
+{% block title %}Dubrovin's conjecture for Fano 3-folds and del Pezzo surfaces{% endblock %}
+
+{% block content %}
+
+<h2>Dubrovin's conjecture</h2>
+
+<p><em>explain this</em>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="row" class="text-right">Picard rank $\rho$</th>
+      {% for rho in fanos.keys() | sort %}
+        <th scope="col"><a href="#rho-{{ rho }}">{{ rho }}</a></th>
+      {% endfor %}
+      <th scope="col">total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="text-right">number of families</th>
+      {% for rho in fanos.keys() | sort %}
+      <td>{{ fanos[rho] | length }}</td>
+      {% endfor %}
+      <td><em>{{ numbers["total"] }}</em></td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-right">number of families with $\mathrm{h}^{1,2}=0$</th>
+      {% for rho in fanos.keys() | sort %}
+      <td>{{ fanos[rho].values() | selectattr("h12", "equalto", 0) | list | length }}</td>
+      {% endfor %}
+      <td><em>{{ numbers["exceptional"] }}</em></td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-right">number of families with generically semisimple small quantum cohomology</th>
+      {% for rho in fanos.keys() | sort %}
+      <td>{{ fanos[rho].values() | selectattr("h12", "equalto", 0) | selectattr("qh") | list | length }}</td>
+      {% endfor %}
+      <td><em>{{ numbers["semisimple"] }}</em></td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-right">number of families with full exceptional collections constructed</th>
+      {% for rho in fanos.keys() | sort %}
+      <td>{{ fanos[rho].values() | selectattr("h12", "equalto", 0) | list | length }}</td>
+      {% endfor %}
+      <td><em>{{ numbers["exceptional"] }}</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For now, only generic semisimplicity of small quantum cohomology is in the table. The generic semisimplicity of quantum cohomology for all the known cases is established at the level of small quantum cohomology, which implies it at the big level (but not conversely). Once Fano 3-folds where only the big quantum cohomology is known to be generically semisimple, the table will be updated accordingly.
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">existence of a full exceptional collection</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">generic semisimplicity of small quantum cohomology</th>
+    </tr>
+  </thead>
+  {% for rho in fanos %}
+  <tbody id="rho-{{ rho }}">
+    {% for ID in fanos[rho] if fanos[rho][ID].h12 == 0 %}
+      {% set fano = fanos[rho][ID] %}
+
+      <tr>
+        <td class="align-middle row-identifier text-center" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></td>
+
+        <td class="align-middle description">
+          {% if fano["name"] %}
+            <strong>{{ fano["name"] | safe }}</strong>
+          {% endif %}
+
+          {{ components.description(fano) }}
+
+          {% if fano["alternative"] %}
+            <dl class="d-none d-xl-block d-print-block mb-0">
+              <dt>alternative</dt>
+              {% for alternative in fano["alternative"] %}
+                <dd class="mb-0 ml-5">{{ alternative | safe }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+        </td>
+
+        <td>
+          {% if fano.exceptional | length == 1 %}
+            constructed using {{ fano.exceptional[0] }}
+          {% else %}
+          <strong>{{ fano.exceptional[0] }}</strong> constructed it in {{ fano.exceptional[1] }} <!--,<br>see {{ components.MR(fano.exceptional[2]) }}-->
+          {% endif %}
+        </td>
+
+        <td>
+          {% if fano.qh | length == 0 %}
+            not known to hold
+          {% else %}
+            {% for reference in fano.qh %}
+              <strong>{{ reference[1] }}</strong> proved it in {{ reference[2] }}<!--,<br>see {{ components.MR(reference[3]) }},--> using {{ reference[4] }}<br>
+            {% endfor %}
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+  {% endfor %}
+</table>
+
+{% endblock %}
+
