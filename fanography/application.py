@@ -214,7 +214,7 @@ class delPezzo:
 # create the dictionary of all deformation families of Fano 3-folds
 fanos = {i: dict() for i in range(1, 11)}
 
-with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "data.yml"), "r") as f:
+with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "data.yml"), "r", encoding="utf8") as f:
   data = yaml.load(f, Loader=yaml.FullLoader)
 
   # read in the data
@@ -262,7 +262,7 @@ delpezzos = dict()
 
 delpezzos_order = ["dP9", "P1xP1", "dP8", "dP7", "dP6", "dP5", "dP4", "dP3", "dP2", "dP1"]
 
-with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-surfaces.yml"), "r") as f:
+with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-surfaces.yml"), "r", encoding="utf8") as f:
   data = yaml.load(f, Loader=yaml.FullLoader)
 
   # read in the data
@@ -338,7 +338,7 @@ def show_delpezzovarieties():
   # let's hardcode the order from Iskovskikh--Prokhorov (this therefore acts as the filtering)
   order = [(1, 11, -1), (1, 12, -1), (1, 13, -1), (1, 14, -1), (1, 15, "\leq 6"), (3, 27, 3), (2, 32, "\leq 4"), (2, 35, 3)]
 
-  with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-varieties.yml"), "r") as f:
+  with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-varieties.yml"), "r", encoding="utf8") as f:
     data = yaml.load(f)
 
     # read in the data
