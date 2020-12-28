@@ -24,12 +24,12 @@
 
 1-5:
  - ambient: $\operatorname{Gr}(2,5)$
-   bundle: $\mathcal{O}(2)^2 \oplus \mathcal{O}(1)$
+   bundle: $\mathcal{O}(2) \oplus \mathcal{O}(1)^{\oplus2}$
    source: moscow
 
 1-6:
  - ambient: $\operatorname{OGr}^+(5,10)$
-   bundle: $\mathcal{O}(\frac{1}{2})^{7}$
+   bundle: $\mathcal{O}(\frac{1}{2})^{\oplus7}$
    source: moscow
 
  - ambient: $\operatorname{Gr}(2,5)$
@@ -38,17 +38,17 @@
 
 1-7:
  - ambient: $\operatorname{Gr}(2,6)$
-   bundle: $\mathcal{O}(1)^5$
+   bundle: $\mathcal{O}(1)^{\oplus5}$
    source: moscow
 
 1-8:
  - ambient: $\operatorname{Gr}(3,6)$
-   bundle: $\bigwedge^2\mathcal{U}^{\vee} \oplus \mathcal{O}(1)^{3}$
+   bundle: $\bigwedge^2\mathcal{U}^{\vee} \oplus \mathcal{O}(1)^{\oplus3}$
    source: moscow
 
 1-9:
  - ambient: $\operatorname{Gr}(2,7)$
-   bundle: $\mathcal{Q}^{\vee}(1) \oplus \mathcal{O}(1)$
+   bundle: $\mathcal{Q}^{\vee}(1) \oplus \mathcal{O}(1)^{\oplus2}$
    source: moscow
 
 1-10:
@@ -209,7 +209,7 @@
    source: london
 
 2-21:
- - ambient: $\operatorname{Gr}(2,4) \times \mathbb{P}^2$
+ - ambient: $\operatorname{Gr}(2,4) \times \mathbb{P}^4$
    bundle: $\mathcal{U}^{\vee}_{\operatorname{Gr}(2,4)}(0,1)^{\oplus 2} \oplus \mathcal{O}(1,0)$
    source: london
 
@@ -356,7 +356,7 @@
 
 3-13:
  - ambient: $(\mathbb{P}^2)^3$
-   bundle: $\mathcal{O}(1,1,0) \oplus \mathcal{O}(1,0,1) \oplus(0,1,1)$
+   bundle: $\mathcal{O}(1,1,0) \oplus \mathcal{O}(1,0,1) \oplus \mathcal{O}(0,1,1)$
    source: london
 
 3-14:
@@ -373,7 +373,7 @@
    bundle: $\mathcal{O}(0,1,1) \oplus \mathcal{O}(1,1,0) \oplus \mathcal{Q}_{\mathbb{P}^2_1}(0,0,1)$
 
 3-17:
- - ambient: $\mathbb{P}^1 \times \mathbb{P}^2 \times \mathbb{P}^2$
+ - ambient: $\mathbb{P}^1 \times \mathbb{P}^1 \times \mathbb{P}^2$
    bundle: $\mathcal{O}(1,1,1)$
    source: london
 
@@ -389,7 +389,7 @@
    bundle: $\mathcal{O}(0,2) \oplus \mathcal{Q}_{\mathbb{P}^2}(0,1)$
 
 3-20:
- - ambient: $\mathbb{P}^2_1 \times \mathbb{P}^2_2 \times \mathbb{P}^5$
+ - ambient: $\mathbb{P}^2_1 \times \mathbb{P}^2_2 \times \mathbb{P}^4$
    bundle: $\mathcal{O}(1,1,0) \oplus \mathcal{Q}_{\mathbb{P}^2_1}(0,0,1) \oplus \mathcal{Q}_{\mathbb{P}^2_2}(0,0,1)$
 
 3-21:
@@ -506,7 +506,7 @@
 4-12:
  - ambient: $ \mathbb{P}^1 \times \mathbb{P}^3 \times \mathbb{P}^{8}$
    bundle: $\mathcal{O}(1,1,0) \oplus \Lambda(0,0,1) \oplus \mathcal{O}(-1,1,1)$
-   definition: $\Lambda \in \operatorname{Ext}^1_{\mathbb{P}^1 \times \mathbb{P}^3}(\mathcal{Q}_{\mathbb{P}^3}^{\oplus 2},\mathcal{O}(1,-1))$ \
+   definition: $\Lambda \in \operatorname{Ext}^1_{\mathbb{P}^1 \times \mathbb{P}^3}(\mathcal{Q}_{\mathbb{P}^3}^{\oplus 2},\mathcal{O}(1,-1))$
 
 4-13:
  - ambient: $ \mathbb{P}^1_1 \times \mathbb{P}^1_2 \times \mathbb{P}^1_3 \times \mathbb{P}^4$
