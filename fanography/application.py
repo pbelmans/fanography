@@ -257,6 +257,17 @@ with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "data.yml"),
       fanos[rho][ID].blowup = [fano for fano in fanos[rho + 1].values() if "{}-{}".format(rho, ID) in [blowdown.identifier() for blowdown in fano.blowdown]]
 
 
+# add the description as the zero section of a vector bundle from arXiv:2009.13382
+with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "sections.yml"), "r", encoding="utf8") as f:
+  data = yaml.load(f, Loader=yaml.FullLoader)
+
+  # read in the data
+  for key in data.keys():
+    (rho, ID) = (int(key.split("-")[0]), int(key.split("-")[1]))
+    fano = fanos[rho][ID]
+    fano.sections = data[key]
+
+
 # create the dictionary of all deformation families of del Pezzo surfaces
 delpezzos = dict()
 
@@ -351,6 +362,11 @@ def show_delpezzovarieties():
 @app.route("/dubrovin")
 def show_dubrovin():
   return render_template("table.dubrovin.html", fanos=fanos, numbers=numbers)
+
+
+@app.route("/zero_section")
+def show_zero_section():
+  return render_template("table.zero_section.html", fanos=fanos)
 
 
 @app.route("/delpezzos")

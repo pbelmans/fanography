@@ -1,0 +1,81 @@
+{% extends "page.html" %}
+
+{% import "components.html" as components %}
+
+{% block title %}Description as a zero section{% endblock %}
+
+{% block content %}
+
+<h2>Description as a zero section</h2>
+
+<p><em>explain this</em>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">ambient variety</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">vector bundle</th>
+    </tr>
+  </thead>
+  {% for rho in fanos %}
+  <tbody id="rho-{{ rho }}">
+    {% for ID in fanos[rho] %}
+      {% set fano = fanos[rho][ID] %}
+
+      <tr>
+        <td class="align-middle row-identifier text-center" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></td>
+
+        <td class="align-middle description">
+          {% if fano["name"] %}
+            <strong>{{ fano["name"] | safe }}</strong>
+          {% endif %}
+
+          {{ components.description(fano) }}
+
+          {% if fano["alternative"] %}
+            <dl class="d-none d-xl-block d-print-block mb-0">
+              <dt>alternative</dt>
+              {% for alternative in fano["alternative"] %}
+                <dd class="mb-0 ml-5">{{ alternative | safe }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+        </td>
+
+        <td>
+          {% if fano["sections"] | length > 1 %}
+            <ol style="padding-left: 20px" class="mb-0">
+              {% for section in fano["sections"] %}<li>{{ section["ambient"] }}{% endfor %}
+            </ol>
+          {% else %}
+            {{ fano["sections"][0]["ambient"] }}
+          {% endif %}
+        </td>
+
+        <td>
+          {% if fano["sections"] | length > 1 %}
+            <ol style="padding-left: 20px" class="mb-0">
+              {% for section in fano["sections"] %}
+                <li>{{ section["bundle"] }}
+                {% if section["definition"] %}<br>{{ section["definition"] }}{% endif %}
+              {% endfor %}
+            </ol>
+          {% else %}
+            {{ fano["sections"][0]["bundle"] }}
+            {% if fano["sections"][0]["definition"] %}<br>{{ fano["sections"][0]["definition"] }}{% endif %}
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+  {% endfor %}
+</table>
+
+{% endblock %}
+
+
