@@ -510,7 +510,7 @@
 
 4-13:
  - ambient: $ \mathbb{P}^1_1 \times \mathbb{P}^1_2 \times \mathbb{P}^1_3 \times \mathbb{P}^4$
-   bundle: $\mathcal{Z}(\Lambda(0,0,0,1) \oplus \mathcal{O}(1,0,1,1)) $
+   bundle: $\Lambda(0,0,0,1) \oplus \mathcal{O}(1,0,1,1)$
    definition: $\Lambda \in \operatorname{Ext}^1_{\mathbb{P}^1_1 \times \mathbb{P}^1_2}(\mathcal{O}(0,1)^{\oplus 2}, \mathcal{O}(1, -1))$
 
 

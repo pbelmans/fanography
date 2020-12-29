@@ -364,9 +364,9 @@ def show_dubrovin():
   return render_template("table.dubrovin.html", fanos=fanos, numbers=numbers)
 
 
-@app.route("/zero_section")
+@app.route("/zero-section")
 def show_zero_section():
-  return render_template("table.zero_section.html", fanos=fanos)
+  return render_template("table.zero-section.html", fanos=fanos)
 
 
 @app.route("/delpezzos")

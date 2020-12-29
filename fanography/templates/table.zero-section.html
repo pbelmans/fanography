@@ -2,13 +2,15 @@
 
 {% import "components.html" as components %}
 
-{% block title %}Description as a zero section{% endblock %}
+{% block title %}Description as a zero locus{% endblock %}
 
 {% block content %}
 
-<h2>Description as a zero section</h2>
+<h2>Description of Fano 3-folds as zero loci in a product of (weighted) Grassmannians</h2>
 
-<p><em>explain this</em>
+<p>In <a href="https://arxiv.org/abs/2009.13382">Fano 3-folds from homogeneous vector bundles over Grassmannians</a> De Biase&ndash;Fatighenti&ndash;Tanturri obtained a description of a general member of each deformation family of Fano 3-folds as the zero locus of a homogeneous vector bundle in a product of Grassmannians and weighted projective spaces. Such description gives new tools to compute cohomological invariants of Fano 3-folds (by virtue of the Borel&ndash;Weil&ndash;Bott theorem), and gives a representation-theoretic flavour to the classification.
+
+<p>Some of these descriptions are classical (and in fact agree with the usual description of the Fano 3-folds), others were obtained for the Fanosearch project in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3470714">Quantum periods for 3-dimensional Fano manifolds</a> by Coates&ndash;Corti&ndash;Galkin&ndash;Kasprzyk. In the table below we list the description of De Biase&ndash;Fatighenti&ndash;Tanturri, using their notation. 
 
 <table class="table table-hover">
   <thead>
@@ -19,7 +21,9 @@
 
       <th scope="col" class="no-sort" data-sort-method="none">ambient variety</th>
 
-      <th scope="col" class="no-sort" data-sort-method="none">vector bundle</th>
+      <th scope="col" class="no-sort" data-sort-method="none">homogeneous vector bundle</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">origin</th>
     </tr>
   </thead>
   {% for rho in fanos %}
@@ -69,6 +73,20 @@
             {{ fano["sections"][0]["bundle"] }}
             {% if fano["sections"][0]["definition"] %}<br>{{ fano["sections"][0]["definition"] }}{% endif %}
           {% endif %}
+        </td>
+
+        <td>
+          {% if fano["sections"] | length > 1 %}
+            <ol style="padding-left: 20px" class="mb-0">
+              {% for section in fano["sections"] %}
+                <li>{% if section["source"] == "moscow" %}classical{% elif section["source"] == "london" %}[CCGK]{% else %}[DBFT]{% endif %}
+              {% endfor %}
+            </ol>
+          {% else %}
+            {% set section = fano["sections"][0] %}
+            {% if section["source"] == "moscow" %}classical{% elif section["source"] == "london" %}[CCGK]{% else %}[DBFT]{% endif %}
+          {% endif %}
+
         </td>
       </tr>
     {% endfor %}
