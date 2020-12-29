@@ -276,7 +276,7 @@
 <div id="{{ id }}" class="card">
   <div class="card-header">{{- header }}</div>
 
-  <div class="card-body">
+  <div class="card-body" style="overflow-x: auto">
     {{ content }}
   </div>
 </div>
@@ -505,6 +505,24 @@
     </tbody>
   </table>
 </dl>
+{% endmacro %}
+
+
+{# description as a zero section #}
+{% macro zero_section(fano) %}
+<p><a href="https://arxiv.org/abs/2009.13382">Fano 3-folds from homogeneous vector bundles over Grassmannians</a> gives the following description(s):
+{% for section in fano.sections %}
+  <dl class="row">
+    <dt class="col-3 text-right">variety</dt>
+    <dd class="col-9">{{ section["ambient"] }}</dd>
+
+    <dt class="col-3 text-right">bundle</dt>
+    <dd class="col-9">{{ section["bundle"] }}</dd>
+  </dl>
+
+  {% if not loop.last %}<p><hr>{% endif %}
+{% endfor %}
+<p>See <a href="/zero-section">the big table</a> for more information.
 {% endmacro %}
 
 
