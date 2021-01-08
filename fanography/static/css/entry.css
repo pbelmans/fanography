@@ -12,12 +12,19 @@ a.next:after {
   content: "\bb";
 }
 
-div.diamond {
+div.diamond,
+div.parallelogram
+{
   margin: 0 -1.25rem;
   text-align: center;
 }
 
 div.diamond span {
+  display: inline-block;
+  width: 2.5rem;
+}
+
+div.parallelogram span {
   display: inline-block;
   width: 2.5rem;
 }

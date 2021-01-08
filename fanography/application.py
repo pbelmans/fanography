@@ -138,15 +138,29 @@ class Fano:
       if self.identifier() in ["2-21", "2-22", "2-26", "2-27", "2-29", "2-30", "2-33", "3-10", "3-12", "3-15", "3-18", "3-20", "3-25"]:
         self.qh.append(["small", "Ciolli", 2005, "MR2168069", "the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$"])
 
-      # Iritani shows (implicitly) semisimplicity of small quantum for Fano toric
-      if self.toric:
-        self.qh.append(["small", "Iritani", 2007, "MR2359850", "toric geometry"])
-
       # for P^1-bundles Ciolli claims semisimplicity
       if any([contraction[0] == "P1" for contraction in self.MMP]):
         self.qh.append(["small", "Ciolli", 2005, "MR2168069", "the description of quantum cohomology of a $\mathbb{P}^1$-bundle"])
 
-    print(self.identifier(), self.qh)
+      # Iritani shows (implicitly) semisimplicity of small quantum for Fano toric
+      if self.toric:
+        self.qh.append(["small", "Iritani", 2007, "MR2359850", "toric geometry"])
+
+    # deal with Hochschild (co)homology
+    self.hochschild_homology = [self.h12, 2 + 2*self.rho, self.h12] # degree -1, 0, 1
+    if "bivector" not in yaml:
+      print("%d-%d: not computed yet" % (self.rho, self.ID))
+    else:
+      # TODO check H^1(X,T_X) for 1-10
+      # TODO improve this
+      bivector = yaml["bivector"]
+      self.polyvector = [
+              [1, 0, 0, 0],
+              [self.Aut[-1][2], self.moduli[0], 0, 0],
+              [bivector[0], bivector[1], bivector[2], 0],
+              [self.KX3 // 2 + 3, 0, 0, 0]]
+
+      self.hochschild_cohomology = [1, self.polyvector[1][0], self.polyvector[1][1] + self.polyvector[2][0], self.polyvector[2][1] + self.polyvector[3][0], self.polyvector[2][2]]
 
 
   def __eq__(self, other):
