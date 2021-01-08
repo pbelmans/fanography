@@ -148,9 +148,7 @@ class Fano:
 
     # deal with Hochschild (co)homology
     self.hochschild_homology = [self.h12, 2 + 2*self.rho, self.h12] # degree -1, 0, 1
-    if "bivector" not in yaml:
-      print("%d-%d: not computed yet" % (self.rho, self.ID))
-    else:
+    if "bivector" in yaml:
       # TODO check H^1(X,T_X) for 1-10
       # TODO improve this
       bivector = yaml["bivector"]
