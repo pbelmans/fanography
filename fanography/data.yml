@@ -326,7 +326,7 @@
 
     period: 158, 34
 
-    #bivector: ["?", "?", "?"]
+    bivector: [1, 3, 0]
 
 
   6:
@@ -373,7 +373,7 @@
 
     period: 144, 26
 
-    #bivector: [?, ?, ?]
+    bivector: [3, 1, 1] # some educated guesswork was used
 
 
   9:
@@ -521,7 +521,7 @@
 
     period: 74, 60
 
-    #bivector: [?, ?, 0]
+    bivector: [6, 0, 0]
 
 
   19:
@@ -861,7 +861,7 @@
 
     period: 154, 22
 
-    #bivector: [?, ?, ?]
+    bivector: [0, 2, 1]
 
 
   2:
@@ -874,7 +874,7 @@
 
     period: 157, 97
 
-    #bivector: [?, ?, ?]
+    bivector: [2, 6, 0]
 
 
   3:
@@ -980,7 +980,7 @@
 
     period: 22, 68
 
-    #bivector: [?, ?, ?]
+    bivector: [8, 0, 0]
 
 
   10:
@@ -1063,7 +1063,7 @@
 
     period: 21, 98
 
-    #bivector: [?, ?, 0]
+    bivector: [12, 0, 0]
 
 
 
