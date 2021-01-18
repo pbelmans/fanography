@@ -268,12 +268,12 @@
     description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
     -KX3: 4
     h12: 22
-    moduli: 26
+    moduli: 36
 
     unirational: "?"
     blowdown: ["1-11"]
 
-    #bivector: [1, "?", "?"]
+    bivector: [1, 0, 5]
 
 
   2:
@@ -284,7 +284,7 @@
 
     unirational: yes
 
-    bivector: [0, 0, 6, 0]
+    bivector: [0, 0, 6]
 
 
   3:
@@ -902,7 +902,7 @@
 
     period: 142, 151
 
-    #bivector: [?, ?, ?]
+    bivector: [2, 3, 0]
 
 
   5:
@@ -918,7 +918,7 @@
 
     period: 138, 109
 
-    #bivector: [?, ?, ?]
+    bivector: [3, 4, 0]
 
 
   6:
@@ -1410,7 +1410,7 @@
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the disjoint union of the vertex and an elliptic curve on the quadric
     -KX3: 28
     h12: 1
-    moduli: 1
+    moduli: 1 # H^1(X,T_X)=2 TODO
 
     rational: yes
     blowdown: ["3-31", "3-31"]
@@ -1419,7 +1419,7 @@
 
     period: 110, 88 # there is an issue with the labeling on http://coates.ma.ic.ac.uk/fanosearch/?page_id=277
 
-    #bivector: [?, ?, 0]
+    bivector: [7, 0, 0]
 
 
   3:
@@ -1467,7 +1467,7 @@
 
     period: 81, 147
 
-    #bivector: [?, ?, ?]
+    bivector: [10, 0, 0]
 
 
   6:
@@ -1627,7 +1627,7 @@
 
     period: 100, 114
 
-    #bivector: [?, ?, ?]
+    bivector: [5, 0, 0]
 
 
   2:
