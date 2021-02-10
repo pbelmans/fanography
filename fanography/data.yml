@@ -273,7 +273,7 @@
     unirational: "?"
     blowdown: ["1-11"]
 
-    bivector: [1, 0, 5]
+    bivector: [1, 2, 7]
 
 
   2:
@@ -296,7 +296,7 @@
     unirational: yes
     blowdown: ["1-12"]
 
-    #bivector: ["?", "?", "?"]
+    bivector: [1, 3, 1]
 
 
   4:
@@ -1410,12 +1410,12 @@
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the disjoint union of the vertex and an elliptic curve on the quadric
     -KX3: 28
     h12: 1
-    moduli: 1 # H^1(X,T_X)=2 TODO
+    moduli: 2 # H^1(X,T_X)=2 TODO
 
     rational: yes
     blowdown: ["3-31", "3-31"]
 
-    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
+    Aut: [["\\mathbb{G}_{\\mathrm{m}}", 2, 1]]
 
     period: 110, 88 # there is an issue with the labeling on http://coates.ma.ic.ac.uk/fanosearch/?page_id=277
 
