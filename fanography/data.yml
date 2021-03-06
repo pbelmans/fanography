@@ -348,7 +348,7 @@
 
 
   7:
-    description: blowup of ((1-16)) in the intersection of two divisors from $|\mathcal{O}_{X_2}(2)|$
+    description: blowup of ((1-16)) in the intersection of two divisors from $|\mathcal{O}_Q(2)|$
     -KX3: 14
     h12: 5
     moduli: 14
