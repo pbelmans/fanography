@@ -555,7 +555,7 @@
 
 {# information about semiorthogonal decompositions #}
 {% macro sod(fano) %}
-{% if fano.h12 == 0 %} 
+{% if fano.h12 == 0 %}
   {% if fano.exceptional | length == 1 %}
     <p>A full exceptional collection can be constructed using {{ fano.exceptional[0] }}.
   {% else %}
@@ -588,6 +588,22 @@
 {% endmacro %}
 
 
+{# information about Hilbert schemes of lines and conics #}
+{% macro hilbert(fano) %}
+{% if 1 in fano.hilbert %}
+  <p>The <strong>Hilbert scheme of lines</strong> is {{ fano.hilbert.1.description | safe }}.
+  <p>Its Hodge diamond is
+  {{ surface_diamond(fano.hilbert.1.invariants.pg, fano.hilbert.1.invariants.q, fano.hilbert.1.invariants.h12) }}
+{% endif %}
+
+{% if 2 in fano.hilbert %}
+  <p>The <strong>Hilbert scheme of conics</strong> is {{ fano.hilbert.2.description | safe }}.
+  <p>Its Hodge diamond is
+  {{ surface_diamond(fano.hilbert.2.invariants.pg, fano.hilbert.2.invariants.q, fano.hilbert.2.invariants.h12) }}
+{% endif %}
+{% endmacro %}
+
+
 {# information about anticanonical bundle of a del Pezzo surface #}
 {% macro delpezzo_anticanonical(delpezzo) %}
 <dl class="row">
@@ -614,6 +630,7 @@
   <dd class="col-6">{{ delpezzo.moduli }}</dd>
 </dl>
 {% endmacro %}
+
 
 {# information about automorphism groups of a del Pezzo surface #}
 {% macro delpezzo_automorphisms(delpezzo) %}
@@ -656,23 +673,29 @@
 {% endmacro %}
 
 
-{# Hodge diamond for a del Pezzo surface #}
-{% macro delpezzo_diamond(delpezzo) %}
+{# Hodge diamond for a general surface #}
+{% macro surface_diamond(pg, q, h12) %}
 <div class="diamond">
   <span>1</span><br style="clear: both">
 
-  <span>0</span>
-  <span>0</span><br style="clear: both">
+  <span>{{ q }}</span>
+  <span>{{ q }}</span><br style="clear: both">
 
-  <span>0</span>
-  <span>{{ delpezzo.rank }}</span>
-  <span>0</span><br style="clear: both">
+  <span>{{ pg }}</span>
+  <span>{{ h12 }}</span>
+  <span>{{ pg }}</span><br style="clear: both">
 
-  <span>0</span>
-  <span>0</span><br style="clear: both">
+  <span>{{ q }}</span>
+  <span>{{ q }}</span><br style="clear: both">
 
   <span>1</span><br style="clear: both">
 </div>
+{% endmacro %}
+
+
+{# Hodge diamond for a del Pezzo surface #}
+{% macro delpezzo_diamond(delpezzo) %}
+{{ surface_diamond(0, 0, delpezzo.rank) }}
 {% endmacro %}
 
 

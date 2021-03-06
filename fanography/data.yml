@@ -71,6 +71,11 @@
 
     period: 150, 7
 
+    hilbert:
+      2:
+        description: "the symmetric square of a smooth curve of genus 7"
+        invariants: {pg: 21, q: 7, h12: 50}
+
 
   7:
     description: section of Plücker embedding of $\mathrm{Gr}(2,6)$ by codimension 5 subspace
@@ -81,6 +86,11 @@
     unirational: yes
 
     period: 147, 18
+
+    hilbert:
+      2:
+        description: "a Fano surface, a minimal surface of general type"
+        invariants: {pg: 10, q: 5, h12: 25}
 
 
   8:
@@ -93,6 +103,11 @@
 
     period: 143, 20
 
+    hilbert:
+      2:
+        description: "the ruled surface obtained from projectivisation of simple rank 2 bundle over a smooth curve of genus 3"
+        invariants: {pg: 0, q: 3, h12: 2}
+
 
   9:
     description: section of the adjoint $\mathrm{G}_2$-Grassmannian $\mathrm{G}_2\mathrm{Gr}(2,7)$ by codimension 2 subspace
@@ -103,6 +118,11 @@
     rational: yes
 
     period: 124, 10
+
+    hilbert:
+      2:
+        description: "an abelian surface"
+        invariants: {pg: 1, q: 2, h12: 4}
 
 
   10:
@@ -121,6 +141,11 @@
     period: 113, 17
 
     exceptional: ["Kuznetsov", 1996, "MR1445274"]
+
+    hilbert:
+      2:
+        description: "$\\mathbb{P}^2$"
+        invariants: {pg: 0, q: 0, h12: 1}
 
 
   11:
@@ -161,6 +186,11 @@
 
     period: 106, 0
 
+    hilbert:
+      1:
+        description: "a Fano surface, a minimal surface of general type"
+        invariants: {pg: 10, q: 5, h12: 25}
+
 
   14:
     description: complete intersection of 2 quadrics in $\mathbb{P}^5$
@@ -173,6 +203,11 @@
     rational: yes
 
     period: 75, 2
+
+    hilbert:
+      1:
+        description: "an abelian surface"
+        invariants: {pg: 1, q: 2, h12: 4}
 
 
   15:
@@ -190,6 +225,11 @@
     period: 46, 14
 
     exceptional: ["Orlov", 1991, "MR1294662"]
+
+    hilbert:
+      1:
+        description: "$\\mathbb{P}^2$"
+        invariants: {pg: 0, q: 0, h12: 1}
 
 
   16:
@@ -379,6 +419,11 @@
 
     period: 118, 13
 
+    hilbert:
+      2:
+        description: the symmetric square of a genus 3 curve
+        invariants: {pg: 3, q: 3, h12: 10}
+
 
   13:
     description: blowup of ((1-16)) in a curve of degree 6 and genus 2
@@ -495,6 +540,11 @@
 
     period: 84, 8
 
+    hilbert:
+      2:
+        description: a quadric surface
+        invariants: {pg: 0, q: 0, h12: 2}
+
 
   22:
     description: blowup of ((1-15)) in a conic
@@ -535,8 +585,8 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 44, 66
- 
-    MMP: 
+
+    MMP:
       - ["P1", "\\mathbb{P}^2", "0\\to\\mathcal{O}_{\\mathbb{P}^2}(-2)\\to\\mathcal{O}_{\\mathbb{P}^2}^{\\oplus3}\\to\\mathcal{E}(1)\\to 0"]
 
 
@@ -581,7 +631,7 @@
 
     period: 19, 61
 
-    MMP: 
+    MMP:
       - ["P1", "\\mathbb{P}^2", "0\\to\\mathcal{O}_{\\mathbb{P}^2}(-1)^{\\oplus2}\\to\\mathcal{O}_{\\mathbb{P}^2}^{\\oplus4}\\to\\mathcal{E}(1)\\to 0"]
 
 
@@ -916,6 +966,11 @@
 
     period: 70, 16
 
+    hilbert:
+      2:
+        description: the disjoint union of 3 projective planes
+        invariants: {pg: 0, q: 0, h12: 1}
+
 
 
   14:
@@ -975,7 +1030,7 @@
 
     period: 39, 37
 
-    MMP: 
+    MMP:
       - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "0\\to\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(-1,-1)\\to\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}^{\\oplus3}\\to\\mathcal{E}(1,1)\\to0"]
 
 
@@ -1099,7 +1154,7 @@
 
     period: 16, 41
 
-    MMP: 
+    MMP:
       - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(1,0)\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(0,1)"]
 
 
@@ -1141,6 +1196,11 @@
 
     MMP:
       - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}"]
+
+    hilbert:
+      2:
+        description: the disjoint union of 6 quadrics
+        invariants: {pg: 0, q: 0, h12: 2}
 
 
   28:

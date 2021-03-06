@@ -18,7 +18,9 @@
     {{ components.component("Semiorthogonal decompositions", components.sod(fano)) }}
     {{ components.component("Structure of quantum cohomology", components.qh(fano)) }}
     {{ components.component("Zero section description", components.zero_section(fano)) }}
-
+    {% if fano.hilbert %}
+      {{ components.component("Hilbert schemes of curves", components.hilbert(fano)) }}
+    {% endif %}
     {% if fano.toric %}
       {{ components.component("Toric geometry", components.toric(fano)) }}
     {% endif %}

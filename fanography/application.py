@@ -127,6 +127,10 @@ class Fano:
     if "MMP" in yaml:
       self.MMP = yaml["MMP"]
 
+    # Hilbert schemes of curves, from Kuznetsov--Prokhorov--Shramov and Kuznetsov--Prokhorov
+    if "hilbert" in yaml:
+      self.hilbert = yaml["hilbert"]
+
     # deal with quantum cohomology
     self.qh = []
     if self.h12 == 0:
@@ -145,8 +149,6 @@ class Fano:
       # for P^1-bundles Ciolli claims semisimplicity
       if any([contraction[0] == "P1" for contraction in self.MMP]):
         self.qh.append(["small", "Ciolli", 2005, "MR2168069", "the description of quantum cohomology of a $\mathbb{P}^1$-bundle"])
-
-    print(self.identifier(), self.qh)
 
 
   def __eq__(self, other):
