@@ -295,7 +295,7 @@
 {% endif %}
 </p>
 
-<h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier() }}</span>{% if fano["name"] %}: {{ fano["name"] }}{% endif %}</h5>
+<h5 class="card-title">Fano variety <span class="identifier">{{ fano.identifier() }}</span>{% if fano["name"] %}: {{ fano["name"] | safe }}{% endif %}</h5>
 
 {{ description(fano) }}
 
@@ -601,7 +601,7 @@
 
 {# information about semiorthogonal decompositions #}
 {% macro sod(fano) %}
-{% if fano.h12 == 0 %} 
+{% if fano.h12 == 0 %}
   {% if fano.exceptional | length == 1 %}
     <p>A full exceptional collection can be constructed using {{ fano.exceptional[0] }}.
   {% else %}
