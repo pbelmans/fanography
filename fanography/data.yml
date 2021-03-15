@@ -1035,7 +1035,7 @@
     description: blowup of ((2-32)) in a curve $C$ of bidegree $(2,2)$ such that the composition $C\hookrightarrow W\hookrightarrow\mathbb{P}^2\times\mathbb{P}^2\overset{p_i}{\to}\mathbb{P}^2$ is an embedding for $i=1,2$
     -KX3: 30
     h12: 0
-    moduli: 1 # TODO Sasha's computation disagrees with Aut^0 paper
+    moduli: 1
 
     rational: yes
     blowdown: ["2-32", "2-32", "2-32"]
@@ -1340,7 +1340,7 @@
 
     period: 8, 163
 
-    bivector: [29, 0, 0] # TODO from toric computation
+    bivector: [29, 0, 0]
 
 
   30:
@@ -1410,7 +1410,7 @@
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the disjoint union of the vertex and an elliptic curve on the quadric
     -KX3: 28
     h12: 1
-    moduli: 2 # H^1(X,T_X)=2 TODO
+    moduli: 1
 
     rational: yes
     blowdown: ["3-31", "3-31"]
@@ -1609,7 +1609,7 @@
 
     period: 88, 32
 
-    #bivector: [?, ?, ?]
+    bivector: [4, 0, 0]
 
 
 # rank 5
@@ -1767,4 +1767,4 @@
     MMP:
       - ["P1", "\\mathrm{Bl}_8\\mathbb{P}^2", "\\mathcal{O}_{\\mathrm{Bl}_8\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathrm{Bl}_8\\mathbb{P}^2}"]
 
-    bivector: [2, 24, 0] # TODO check this
+    bivector: [2, 24, 0]
