@@ -1410,7 +1410,7 @@
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the disjoint union of the vertex and an elliptic curve on the quadric
     -KX3: 28
     h12: 1
-    moduli: 1
+    moduli: 2 # this is H^2(X,T_X), there are really just 1 moduli
 
     rational: yes
     blowdown: ["3-31", "3-31"]
