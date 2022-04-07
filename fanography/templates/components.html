@@ -359,7 +359,7 @@
   <dt class="col-6 text-right">$-\mathrm{K}_X$ very ample?</dt>
   {% if (fano["rho"], fano["ID"]) not in [(1, 1), (1, 11), (2, 1), (2, 2), (2, 3), (9, 1), (10, 1)] %}
     <dd class="col-6 text-nowrap">yes
-      {% if fano["rho"] == 1 and fano["ID"] == 2 %}if (a), else no{% endif %}
+      {% if fano["rho"] == 1 and fano["ID"] in [2, 5] %}if (a), else no{% endif %}
     </dd>
   {% else %}
     <dd class="col-6 text-nowrap">no</dd>
