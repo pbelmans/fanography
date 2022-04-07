@@ -24,6 +24,10 @@
     unirational: some
 
     period: 165, 15
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1]]
+      bundles: [[4]]
 
     bivector: [0, 0, 15]
 
@@ -37,6 +41,10 @@
     unirational: yes
 
     period: 164, 19
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,1]]
+      bundles: [[2], [3]]
 
     bivector: [0, 0, 7]
 
@@ -50,6 +58,10 @@
     unirational: yes
 
     period: 163, 5
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,1,1]]
+      bundles: [[2], [2], [2]]
 
     bivector: [0, 0, 3]
 
@@ -209,6 +221,10 @@
     unirational: yes
 
     period: 106, 0
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1]]
+      bundles: [[3]]
 
     hilbert:
       1:
@@ -229,6 +245,10 @@
     rational: yes
 
     period: 75, 2
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,1]]
+      bundles: [[2], [2]]
 
     hilbert:
       1:
@@ -275,6 +295,10 @@
     rational: yes
 
     period: 3, 4
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1]]
+      bundles: [[2]]
 
     bivector: [35, 0, 0]
 
@@ -351,6 +375,10 @@
     blowdown: ["1-17"]
 
     period: 161, 49
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0], [0,0,1,1,1,1]]
+      bundles: [[1,3]]
 
     bivector: [0, 0, 0]
 
@@ -365,6 +393,10 @@
     blowdown: ["1-13"]
 
     period: 158, 34
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0], [0,0,1,1,1,1]]
+      bundles: [[0,3]]
 
     bivector: [1, 3, 0]
 
@@ -383,6 +415,10 @@
     fibrelike: yes
 
     period: 149, 11
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,0,0,0], [0,0,0,1,1,1]]
+      bundles: [[2,2]]
 
     bivector: [0, 0, 1]
 
@@ -397,6 +433,10 @@
     blowdown: ["1-16"]
 
     period: 148, 51
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0], [0,0,1,1,1,1]]
+      bundles: [[2,0], [1,2]]
 
     bivector: [0, 1, 0]
 
@@ -412,6 +452,10 @@
     unirational: yes
 
     period: 144, 26
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-1,0,1], [0,0,0,1,1,1]]
+      bundles: [[2,2]]
 
     bivector: [3, 1, 1] # some educated guesswork was used
 
@@ -428,6 +472,10 @@
     blowdown: ["1-17"]
 
     period: 139, 62
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,0,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[1,1], [2,1]]
 
     bivector: [1, 0, 0]
 
@@ -442,6 +490,10 @@
     blowdown: ["1-14"]
 
     period: 145, 40
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0], [0,0,1,1,1,1,1]]
+      bundles: [[0,2], [0,2]]
 
     bivector: [1, 2, 0]
 
@@ -456,6 +508,10 @@
     blowdown: ["1-13"]
 
     period: 120, 56
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-1,0,0], [0,0,0,1,1,1]]
+      bundles: [[1,2]]
 
     bivector: [3, 0, 0]
 
@@ -474,6 +530,10 @@
     fibrelike: yes
 
     period: 118, 13
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,0,0,0,0], [0,0,0,0,1,1,1,1]]
+      bundles: [[1,1], [1,1], [1,1]]
 
     hilbert:
       2:
@@ -493,6 +553,10 @@
     blowdown: ["1-16"]
 
     period: 119, 52
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,0,0,0,0,0], [0,0,0,1,1,1,1,1]]
+      bundles: [[1,1], [1,1], [0,2]]
 
     bivector: [2, 0, 0]
 
@@ -524,6 +588,10 @@
     blowdown: ["1-17"]
 
     period: 109, 35
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,-1,0], [0,0,0,0,1,1]]
+      bundles: [[2,1]]
 
     bivector: [6, 0, 0]
 
@@ -538,6 +606,10 @@
     blowdown: ["1-14"]
 
     period: 104, 59
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-1,0,0,0], [0,0,0,1,1,1,1]]
+      bundles: [[1,1], [0,2]]
 
     bivector: [4, 0, 0]
 
@@ -565,6 +637,10 @@
     rational: yes
 
     period: 74, 60
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,0,0,1], [0,0,0,1,1,1]]
+      bundles: [[2,2]]
 
     bivector: [6, 0, 0]
 
@@ -579,6 +655,10 @@
     blowdown: ["1-14", "1-17"]
 
     period: 86, 55
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,-1,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[1,1], [1,1]]
 
     bivector: [8, 0, 0]
 
@@ -650,6 +730,10 @@
     blowdown: ["1-16"]
 
     period: 78, 29
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,1,-1,0], [0,0,0,0,0,1,1]]
+      bundles: [[1,1], [2,0]]
 
     bivector: [11, 0, 0]
 
@@ -665,6 +749,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 44, 66
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,0,0,0], [0,0,0,1,1,1]]
+      bundles: [[1,2]]
 
     MMP:
       - ["P1", "\\mathbb{P}^2", "0\\to\\mathcal{O}_{\\mathbb{P}^2}(-2)\\to\\mathcal{O}_{\\mathbb{P}^2}^{\\oplus3}\\to\\mathcal{E}(1)\\to 0"]
@@ -684,6 +772,10 @@
     blowdown: ["1-17"]
 
     period: 43, 28
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0], [0,0,1,1,1,1]]
+      bundles: [[1,2]]
 
     bivector: [13, 0, 0]
 
@@ -716,6 +808,10 @@
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
     period: 19, 61
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,0,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[1,1], [1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^2", "0\\to\\mathcal{O}_{\\mathbb{P}^2}(-1)^{\\oplus2}\\to\\mathcal{O}_{\\mathbb{P}^2}^{\\oplus4}\\to\\mathcal{E}(1)\\to 0"]
@@ -735,6 +831,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes\\mathbb{G}_{\\mathrm{m}}", 1, 4]]
 
     period: 5, 33
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,-2,0], [0,0,0,0,1,1]]
+      bundles: [[1,1]]
 
     bivector: [21, 0, 0]
 
@@ -751,6 +851,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
     period: 35, 42
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0], [0,0,1,1,1,1]]
+      bundles: [[0,2]]
 
     bivector: [20, 0, 0]
 
@@ -767,6 +871,10 @@
     Aut: [["\\mathrm{PSO}_{5;1}", 0, 7]]
 
     period: 4, 70
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,-1,0], [0,0,0,0,1,1]]
+      bundles: [[1,1]]
 
     bivector: [26, 0, 0]
 
@@ -783,6 +891,10 @@
     Aut: [["\\mathrm{PSO}_{5;2}", 0, 7]]
 
     period: 15, 48
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-1,0,0], [0,0,0,1,1,1]]
+      bundles: [[1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^2", "0\\to\\mathcal{O}_{\\mathbb{P}^2}\\to\\mathcal{E}\\to\\mathcal{J}_x\\to0"]
@@ -808,6 +920,10 @@
     fibrelike: yes
 
     period: 24, 6
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,0,0,0], [0,0,0,1,1,1]]
+      bundles: [[1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^2", "\\mathrm{T}_{\\mathbb{P}^2}"]
@@ -829,6 +945,9 @@
     toric: 19
 
     period: 2, 54
+    method:
+      type: "toric"
+      weights: [[1,1,-1,0,0], [0,0,1,1,1]]
 
     bivector: [34, 0, 0]
 
@@ -846,6 +965,9 @@
     toric: 22
 
     period: 10, 44
+    method:
+      type: "toric"
+      weights: [[1,1,0,0,0], [0,0,1,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^2", "\\mathcal{O}_{\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathbb{P}^2}"]
@@ -870,6 +992,9 @@
     toric: 20
 
     period: 7, 30
+    method:
+      type: "toric"
+      weights: [[1,1,1,-1,0], [0,0,0,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^2", "\\mathcal{O}_{\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathbb{P}^2}(1)"]
@@ -890,6 +1015,9 @@
     toric: 7
 
     period: 6, 58
+    method:
+      type: "toric"
+      weights: [[1,1,1,-2,0], [0,0,0,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^2", "\\mathcal{O}_{\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathbb{P}^2}(2)"]
@@ -910,6 +1038,10 @@
     fibrelike: yes
 
     period: 154, 22
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,1], [0,0,1,1,0,0,1], [0,0,0,0,1,1,1]]
+      bundles: [[2,2,2]]
 
     bivector: [0, 2, 1]
 
@@ -923,6 +1055,10 @@
     rational: yes
 
     period: 157, 97
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,-1,0,0], [0,0,1,1,-1,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[0,1,2]]
 
     bivector: [2, 6, 0]
 
@@ -937,6 +1073,10 @@
     blowdown: ["2-34", "2-34"]
 
     period: 135, 31
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,0], [0,0,1,1,0,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[1,1,2]]
 
     bivector: [0, 0, 0]
 
@@ -951,6 +1091,10 @@
     blowdown: ["2-18"]
 
     period: 142, 151
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0], [0,0,1,1,-1,-1,0], [0,0,0,0,1,1,1]]
+      bundles: [[0,0,2]]
 
     bivector: [2, 3, 0]
 
@@ -967,6 +1111,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 138, 109
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,-1,0,0], [0,0,1,1,1,-1,0,0], [0,0,0,0,0,1,1,1]]
+      bundles: [[0,1,1], [0,1,1]]
 
     bivector: [3, 4, 0]
 
@@ -983,6 +1131,10 @@
     blowdown: ["2-25", "2-33"]
 
     period: 117, 146
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0], [0,0,1,1,1,0,0], [0,0,0,0,0,1,1]]
+      bundles: [[0,2,1]]
 
     bivector: [2, 0, 0]
 
@@ -997,6 +1149,10 @@
     blowdown: ["2-32", "2-34", "2-34"]
 
     period: 103, 36
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,0,0], [0,0,1,1,1,0,0,0], [0,0,0,0,0,1,1,1]]
+      bundles: [[0,1,1], [1,1,1]]
 
     bivector: [4, 0, 0]
 
@@ -1013,6 +1169,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 112, 85
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0], [0,0,1,1,0,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[0,1,2]]
 
     bivector: [3, 0, 0]
 
@@ -1029,6 +1189,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 6, 1]]
 
     period: 22, 68
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-2,0,0], [0,0,0,1,1,1]]
+      bundles: [[0,2]]
 
     bivector: [8, 0, 0]
 
@@ -1047,6 +1211,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
     period: 99, 67
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,-1,0,0], [0,0,1,1,0,-1,0], [0,0,0,0,1,1,1]]
+      bundles: [[0,0,2]]
 
     bivector: [5, 0, 0]
 
@@ -1061,6 +1229,10 @@
     blowdown: ["2-25", "2-34", "2-35"]
 
     period: 72, 107
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-1,0,0,0], [0,0,0,1,1,0,0], [0,0,0,0,0,1,1]]
+      bundles: [[1,1,1]]
 
     bivector: [8, 0, 0]
 
@@ -1077,6 +1249,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 85, 144
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0,0], [0,0,1,1,1,0,0,0], [0,0,0,0,0,1,1,1]]
+      bundles: [[0,1,1], [0,1,1]]
 
     bivector: [7, 0, 0]
 
@@ -1095,6 +1271,10 @@
     fibrelike: yes
 
     period: 70, 16
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,0,0,0,0,0,0], [0,0,0,1,1,1,0,0,0], [0,0,0,0,0,0,1,1,1]]
+      bundles: [[1,1,0], [1,0,1], [0,1,1]]
 
     hilbert:
       2:
@@ -1117,6 +1297,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
     period: 21, 98
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,0,-2,0], [0,0,0,1,1,0,0], [0,0,0,0,0,1,1]]
+      bundles: [[0,1,1]]
 
     bivector: [12, 0, 0]
 
@@ -1134,6 +1318,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 67, 112
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,0,0,-1,0], [0,0,0,1,1,0,-1], [0,0,0,0,0,1,1]]
+      bundles: [[1,0,1]]
 
     bivector: [11, 0, 0]
 
@@ -1151,6 +1339,10 @@
     Aut: [["\\mathrm{B}", 0, 2]]
 
     period: 42, 119
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-1,0,0,-1,-1], [0,0,0,1,1,-1,0,0], [0,0,0,0,0,1,1,1]]
+      bundles: [[0,0,1], [0,0,1]]
 
     bivector: [13, 0, 0]
 
@@ -1167,6 +1359,10 @@
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
     period: 39, 37
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,0], [0,0,1,1,0,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[1,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "0\\to\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(-1,-1)\\to\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}^{\\oplus3}\\to\\mathcal{E}(1,1)\\to0"]
@@ -1186,6 +1382,10 @@
     Aut: [["\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}}", 0, 3]]
 
     period: 41, 160
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0], [0,0,1,1,1,-1,0], [0,0,0,0,0,1,1]]
+      bundles: [[0,1,1]]
 
     bivector: [15, 0, 0]
 
@@ -1202,6 +1402,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
     period: 18, 57
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-1,0,0], [0,0,0,1,1,1]]
+      bundles: [[0,2]]
 
     bivector: [17, 0, 0]
 
@@ -1218,6 +1422,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
     period: 38, 63
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,1,-1,0], [0,0,1,1,1,0,-1], [0,0,0,0,-1,1,1]]
+      bundles: [[1,1,0]]
 
     bivector: [17, 0, 0]
 
@@ -1234,6 +1442,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^2\\rtimes\\mathbb{G}_{\\mathrm{m}}^2", 0, 4]]
 
     period: 49, 98
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,-1], [0,0,1,1,1,0,-1], [0,0,0,0,0,1,1]]
+      bundles: [[0,1,1]]
 
     bivector: [17, 0, 0]
 
@@ -1250,6 +1462,10 @@
     Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0, 5]]
 
     period: 13, 152
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,-1,0], [0,0,1,1,1,0,-2], [0,0,0,0,0,1,1]]
+      bundles: [[0,0,1]]
 
     bivector: [19, 0, 0]
 
@@ -1268,6 +1484,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}})", 0, 6]]
 
     period: 17, 158
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,-1,0,0,0], [0,0,0,1,1,-1,0], [0,0,0,0,0,1,1]]
+      bundles: [[1,0,1]]
 
     bivector: [21, 0, 0]
 
@@ -1284,6 +1504,10 @@
     Aut: [["\\mathrm{PGL}_{3;1}", 0, 6]]
 
     period: 31, 86
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0], [0,0,1,1,0,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[0,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{F}_1", "\\pi^*(\\mathrm{T}_{\\mathbb{P}^2})"]
@@ -1307,6 +1531,9 @@
     toric: 18
 
     period: 16, 41
+    method:
+      type: "toric"
+      weights: [[1,1,0,0,-1,0], [0,0,1,1,0,-1], [0,0,0,0,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(1,0)\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(0,1)"]
@@ -1330,6 +1557,9 @@
     toric: 16
 
     period: 12, 113
+    method:
+      type: "toric"
+      weights: [[1,1,0,1,-1,0], [0,0,1,1,0,-1], [0,0,0,-1,1,1]]
 
     bivector: [25, 0, 0]
 
@@ -1351,6 +1581,9 @@
     toric: 21
 
     period: 45, 21
+    method:
+      type: "toric"
+      weights: [[1,1,0,0,0,0], [0,0,1,1,0,0], [0,0,0,0,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}"]
@@ -1377,6 +1610,9 @@
     toric: 17
 
     period: 28, 90
+    method:
+      type: "toric"
+      weights: [[1,1,0,0,0,0], [0,0,1,1,-1,0], [0,0,0,0,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(0,1)"]
@@ -1399,6 +1635,9 @@
     toric: 6
 
     period: 8, 163
+    method:
+      type: "toric"
+      weights: [[1,0,0,-1,0,1], [0,1,1,0,-2,1], [0,0,0,1,1,-1]]
 
     bivector: [29, 0, 0]
 
@@ -1419,6 +1658,9 @@
     toric: 12
 
     period: 11, 84
+    method:
+      type: "toric"
+      weights: [[1,1,-1,0,0,0], [0,0,1,1,-1,0], [0,0,0,0,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{F}_1", "\\pi^*(\\mathcal{O}_{\\mathbb{P}^2}\\oplus\\mathcal{O}_{\\mathbb{P}^2}(1))"]
@@ -1441,6 +1683,9 @@
     toric: 11
 
     period: 14, 53
+    method:
+      type: "toric"
+      weights: [[1,1,0,0,-1,0], [0,0,1,1,-1,0], [0,0,0,0,1,1]]
 
     MMP:
       - ["P1", "\\mathbb{P}^1\\times\\mathbb{P}^1", "\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}\\oplus\\mathcal{O}_{\\mathbb{P}^1\\times\\mathbb{P}^1}(1,1)"]
@@ -1462,6 +1707,10 @@
     fibrelike: yes
 
     period: 111, 3
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,0,0], [0,0,1,1,0,0,0,0], [0,0,0,0,1,1,0,0], [0,0,0,0,0,0,1,1]]
+      bundles: [[1,1,1,1]]
 
     bivector: [3, 0, 0]
 
@@ -1470,7 +1719,7 @@
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the disjoint union of the vertex and an elliptic curve on the quadric
     -KX3: 28
     h12: 1
-    moduli: 2 # this is H^2(X,T_X), there are really just 1 moduli
+    moduli: 2 # this is H^1(X,T_X), there are really just 1 moduli
 
     rational: yes
     blowdown: ["3-31", "3-31"]
@@ -1478,6 +1727,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 2, 1]]
 
     period: 110, 88 # there is an issue with the labeling on http://coates.ma.ic.ac.uk/fanosearch/?page_id=277
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,-1,0,0], [0,0,1,1,-1,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[0,0,2]]
 
     bivector: [7, 0, 0]
 
@@ -1494,6 +1747,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 83, 122
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,0,0], [0,0,1,1,0,0,0,0], [0,0,0,0,1,1,-1,0], [0,0,0,0,0,0,1,1]]
+      bundles: [[1,1,0,1]]
 
     bivector: [8, 0, 0]
 
@@ -1510,6 +1767,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2]]
 
     period: 68, 103
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0], [0,0,1,1,-1,0,0], [0,0,0,0,1,1,1]]
+      bundles: [[0,0,2]]
 
     bivector: [10, 0, 0]
 
@@ -1526,6 +1787,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2]]
 
     period: 81, 147
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,-1,0,-1,0], [0,0,1,1,0,0,-1,0], [0,0,0,0,1,1,0,0], [0,0,0,0,0,0,1,1]]
+      bundles: [[0,0,1,1]]
 
     bivector: [10, 0, 0]
 
@@ -1545,6 +1810,10 @@
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
     period: 65, 65
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,-1,0,0], [0,0,1,1,0,0,0,-1,0], [0,0,0,0,1,1,0,0,-1], [0,0,0,0,0,0,1,1,1]]
+      bundles: [[0,0,0,1], [0,0,0,1]]
 
     bivector: [12, 0, 0]
 
@@ -1561,6 +1830,10 @@
     Aut: [["\\mathrm{GL}_2", 0, 4]]
 
     period: 57, 69
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,-1,0,0,0,0,0], [0,0,1,1,0,0,0,0], [0,0,0,0,1,1,-1,0], [0,0,0,0,0,0,1,1]]
+      bundles: [[0,1,0,1]]
 
     bivector: [14, 0, 0]
 
@@ -1577,6 +1850,10 @@
     Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0, 5]]
 
     period: 54, 105
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,0,-1], [0,0,1,1,0,0,0,-1], [0,0,0,0,1,1,-1,0], [0,0,0,0,0,0,1,1]]
+      bundles: [[0,0,0,1]]
 
     bivector: [16, 0, 0]
 
@@ -1595,6 +1872,9 @@
     toric: 13
 
     period: 37, 102
+    method:
+      type: "toric"
+      weights: [[1,1,0,0,-1,0,0], [0,0,1,1,0,-1,0], [0,0,0,-1,0,1,1], [0,0,0,1,1,0,-1]]
 
     bivector: [18, 0, 0]
 
@@ -1634,6 +1914,9 @@
     toric: 10
 
     period: 34, 93
+    method:
+      type: "toric"
+      weights: [[1,0,0,0,-1,0,1], [0,0,1,1,-1,0,0], [0,-1,0,0,0,1,1], [0,1,0,0,1,0,-1]]
 
     bivector: [22, 0, 0]
 
@@ -1652,6 +1935,9 @@
     toric: 8
 
     period: 29, 150
+    method:
+      type: "toric"
+      weights: [[1,1,-1,0,0,0,0], [0,0,-1,0,0,1,1], [0,0,1,1,0,-1,0], [0,0,1,0,1,0,-1]]
 
     bivector: [24, 0, 0]
 
@@ -1668,6 +1954,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 88, 32
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,0,0,0,0,-1,0], [0,0,1,1,0,0,-1,0], [0,0,0,0,1,1,0,0], [0,0,0,0,0,0,1,1]]
+      bundles: [[0,1,1,1]]
 
     bivector: [4, 0, 0]
 
@@ -1686,6 +1976,10 @@
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 100, 114
+    method:
+      type: "quantum Lefschetz"
+      ambient: [[1,1,1,1,1,0,0,0,0], [1,1,1,0,0,1,0,0,0], [1,0,0,0,0,0,1,0,0], [0,1,0,0,0,0,0,1,0], [0,0,1,0,0,0,0,0,0,1]]
+      bundles: [[2,2,1,1,1]]
 
     bivector: [5, 0, 0]
 
@@ -1704,6 +1998,9 @@
     toric: 15
 
     period: 64, 87
+    method:
+      type: "toric"
+      weights: [[1,1,0,0,-1,0,0,0], [0,0,1,1,0,-1,0,0], [0,0,0,1,1,0,-1,0], [0,0,1,0,1,0,0,-1], [0,0,-1,-1,-1,1,1,1]]
 
     bivector: [13, 0, 0]
 
