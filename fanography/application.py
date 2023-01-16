@@ -156,6 +156,8 @@ class Fano:
       # TODO check H^1(X,T_X) for 1-10
       # TODO improve this
       bivector = yaml["bivector"]
+      assert bivector[0] - bivector[1] + bivector[2] == self.KX3 - 18 - self.rho + self.h12, "Cohomology of bivectors not consistent with Euler characteristic"
+
       self.polyvector = [
               [1, 0, 0, 0],
               [self.Aut[-1][2], self.moduli[0], 0, 0],

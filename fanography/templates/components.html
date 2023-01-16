@@ -428,13 +428,13 @@
   <br style="clear: both">
 
   <span>{{ fano["polyvector"][0][1] }}</span>
-  <span>{{ fano["polyvector"][1][0] }}</span>
+  <span>{{ fano["polyvector"][1][0] }}{% if fano["Aut"] | length > 1 %}<sup>*</sup>{% endif %}</span>
   <span></span>
   <span></span>
   <br style="clear: both">
 
   <span>{{ fano["polyvector"][0][2] }}</span>
-  <span>{{ fano["polyvector"][1][1] }}</span>
+  <span>{{ fano["polyvector"][1][1] }}{% if fano["Aut"] | length > 1 %}<sup>*</sup>{% endif %}</span>
   <span>{{ fano["polyvector"][2][0] }}</span>
   <span></span>
   <br style="clear: both">
@@ -462,6 +462,12 @@
   <span></span>
   <span>{{ fano["polyvector"][3][3] }}</span>
   <br style="clear: both">
+
+  {% if fano["Aut"] | length > 1 %}
+  <sup>*</sup> indicates jumping of $\operatorname{Aut}^0$<br>
+
+  its dimension takes on the values {% for dim in fano["Aut"] | map(attribute=2) | unique | sort %}{{ dim }}{% if not loop.last %}, {% endif %}{% endfor %}
+  {% endif %}
 </div>
 {% endif %}
 {% endmacro %}
