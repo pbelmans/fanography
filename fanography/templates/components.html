@@ -211,6 +211,57 @@
 {% endmacro %}
 
 
+{# Bott vanishing table #}
+{% macro bott_table(fanos, order) %}
+<table class="table table-hover" id="table-bott">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+      <th scope="col" class="text-center" data-sort-method="number">index</th>
+      <th scope="col" class="text-center">toric</th>
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for rho in fanos %}
+      {% for ID in fanos[rho] if fanos[rho][ID].bott %}
+        {% set fano = fanos[rho][ID] %}
+        <tr>
+          <td class="align-middle row-identifier text-center" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></td>
+
+          <td class="align-middle rank text-center">{{ fano["index"] }}</td>
+
+          <td class="align-middle rank text-center">{{ fano["toric"] | lower }}</td>
+
+          <td class="align-middle description">
+            {% if fano["name"] %}
+              <strong>{{ fano["name"] }}</strong>
+            {% endif %}
+
+            {{ description(fano) }}
+
+            {% if fano["alternative"] %}
+              <dl class="d-none d-xl-block d-print-block mb-0">
+                <dt>alternative</dt>
+                {% for alternative in fano["alternative"] %}
+                  <dd class="mb-0 ml-5">{{ alternative | safe }}</dd>
+                {% endfor %}
+              </dl>
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    {% endfor %}
+  </tbody>
+</table>
+
+<script type="text/javascript">
+new Tablesort(document.getElementById("table-bott"));
+</script>
+{% endmacro %}
+
+
 {# del Pezzo varieties table #}
 {% macro delpezzovarieties(fanos, order) %}
 <table class="table">
@@ -536,29 +587,35 @@
   {% if -1 in fano["moduli"] %}
     <p class="alert alert-warning">The value -1 means that I don't know the correct value yet.</p>
   {% endif %}
-
-  <hr>
-
-  <table class="table-sm mx-auto">
-    <thead>
-      <tr class="border-bottom">
-        <th class="text-center"><a href="/explained#aut">$\mathrm{Aut}^0(X)$</a></th>
-        <th class="text-center">$\dim\mathrm{Aut}^0(X)$</th>
-        <th class="text-center">number of moduli</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      {% for tuple in fano["Aut"] %}
-        <tr>
-          <td class="text-center">${{ tuple[0] }}$</td>
-          <td class="text-center">{{ tuple[2] }}</td>
-          <td class="text-center">{{ tuple[1] }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <dt class="col-6 text-right"><a href="/bott">Bott vanishing</a></dt>
+  <dd class="col-6">
+    {% if fano.bott %}
+      holds
+    {% else %}
+      does <em>not</em> hold
+    {% endif %}
+  </dd>
 </dl>
+
+<table class="table-sm mx-auto">
+  <thead>
+    <tr class="border-bottom">
+      <th class="text-center"><a href="/explained#aut">$\mathrm{Aut}^0(X)$</a></th>
+      <th class="text-center">$\dim\mathrm{Aut}^0(X)$</th>
+      <th class="text-center">number of moduli</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for tuple in fano["Aut"] %}
+      <tr>
+        <td class="text-center">${{ tuple[0] }}$</td>
+        <td class="text-center">{{ tuple[2] }}</td>
+        <td class="text-center">{{ tuple[1] }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endmacro %}
 
 
@@ -682,6 +739,15 @@
 <dl class="row">
   <dt class="col-6 text-right">number of moduli</dt>
   <dd class="col-6">{{ delpezzo.moduli }}</dd>
+
+  <dt class="col-6 text-right"><a href="/bott">Bott vanishing</a></dt>
+  <dd class="col-6">
+    {% if delpezzo.bott %}
+      holds
+    {% else %}
+      does <em>not</em> hold
+    {% endif %}
+  </dd>
 </dl>
 {% endmacro %}
 

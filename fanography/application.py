@@ -131,6 +131,13 @@ class Fano:
     if "hilbert" in yaml:
       self.hilbert = yaml["hilbert"]
 
+    # dealing with Bott vanishing following https://arxiv.org/abs/2302.08142
+    self.bott = False
+    if self.toric:
+        self.bott = True
+    if self.identifier() in ["2-26", "2-30", "3-15", "3-16", "3-18", "3-19", "3-20", "3-21", "3-22", "3-23", "3-24", "4-3", "4-4", "4-5", "4-6", "4-7", "4-8", "5-1", "6-1"]:
+        self.bott = True
+
     # deal with quantum cohomology
     self.qh = []
     if self.h12 == 0:
@@ -212,6 +219,10 @@ class delPezzo:
       self.moduli = 0
     else:
       self.moduli = (5 - self.degree) * 2
+
+    # Bott vanishing
+    self.bott = (self.degree >= 5)
+
 
     # deal with automorphism groups: degree 5 and higher is rigid, so there is a unique automorphism group, for lower degrees: it varies in moduli
     if self.degree >= 5:
@@ -360,6 +371,11 @@ def show_toric():
   order = [(1, 17), (2, 36), (2, 35), (2, 33), (2, 34), (3, 31), (3, 29), (3, 30), (3, 27), (3, 28), (3, 26), (3, 25), (4, 12), (4, 11), (4, 10), (4, 9), (5, 3), (5, 2)]
 
   return render_template("table.toric.html", fanos=fanos, order=order)
+
+
+@app.route("/bott")
+def show_bott():
+  return render_template("table.bott.html", fanos=fanos, delpezzos=delpezzos)
 
 
 @app.route("/delpezzo-varieties")
