@@ -384,7 +384,7 @@ def show_delpezzovarieties():
   order = [(1, 11, -1), (1, 12, -1), (1, 13, -1), (1, 14, -1), (1, 15, "\leq 6"), (3, 27, 3), (2, 32, "\leq 4"), (2, 35, 3)]
 
   with open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "delpezzo-varieties.yml"), "r", encoding="utf8") as f:
-    data = yaml.load(f)
+    data = yaml.load(f, Loader=yaml.FullLoader)
 
     # read in the data
     for ID in data.keys():
