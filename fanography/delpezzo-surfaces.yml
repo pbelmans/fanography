@@ -53,7 +53,7 @@ dP8:
   index: 1
 
   exceptional: 1
-  Aut: ['$\mathbb{G}_{\mathrm{m}}^2\rtimes\mathrm{GL}_2$', 6] # Dolgachev, proposition 8.2.31
+  Aut: ['$\mathbb{A}^2\rtimes\mathrm{GL}_2$', 6] # Dolgachev, proposition 8.2.31
 
 dP7:
   label: $\mathrm{Bl}_2\mathbb{P}^2$
