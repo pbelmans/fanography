@@ -1472,8 +1472,6 @@
 
   23:
     description: blowup of ((2-35)) in the proper transform of a conic containing the center of the blowup
-    alternative:
-      - complete intersection of degree $(1,1,0)$ and $(0,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^2\times\mathbb{P}^2$
     -KX3: 42
     h12: 0
     moduli: 0
@@ -1494,6 +1492,8 @@
 
   24:
     description: the fiber product of ((2-32)) with $\mathrm{Bl}_p\mathbb{P}^2$ over $\mathbb{P}^2$
+    alternative:
+      - complete intersection of degree $(1,1,0)$ and $(0,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^2\times\mathbb{P}^2$
     -KX3: 42
     h12: 0
     moduli: 0
