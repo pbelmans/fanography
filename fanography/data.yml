@@ -1995,7 +1995,7 @@
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{GL}_2", 0, 5]]
 
-    toric: 15
+    toric: 9
 
     period: 64, 87
     method:
@@ -2016,7 +2016,7 @@
 
     Aut: [["\\mathrm{PGL}_2\\times\\mathbb{G}_{\\mathrm{m}}^2", 0, 5]]
 
-    toric: 9
+    toric: 15
 
     period: 76, 43
 
