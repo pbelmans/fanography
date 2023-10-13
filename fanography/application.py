@@ -424,6 +424,13 @@ def show_delpezzosurface(ID):
   except KeyError:
     return render_template("delpezzo.notfound.html", delpezzos=delpezzos, ID=ID)
 
+from datetime import datetime
+
+# to make the current year accessible in templates
+@app.context_processor
+def inject_now():
+    return {"now": datetime.utcnow()}
+
 
 """
 # Naming scheme
