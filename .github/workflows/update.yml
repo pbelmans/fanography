@@ -1,0 +1,29 @@
+name: update and reload website
+on: workflow_dispatch
+jobs:
+  update:
+    name: Update repository
+    runs-on: ubuntu-latest
+    steps:
+    - name: git pull
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: cd fanography-info && git pull
+
+  reload:
+    name: Reload website
+    needs: update
+    runs-on: ubuntu-latest
+    steps:
+    - name: touch WSGI
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: touch /var/www/www_fanography_info_wsgi.py
