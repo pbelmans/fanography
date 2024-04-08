@@ -139,6 +139,7 @@ dP2:
   anticanonical: double cover of $\mathbb{P}^2$ branched along a quartic curve
   alternatives:
     - quartic surface in $\mathbb{P}(1,1,1,2)$ # this is tautological from the previous construction
+    - divisor of degree $(2,2)$ in $\mathbb{P}^1\times\mathbb{P}^2$
 
   index: 1
 
