@@ -206,9 +206,9 @@ class delPezzo:
     # deal with constructions
     self.anticanonical = yaml["anticanonical"] if yaml["anticanonical"] else ""
 
-    self.intersections = []
-    if "intersections" in yaml:
-      self.intersections.extend(yaml["intersections"])
+    self.alternatives = []
+    if "alternatives" in yaml:
+      self.alternatives.extend(yaml["alternatives"])
 
     # number of exceptional curves
     self.exceptional = yaml["exceptional"]

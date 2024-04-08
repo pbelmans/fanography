@@ -40,11 +40,11 @@
         <td>
           <strong>{{ delpezzo.name }}</strong>
 
-          {% if delpezzo["intersections"] %}
+          {% if delpezzo["alternatives"] %}
             <dl class="d-none d-xl-block d-print-block mb-0">
-              <dt>as complete intersection</dt>
-              {% for intersection in delpezzo["intersections"] %}
-                <dd class="mb-0 ml-5">{{ intersection }}</dd>
+              <dt>alternative descriptions</dt>
+              {% for alternative in delpezzo["alternatives"] %}
+                <dd class="mb-0 ml-5">{{ alternative }}</dd>
               {% endfor %}
             </dl>
           {% endif %}

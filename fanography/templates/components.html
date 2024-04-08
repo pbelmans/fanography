@@ -840,5 +840,15 @@ new Tablesort(document.getElementById("table-bott"));
 
   <dt class="col-6 text-right">$-\mathrm{K}_S^2$
   <dd class="col-6">{{ delpezzo.degree }}
+
+  {% if delpezzo["alternatives"] %}
+    <dt class="col-6 text-right">alternatives</dt>
+    <dd class="col-6">
+    {% for alternative in delpezzo["alternatives"] %}
+      {{ alternative }}
+      {% if not loop.last %}<br><br>{% endif %}
+    {% endfor %}
+    </dd>
+  {% endif %}
 </dl>
 {% endmacro %}
