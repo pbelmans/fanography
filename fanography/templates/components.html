@@ -637,6 +637,16 @@ new Tablesort(document.getElementById("table-bott"));
 {% endmacro %}
 
 
+{# overview of K-stability #}
+{% macro k_stability(fano) %}
+<ul>
+  <li>{{ fano.Kps }}
+  <li>{{ fano.Kss }}
+</ul>
+<p>See <a href="/K-stability">the big table</a> for more information.
+{% endmacro %}
+
+
 {# information about period sequences #}
 {% macro period(fano) %}
 {% if fano.period %}

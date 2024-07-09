@@ -1,0 +1,93 @@
+{% extends "page.html" %}
+
+{% import "components.html" as components %}
+
+{% block title %}Overview of K-stability for Fano 3-folds{% endblock %}
+
+{% block content %}
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+
+      <th scope="col" class="text-center">moduli</th>
+
+      <th scope="col" class="text-center no-sort" data-sort-method="none"><a href="/explained#aut">$\mathrm{Aut}^0$</a></th>
+
+      <th scope="col" class="text-center">K&#8209;polystability</th>
+
+      <th scope="col" class="text-center">K&#8209;semistability</th>
+    </tr>
+  </thead>
+  {% for rho in fanos %}
+  <tbody id="rho-{{ rho }}">
+    {% for ID in fanos[rho] %}
+      {% set fano = fanos[rho][ID] %}
+
+      <tr>
+        <td class="align-middle row-identifier text-center" data-sort="{{ "%03d%03d" | format(fano["rho"], fano["ID"]) }}"><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></td>
+
+        <td class="align-middle description">
+          {% if fano["name"] %}
+            <strong>{{ fano["name"] | safe }}</strong>
+          {% endif %}
+
+          {{ components.description(fano) }}
+
+          {% if fano["alternative"] %}
+            <dl class="d-none d-xl-block d-print-block mb-0">
+              <dt>alternative</dt>
+              {% for alternative in fano["alternative"] %}
+                <dd class="mb-0 ml-5">{{ alternative | safe }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+        </td>
+
+        <td class="align-middle moduli text-center" data-sort="{{ fano["moduli"][0] }}">
+          {% if fano["moduli"] | length == 1 %}{{ fano["moduli"][0] }}
+          {% else %}<ol class="description"><li>{{ fano["moduli"][0] }}<li>{{ fano["moduli"][1] }}</ol>{% endif %}
+        </td>
+
+        <td>
+          {% if fano["Aut"] | length == 1 %}
+            <p class="text-center">${{ fano["Aut"][0][0] }}$</p>
+          {% else %}
+            <table class="table-sm mx-auto">
+              <thead>
+                <tr class="border-bottom">
+                  <th class="text-center border-0">$\mathrm{Aut}^0(X)$</th>
+                  <th class="text-center border-0">moduli</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {% for tuple in fano["Aut"] if tuple[0] != "0" %}
+                  <tr>
+                    <td class="text-center border-0">${{ tuple[0] }}$</td>
+                    <td class="text-center border-0">{{ tuple[1] }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </td>
+
+        <td>
+          {{ fano["Kps"] }}
+        </td>
+
+        <td>
+          {{ fano["Kss"] }}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+  {% endfor %}
+</table>
+
+{% endblock %}
+
