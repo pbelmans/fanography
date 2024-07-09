@@ -55,7 +55,7 @@ so more recent progress is missing at the moment.
           {% else %}<ol class="description"><li>{{ fano["moduli"][0] }}<li>{{ fano["moduli"][1] }}</ol>{% endif %}
         </td>
 
-        <td>
+        <td class="align-middle">
           {% if fano["Aut"] | length == 1 %}
             <p class="text-center">${{ fano["Aut"][0][0] }}$</p>
           {% else %}
@@ -79,11 +79,11 @@ so more recent progress is missing at the moment.
           {% endif %}
         </td>
 
-        <td>
+        <td class="align-middle">
           {{ fano["Kps"] }}
         </td>
 
-        <td>
+        <td class="align-middle">
           {{ fano["Kss"] }}
         </td>
       </tr>
