@@ -173,6 +173,29 @@ class Fano:
 
       self.hochschild_cohomology = [1, self.polyvector[1][0], self.polyvector[1][1] + self.polyvector[2][0], self.polyvector[2][1] + self.polyvector[3][0], self.polyvector[2][2]]
 
+      # deal with K-polystability and K-semistability
+      # we follow the convention from Section 6.1 of https://www.maths.ed.ac.uk/cheltsov/pdf/Fanos.pdf
+      # a) Yes        every threefolds is K-(poly/semi)stable
+      # b) Yes *      general threefold is K-(poly/semi)stable
+      # c) No         no threefold is K-(poly/semi)stable
+      # d) \exists No at least one threefold is not K-(poly/semi)stable
+      # e) there is also the _combination_ of Yes * and \exists No
+      # we use the following encoding as an integer
+      # a = 4
+      # b = 3
+      # c = 0
+      # d = 1
+      # e = 2
+      if "Kps" and "Kss" in yaml:
+          encoding = {0: "none are K-{}stable",
+                      1: "at least one member is not K-{}stable",
+                      2: "general member is K-{}stable but there exists one that is not",
+                      3: "general member is K-{}stable",
+                      4: "every member is K-{}stable"}
+          self.Kps = encoding[yaml["Kps"]].format("poly")
+          self.Kss = encoding[yaml["Kss"]].format("semi")
+
+
 
   def __eq__(self, other):
     return self.identifier() == other.identifier()
@@ -376,6 +399,11 @@ def show_toric():
 @app.route("/bott")
 def show_bott():
   return render_template("table.bott.html", fanos=fanos, delpezzos=delpezzos)
+
+
+@app.route("/K-stability")
+def show_kstability():
+  return render_template("table.kstability.html", fanos=fanos, delpezzos=delpezzos)
 
 
 @app.route("/delpezzo-varieties")

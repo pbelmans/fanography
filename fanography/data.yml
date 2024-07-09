@@ -12,6 +12,9 @@
 
     bivector: [0, 0, 35]
 
+    Kps: 4
+    Kss: 4
+
 
   2:
     description:
@@ -31,6 +34,9 @@
 
     bivector: [0, 0, 15]
 
+    Kps: 4
+    Kss: 4
+
 
   3:
     description: complete intersection of quadric and cubic in $\mathbb{P}^5$
@@ -47,6 +53,9 @@
       bundles: [[2], [3]]
 
     bivector: [0, 0, 7]
+
+    Kps: 4
+    Kss: 4
 
 
   4:
@@ -65,6 +74,9 @@
 
     bivector: [0, 0, 3]
 
+    Kps: 4
+    Kss: 4
+
 
   5:
     name: Gushel&ndash;Mukai 3-fold
@@ -81,6 +93,9 @@
     period: 160, 9
 
     bivector: [0, 0, 1]
+
+    Kps: 4
+    Kss: 4
 
 
   6:
@@ -100,6 +115,9 @@
 
     bivector: [0, 0, 0]
 
+    Kps: 4
+    Kss: 4
+
 
   7:
     description: section of Plücker embedding of $\mathrm{Gr}(2,6)$ by codimension 5 subspace
@@ -117,6 +135,9 @@
         invariants: {pg: 10, q: 5, h12: 25}
 
     bivector: [0, 0, 0]
+
+    Kps: 4
+    Kss: 4
 
 
   8:
@@ -136,6 +157,9 @@
 
     bivector: [0, 0, 0]
 
+    Kps: 4
+    Kss: 4
+
 
   9:
     description: section of the adjoint $\mathrm{G}_2$-Grassmannian $\mathrm{G}_2\mathrm{Gr}(2,7)$ by codimension 2 subspace
@@ -154,6 +178,9 @@
 
     bivector: [1, 0, 0]
 
+    Kps: 3
+    Kss: 3
+
 
   10:
     description: zero locus of $(\bigwedge^2\mathcal{U}^\vee)^{\oplus 3}$ on $\mathrm{Gr}(3,7)$
@@ -162,6 +189,9 @@
     moduli: 6
 
     rational: yes
+
+    Kps: 2
+    Kss: 3
 
     Aut: [["\\mathrm{PGL}_2", 0, 3], ["\\mathbb{G}_{\\mathrm{a}}", 0, 1], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
@@ -190,6 +220,9 @@
 
     unirational: "?"
 
+    Kps: 4
+    Kss: 4
+
     bivector: [3, 0, 7]
 
 
@@ -205,6 +238,9 @@
 
     unirational: yes
 
+    Kps: 4
+    Kss: 4
+
     period: 140, 1
 
     bivector: [6, 0, 1]
@@ -219,6 +255,9 @@
     index: 2
 
     unirational: yes
+
+    Kps: 4
+    Kss: 4
 
     period: 106, 0
     method:
@@ -243,6 +282,9 @@
     index: 2
 
     rational: yes
+
+    Kps: 4
+    Kss: 4
 
     period: 75, 2
     method:
@@ -270,6 +312,9 @@
 
     rational: yes
 
+    Kps: 4
+    Kss: 4
+
     period: 46, 14
 
     bivector: [21, 0, 0]
@@ -294,6 +339,9 @@
 
     rational: yes
 
+    Kps: 4
+    Kss: 4
+
     period: 3, 4
     method:
       type: "quantum Lefschetz"
@@ -317,6 +365,9 @@
 
     rational: yes
 
+    Kps: 4
+    Kss: 4
+
     toric: 23
 
     period: 1, 12
@@ -337,6 +388,9 @@
     unirational: "?"
     blowdown: ["1-11"]
 
+    Kps: 3
+    Kss: 3
+
     bivector: [1, 2, 7]
 
 
@@ -347,6 +401,9 @@
     moduli: 33
 
     unirational: yes
+
+    Kps: 3
+    Kss: 3
 
     bivector: [0, 0, 6]
 
@@ -359,6 +416,9 @@
 
     unirational: yes
     blowdown: ["1-12"]
+
+    Kps: 3
+    Kss: 3
 
     bivector: [1, 3, 1]
 
@@ -373,6 +433,9 @@
 
     rational: yes
     blowdown: ["1-17"]
+
+    Kps: 3
+    Kss: 3
 
     period: 161, 49
     method:
@@ -391,6 +454,9 @@
 
     unirational: yes
     blowdown: ["1-13"]
+
+    Kps: 3
+    Kss: 3
 
     period: 158, 34
     method:
@@ -412,6 +478,10 @@
 
     unirational: yes
 
+    Kps: 3
+    Kss: 3
+    Kremark: the double covers are known to be all K-polystable
+
     fibrelike: yes
 
     period: 149, 11
@@ -432,6 +502,9 @@
     rational: yes
     blowdown: ["1-16"]
 
+    Kps: 3
+    Kss: 3
+
     period: 148, 51
     method:
       type: "quantum Lefschetz"
@@ -450,6 +523,9 @@
     moduli: [18, 17]
 
     unirational: yes
+
+    Kps: 4
+    Kss: 4
 
     period: 144, 26
     method:
@@ -471,6 +547,9 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kps: 3
+    Kss: 3
+
     period: 139, 62
     method:
       type: "quantum Lefschetz"
@@ -489,6 +568,9 @@
     rational: yes
     blowdown: ["1-14"]
 
+    Kps: 3
+    Kss: 3
+
     period: 145, 40
     method:
       type: "quantum Lefschetz"
@@ -506,6 +588,9 @@
 
     unirational: yes
     blowdown: ["1-13"]
+
+    Kps: 3
+    Kss: 3
 
     period: 120, 56
     method:
@@ -526,6 +611,9 @@
 
     rational: yes
     blowdown: ["1-17"]
+
+    Kps: 3
+    Kss: 3
 
     fibrelike: yes
 
@@ -552,6 +640,9 @@
     rational: yes
     blowdown: ["1-16"]
 
+    Kps: 3
+    Kss: 3
+
     period: 119, 52
     method:
       type: "quantum Lefschetz"
@@ -570,6 +661,9 @@
     rational: yes
     blowdown: ["1-15"]
 
+    Kps: 3
+    Kss: 3
+
     period: 122, 39 # see comments of http://coates.ma.ic.ac.uk/fanosearch/?page_id=175
 
     bivector: [1, 0, 0]
@@ -584,6 +678,9 @@
     moduli: [9, 8]
 
     rational: yes
+
+    Kps: 3
+    Kss: 3
 
     blowdown: ["1-17"]
 
@@ -605,6 +702,9 @@
     rational: yes
     blowdown: ["1-14"]
 
+    Kps: 3
+    Kss: 3
+
     period: 104, 59
     method:
       type: "quantum Lefschetz"
@@ -623,6 +723,9 @@
     rational: yes
     blowdown: ["1-16", "1-17"]
 
+    Kps: 3
+    Kss: 3
+
     period: 101, 38
 
     bivector: [5, 0, 0]
@@ -635,6 +738,9 @@
     moduli: 6
 
     rational: yes
+
+    Kps: 3
+    Kss: 3
 
     period: 74, 60
     method:
@@ -660,6 +766,9 @@
       ambient: [[1,1,1,1,-1,0,0], [0,0,0,0,1,1,1]]
       bundles: [[1,1], [1,1]]
 
+    Kps: 3
+    Kss: 3
+
     bivector: [8, 0, 0]
 
 
@@ -671,6 +780,9 @@
 
     rational: yes
     blowdown: ["1-15"]
+
+    Kps: 2
+    Kss: 3
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -687,6 +799,9 @@
 
     rational: yes
     blowdown: ["1-16", "1-16"]
+
+    Kps: 2
+    Kss: 3
 
     fibrelike: yes
 
@@ -711,6 +826,9 @@
     rational: yes
     blowdown: ["1-15", "1-17"]
 
+    Kps: 2
+    Kss: 4
+
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 69, 50
@@ -729,6 +847,9 @@
     rational: yes
     blowdown: ["1-16"]
 
+    Kps: 0
+    Kss: 0
+
     period: 78, 29
     method:
       type: "quantum Lefschetz"
@@ -745,6 +866,9 @@
     moduli: 1
 
     rational: yes
+
+    Kps: 2
+    Kss: 3
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -771,6 +895,9 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kps: 4
+    Kss: 4
+
     period: 43, 28
     method:
       type: "quantum Lefschetz"
@@ -789,6 +916,9 @@
     rational: yes
     blowdown: ["1-15", "1-16"]
 
+    Kps: 0
+    Kss: 2
+
     Aut: [["\\mathrm{B}", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 58, 47
@@ -804,6 +934,9 @@
 
     rational: yes
     blowdown: ["1-17"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
@@ -828,6 +961,9 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes\\mathbb{G}_{\\mathrm{m}}", 1, 4]]
 
     period: 5, 33
@@ -847,6 +983,9 @@
 
     rational: yes
     blowdown: ["1-16"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
@@ -868,6 +1007,9 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{PSO}_{5;1}", 0, 7]]
 
     period: 4, 70
@@ -887,6 +1029,9 @@
 
     rational: yes
     blowdown: ["1-16"]
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathrm{PSO}_{5;2}", 0, 7]]
 
@@ -915,6 +1060,9 @@
 
     rational: yes
 
+    Kps: 4
+    Kss: 4
+
     Aut: [["\\mathrm{PGL}_3", 0, 8]]
 
     fibrelike: yes
@@ -940,6 +1088,9 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{PGL}_{4;2}", 0, 11]]
 
     toric: 19
@@ -959,6 +1110,9 @@
     moduli: 0
 
     rational: yes
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_3", 0, 11]]
 
@@ -985,6 +1139,9 @@
 
     rational: yes
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{PGL}_{4;1}", 0, 12]]
 
     index: 2
@@ -1009,6 +1166,9 @@
     moduli: 0
 
     rational: yes
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathrm{Aut}(\\mathbb{P}(1,1,1,2))", 0, 15]]
 
@@ -1035,6 +1195,9 @@
 
     unirational: yes
 
+    Kps: 4
+    Kss: 4
+
     fibrelike: yes
 
     period: 154, 22
@@ -1054,6 +1217,9 @@
 
     rational: yes
 
+    Kps: 3
+    Kss: 3
+
     period: 157, 97
     method:
       type: "quantum Lefschetz"
@@ -1071,6 +1237,9 @@
 
     rational: yes
     blowdown: ["2-34", "2-34"]
+
+    Kps: 4
+    Kss: 4
 
     period: 135, 31
     method:
@@ -1090,6 +1259,9 @@
     rational: yes
     blowdown: ["2-18"]
 
+    Kps: 3
+    Kss: 3
+
     period: 142, 151
     method:
       type: "quantum Lefschetz"
@@ -1107,6 +1279,9 @@
 
     rational: yes
     blowdown: ["2-34"]
+
+    Kps: 2
+    Kss: 3
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -1130,6 +1305,9 @@
     rational: yes
     blowdown: ["2-25", "2-33"]
 
+    Kps: 3
+    Kss: 3
+
     period: 117, 146
     method:
       type: "quantum Lefschetz"
@@ -1148,6 +1326,9 @@
     rational: yes
     blowdown: ["2-32", "2-34", "2-34"]
 
+    Kps: 3
+    Kss: 3
+
     period: 103, 36
     method:
       type: "quantum Lefschetz"
@@ -1165,6 +1346,9 @@
 
     rational: yes
     blowdown: ["2-24", "2-34"]
+
+    Kps: 2
+    Kss: 3
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -1185,6 +1369,9 @@
 
     rational: yes
     blowdown: ["2-36", "2-36"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 6, 1]]
 
@@ -1208,6 +1395,9 @@
     rational: yes
     blowdown: ["2-29", "2-29"]
 
+    Kps: 2
+    Kss: 4
+
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
     period: 99, 67
@@ -1228,6 +1418,9 @@
     rational: yes
     blowdown: ["2-25", "2-34", "2-35"]
 
+    Kps: 3
+    Kss: 3
+
     period: 72, 107
     method:
       type: "quantum Lefschetz"
@@ -1245,6 +1438,9 @@
 
     rational: yes
     blowdown: ["2-27", "2-33", "2-34"]
+
+    Kps: 2
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -1265,6 +1461,9 @@
 
     rational: yes
     blowdown: ["2-32", "2-32", "2-32"]
+
+    Kps: 2
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_2", 0, 3], ["\\mathbb{G}_{\\mathrm{a}}", 0, 1], ["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
@@ -1294,6 +1493,9 @@
     rational: yes
     blowdown: ["2-35", "2-36"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 1, 1]]
 
     period: 21, 98
@@ -1314,6 +1516,9 @@
 
     rational: yes
     blowdown: ["2-29", "2-31", "2-34"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -1336,6 +1541,9 @@
     rational: yes
     blowdown: ["2-27", "2-32", "2-35"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{B}", 0, 2]]
 
     period: 42, 119
@@ -1355,6 +1563,9 @@
 
     rational: yes
     blowdown: ["2-34", "2-34"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
@@ -1379,6 +1590,9 @@
     rational: yes
     blowdown: ["2-29", "2-30", "2-33"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}}", 0, 3]]
 
     period: 41, 160
@@ -1398,6 +1612,9 @@
 
     rational: yes
     blowdown: ["2-35", "2-35"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
@@ -1419,6 +1636,9 @@
     rational: yes
     blowdown: ["2-31", "2-31", "2-32"]
 
+    Kps: 4
+    Kss: 4
+
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{PGL}_2", 0, 4]]
 
     period: 38, 63
@@ -1438,6 +1658,9 @@
 
     rational: yes
     blowdown: ["2-34"]
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^2\\rtimes\\mathbb{G}_{\\mathrm{m}}^2", 0, 4]]
 
@@ -1459,6 +1682,9 @@
     rational: yes
     blowdown: ["2-34", "2-36"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0, 5]]
 
     period: 13, 152
@@ -1478,6 +1704,9 @@
 
     rational: yes
     blowdown: ["2-30", "2-31", "2-35"]
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{B}\\times\\mathbb{G}_{\\mathrm{m}})", 0, 6]]
 
@@ -1500,6 +1729,9 @@
 
     rational: yes
     blowdown: ["2-32", "2-34"]
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathrm{PGL}_{3;1}", 0, 6]]
 
@@ -1525,6 +1757,9 @@
 
     rational: yes
     blowdown: ["2-33", "2-33"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_{(2,2)}", 0, 7]]
 
@@ -1552,6 +1787,9 @@
     rational: yes
     blowdown: ["2-34", "2-35"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^3\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0, 8]]
 
     toric: 16
@@ -1573,6 +1811,9 @@
     index: 2
 
     rational: yes
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_2^3", 0, 9]]
 
@@ -1605,6 +1846,9 @@
     rational: yes
     blowdown: ["2-34"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{PGL}_2\\times\\mathrm{PGL}_{3;1}", 0, 9]]
 
     toric: 17
@@ -1630,6 +1874,9 @@
     rational: yes
     blowdown: ["2-35", "2-35"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{PGL}_{4;3,1}", 0, 10]]
 
     toric: 6
@@ -1652,6 +1899,9 @@
 
     rational: yes
     blowdown: ["2-33", "2-35"]
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathrm{PGL}_{4;2,1}", 0, 10]]
 
@@ -1677,6 +1927,9 @@
     moduli: 0
 
     rational: yes
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathrm{PSO}_{6;1}", 0, 11]]
 
@@ -1704,6 +1957,9 @@
     rational: yes
     blowdown: ["3-27", "3-27", "3-27", "3-27"]
 
+    Kps: 4
+    Kss: 4
+
     fibrelike: yes
 
     period: 111, 3
@@ -1723,6 +1979,9 @@
 
     rational: yes
     blowdown: ["3-31", "3-31"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 2, 1]]
 
@@ -1744,6 +2003,9 @@
     rational: yes
     blowdown: ["3-17", "3-27", "3-28", "3-28"]
 
+    Kps: 4
+    Kss: 4
+
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 83, 122
@@ -1763,6 +2025,9 @@
 
     rational: yes
     blowdown: ["3-18", "3-18", "3-19", "3-30", "3-30"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2]]
 
@@ -1784,6 +2049,9 @@
     rational: yes
     blowdown: ["3-21", "3-28", "3-31"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2]]
 
     period: 81, 147
@@ -1804,6 +2072,9 @@
     moduli: 0
 
     rational: yes
+
+    Kps: 4
+    Kss: 4
 
     blowdown: ["3-25", "3-25", "3-25", "3-27"]
 
@@ -1827,6 +2098,9 @@
     rational: yes
     blowdown: ["3-24", "3-24", "3-28", "3-28"]
 
+    Kps: 4
+    Kss: 4
+
     Aut: [["\\mathrm{GL}_2", 0, 4]]
 
     period: 57, 69
@@ -1847,6 +2121,9 @@
     rational: yes
     blowdown: ["3-27", "3-31"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_2", 0, 5]]
 
     period: 54, 105
@@ -1866,6 +2143,9 @@
 
     rational: yes
     blowdown: ["3-25", "3-26", "3-28", "3-30"]
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathrm{PGL}_{(2,2);1}", 0, 6]]
 
@@ -1888,6 +2168,9 @@
     rational: yes
     blowdown: ["3-27", "3-28", "3-28"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathrm{PGL}_2\\times\\mathrm{B}^2", 0, 7]]
 
     toric: 14
@@ -1908,6 +2191,9 @@
 
     rational: yes
     blowdown: ["3-28", "3-31"]
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathrm{B}\\times\\mathrm{PGL}_{3;1}", 0, 8]]
 
@@ -1930,6 +2216,9 @@
     rational: yes
     blowdown: ["3-30", "3-30"]
 
+    Kps: 0
+    Kss: 0
+
     Aut: [["\\mathbb{G}_{\\mathrm{a}}^4\\rtimes(\\mathrm{GL}_2\\times\\mathbb{G}_{\\mathrm{m}})", 0, 9]]
 
     toric: 8
@@ -1950,6 +2239,9 @@
 
     rational: yes
     blowdown: ["3-27", "3-31", "3-31"]
+
+    Kps: 2
+    Kss: 3
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -1973,6 +2265,9 @@
     rational: yes
     blowdown: ["4-4", "4-4", "4-4", "4-12", "4-12", "4-12"]
 
+    Kps: 4
+    Kss: 4
+
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
     period: 100, 114
@@ -1992,6 +2287,9 @@
 
     rational: yes
     blowdown: ["4-9", "4-9", "4-11", "4-11", "4-12"]
+
+    Kps: 0
+    Kss: 0
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}\\times\\mathrm{GL}_2", 0, 5]]
 
@@ -2013,6 +2311,9 @@
 
     rational: yes
     blowdown: ["4-10", "4-10", "4-10", "4-10", "4-10", "4-10"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_2\\times\\mathbb{G}_{\\mathrm{m}}^2", 0, 5]]
 
@@ -2037,6 +2338,9 @@
     rational: yes
     blowdown: ["5-3"]
 
+    Kps: 4
+    Kss: 4
+
     Aut: [["\\mathrm{PGL}_2", 0, 3]]
 
     period: 107, 64
@@ -2057,6 +2361,9 @@
 
     rational: yes
     blowdown: ["6-1"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_2", 2, 3]]
 
@@ -2079,6 +2386,9 @@
     rational: yes
     blowdown: ["7-1"]
 
+    Kps: 4
+    Kss: 4
+
     Aut: [["\\mathrm{PGL}_2", 4, 3]]
 
     period: 155, 45
@@ -2100,6 +2410,9 @@
     rational: yes
     blowdown: ["8-1"]
 
+    Kps: 4
+    Kss: 4
+
     Aut: [["\\mathrm{PGL}_2", 6, 3]]
 
     MMP:
@@ -2118,6 +2431,9 @@
 
     rational: yes
     blowdown: ["9-1"]
+
+    Kps: 4
+    Kss: 4
 
     Aut: [["\\mathrm{PGL}_2", 8, 3]]
 
