@@ -186,15 +186,19 @@ class Fano:
       # c = 0
       # d = 1
       # e = 2
-      if "Kps" and "Kss" in yaml:
-          encoding = {0: "none are K-{}stable",
-                      1: "at least one member is not K-{}stable",
-                      2: "general member is K-{}stable but there exists one that is not",
-                      3: "general member is K-{}stable",
-                      4: "every member is K-{}stable"}
-          self.Kps = encoding[yaml["Kps"]].format("poly")
-          self.Kss = encoding[yaml["Kss"]].format("semi")
+      encoding = {0: "none are K-{}stable",
+                  1: "at least one member is not K-{}stable",
+                  2: "general member is K-{}stable but there exists one that is not",
+                  3: "general member is K-{}stable",
+                  4: "every member is K-{}stable"}
+      self.Kps = encoding[yaml["Kps"]].format("poly")
+      self.Kss = encoding[yaml["Kss"]].format("semi")
 
+      # for the moment not all entries have a Ks field
+      if "Ks" in yaml:
+          self.Ks = encoding[yaml["Ks"]].format("")
+      else:
+          self.Ks = "K-stability is not understood"
 
 
   def __eq__(self, other):
