@@ -192,13 +192,16 @@ class Fano:
                   3: "general member is K-{}stable",
                   4: "every member is K-{}stable"}
       self.Kps = encoding[yaml["Kps"]].format("poly")
+      self.Kps_open = yaml["Kps"] == 3
       self.Kss = encoding[yaml["Kss"]].format("semi")
+      self.Kss_open = yaml["Kss"] == 3
 
       # for the moment not all entries have a Ks field
       if "Ks" in yaml:
           self.Ks = encoding[yaml["Ks"]].format("")
       else:
           self.Ks = "K-stability is not understood"
+      self.Ks_open = "Ks" not in yaml
 
 
   def __eq__(self, other):

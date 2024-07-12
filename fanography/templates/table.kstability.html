@@ -9,6 +9,8 @@
 <p>This is currently Table 6.1 of the book <a href="https://www.maths.ed.ac.uk/cheltsov/pdf/Fanos.pdf">The Calabi problem for Fano threefolds</a>,
 so more recent progress is missing at the moment.
 
+<p>Below the table we provide an overview of the <a href="#open">open cases</a>.
+
 <table class="table table-hover">
   <thead>
     <tr>
@@ -97,6 +99,67 @@ so more recent progress is missing at the moment.
   </tbody>
   {% endfor %}
 </table>
+
+<h3>Open cases</h3>
+<a name="open"></a>
+
+<style type="text/css">
+ul.status {
+  display: inline;
+  list-style: none;
+}
+
+ul.status li {
+  display: inline;
+}
+
+ul.status li:after {
+  content: ", ";
+}
+
+ul.status li:last-child:after {
+  content: "";
+}
+</style>
+
+<p>K-stability is not fully understood for the following families:
+<ul class="status">
+{% for rho in fanos %}
+  {% for ID in fanos[rho] %}
+    {% set fano = fanos[rho][ID] %}
+
+    {% if fano.Ks_open %}
+    <li><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></li>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
+
+<p>K-polystability is not fully understood for the following families:
+<ul class="status">
+{% for rho in fanos %}
+  {% for ID in fanos[rho] %}
+    {% set fano = fanos[rho][ID] %}
+
+    {% if fano.Kps_open %}
+    <li><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></li>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
+
+<p>K-semistability is not fully understood for the following families:
+<ul class="status">
+{% for rho in fanos %}
+  {% for ID in fanos[rho] %}
+    {% set fano = fanos[rho][ID] %}
+
+    {% if fano.Kss_open %}
+    <li><a class="identifier text-nowrap" href="/{{ fano.identifier() }}">{{ fano.identifier() }}</a></li>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
 
 {% endblock %}
 
