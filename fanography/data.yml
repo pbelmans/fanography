@@ -388,8 +388,10 @@
     unirational: "?"
     blowdown: ["1-11"]
 
-    Kps: 3
-    Kss: 3
+    # https://arxiv.org/abs/2210.14770
+    Ks: 4
+    Kps: 4
+    Kss: 4
 
     bivector: [1, 2, 7]
 
@@ -402,8 +404,10 @@
 
     unirational: yes
 
-    Kps: 3
-    Kss: 3
+    # https://arxiv.org/abs/2210.14770
+    Ks: 4
+    Kps: 4
+    Kss: 4
 
     bivector: [0, 0, 6]
 
@@ -417,8 +421,10 @@
     unirational: yes
     blowdown: ["1-12"]
 
-    Kps: 3
-    Kss: 3
+    # https://arxiv.org/abs/2210.14770
+    Ks: 4
+    Kps: 4
+    Kss: 4
 
     bivector: [1, 3, 1]
 
@@ -434,8 +440,10 @@
     rational: yes
     blowdown: ["1-17"]
 
-    Kps: 3
-    Kss: 3
+    # https://arxiv.org/abs/2210.14770
+    Ks: 4
+    Kps: 4
+    Kss: 4
 
     period: 161, 49
     method:
@@ -455,8 +463,9 @@
     unirational: yes
     blowdown: ["1-13"]
 
-    Kps: 3
-    Kss: 3
+    Ks: 3 # https://arxiv.org/abs/2210.14770
+    Kps: 3 # book
+    Kss: 3 # book
 
     period: 158, 34
     method:
@@ -478,9 +487,10 @@
 
     unirational: yes
 
-    Kps: 3
-    Kss: 3
-    Kremark: the double covers are known to be all K-polystable
+    # https://arxiv.org/abs/2210.14770
+    Ks: 4
+    Kps: 4
+    Kss: 4
 
     fibrelike: yes
 
@@ -502,8 +512,10 @@
     rational: yes
     blowdown: ["1-16"]
 
-    Kps: 3
-    Kss: 3
+    # https://arxiv.org/abs/2210.14770
+    Ks: 4
+    Kps: 4
+    Kss: 4
 
     period: 148, 51
     method:
@@ -524,6 +536,7 @@
 
     unirational: yes
 
+    # book, and https://arxiv.org/abs/2204.06709
     Kps: 4
     Kss: 4
 
@@ -612,6 +625,7 @@
     rational: yes
     blowdown: ["1-17"]
 
+    # https://arxiv.org/abs/2304.11334
     Kps: 3
     Kss: 3
 
@@ -679,8 +693,10 @@
 
     rational: yes
 
-    Kps: 3
-    Kss: 3
+    # https://arxiv.org/abs/2403.16747
+    # https://arxiv.org/abs/2304.11420
+    Kps: 4
+    Kss: 4
 
     blowdown: ["1-17"]
 
@@ -739,8 +755,10 @@
 
     rational: yes
 
-    Kps: 3
-    Kss: 3
+    # https://arxiv.org/abs/2304.11334
+    Ks: 4
+    Kps: 4
+    Kss: 4
 
     period: 74, 60
     method:
@@ -800,6 +818,7 @@
     rational: yes
     blowdown: ["1-16", "1-16"]
 
+    # https://arxiv.org/abs/2304.12295
     Kps: 2
     Kss: 3
 
@@ -826,8 +845,9 @@
     rational: yes
     blowdown: ["1-15", "1-17"]
 
-    Kps: 2
-    Kss: 4
+    Ks: 2 # https://arxiv.org/abs/2110.14762
+    Kps: 2 # book
+    Kss: 4 # book
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -1238,8 +1258,9 @@
     rational: yes
     blowdown: ["2-34", "2-34"]
 
-    Kps: 4
-    Kss: 4
+    Ks: 4 # https://arxiv.org/abs/2206.08539
+    Kps: 4 # book
+    Kss: 4 # book
 
     period: 135, 31
     method:
@@ -1259,8 +1280,10 @@
     rational: yes
     blowdown: ["2-18"]
 
-    Kps: 3
-    Kss: 3
+    # https://arxiv.org/abs/2304.11334
+    Ks: 4
+    Kps: 4
+    Kss: 4
 
     period: 142, 151
     method:
@@ -1280,8 +1303,9 @@
     rational: yes
     blowdown: ["2-34"]
 
-    Kps: 2
-    Kss: 3
+    Ks: 2 # https://arxiv.org/abs/2403.09002
+    Kps: 2 # book
+    Kss: 3 # book
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -1305,6 +1329,8 @@
     rational: yes
     blowdown: ["2-25", "2-33"]
 
+    # https://arxiv.org/abs/2401.02818
+    Ks: 3
     Kps: 3
     Kss: 3
 
@@ -1439,7 +1465,7 @@
     rational: yes
     blowdown: ["2-27", "2-33", "2-34"]
 
-    Kps: 2
+    Kps: 2 # https://arxiv.org/abs/2210.14770
     Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
