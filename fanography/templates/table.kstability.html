@@ -53,7 +53,7 @@ so more recent progress is missing at the moment.
         </td>
 
         <td class="align-middle moduli text-center" data-sort="{{ fano["moduli"][0] }}">
-          {% if fano["moduli"] | length == 1 %}{{ fano["moduli"][0] }}
+          {% if fano["moduli"] | length == 1 %}<p class="text-center">{{ fano["moduli"][0] }}</a>
           {% else %}<ol class="description"><li>{{ fano["moduli"][0] }}<li>{{ fano["moduli"][1] }}</ol>{% endif %}
         </td>
 
