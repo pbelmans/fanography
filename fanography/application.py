@@ -187,10 +187,10 @@ class Fano:
       # d = 1
       # e = 2
       encoding = {0: "none are K-{}stable",
-                  1: "at least one member is not K-{}stable",
-                  2: "general member is K-{}stable but there exists one that is not",
-                  3: "general member is K-{}stable",
-                  4: "every member is K-{}stable"}
+                  1: "at least one member is not K&#8209;{}stable",
+                  2: "general member is K&#8209;{}stable but there exists one that is not",
+                  3: "general member is K&#8209;{}stable",
+                  4: "every member is K&#8209;{}stable"}
 
       # TODO implement bibliography management...
       self.Kref = [("the book", "https://mathscinet.ams.org/mathscinet/relay-station?mr=MR4590444")]
