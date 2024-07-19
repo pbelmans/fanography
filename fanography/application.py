@@ -191,17 +191,42 @@ class Fano:
                   2: "general member is K-{}stable but there exists one that is not",
                   3: "general member is K-{}stable",
                   4: "every member is K-{}stable"}
+
       self.Kps = encoding[yaml["Kps"]].format("poly")
       self.Kps_open = yaml["Kps"] == 3
       self.Kss = encoding[yaml["Kss"]].format("semi")
       self.Kss_open = yaml["Kss"] == 3
 
-      # for the moment not all entries have a Ks field
+      self.Ks_open = "Ks" not in yaml
       if "Ks" in yaml:
           self.Ks = encoding[yaml["Ks"]].format("")
+      # for the moment not all entries have a Ks field, so we might have to compute it
+      # K-stable <=> K-polystable and finite automorphism group
       else:
-          self.Ks = "K-stability is not understood"
-      self.Ks_open = "Ks" not in yaml
+          # self.Aut[-1][2] is the dimension of the generic Aut^0
+          all_Aut_finite = self.Aut[-1][2] == 0 and len(self.Aut) == 1
+          generic_Aut_finite = self.Aut[-1][2] == 0
+
+          # all are K-stable if all are K-polystable and all Aut^0=0
+          if yaml["Kps"] == 4 and all_Aut_finite:
+              self.Ks = encoding[4].format("")
+              self.Ks_open = False
+          # if the generic one has finite Aut^0 we can use K-polystability if 2, 3 or 4
+          elif yaml["Kps"] in [2, 3, 4] and generic_Aut_finite:
+              self.Ks = encoding[yaml["Kps"]].format("")
+              self.Ks_open = yaml["Kps"] == 3
+          # if generic Aut^0 is non-trivial, no need to bother with K-polystability
+          elif self.Aut[-1][2] > 0:
+              self.Ks = encoding[0].format("")
+              self.Ks_open = False
+          # if no-one is K-polystable certainly no-one is K-stable
+          elif yaml["Kps"] == 0:
+              self.Ks = encoding[0].format("")
+              self.Ks_open = False
+          else:
+              print(self.rho, self.ID, yaml["Kps"], all_Aut_finite, generic_Aut_finite)
+              self.Ks = "K-stability is not understood"
+              self.Ks_open = True
 
 
   def __eq__(self, other):
