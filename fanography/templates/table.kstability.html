@@ -27,6 +27,8 @@ so more recent progress is missing at the moment.
       <th scope="col" class="text-center">K&#8209;polystability</th>
 
       <th scope="col" class="text-center">K&#8209;semistability</th>
+
+      <th scope="col" class="text-center">references</th>
     </tr>
   </thead>
   {% for rho in fanos %}
@@ -93,6 +95,14 @@ so more recent progress is missing at the moment.
 
         <td class="align-middle">
           {{ fano["Kss"] }}
+        </td>
+
+        <td class="align-middle">
+          <ul>
+          {% for ref in fano["Kref"] %}
+            <li><a href="{{ ref[1] }}">{{ ref[0] }}</a>
+          {% endfor %}
+          </ul>
         </td>
       </tr>
     {% endfor %}

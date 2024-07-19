@@ -192,6 +192,12 @@ class Fano:
                   3: "general member is K-{}stable",
                   4: "every member is K-{}stable"}
 
+      # TODO implement bibliography management...
+      self.Kref = [("the book", "https://mathscinet.ams.org/mathscinet/relay-station?mr=MR4590444")]
+      # they are all arXiv links for now
+      if "Kref" in yaml:
+          self.Kref = self.Kref + [(ref, "https://arxiv.org/abs/{}".format(ref)) for ref in yaml["Kref"]]
+
       self.Kps = encoding[yaml["Kps"]].format("poly")
       self.Kps_open = yaml["Kps"] == 3
       self.Kss = encoding[yaml["Kss"]].format("semi")
