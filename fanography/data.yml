@@ -1252,6 +1252,8 @@
 
     rational: yes
 
+    Kref:
+      - "2403.03700"
     Kps: 3
     Kss: 3
 
@@ -2006,6 +2008,8 @@
     rational: yes
     blowdown: ["3-27", "3-27", "3-27", "3-27"]
 
+    Kref:
+      - "2206.12208"
     Kps: 4
     Kss: 4
 
