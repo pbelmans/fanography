@@ -644,7 +644,13 @@ new Tablesort(document.getElementById("table-bott"));
   <li>{{ fano.Kps | safe }}
   <li>{{ fano.Kss | safe }}
 </ul>
-<p>See <a href="/K-stability">the big table</a> for more information.
+See
+<ul>
+{% for ref in fano["Kref"] %}
+  <li><a href="{{ ref[1] }}">{{ ref[0] }}</a>
+{% endfor %}
+</ul>
+and <a href="/K-stability">the big table</a> for more information.
 {% endmacro %}
 
 
