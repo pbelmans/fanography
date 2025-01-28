@@ -886,6 +886,8 @@
     rational: yes
     blowdown: ["1-16"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1004,6 +1006,8 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1050,6 +1054,8 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1073,6 +1079,8 @@
     rational: yes
     blowdown: ["1-16"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1131,6 +1139,8 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1182,6 +1192,8 @@
 
     rational: yes
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1210,6 +1222,8 @@
 
     rational: yes
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1561,6 +1575,8 @@
     rational: yes
     blowdown: ["2-35", "2-36"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1609,6 +1625,8 @@
     rational: yes
     blowdown: ["2-27", "2-32", "2-35"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1658,6 +1676,8 @@
     rational: yes
     blowdown: ["2-29", "2-30", "2-33"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1727,6 +1747,8 @@
     rational: yes
     blowdown: ["2-34"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1750,6 +1772,8 @@
     rational: yes
     blowdown: ["2-34", "2-36"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1773,6 +1797,8 @@
     rational: yes
     blowdown: ["2-30", "2-31", "2-35"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1798,6 +1824,8 @@
     rational: yes
     blowdown: ["2-32", "2-34"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1855,6 +1883,8 @@
     rational: yes
     blowdown: ["2-34", "2-35"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1914,6 +1944,8 @@
     rational: yes
     blowdown: ["2-34"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1942,6 +1974,8 @@
     rational: yes
     blowdown: ["2-35", "2-35"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1968,6 +2002,8 @@
     rational: yes
     blowdown: ["2-33", "2-35"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -1996,6 +2032,8 @@
 
     rational: yes
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -2121,6 +2159,8 @@
     rational: yes
     blowdown: ["3-21", "3-28", "3-31"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -2193,6 +2233,8 @@
     rational: yes
     blowdown: ["3-27", "3-31"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -2216,6 +2258,8 @@
     rational: yes
     blowdown: ["3-25", "3-26", "3-28", "3-30"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -2240,6 +2284,8 @@
     rational: yes
     blowdown: ["3-27", "3-28", "3-28"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -2264,6 +2310,8 @@
     rational: yes
     blowdown: ["3-28", "3-31"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -2288,6 +2336,8 @@
     rational: yes
     blowdown: ["3-30", "3-30"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
@@ -2362,6 +2412,8 @@
     rational: yes
     blowdown: ["4-9", "4-9", "4-11", "4-11", "4-12"]
 
+    Kref:
+      - "MR3570238"
     Kps: 0
     Kss: 0
 
