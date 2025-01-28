@@ -862,7 +862,8 @@
     blowdown: ["1-15", "1-17"]
 
     Kref:
-      - "2110.14762"
+      - "MR4498816"
+      - "2309.12518"
     Ks: 2
     Kps: 2
     Kss: 4
@@ -905,8 +906,10 @@
 
     rational: yes
 
+    Kref:
+      - "2309.12518"
     Kps: 2
-    Kss: 3
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}^2", 0, 2], ["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
@@ -933,6 +936,8 @@
     rational: yes
     blowdown: ["1-17"]
 
+    Kref:
+      - "2309.12518"
     Kps: 4
     Kss: 4
 
@@ -1499,6 +1504,7 @@
 
     Kref:
       - "MR4719816"
+      - "2309.12518"
     Kps: 2
     Kss: 4
 
@@ -1522,6 +1528,8 @@
     rational: yes
     blowdown: ["2-32", "2-32", "2-32"]
 
+    Kref:
+      - "2309.12518"
     Kps: 2
     Kss: 4
 
@@ -2304,6 +2312,8 @@
     rational: yes
     blowdown: ["3-27", "3-31", "3-31"]
 
+    Kref:
+      - "2309.12518"
     Kps: 2
     Kss: 3
 
