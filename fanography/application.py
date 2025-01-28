@@ -188,7 +188,7 @@ class Fano:
       # e = 2
       encoding = {0: "none are K-{}stable",
                   1: "at least one member is not K&#8209;{}stable",
-                  2: "general member is K&#8209;{}stable but there exists one that is not",
+                  2: "general member is K&#8209;{}stable but there exist members that are not",
                   3: "general member is K&#8209;{}stable",
                   4: "every member is K&#8209;{}stable"}
 
