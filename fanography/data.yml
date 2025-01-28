@@ -1701,6 +1701,8 @@
     rational: yes
     blowdown: ["2-35", "2-35"]
 
+    Kref:
+      - "MR3592691"
     Kps: 4
     Kss: 4
 
@@ -2136,6 +2138,8 @@
     rational: yes
     blowdown: ["3-18", "3-18", "3-19", "3-30", "3-30"]
 
+    Kref:
+      - "MR3592691"
     Kps: 4
     Kss: 4
 
@@ -2365,7 +2369,7 @@
     Kref:
       - "2309.12518"
     Kps: 2
-    Kss: 3
+    Kss: 4
 
     Aut: [["\\mathbb{G}_{\\mathrm{m}}", 0, 1]]
 
