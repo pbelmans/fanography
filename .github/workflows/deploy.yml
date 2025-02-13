@@ -1,4 +1,4 @@
-name: update and reload website
+name: deploy
 on: workflow_dispatch
 jobs:
   update:

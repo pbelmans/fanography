@@ -29,3 +29,11 @@ If you want to use the local state of the repository, change `git clone` to
 ```Dockerfile
 COPY . ./website
 ```
+
+## Deployment instructions
+
+With GitHub CLI installed and configured, simply run
+
+```shell
+gh workflow run deploy
+```
