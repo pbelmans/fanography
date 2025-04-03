@@ -8,10 +8,5 @@ setup(
         "flask",
         "pyyaml",
     ],
-    data_files=[
-        ("", "data.yml"),
-        ("", "sections.yml"),
-        ("", "delpezzo-surfaces.yml"),
-        ("", "delpezzo-varieties.yml"),
-    ],
+    package_data={"": ["*.yml"]},
 )
