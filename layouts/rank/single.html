@@ -1,0 +1,5 @@
+{{ define "main" }}
+<h2>Fano threefolds with $\rho={{ .Params.rho }}$</h2>
+
+{{ partial "components/overview-table.html" (dict "rho" .Params.rho) }}
+{{ end }}

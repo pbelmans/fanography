@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ range $rho := seq 1 10 }}
+  <h2><a href="/{{ $rho }}">Fano threefolds with $\rho={{ $rho }}$</a></h2>
+
+  {{ partial "components/overview-table.html" (dict "rho" $rho) }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $fano := partialCached "lib/enrich-fano.html" (dict "rho" .Params.rho "id" .Params.id) (printf "%d-%d" .Params.rho .Params.id) }}
+  <div class="card-columns">
+    {{ partial "components/component.html" (dict "header" "Identification" "id" "" "body" (partial "components/basic.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Hodge diamond and polyvector parallelogram" "id" "" "body" (partial "components/diamond.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Anticanonical bundle" "id" "" "body" (partial "components/anticanonical.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Birational geometry" "id" "birational" "body" (partial "components/birational.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Deformation theory" "id" "" "body" (partial "components/deformations.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Period sequence" "id" "" "body" (partial "components/period.html" $fano)) }}
+    {{ if ne $fano.rho 1 }}
+      {{ partial "components/component.html" (dict "header" "Extremal contractions" "id" "" "body" (partial "components/mmp.html" $fano)) }}
+    {{ end }}
+    {{ partial "components/component.html" (dict "header" "Semiorthogonal decompositions" "id" "" "body" (partial "components/sod.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Structure of quantum cohomology" "id" "" "body" (partial "components/qh.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Zero section description" "id" "" "body" (partial "components/zero-section.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "K-stability" "id" "" "body" (partial "components/k-stability.html" $fano)) }}
+    {{ if $fano.hilbert }}
+      {{ partial "components/component.html" (dict "header" "Hilbert schemes of curves" "id" "" "body" (partial "components/hilbert.html" $fano)) }}
+    {{ end }}
+    {{ if $fano.toric }}
+      {{ partial "components/component.html" (dict "header" "Toric geometry" "id" "" "body" (partial "components/toric.html" $fano)) }}
+    {{ end }}
+  </div>
+{{ end }}

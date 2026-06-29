@@ -1,0 +1,124 @@
+{{ define "main" }}
+<p>This table tries to give the state of the art of the ongoing project of understanding K-stability for all Fano 3-folds.
+Let me know if I have made a mistake, or am missing some recent progress!
+
+<p>Below the table we provide an overview of the <a href="#open">open cases</a>.
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+
+      <th scope="col" class="text-center">moduli</th>
+
+      <th scope="col" class="text-center no-sort" data-sort-method="none"><a href="/explained#aut">$\mathrm{Aut}^0$</a></th>
+
+      <th scope="col" class="text-center">K&#8209;stability</th>
+
+      <th scope="col" class="text-center">K&#8209;polystability</th>
+
+      <th scope="col" class="text-center">K&#8209;semistability</th>
+
+      <th scope="col" class="text-center">references</th>
+    </tr>
+  </thead>
+  {{ range $rho := seq 1 10 }}
+  <tbody id="rho-{{ $rho }}">
+    {{ range $id := partial "lib/rank-ids.html" $rho }}
+      {{ $fano := partialCached "lib/enrich-fano.html" (dict "rho" $rho "id" $id) (printf "%d-%d" $rho $id) }}
+      <tr>
+        <td class="align-middle row-identifier text-center" data-sort="{{ printf "%03d%03d" $fano.rho $fano.ID }}"><a class="identifier text-nowrap" href="/{{ $fano.identifier }}">{{ $fano.identifier }}</a></td>
+
+        {{ partial "components/description-cell.html" $fano }}
+
+        <td class="align-middle moduli text-center" data-sort="{{ index $fano.moduli 0 }}">
+          {{ if eq (len $fano.moduli) 1 }}<p class="text-center">{{ index $fano.moduli 0 }}</a>
+          {{ else }}<ol class="description"><li>{{ index $fano.moduli 0 }}<li>{{ index $fano.moduli 1 }}</ol>{{ end }}
+        </td>
+
+        <td class="align-middle">
+          {{ if eq (len $fano.Aut) 1 }}
+            <p class="text-center">${{ (index $fano.Aut 0).group }}$</p>
+          {{ else }}
+            <table class="table-sm mx-auto">
+              <thead>
+                <tr class="border-bottom">
+                  <th class="text-center border-0">$\mathrm{Aut}^0(X)$</th>
+                  <th class="text-center border-0">moduli</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {{ range $fano.Aut }}{{ if ne .group "0" }}
+                  <tr>
+                    <td class="text-center border-0">${{ .group }}$</td>
+                    <td class="text-center border-0">{{ .moduli }}</td>
+                  </tr>
+                {{ end }}{{ end }}
+              </tbody>
+            </table>
+          {{ end }}
+        </td>
+
+        <td class="align-middle">
+          {{ $fano.Ks | safeHTML }}
+        </td>
+
+        <td class="align-middle">
+          {{ $fano.Kps | safeHTML }}
+        </td>
+
+        <td class="align-middle">
+          {{ $fano.Kss | safeHTML }}
+        </td>
+
+        <td class="align-middle">
+          <ul>
+          {{ range $fano.Kref }}
+            <li><a href="{{ .url }}">{{ .label }}</a>
+          {{ end }}
+          </ul>
+        </td>
+      </tr>
+    {{ end }}
+  </tbody>
+  {{ end }}
+</table>
+
+<h3>Open cases</h3>
+<a name="open"></a>
+
+<style type="text/css">
+ul.status {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+ul.status li {
+  display: inline;
+}
+
+ul.status li:after {
+  content: ", ";
+}
+
+ul.status li:last-child:after {
+  content: "";
+}
+</style>
+
+<p>K-(poly/semi)stability is not fully understood for (the smooth members in) the following families:
+<ul class="status">
+{{ range $rho := seq 1 10 }}
+  {{ range $id := partial "lib/rank-ids.html" $rho }}
+    {{ $fano := partialCached "lib/enrich-fano.html" (dict "rho" $rho "id" $id) (printf "%d-%d" $rho $id) }}
+    {{ if $fano.Kss_open }}
+    <li><a class="identifier text-nowrap" href="/{{ $fano.identifier }}">{{ $fano.identifier }}</a></li>
+    {{ end }}
+  {{ end }}
+{{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,68 @@
+{{ define "main" }}
+{{ .Content }}
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">ambient variety</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">homogeneous vector bundle</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">origin</th>
+    </tr>
+  </thead>
+  {{ range $rho := seq 1 10 }}
+  <tbody id="rho-{{ $rho }}">
+    {{ range $id := partial "lib/rank-ids.html" $rho }}
+      {{ $fano := partialCached "lib/enrich-fano.html" (dict "rho" $rho "id" $id) (printf "%d-%d" $rho $id) }}
+      <tr>
+        <td class="align-middle row-identifier text-center" data-sort="{{ printf "%03d%03d" $fano.rho $fano.ID }}"><a class="identifier text-nowrap" href="/{{ $fano.identifier }}">{{ $fano.identifier }}</a></td>
+
+        {{ partial "components/description-cell.html" $fano }}
+
+        <td>
+          {{ if gt (len $fano.sections) 1 }}
+            <ol style="padding-left: 20px" class="mb-0">
+              {{ range $fano.sections }}<li>{{ .ambient }}{{ end }}
+            </ol>
+          {{ else }}
+            {{ (index $fano.sections 0).ambient }}
+          {{ end }}
+        </td>
+
+        <td>
+          {{ if gt (len $fano.sections) 1 }}
+            <ol style="padding-left: 20px" class="mb-0">
+              {{ range $fano.sections }}
+                <li>{{ .bundle }}
+                {{ with .definition }}<br>{{ . }}{{ end }}
+              {{ end }}
+            </ol>
+          {{ else }}
+            {{ $s := index $fano.sections 0 }}
+            {{ $s.bundle }}
+            {{ with $s.definition }}<br>{{ . }}{{ end }}
+          {{ end }}
+        </td>
+
+        <td>
+          {{ if gt (len $fano.sections) 1 }}
+            <ol style="padding-left: 20px" class="mb-0">
+              {{ range $fano.sections }}
+                <li>{{ partial "components/origin.html" .source }}
+              {{ end }}
+            </ol>
+          {{ else }}
+            {{ partial "components/origin.html" (index $fano.sections 0).source }}
+          {{ end }}
+        </td>
+      </tr>
+    {{ end }}
+  </tbody>
+  {{ end }}
+</table>
+{{ end }}

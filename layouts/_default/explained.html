@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{ $n := partial "lib/numbers.html" . }}
+<h2>Statistics</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="row" class="text-end">Picard rank $\rho$</th>
+      {{ range $n.perrank }}
+        <th scope="col"><a href="/{{ .rho }}">{{ .rho }}</a></th>
+      {{ end }}
+      <th scope="col">total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="text-end">number of deformation families</th>
+      {{ range $n.perrank }}<td>{{ .total }}</td>{{ end }}
+      <td><em>{{ $n.total }}</em></td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-end">number of primitive deformation families</th>
+      {{ range $n.perrank }}<td>{{ .primitive }}</td>{{ end }}
+      <td><em>{{ $n.primitive }}</em></td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-end">number of rational deformation families</th>
+      {{ range $n.perrank }}<td>{{ .rational }}</td>{{ end }}
+      <td><em>{{ $n.rational }}</em></td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-end">number of unirational deformation families</th>
+      {{ range $n.perrank }}<td>{{ .unirational }}</td>{{ end }}
+      <td><em>{{ $n.unirational }}</em></td>
+    </tr>
+  </tbody>
+</table>
+
+{{ .Content }}
+{{ end }}
