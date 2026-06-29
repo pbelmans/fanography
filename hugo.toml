@@ -1,0 +1,25 @@
+baseURL = "https://fanography.info/"
+locale = "en-us"
+title = "Fanography"
+
+# Pretty URLs: /2-22/ (served at /2-22 too). Works on hugo server and any static host.
+# Preserve case in URLs (del Pezzo ids like dP9, P1xP1); GitHub Pages is case-sensitive
+disablePathToLower = true
+
+# Fully static: no taxonomies, no RSS
+disableKinds = ["taxonomy", "term", "RSS"]
+
+# Allow raw HTML in the Markdown content pages
+[markup.goldmark.renderer]
+unsafe = true
+
+# Leave math delimiters untouched so client-side KaTeX renders them
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)'], ['$', '$']]
+
+# Keep straight quotes/dashes (no smart-quote substitution)
+[markup.goldmark.extensions.typographer]
+disable = true

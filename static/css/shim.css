@@ -1,0 +1,26 @@
+/* Recreate Bootstrap 4 `.card-columns` (removed in Bootstrap 5) with the same
+   CSS column masonry it used internally. entry.css forces a single column at
+   <= 800px, exactly as on the original site. */
+.card-columns {
+  column-count: 3;
+  column-gap: 1.25rem;
+  orphans: 1;
+  widows: 1;
+}
+.card-columns .card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+/* Bootstrap 5 renamed the tooltip arrow element; keep it hidden as before. */
+.tooltip .tooltip-arrow { display: none; }
+
+/* Issue #18: on hover the description tooltip could appear under the cursor, causing
+   it to flicker and block clicks on the link (Chrome). Making the tooltip transparent
+   to the pointer stops the flicker and lets clicks reach the link underneath. */
+.tooltip { pointer-events: none; }
+
+/* KaTeX sizing — starting point; calibrate against the old MathJax `scale: 90`
+   during screenshot verification. */
+.katex { font-size: 1em; }

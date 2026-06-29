@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+nav#menu {
+  font-size: 14px;
+}
+
+nav#menu a {
+  color: #81c3fc;
+}
+
+nav#menu a:hover {
+  color: #d9edf7;
+  text-decoration: none;
+}
+
+div#title {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-family: Georgia, serif;
+  z-index: 3;
+}
+
+div#content {
+  margin: 0 auto;
+  padding: 1rem .5rem;
+  overflow-x: scroll;
+}
+
+div#content::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-variant: small-caps;
+  padding-top: .3rem;
+}
+
+h1 a {
+  display: block;
+}
+
+h1 a,
+h1 a:hover {
+  color: black;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+  text-decoration-color: #971539;
+}
+
+h1 a::first-letter {
+  color: #971539;
+}
+
+p#slogan {
+  font-style: italic;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+h2 a,
+h2 a:hover {
+  color: black;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.identifier {
+  font-family: "Roboto Mono", monospace;
+  white-space: nowrap;
+}
+
+:target::before { /* offsets all # links */
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 5.5rem;
+  margin-top: -5.5rem;
+}
+
+table.overview {
+  margin-bottom: 3rem;
+}
+
+table.overview tr .row-identifier,
+table.overview tr .genus {
+  width: 2rem;
+}
+
+table.overview tr .volume,
+table.overview tr .h12,
+table.overview tr .index {
+  width: 4rem;
+}
+
+table.overview tr .rationality,
+table.overview tr .moduli {
+  width: 5rem;
+}
+
+table.overview tr .blowup {
+  width: 6rem;
+}
+
+table.overview tr .blowdown,
+table.overview tr .unirationality {
+  width: 6.5rem;
+}
+
+div.tooltip ol.description,
+div.tooltip p,
+td.moduli ol.description,
+td.description ol.description,
+td.description p {
+  margin-bottom: 0;
+}
+
+ol.description {
+  counter-reset: list;
+  padding: 0;
+}
+
+ol.description > li {
+  list-style: none;
+}
+
+ol.description > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+}
+
+@media (min-width: 992px) {
+  th[role=columnheader]:not(.no-sort) {
+  	cursor: pointer;
+    white-space: nowrap;
+  }
+
+  th[role=columnheader]:not(.no-sort):after {
+  	content: '';
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 4px;
+    margin-left: 3px;
+  	border-width: 0 4px 4px;
+  	border-style: solid;
+  	border-color: #404040 transparent;
+  	visibility: hidden;
+  	opacity: 0;
+  	-ms-user-select: none;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	user-select: none;
+  }
+
+  th[aria-sort=ascending]:not(.no-sort):after {
+  	border-bottom: none;
+  	border-width: 4px 4px 0;
+  }
+
+  th[aria-sort]:not(.no-sort):after {
+  	visibility: visible;
+  	opacity: 0.4;
+  }
+
+  th[role=columnheader]:not(.no-sort):hover:after {
+  	visibility: visible;
+  	opacity: 1;
+  }
+}

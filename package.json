@@ -1,0 +1,9 @@
+{
+  "name": "fanography",
+  "description": "Static Hugo site for fanography.info",
+  "private": true,
+  "scripts": {
+    "build": "hugo --gc --minify",
+    "dev": "hugo server"
+  }
+}
