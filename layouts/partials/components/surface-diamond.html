@@ -1,0 +1,16 @@
+{{- /* Hodge diamond of a surface. Input: dict {pg, q, h12}. */ -}}
+<div class="diamond">
+  <span>1</span><br style="clear: both">
+
+  <span>{{ .q }}</span>
+  <span>{{ .q }}</span><br style="clear: both">
+
+  <span>{{ .pg }}</span>
+  <span>{{ .h12 }}</span>
+  <span>{{ .pg }}</span><br style="clear: both">
+
+  <span>{{ .q }}</span>
+  <span>{{ .q }}</span><br style="clear: both">
+
+  <span>1</span><br style="clear: both">
+</div>

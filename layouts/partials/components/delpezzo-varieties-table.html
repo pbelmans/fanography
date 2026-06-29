@@ -1,0 +1,44 @@
+{{- /* del Pezzo varieties table. Curated order [rho, ID, dimension] (also the filter);
+       per-position descriptions are merged from data/delpezzo_varieties.yml (5 and 7 have none). */ -}}
+{{- $order := slice (slice 1 11 -1) (slice 1 12 -1) (slice 1 13 -1) (slice 1 14 -1) (slice 1 15 `\leq 6`) (slice 3 27 3) (slice 2 32 `\leq 4`) (slice 2 35 3) -}}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">Fano 3-fold</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">$H^{\dim X}$</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">$\rho$</th>
+
+      <th scope="col" class="text-center">dimension</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description in dimension 3</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $i, $tuple := $order }}
+      {{ $rho := index $tuple 0 }}{{ $id := index $tuple 1 }}{{ $dimension := index $tuple 2 }}
+      {{ $data := index hugo.Data.delpezzo_varieties (string $i) }}
+      {{ $fano := partialCached "lib/enrich-fano.html" (dict "rho" $rho "id" $id) (printf "%d-%d" $rho $id) }}
+      <tr>
+        <td class="align-middle text-center row-identifier" data-sort="{{ printf "%03d%03d" $fano.rho $fano.ID }}"><a class="identifier text-nowrap" href="/{{ $fano.identifier }}">{{ $fano.identifier }}</a></td>
+
+        <td class="align-middle genus text-center">{{ partial "lib/intdiv.html" (dict "a" $fano.KX3 "b" (mul (mul $fano.index $fano.index) $fano.index)) }}</td>
+
+        <td class="align-middle rank text-center">{{ $fano.rho }}</td>
+
+        <td class="align-middle dimension text-center">
+          {{ if eq $dimension -1 }}any{{ else }}${{ $dimension }}${{ end }}
+        </td>
+
+        {{ partial "components/description-cell.html" $fano }}
+
+        <td class="align-middle description">
+          {{ with $data }}{{ index . "description" }}{{ end }}
+        </td>
+      </tr>
+    {{ end }}
+  </tbody>
+</table>

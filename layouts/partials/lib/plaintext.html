@@ -1,0 +1,8 @@
+{{- /* Plaintext of a raw Fano entry's description(s): cross-refs ((r-i)) flattened
+       to "r-i", math kept, multiple descriptions joined with ", ". Input: raw entry. */ -}}
+{{- $e := . -}}
+{{- $descs := index $e "description" -}}
+{{- if not (reflect.IsSlice $descs) }}{{ $descs = slice $descs }}{{ end -}}
+{{- $out := slice -}}
+{{- range $d := $descs -}}{{ $out = $out | append (replaceRE `\(\((\d+)-(\d+)\)\)` "$1-$2" $d) }}{{- end -}}
+{{- return (delimit $out ", ") -}}

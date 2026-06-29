@@ -1,0 +1,15 @@
+{{- /* semiorthogonal decompositions. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+{{ if eq $fano.h12 0 }}
+  {{ if eq (len $fano.exceptional) 1 }}
+    <p>A full exceptional collection can be constructed using {{ index $fano.exceptional 0 }}.
+  {{ else }}
+    <p>A full exceptional collection was constructed by <strong>{{ index $fano.exceptional 0 }}</strong> in <strong>{{ index $fano.exceptional 1 }}</strong>, see {{ partial "components/mr.html" (index $fano.exceptional 2) }}.
+  {{ end }}
+
+  {{ if $fano.toric }}
+    <p>Alternatively, Kawamata has constructed a full exceptional collection for every smooth projective toric variety.
+  {{ end }}
+{{ else }}
+  <p><em>There exist interesting semiorthogonal decompositions, but this data is not yet added.</em>
+{{ end }}

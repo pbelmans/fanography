@@ -1,0 +1,10 @@
+{{- /* description(s) of a Fano. Input: enriched $fano. */ -}}
+{{- if eq (len .description) 1 -}}
+  <p>{{ index .description 0 | safeHTML }}
+{{- else -}}
+  <ol class="description">
+    {{ range .description }}
+      <li>{{ . | safeHTML }}
+    {{ end }}
+  </ol>
+{{- end -}}

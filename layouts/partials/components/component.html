@@ -1,0 +1,8 @@
+{{- /* generic card wrapper. Input: dict {header, id, body}. */ -}}
+<div id="{{ .id }}" class="card">
+  <div class="card-header">{{ .header }}</div>
+
+  <div class="card-body" style="overflow-x: auto">
+    {{ .body | safeHTML }}
+  </div>
+</div>

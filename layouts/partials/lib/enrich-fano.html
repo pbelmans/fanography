@@ -1,0 +1,218 @@
+{{- /*
+  enrich-fano.html -- assemble the full data for one Fano 3-fold.
+
+  Input:  dict { rho (int), id (int) }
+  Output: a map ("$fano") consumed by the components/* presentation partials.
+
+  data.yml holds only the raw, hand-maintained facts; everything derivable is computed
+  here, so editing the YAML is enough -- nothing is precomputed into the data or duplicated.
+  What this derives:
+    - genus, dim H^0, the (anti)canonical degree        (arithmetic on -KX3)
+    - the blowup graph (the inverse of every entry's blowdown) and the curve genera
+    - previous / next in the rho-then-ID ordering (wrapping across ranks)
+    - Aut^0 normalisation and the polyvector parallelogram
+    - K-(poly/semi)stability sentences from the Kps/Kss codes, and Ks (derived from
+      Kps + Aut^0 when the entry does not state it)
+    - quantum-cohomology rows, and cross-reference tooltip links in the descriptions
+
+  The returned keys mirror the fields the partials read; see the return dict at the end.
+*/ -}}
+{{- $rho := .rho -}}
+{{- $id := .id -}}
+{{- $data := hugo.Data.data -}}
+{{- $rank := index $data (string $rho) -}}
+{{- $e := index $rank (string $id) -}}
+{{- $ident := printf "%d-%d" $rho $id -}}
+
+{{- /* description(s): linked HTML + plaintext */ -}}
+{{- $descsRaw := index $e "description" -}}
+{{- if not (reflect.IsSlice $descsRaw) }}{{ $descsRaw = slice $descsRaw }}{{ end -}}
+{{- $desc := slice -}}
+{{- range $d := $descsRaw -}}{{ $desc = $desc | append (partial "lib/links.html" (dict "text" $d "data" $data)) }}{{- end -}}
+{{- $plaintext := partial "lib/plaintext.html" $e -}}
+
+{{- /* alternative descriptions */ -}}
+{{- $alt := slice -}}
+{{- range $a := (index $e "alternative" | default slice) -}}{{ $alt = $alt | append (partial "lib/links.html" (dict "text" $a "data" $data)) }}{{- end -}}
+
+{{- $kx3 := index $e "-KX3" -}}
+{{- $h12 := index $e "h12" -}}
+
+{{- /* moduli -> list */ -}}
+{{- $moduli := index $e "moduli" -}}
+{{- if not (reflect.IsSlice $moduli) }}{{ $moduli = slice $moduli }}{{ end -}}
+{{- $mod0 := index $moduli 0 -}}
+
+{{- /* index, default 1 */ -}}
+{{- $idx := index $e "index" | default 1 -}}
+
+{{- /* genus for rho=1, index=1 only; empty otherwise (the oracle leaves it unset) */ -}}
+{{- $genus := "" -}}
+{{- if and (eq $rho 1) (eq $idx 1) }}{{ $genus = int (math.Floor (div (add $kx3 2) 2)) }}{{ end -}}
+
+{{- /* blowdown refs: iterate rank rho-1 numerically and keep those whose id is in the
+       blowdown list (this dedups and orders by lower-rank id) */ -}}
+{{- $isPrimitive := not (index $e "blowdown") -}}
+{{- $blowdown := slice -}}
+{{- $bdlist := index $e "blowdown" | default slice -}}
+{{- if $bdlist -}}
+  {{- $prank := index $data (string (sub $rho 1)) -}}
+  {{- $pkeys := slice -}}{{ range $k, $v := $prank }}{{ $pkeys = $pkeys | append (int $k) }}{{ end -}}
+  {{- range $pk := (sort $pkeys) -}}
+    {{- $pid := printf "%d-%d" (sub $rho 1) $pk -}}
+    {{- if in $bdlist $pid -}}
+      {{- $pe := index $prank (string $pk) -}}
+      {{- $blowdown = $blowdown | append (dict "identifier" $pid "h12" (index $pe "h12") "plaintext" (partial "lib/plaintext.html" $pe)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* blowup = inverse of blowdown in rank rho+1, numeric ID order */ -}}
+{{- $blowup := slice -}}
+{{- $urank := index $data (string (add $rho 1)) -}}
+{{- if $urank -}}
+  {{- $ukeys := slice -}}{{ range $k, $v := $urank }}{{ $ukeys = $ukeys | append (int $k) }}{{ end -}}
+  {{- range $uk := (sort $ukeys) -}}
+    {{- $ue := index $urank (string $uk) -}}
+    {{- $ubd := index $ue "blowdown" -}}
+    {{- if and $ubd (in $ubd $ident) -}}
+      {{- $blowup = $blowup | append (dict "identifier" (printf "%d-%d" (add $rho 1) $uk) "h12" (index $ue "h12") "plaintext" (partial "lib/plaintext.html" $ue)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* (uni)rationality */ -}}
+{{- $ratRaw := index $e "rational" -}}
+{{- $isRational := eq $ratRaw "yes" -}}
+{{- $rationality := cond (isset $e "rational") (cond (eq $ratRaw "yes") "yes" (string $ratRaw)) "no" -}}
+{{- $uniRaw := index $e "unirational" -}}
+{{- $isUnirational := or (eq $uniRaw "yes") (isset $e "rational") -}}
+{{- $unirationality := "no" -}}
+{{- if isset $e "unirational" }}{{ $unirationality = cond (eq $uniRaw "yes") "yes" (string $uniRaw) }}{{ else if $isRational }}{{ $unirationality = "yes" }}{{ end -}}
+
+{{- /* fibre-like */ -}}
+{{- $fibrelike := or (eq $rho 1) (isset $e "fibrelike") -}}
+
+{{- /* toric */ -}}
+{{- $toric := isset $e "toric" -}}
+
+{{- /* period */ -}}
+{{- $period := isset $e "period" -}}
+{{- $periodGrdb := 0 -}}{{- $periodFano := 0 -}}
+{{- if $period -}}{{- $pp := split (index $e "period") ", " -}}{{- $periodGrdb = int (index $pp 0) -}}{{- $periodFano = int (index $pp 1) -}}{{- end -}}
+
+{{- /* Aut^0 normalization; stored as dicts {group, moduli, dim} */ -}}
+{{- $autRaw := index $e "Aut" -}}
+{{- $aut := slice -}}
+{{- range $t := ($autRaw | default slice) -}}{{ $aut = $aut | append (dict "group" (index $t 0) "moduli" (index $t 1) "dim" (index $t 2)) }}{{- end -}}
+{{- if not $autRaw -}}
+  {{- $aut = slice (dict "group" "0" "moduli" $mod0 "dim" 0) -}}
+{{- else -}}
+  {{- $mvals := slice -}}{{ range $t := $aut }}{{ $mvals = $mvals | append $t.moduli }}{{ end -}}
+  {{- $maxm := index (sort $mvals) (sub (len $mvals) 1) -}}
+  {{- if ne $mod0 $maxm -}}{{- $aut = $aut | append (dict "group" "0" "moduli" $mod0 "dim" 0) -}}{{- end -}}
+{{- end -}}
+{{- $autLastDim := (index $aut (sub (len $aut) 1)).dim -}}
+{{- $autDims := slice -}}{{ range $t := $aut }}{{ $autDims = $autDims | append $t.dim }}{{ end -}}
+{{- $autDims = uniq (sort $autDims) -}}
+
+{{- /* exceptional collection: explicit on the entry, else the default blowup formula when h12=0 */ -}}
+{{- $exc := index $e "exceptional" -}}
+{{- if and (not $exc) (eq $h12 0) -}}{{- $exc = slice "Orlov's blowup formula" -}}{{- end -}}
+
+{{- /* MMP, hilbert */ -}}
+{{- $mmp := index $e "MMP" | default slice -}}
+{{- $hilbert := index $e "hilbert" -}}
+
+{{- /* Bott vanishing: every toric Fano, plus those flagged on the entry */ -}}
+{{- $bott := or $toric (eq (index $e "bott") "yes") -}}
+
+{{- /* quantum cohomology (h12=0): per-entry rows, then the P1-bundle and toric boilerplate */ -}}
+{{- $qh := slice -}}
+{{- if eq $h12 0 -}}
+  {{- $qh = index $e "qh" | default slice -}}
+  {{- $hasP1 := false -}}{{ range $c := $mmp }}{{ if eq (index $c 0) "P1" }}{{ $hasP1 = true }}{{ end }}{{ end -}}
+  {{- if $hasP1 -}}{{- $qh = $qh | append (dict "type" "small" "who" "Ciolli" "when" 2005 "ref" "MR2168069" "using" `the description of quantum cohomology of a $\mathbb{P}^1$-bundle`) -}}{{- end -}}
+  {{- if $toric -}}{{- $qh = $qh | append (dict "type" "small" "who" "Iritani" "when" 2007 "ref" "MR2359850" "using" "toric geometry") -}}{{- end -}}
+{{- end -}}
+
+{{- /* polyvector + K-stability, only when bivector present */ -}}
+{{- $polyvector := false -}}
+{{- $Ks := "" -}}{{- $Kps := "" -}}{{- $Kss := "" -}}
+{{- $KsOpen := false -}}{{- $KpsOpen := false -}}{{- $KssOpen := false -}}
+{{- $kref := slice -}}
+{{- $biv := index $e "bivector" -}}
+{{- if $biv -}}
+  {{- $b0 := index $biv 0 -}}{{- $b1 := index $biv 1 -}}{{- $b2 := index $biv 2 -}}
+  {{- if ne (add (sub $b0 $b1) $b2) (add (sub (sub $kx3 18) $rho) $h12) -}}{{- errorf "polyvector inconsistent for %s" $ident -}}{{- end -}}
+  {{- $h0 := add (int (math.Floor (div $kx3 2))) 3 -}}
+  {{- $polyvector = slice (slice 1 0 0 0) (slice $autLastDim $mod0 0 0) (slice $b0 $b1 $b2 0) (slice $h0 0 0 0) -}}
+  {{- $enc := dict "0" "none are K-%sstable" "1" "at least one member is not K&#8209;%sstable" "2" "general member is K&#8209;%sstable but there exist members that are not" "3" "general member is K&#8209;%sstable" "4" "every member is K&#8209;%sstable" -}}
+  {{- $kpsv := index $e "Kps" -}}{{- $kssv := index $e "Kss" -}}
+  {{- $Kps = printf (index $enc (string $kpsv)) "poly" -}}{{- $KpsOpen = eq $kpsv 3 -}}
+  {{- $Kss = printf (index $enc (string $kssv)) "semi" -}}{{- $KssOpen = eq $kssv 3 -}}
+  {{- $kref = slice (dict "label" "the book" "url" "https://mathscinet.ams.org/mathscinet/relay-station?mr=MR4590444") -}}
+  {{- range $r := (index $e "Kref" | default slice) -}}{{- $kref = $kref | append (dict "label" $r "url" (printf "https://arxiv.org/abs/%s" $r)) -}}{{- end -}}
+  {{- $hasKs := isset $e "Ks" -}}
+  {{- $KsOpen = not $hasKs -}}
+  {{- if $hasKs -}}
+    {{- $Ks = printf (index $enc (string (index $e "Ks"))) "" -}}
+  {{- else -}}
+    {{- $allAutFinite := and (eq $autLastDim 0) (eq (len $aut) 1) -}}
+    {{- $genAutFinite := eq $autLastDim 0 -}}
+    {{- if and (eq $kpsv 4) $allAutFinite -}}{{- $Ks = printf (index $enc "4") "" -}}{{- $KsOpen = false -}}
+    {{- else if and (in (slice 2 3 4) $kpsv) $genAutFinite -}}{{- $Ks = printf (index $enc (string $kpsv)) "" -}}{{- $KsOpen = eq $kpsv 3 -}}
+    {{- else if gt $autLastDim 0 -}}{{- $Ks = printf (index $enc "0") "" -}}{{- $KsOpen = false -}}
+    {{- else if eq $kpsv 0 -}}{{- $Ks = printf (index $enc "0") "" -}}{{- $KsOpen = false -}}
+    {{- else -}}{{- $Ks = "K-stability is not understood" -}}{{- $KsOpen = true -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* zero-section descriptions attached from sections.yml */ -}}
+{{- $sections := index hugo.Data.sections $ident -}}
+
+{{- /* previous */ -}}
+{{- $prev := false -}}
+{{- $pm1 := index $rank (string (sub $id 1)) -}}
+{{- if $pm1 -}}
+  {{- $prev = dict "identifier" (printf "%d-%d" $rho (sub $id 1)) "plaintext" (partial "lib/plaintext.html" $pm1) -}}
+{{- else if gt $rho 1 -}}
+  {{- $prank := index $data (string (sub $rho 1)) -}}
+  {{- if $prank -}}
+    {{- $pk := slice -}}{{ range $k, $v := $prank }}{{ $pk = $pk | append (int $k) }}{{ end -}}
+    {{- $maxk := index (sort $pk) (sub (len $pk) 1) -}}
+    {{- $pe := index $prank (string $maxk) -}}
+    {{- $prev = dict "identifier" (printf "%d-%d" (sub $rho 1) $maxk) "plaintext" (partial "lib/plaintext.html" $pe) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* next */ -}}
+{{- $nxt := false -}}
+{{- $np1 := index $rank (string (add $id 1)) -}}
+{{- if $np1 -}}
+  {{- $nxt = dict "identifier" (printf "%d-%d" $rho (add $id 1)) "plaintext" (partial "lib/plaintext.html" $np1) -}}
+{{- else -}}
+  {{- $nrank := index $data (string (add $rho 1)) -}}
+  {{- if $nrank -}}{{- $n1 := index $nrank "1" -}}{{- if $n1 -}}{{- $nxt = dict "identifier" (printf "%d-1" (add $rho 1)) "plaintext" (partial "lib/plaintext.html" $n1) -}}{{- end -}}{{- end -}}
+{{- end -}}
+
+{{- return (dict
+  "rho" $rho "ID" $id "identifier" $ident
+  "name" (index $e "name")
+  "description" $desc "plaintext" $plaintext "alternative" $alt
+  "remarks" (index $e "remarks")
+  "KX3" $kx3 "h12" $h12 "moduli" $moduli "index" $idx "genus" $genus
+  "is_primitive" $isPrimitive "blowdown" $blowdown "blowup" $blowup
+  "is_rational" $isRational "rationality" $rationality
+  "is_unirational" $isUnirational "unirationality" $unirationality
+  "fibrelike" $fibrelike
+  "toric" $toric "grdb" (index $e "toric")
+  "very_ample" (index $e "very_ample") "basepoint_free" (index $e "basepoint_free") "hyperelliptic" (index $e "hyperelliptic") "trigonal" (index $e "trigonal")
+  "period" $period "period_grdb" $periodGrdb "period_fanosearch" $periodFano
+  "Aut" $aut "aut_dims" $autDims
+  "exceptional" $exc "MMP" $mmp "hilbert" $hilbert "bott" $bott "qh" $qh
+  "polyvector" $polyvector
+  "Ks" $Ks "Kps" $Kps "Kss" $Kss "Ks_open" $KsOpen "Kps_open" $KpsOpen "Kss_open" $KssOpen
+  "Kref" $kref "sections" $sections
+  "previous" $prev "next" $nxt
+) -}}

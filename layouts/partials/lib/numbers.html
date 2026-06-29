@@ -1,0 +1,20 @@
+{{- /* Aggregate statistics (per-rank and total counts) used on /explained and /dubrovin.
+       Returns {perrank: [...], total, primitive, rational, unirational, exceptional, semisimple}. */ -}}
+{{- $perrank := slice -}}
+{{- $T := 0 -}}{{- $P := 0 -}}{{- $R := 0 -}}{{- $U := 0 -}}{{- $E := 0 -}}{{- $S := 0 -}}
+{{- range $rho := seq 1 10 -}}
+  {{- $rank := index hugo.Data.data (string $rho) -}}
+  {{- $t := 0 -}}{{- $prim := 0 -}}{{- $rat := 0 -}}{{- $uni := 0 -}}{{- $exc := 0 -}}{{- $ss := 0 -}}
+  {{- range $id, $e := $rank -}}
+    {{- $fano := partialCached "lib/enrich-fano.html" (dict "rho" $rho "id" (int $id)) (printf "%d-%s" $rho $id) -}}
+    {{- $t = add $t 1 -}}
+    {{- if $fano.is_primitive }}{{ $prim = add $prim 1 }}{{ end -}}
+    {{- if $fano.is_rational }}{{ $rat = add $rat 1 }}{{ end -}}
+    {{- if $fano.is_unirational }}{{ $uni = add $uni 1 }}{{ end -}}
+    {{- if eq $fano.h12 0 }}{{ $exc = add $exc 1 }}{{ end -}}
+    {{- if and (eq $fano.h12 0) (gt (len $fano.qh) 0) }}{{ $ss = add $ss 1 }}{{ end -}}
+  {{- end -}}
+  {{- $perrank = $perrank | append (dict "rho" $rho "total" $t "primitive" $prim "rational" $rat "unirational" $uni "exceptional" $exc "semisimple" $ss) -}}
+  {{- $T = add $T $t -}}{{- $P = add $P $prim -}}{{- $R = add $R $rat -}}{{- $U = add $U $uni -}}{{- $E = add $E $exc -}}{{- $S = add $S $ss -}}
+{{- end -}}
+{{- return (dict "perrank" $perrank "total" $T "primitive" $P "rational" $R "unirational" $U "exceptional" $E "semisimple" $S) -}}

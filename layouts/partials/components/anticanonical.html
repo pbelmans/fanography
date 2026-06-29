@@ -1,0 +1,52 @@
+{{- /* anticanonical bundle info. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+<dl class="row">
+  <dt class="col-6 text-end">index</dt>
+  <dd class="col-6">{{ $fano.index }}</dd>
+
+  {{ if or (eq $fano.index 2) (eq $fano.index 4) }}
+    {{ $degree := partial "lib/intdiv.html" (dict "a" $fano.KX3 "b" 8) }}
+    <dt class="col-6 text-end"><a href="/explained#del-pezzo">del Pezzo of degree {{ $degree }}</a></dt>
+    <dd class="col-6">
+      {{ if eq $degree 1 }}$X\to\mathbb{P}^2$
+      {{ else if eq $degree 2 }}$X\overset{2:1}{\to}\mathbb{P}^3$
+      {{ else if eq $fano.index 4 }}$\mathbb{P}^3\hookrightarrow\mathbb{P}^9$, Veronese embedding
+      {{ else }}{{ printf `$X\hookrightarrow\mathbb{P}^{%d}$` (add $degree 1) }}
+      {{ end }}
+    </dd>
+  {{ end }}
+
+  <dt class="col-6 text-end">$\dim\mathrm{H}^0(X,\omega_X^\vee)$</dt>
+  <dd class="col-6">{{ add (partial "lib/intdiv.html" (dict "a" $fano.KX3 "b" 2)) 3 }}</dd>
+
+  <dt class="col-6 text-end">$-\mathrm{K}_X$ very ample?</dt>
+  {{ $va := $fano.very_ample | default "yes" }}
+  {{ if eq $va "no" }}
+    <dd class="col-6 text-nowrap">no</dd>
+  {{ else }}
+    <dd class="col-6 text-nowrap">yes
+      {{ if eq $va "conditional" }}if (a), else no{{ end }}
+    </dd>
+  {{ end }}
+
+  <dt class="col-6 text-end">$-\mathrm{K}_X$ basepoint free?</dt>
+  {{ if eq ($fano.basepoint_free | default "yes") "no" }}
+    <dd class="col-6 text-nowrap">no</dd>
+  {{ else }}
+    <dd class="col-6 text-nowrap">yes</dd>
+  {{ end }}
+
+  <dt class="col-6 text-end"><a href="/explained#hyperelliptic">hyperelliptic</a></dt>
+  {{ if eq ($fano.hyperelliptic | default "no") "yes" }}
+    <dd class="col-6 text-nowrap">yes
+  {{ else }}
+    <dd class="col-6 text-nowrap">no
+  {{ end }}
+
+  <dt class="col-6 text-end">trigonal</dt>
+  {{ if eq ($fano.trigonal | default "no") "yes" }}
+    <dd class="col-6 text-nowrap">yes
+  {{ else }}
+    <dd class="col-6 text-nowrap">no
+  {{ end }}
+</dl>

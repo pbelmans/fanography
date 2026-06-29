@@ -1,0 +1,17 @@
+{{- /* The shared "description" table cell: the family's bold name, its rendered
+       description, and the optional list of alternative names. Used by every Fano
+       table. Input: an enriched $fano (see lib/enrich-fano.html). */ -}}
+<td class="align-middle description">
+  {{ with .name }}<strong>{{ . | safeHTML }}</strong>{{ end }}
+
+  {{ partial "components/description.html" . }}
+
+  {{ if .alternative }}
+    <dl class="d-none d-xl-block d-print-block mb-0">
+      <dt>alternative</dt>
+      {{ range .alternative }}
+        <dd class="mb-0 ms-5">{{ . | safeHTML }}</dd>
+      {{ end }}
+    </dl>
+  {{ end }}
+</td>

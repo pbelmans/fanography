@@ -1,0 +1,41 @@
+{{- /* birational geometry. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+{{ if eq $fano.rationality "yes" }}
+  <p>This variety is rational.
+{{ else if eq $fano.rationality "generically non-rational" }}
+  <p>This variety is known to be generically non-rational.
+{{ else if in (slice "yes" "some") $fano.unirationality }}
+  <p>This variety is not rational but {{ if eq $fano.unirationality "some" }}at least some are{{ end }} unirational.
+{{ else if eq $fano.unirationality "?" }}
+  <p>This variety is not known to be unirational.
+{{ else }}
+  <p>This variety is not unirational.
+{{ end }}
+
+<hr>
+
+{{ if $fano.is_primitive }}
+  <p>This variety is primitive.<p>
+{{ else }}
+  <p>This variety is the blowup of
+  <ul>
+    {{ range $fano.blowdown }}
+      <li><a href="/{{ .identifier }}" class="identifier" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='{{ .plaintext }}'>{{ .identifier }}</a>, in a curve of genus {{ sub $fano.h12 .h12 }}
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ if $fano.blowup }}
+  <p>This variety can be blown up (in a curve) to
+  <ul>
+    {{ range $fano.blowup }}
+      <li><a href="/{{ .identifier }}" class="identifier" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='{{ .plaintext }}'>{{ .identifier }}</a>, in a curve of genus {{ sub .h12 $fano.h12 }}
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ if $fano.fibrelike }}
+  <hr>
+
+  <p>This variety is <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3509946">fibre-like</a>, i.e. it can appear as the fibre of a Mori fibre space.</p>
+{{ end }}

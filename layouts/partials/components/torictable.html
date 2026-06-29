@@ -1,0 +1,34 @@
+{{- /* toric table; the curated order (Iskovskikh--Prokhorov) also acts as the filter. */ -}}
+{{- $order := slice (slice 1 17) (slice 2 36) (slice 2 35) (slice 2 33) (slice 2 34) (slice 3 31) (slice 3 29) (slice 3 30) (slice 3 27) (slice 3 28) (slice 3 26) (slice 3 25) (slice 4 12) (slice 4 11) (slice 4 10) (slice 4 9) (slice 5 3) (slice 5 2) -}}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">$\rho$</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">$g$</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">index</th>
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{ range $pair := $order }}
+      {{ $fano := partialCached "lib/enrich-fano.html" (dict "rho" (index $pair 0) "id" (index $pair 1)) (printf "%d-%d" (index $pair 0) (index $pair 1)) }}
+      <tr>
+        <td class="align-middle row-identifier text-center" data-sort="{{ printf "%03d%03d" $fano.rho $fano.ID }}"><a class="identifier text-nowrap" href="/{{ $fano.identifier }}">{{ $fano.identifier }}</a></td>
+
+        <td class="align-middle rank text-center">{{ $fano.rho }}</td>
+
+        <td class="align-middle genus text-center">{{ partial "lib/intdiv.html" (dict "a" (add $fano.KX3 2) "b" 2) }}</td>
+
+        <td class="align-middle rank text-center">{{ $fano.index }}</td>
+
+        {{ partial "components/description-cell.html" $fano }}
+      </tr>
+    {{ end }}
+  </tbody>
+</table>

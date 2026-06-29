@@ -1,0 +1,13 @@
+{{- /* Hilbert schemes of lines/conics. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+{{ with index $fano.hilbert "1" }}
+  <p>The <strong>Hilbert scheme of lines</strong> is {{ .description | safeHTML }}.
+  <p>Its Hodge diamond is
+  {{ partial "components/surface-diamond.html" (dict "pg" .invariants.pg "q" .invariants.q "h12" .invariants.h12) }}
+{{ end }}
+
+{{ with index $fano.hilbert "2" }}
+  <p>The <strong>Hilbert scheme of conics</strong> is {{ .description | safeHTML }}.
+  <p>Its Hodge diamond is
+  {{ partial "components/surface-diamond.html" (dict "pg" .invariants.pg "q" .invariants.q "h12" .invariants.h12) }}
+{{ end }}

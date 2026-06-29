@@ -1,0 +1,14 @@
+{{- /* K-stability overview. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+<ul>
+  <li>{{ $fano.Ks | safeHTML }}
+  <li>{{ $fano.Kps | safeHTML }}
+  <li>{{ $fano.Kss | safeHTML }}
+</ul>
+See
+<ul>
+{{ range $fano.Kref }}
+  <li><a href="{{ .url }}">{{ .label }}</a>
+{{ end }}
+</ul>
+and <a href="/K-stability">the big table</a> for more information.

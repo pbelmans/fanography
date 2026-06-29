@@ -1,0 +1,34 @@
+{{- /* Bott vanishing table. */ -}}
+<table class="table table-hover" id="table-bott">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+      <th scope="col" class="text-center" data-sort-method="number">index</th>
+      <th scope="col" class="text-center">toric</th>
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{ range $rho := seq 1 10 }}
+      {{ range $id := partial "lib/rank-ids.html" $rho }}
+        {{ $fano := partialCached "lib/enrich-fano.html" (dict "rho" $rho "id" $id) (printf "%d-%d" $rho $id) }}
+        {{ if $fano.bott }}
+        <tr>
+          <td class="align-middle row-identifier text-center" data-sort="{{ printf "%03d%03d" $fano.rho $fano.ID }}"><a class="identifier text-nowrap" href="/{{ $fano.identifier }}">{{ $fano.identifier }}</a></td>
+
+          <td class="align-middle rank text-center">{{ $fano.index }}</td>
+
+          <td class="align-middle rank text-center">{{ $fano.toric }}</td>
+
+          {{ partial "components/description-cell.html" $fano }}
+        </tr>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </tbody>
+</table>
+
+<script type="text/javascript">
+new Tablesort(document.getElementById("table-bott"));
+</script>

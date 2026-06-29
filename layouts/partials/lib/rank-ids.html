@@ -1,0 +1,6 @@
+{{- /* Sorted integer IDs of the families in one Picard rank. Input: the rank number $rho.
+       data/data.yml keys these as strings in no guaranteed order, so cast to int and sort. */ -}}
+{{- $rank := index hugo.Data.data (string .) -}}
+{{- $ids := slice -}}
+{{- range $k, $v := $rank }}{{ $ids = $ids | append (int $k) }}{{ end -}}
+{{- return (sort $ids) -}}

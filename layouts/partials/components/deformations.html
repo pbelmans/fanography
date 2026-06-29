@@ -1,0 +1,40 @@
+{{- /* deformation theory. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+<dl class="row">
+  <dt class="col-6 text-end">number of moduli</dt>
+  <dd class="col-6">
+    {{ if eq (len $fano.moduli) 1 }}{{ index $fano.moduli 0 }}
+    {{ else }}<ol class="description"><li>{{ index $fano.moduli 0 }}<li>{{ index $fano.moduli 1 }}</ol>{{ end }}
+  </dd>
+  {{ if in $fano.moduli -1 }}
+    <p class="alert alert-warning">The value -1 means that I don't know the correct value yet.</p>
+  {{ end }}
+  <dt class="col-6 text-end"><a href="/bott">Bott vanishing</a></dt>
+  <dd class="col-6">
+    {{ if $fano.bott }}
+      holds
+    {{ else }}
+      does <em>not</em> hold
+    {{ end }}
+  </dd>
+</dl>
+
+<table class="table-sm mx-auto">
+  <thead>
+    <tr class="border-bottom">
+      <th class="text-center"><a href="/explained#aut">$\mathrm{Aut}^0(X)$</a></th>
+      <th class="text-center">$\dim\mathrm{Aut}^0(X)$</th>
+      <th class="text-center">number of moduli</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{ range $fano.Aut }}
+      <tr>
+        <td class="text-center">${{ .group }}$</td>
+        <td class="text-center">{{ .dim }}</td>
+        <td class="text-center">{{ .moduli }}</td>
+      </tr>
+    {{ end }}
+  </tbody>
+</table>

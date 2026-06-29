@@ -1,0 +1,7 @@
+{{- /* extremal contractions. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+{{ range $fano.MMP }}
+  {{ if eq (index . 0) "P1" }}
+    <p>$\mathbb{P}^1$-bundle over ${{ index . 1 }}$, for the vector bundle ${{ index . 2 }}$.
+  {{ end }}
+{{ end }}

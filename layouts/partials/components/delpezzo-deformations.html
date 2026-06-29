@@ -1,0 +1,15 @@
+{{- /* del Pezzo deformation theory. Input: enriched $dp. */ -}}
+{{- $dp := . -}}
+<dl class="row">
+  <dt class="col-6 text-end">number of moduli</dt>
+  <dd class="col-6">{{ $dp.moduli }}</dd>
+
+  <dt class="col-6 text-end"><a href="/bott">Bott vanishing</a></dt>
+  <dd class="col-6">
+    {{ if $dp.bott }}
+      holds
+    {{ else }}
+      does <em>not</em> hold
+    {{ end }}
+  </dd>
+</dl>

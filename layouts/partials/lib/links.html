@@ -1,0 +1,13 @@
+{{- /* Turn ((r-i)) cross-refs in a description into tooltip links whose title is the
+       target's plaintext. Input: dict {text, data} where data = hugo.Data.data. */ -}}
+{{- $s := .text -}}
+{{- $data := .data -}}
+{{- range $m := findRESubmatch `\(\((\d+)-(\d+)\)\)` .text -}}
+  {{- $full := index $m 0 -}}{{- $r := index $m 1 -}}{{- $i := index $m 2 -}}
+  {{- $id := printf "%s-%s" $r $i -}}
+  {{- $nb := index $data $r $i -}}
+  {{- $pt := partial "lib/plaintext.html" $nb -}}
+  {{- $a := printf `<a class="identifier" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='%s' href="/%s">%s</a>` $pt $id $id -}}
+  {{- $s = replace $s $full $a -}}
+{{- end -}}
+{{- return $s -}}

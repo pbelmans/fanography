@@ -1,0 +1,114 @@
+{{- /* overview table for one rank. Input: dict {rho}. */ -}}
+{{- $rho := .rho -}}
+<table class="overview table table-hover table-sm" id="table-{{ $rho }}">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+
+      <th scope="col" class="text-center" data-sort-method="number">$-\mathrm{K}_X^3$</th>
+
+      {{ if eq $rho 1 }}
+        <th scope="col" class="d-none d-lg-table-cell text-center" data-sort-method="number">$g$</th>
+      {{ end }}
+
+      <th scope="col" class="text-center" data-sort-method="number">$\mathrm{h}^{1,2}$</th>
+
+      {{ if in (slice 1 2 3) $rho }}
+        <th scope="col" class="text-center" data-sort-method="number">index</th>
+      {{ end }}
+
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+
+      {{ if ne $rho 10 }}
+        <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">blowups</th>
+      {{ end }}
+
+      {{ if ne $rho 1 }}
+        <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">blowdowns</th>
+      {{ end }}
+
+      <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">rational</th>
+
+      <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">unirational</th>
+
+      <th scope="col" class="text-center d-none d-xl-table-cell d-print-table-cell">moduli</th>
+
+      <th scope="col" class="text-center d-none d-xl-table-cell d-print-table-cell no-sort" data-sort-method="none"><a href="/explained#aut">$\mathrm{Aut}^0$</a></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{ range $id := partial "lib/rank-ids.html" $rho }}
+      {{ $fano := partialCached "lib/enrich-fano.html" (dict "rho" $rho "id" $id) (printf "%d-%d" $rho $id) }}
+      <tr>
+        <td class="align-middle row-identifier" data-sort="{{ printf "%03d%03d" $fano.rho $fano.ID }}"><a class="identifier text-nowrap" href="/{{ $fano.identifier }}">{{ $fano.identifier }}</a></td>
+
+        <td class="align-middle volume text-center">{{ $fano.KX3 }}</td>
+
+        {{ if eq $rho 1 }}
+          <td class="align-middle genus text-center d-none d-lg-table-cell">{{ $fano.genus }}</td>
+        {{ end }}
+
+        <td class="align-middle h12 text-center">{{ $fano.h12 }}</td>
+
+        {{ if in (slice 1 2 3) $rho }}
+          <td class="align-middle index text-center" scope="col">{{ $fano.index }}</td>
+        {{ end }}
+
+        {{ partial "components/description-cell.html" $fano }}
+
+        {{ if ne $rho 10 }}
+          <td class="align-middle blowup text-center d-none d-lg-table-cell d-print-table-cell">
+            {{ if $fano.blowup }}<a href="/{{ $fano.identifier }}#birational">*</a>{{ end }}
+          </td>
+        {{ end }}
+
+        {{ if ne $rho 1 }}
+          <td class="align-middle blowdown text-center d-none d-lg-table-cell d-print-table-cell">
+          {{ range $i, $bd := $fano.blowdown }}{{ if $i }}, {{ end }}<a href="/{{ $bd.identifier }}" class="identifier text-nowrap" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='{{ $bd.plaintext }}'>{{ $bd.identifier }}</a>{{ end }}
+          </td>
+        {{ end }}
+
+        <td class="align-middle rationality text-center d-none d-lg-table-cell d-print-table-cell">{{ $fano.rationality }}</td>
+
+        <td class="align-middle unirationality text-center d-none d-lg-table-cell d-print-table-cell">{{ $fano.unirationality }}</td>
+
+        <td class="align-middle moduli text-center d-none d-xl-table-cell d-print-table-cell" data-sort="{{ index $fano.moduli 0 }}">
+          {{ if eq (len $fano.moduli) 1 }}{{ index $fano.moduli 0 }}
+          {{ else }}<ol class="description"><li>{{ index $fano.moduli 0 }}<li>{{ index $fano.moduli 1 }}</ol>{{ end }}
+        </td>
+
+        <td class="align-middle moduli text-center d-none d-xl-table-cell d-print-table-cell">
+          {{ if eq (len $fano.Aut) 1 }}
+            ${{ (index $fano.Aut 0).group }}$
+          {{ else }}
+            <table class="table-sm mx-auto">
+              <thead>
+                <tr class="border-bottom">
+                  <th class="text-center border-0">$\mathrm{Aut}^0(X)$</th>
+                  <th class="text-center border-0">moduli</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {{ range $fano.Aut }}{{ if ne .group "0" }}
+                  <tr>
+                    <td class="text-center border-0">${{ .group }}$</td>
+                    <td class="text-center border-0">{{ .moduli }}</td>
+                  </tr>
+                {{ end }}{{ end }}
+              </tbody>
+            </table>
+          {{ end }}
+        </td>
+
+      </tr>
+    {{ end }}
+  </tbody>
+</table>
+
+{{ if lt $rho 6 }}
+  <script type="text/javascript">
+  new Tablesort(document.getElementById("table-{{ $rho }}"));
+  </script>
+{{ end }}

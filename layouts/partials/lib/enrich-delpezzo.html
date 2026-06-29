@@ -1,0 +1,62 @@
+{{- /*
+  enrich-delpezzo.html -- assemble the full data for one del Pezzo surface.
+
+  Input:  dict { id }            e.g. "dP5", "P1xP1"
+  Output: a map ("$dp") consumed by the components/delpezzo-* presentation partials.
+
+  Everything is derived from the id and data/delpezzo_surfaces.yml:
+    - degree (the n in dPn; 8 for the two that aren't written "dP<digit>")
+    - Picard rank = 10 - degree, and the number of moduli
+    - Bott vanishing (holds iff degree >= 5)
+    - the automorphism group(s): a single [group, dim] for degree >= 5, otherwise a
+      table of the finite groups
+    - previous / next in the curated dP9, P1xP1, dP8, ..., dP1 order (clamped, no wrap)
+*/ -}}
+
+{{- $id := .id -}}
+{{- $e := index hugo.Data.delpezzo_surfaces $id -}}
+
+{{- /* degree: the n in dPn; P1xP1 and dP8 are both degree 8 */ -}}
+{{- $degree := 8 -}}
+{{- if hasPrefix $id "dP" -}}{{- $degree = int (substr $id 2 1) -}}{{- end -}}
+
+{{- /* basic invariants */ -}}
+{{- $rank := sub 10 $degree -}}
+{{- $moduli := cond (ge $degree 5) 0 (mul (sub 5 $degree) 2) -}}
+{{- $bott := ge $degree 5 -}}
+
+{{- /* automorphisms: degree >= 5 has one [group, dim]; degree <= 4 has a table of finite groups */ -}}
+{{- $autRaw := index $e "Aut" -}}
+{{- $automorphisms := cond (ge $degree 5) $autRaw (slice "finite" 0) -}}
+{{- $groups := slice -}}
+{{- if le $degree 4 -}}{{- $groups = index $autRaw "groups" -}}{{- end -}}
+
+{{- /* previous / next in the curated order, clamped (no wrap) */ -}}
+{{- $order := slice "dP9" "P1xP1" "dP8" "dP7" "dP6" "dP5" "dP4" "dP3" "dP2" "dP1" -}}
+{{- $pos := -1 -}}
+{{- range $i, $v := $order -}}{{- if eq $v $id -}}{{- $pos = $i -}}{{- end -}}{{- end -}}
+
+{{- $prev := false -}}
+{{- if gt $pos 0 -}}
+  {{- $pid := index $order (sub $pos 1) -}}
+  {{- $prev = dict "ID" $pid "label" (index (index hugo.Data.delpezzo_surfaces $pid) "label") -}}
+{{- end -}}
+
+{{- $nxt := false -}}
+{{- if lt $pos 9 -}}
+  {{- $nid := index $order (add $pos 1) -}}
+  {{- $nxt = dict "ID" $nid "label" (index (index hugo.Data.delpezzo_surfaces $nid) "label") -}}
+{{- end -}}
+
+{{- return (dict
+  "ID" $id
+  "label" (index $e "label")
+  "name" (index $e "name" | default "")
+  "anticanonical" (index $e "anticanonical" | default "")
+  "alternatives" (index $e "alternatives" | default slice)
+  "exceptional" (index $e "exceptional")
+  "degree" $degree "rank" $rank "moduli" $moduli "bott" $bott
+  "automorphisms" $automorphisms "groups" $groups
+  "index" (index $e "index")
+  "previous" $prev "next" $nxt
+) -}}

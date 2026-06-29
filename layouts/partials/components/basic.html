@@ -1,0 +1,43 @@
+{{- /* basic identification card. Input: enriched $fano (uses $fano.previous/$fano.next). */ -}}
+{{- $fano := . -}}
+<p class="clearfix">
+{{ with $fano.previous }}
+  <a class="previous float-start identifier" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='{{ .plaintext }}' href="/{{ .identifier }}">{{ .identifier }}</a>
+{{ end }}
+
+{{ with $fano.next }}
+  <a class="next float-end identifier" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='{{ .plaintext }}' href="/{{ .identifier }}">{{ .identifier }}</a>
+{{ end }}
+</p>
+
+<h5 class="card-title">Fano variety <span class="identifier">{{ $fano.identifier }}</span>{{ with $fano.name }}: {{ . | safeHTML }}{{ end }}</h5>
+
+{{ partial "components/description.html" $fano }}
+
+{{ if $fano.alternative }}
+  <p class="mb-0"><strong>Alternative description{{ if gt (len $fano.alternative) 1 }}s{{ end }}</strong>:
+  <ul>
+    {{ range $fano.alternative }}
+      <li>{{ . | safeHTML }}
+    {{ end }}
+  </ul>
+{{ end }}
+
+<dl class="row">
+  <dt class="col-6 text-end">Picard rank
+  <dd class="col-6">{{ $fano.rho }}
+  {{ if in (slice 1 2 3 4 5) $fano.rho }}(<a href="/{{ $fano.rho }}">others</a>){{ end }}
+
+  <dt class="col-6 text-end">$-\mathrm{K}_X^3$
+  <dd class="col-6">{{ $fano.KX3 }}
+
+  <dt class="col-6 text-end">$\mathrm{h}^{1,2}(X)$
+  <dd class="col-6">{{ $fano.h12 }}
+</dl>
+
+{{ with $fano.remarks }}
+  <h5>Remarks</h5>
+  {{ range . }}
+    <p>{{ . | safeHTML }}</p>
+  {{ end }}
+{{ end }}

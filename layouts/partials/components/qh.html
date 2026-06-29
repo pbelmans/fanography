@@ -1,0 +1,14 @@
+{{- /* quantum cohomology. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+{{ if ne $fano.h12 0 }}
+  <p>By Hertling&ndash;Manin&ndash;Teleman we have that quantum cohomology cannot be generically semisimple, as $\mathrm{h}^{1,2}\neq 0$.
+{{ else }}
+  {{ if gt (len $fano.qh) 0 }}
+    <p>Generic semisimplicity of:
+    <ul>
+    {{ range $fano.qh }}
+      <li>{{ .type }} quantum cohomology, proved by {{ .who }} in {{ .when }}, see {{ partial "components/mr.html" .ref }}, using {{ .using }}
+    {{ end }}
+    </ul>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,28 @@
+{{- /* del Pezzo identification card. Input: enriched $dp. */ -}}
+{{- $dp := . -}}
+<p class="clearfix">
+{{ with $dp.previous }}
+  <a class="previous float-start identifier" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='{{ .ID }}' href="/delpezzos/{{ .ID }}">{{ .label }}</a>
+{{ end }}
+
+{{ with $dp.next }}
+  <a class="next float-end identifier" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='{{ .ID }}' href="/delpezzos/{{ .ID }}">{{ .label }}</a>
+{{ end }}
+</p>
+
+<h5 class="card-title">del Pezzo surface <span class="identifier">{{ $dp.label }}</span>{{ with $dp.name }}: {{ . }}{{ end }}</h5>
+
+<dl class="row">
+  <dt class="col-6 text-end">Picard rank
+  <dd class="col-6">{{ $dp.rank }}
+
+  <dt class="col-6 text-end">$-\mathrm{K}_S^2$
+  <dd class="col-6">{{ $dp.degree }}
+
+  {{ if $dp.alternatives }}
+    <dt class="col-6 text-end">alternatives</dt>
+    <dd class="col-6">
+    {{ range $i, $a := $dp.alternatives }}{{ if $i }}<br><br>{{ end }}{{ $a }}{{ end }}
+    </dd>
+  {{ end }}
+</dl>

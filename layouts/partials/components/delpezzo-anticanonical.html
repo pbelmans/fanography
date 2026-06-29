@@ -1,0 +1,16 @@
+{{- /* del Pezzo anticanonical bundle. Input: enriched $dp. */ -}}
+{{- $dp := . -}}
+<dl class="row">
+  <dt class="col-6 text-end">index</dt>
+  <dd class="col-6">{{ $dp.index }}</dd>
+
+  <dt class="col-6 text-end">$\dim\mathrm{H}^0(S,\omega_S^\vee)$</dt>
+  <dd class="col-6">{{ add $dp.degree 1 }}</dd>
+
+  <dt class="col-6 text-end">$-\mathrm{K}_S$ very ample?</dt>
+  <dd class="col-6">
+    {{ if ge $dp.degree 3 }}yes
+    {{ else if eq $dp.degree 2 }}no, but $-2\mathrm{K}_S$ is
+    {{ else if eq $dp.degree 1 }}no, but $-3\mathrm{K}_S$ is
+    {{ end }}
+</dl>
