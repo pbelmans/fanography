@@ -1,6 +1,7 @@
 # rank 1
 1:
   1:
+    very_ample: no
     description: double cover of $\mathbb{P}^3$ with branch locus a divisor of degree 6
     alternative:
       - hypersurface of degree 6 in $\mathbb{P}(1,1,1,1,3)$
@@ -17,6 +18,7 @@
 
 
   2:
+    very_ample: conditional
     description:
       - hypersurface of degree 4 in $\mathbb{P}^4$
       - double cover of ((1-16)) with branch locus a divisor of degree 8
@@ -79,6 +81,7 @@
 
 
   5:
+    very_ample: conditional
     name: Gushel&ndash;Mukai 3-fold
     description:
       - section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 2 subspace and a quadric
@@ -183,6 +186,12 @@
 
 
   10:
+    qh:
+      - type: small
+        who: someone
+        when: at some point
+        ref: "?"
+        using: ""
     description: zero locus of $(\bigwedge^2\mathcal{U}^\vee)^{\oplus 3}$ on $\mathrm{Gr}(3,7)$
     -KX3: 22
     h12: 0
@@ -211,6 +220,7 @@
 
 
   11:
+    very_ample: no
     description: hypersurface of degree 6 in $\mathbb{P}(1,1,1,2,3)$
     -KX3: 8
     h12: 21
@@ -301,6 +311,12 @@
 
 
   15:
+    qh:
+      - type: small
+        who: someone
+        when: at some point
+        ref: "?"
+        using: ""
     description: section of Plücker embedding of $\mathrm{Gr}(2,5)$ by codimension 3 subspace
     -KX3: 40
     h12: 0
@@ -328,6 +344,12 @@
 
 
   16:
+    qh:
+      - type: small
+        who: someone
+        when: at some point
+        ref: "?"
+        using: ""
     description: hypersurface of degree 2 in $\mathbb{P}^4$
     -KX3: 54
     h12: 0
@@ -354,6 +376,12 @@
 
 
   17:
+    qh:
+      - type: small
+        who: someone
+        when: at some point
+        ref: "?"
+        using: ""
     description: projective space $\mathbb{P}^3$
     -KX3: 64
     h12: 0
@@ -380,6 +408,8 @@
 # rank 2
 2:
   1:
+    very_ample: no
+    basepoint_free: no
     description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
     -KX3: 4
     h12: 22
@@ -398,6 +428,8 @@
 
 
   2:
+    very_ample: no
+    hyperelliptic: yes
     description: double cover of ((2-34)) with branch locus a $(2,4)$-divisor
     -KX3: 6
     h12: 20
@@ -415,6 +447,8 @@
 
 
   3:
+    very_ample: no
+    hyperelliptic: yes
     description: blowup of ((1-12)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
     -KX3: 8
     h12: 11
@@ -434,6 +468,7 @@
 
 
   4:
+    trigonal: yes
     description: blowup of ((1-17)) in the intersection of two cubics
     alternative:
       - $(1,3)$-divisor on $\mathbb{P}^1\times\mathbb{P}^3$
@@ -460,6 +495,7 @@
 
 
   5:
+    trigonal: yes
     description: blowup of ((1-13)) in a plane cubic
     -KX3: 12
     h12: 6
@@ -826,6 +862,12 @@
 
 
   21:
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in a twisted quartic
     -KX3: 28
     h12: 0
@@ -854,6 +896,12 @@
 
 
   22:
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-15)) in a conic
     -KX3: 30
     h12: 0
@@ -903,6 +951,8 @@
 
 
   24:
+    exceptional:
+      - Orlov's projective bundle formula
     description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(1,2)$
     -KX3: 30
     h12: 0
@@ -955,6 +1005,13 @@
 
 
   26:
+    bott: yes
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-15)) in a line
     -KX3: 34
     h12: 0
@@ -974,6 +1031,12 @@
 
 
   27:
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in a twisted cubic
     -KX3: 38
     h12: 0
@@ -1025,6 +1088,12 @@
 
 
   29:
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in a conic
     -KX3: 40
     h12: 0
@@ -1048,6 +1117,13 @@
 
 
   30:
+    bott: yes
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in a conic
     -KX3: 46
     h12: 0
@@ -1101,6 +1177,8 @@
 
 
   32:
+    exceptional:
+      - Orlov's projective bundle formula
     description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(1,1)$
     alternative:
       - $\mathbb{P}(\mathrm{T}_{\mathbb{P}^2})$
@@ -1133,6 +1211,12 @@
 
 
   33:
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in a line
     -KX3: 54
     h12: 0
@@ -1159,6 +1243,8 @@
 
 
   34:
+    exceptional:
+      - Orlov's projective bundle formula
     description: $\mathbb{P}^1\times\mathbb{P}^2$
     -KX3: 54
     h12: 0
@@ -1185,6 +1271,8 @@
 
 
   35:
+    exceptional:
+      - Orlov's projective bundle formula
     description: $\mathrm{Bl}_p\mathbb{P}^3$
     alternative:
       - $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(1))$
@@ -1217,6 +1305,8 @@
 
 
   36:
+    exceptional:
+      - Orlov's projective bundle formula
     description: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(2))$
     -KX3: 62
     h12: 0
@@ -1269,6 +1359,7 @@
 
 
   2:
+    trigonal: yes
     description: divisor from $|\mathcal{L}^{\otimes 2}\otimes\mathcal{O}(2,3)|$ on the $\mathbb{P}^2$-bundle $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(-1,-1)^{\oplus 2})$ over $\mathbb{P}^1\times\mathbb{P}^1$ such that $X\cap Y$ is irreducible, and $\mathcal{L}$ is the tautological bundle, and $Y\in|\mathcal{L}|$
     -KX3: 14
     h12: 3
@@ -1460,6 +1551,12 @@
 
 
   10:
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in the disjoint union of 2 conics
     alternative:
       - complete intersection of degree $(1,0,1)$, $(0,1,1)$ and $(0,0,2)$ in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^4$
@@ -1510,6 +1607,12 @@
 
 
   12:
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in the disjoint union of a line and a twisted cubic
     -KX3: 28
     h12: 0
@@ -1595,6 +1698,13 @@
 
 
   15:
+    bott: yes
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in the disjoint union of a line and a conic
     -KX3: 32
     h12: 0
@@ -1619,6 +1729,7 @@
 
 
   16:
+    bott: yes
     description: blowup of ((2-35)) in the proper transform of a twisted cubic containing the center of the blowup
     -KX3: 34
     h12: 0
@@ -1670,6 +1781,13 @@
 
 
   18:
+    bott: yes
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in the disjoint union of a line and a conic
     -KX3: 36
     h12: 0
@@ -1695,6 +1813,7 @@
 
 
   19:
+    bott: yes
     description: blowup of ((1-16)) in two non-collinear points
     -KX3: 38
     h12: 0
@@ -1720,6 +1839,13 @@
 
 
   20:
+    bott: yes
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in the disjoint union of two lines
     -KX3: 38
     h12: 0
@@ -1743,6 +1869,7 @@
 
 
   21:
+    bott: yes
     description: blowup of ((2-34)) in a curve of degree $(2,1)$
     -KX3: 38
     h12: 0
@@ -1768,6 +1895,7 @@
 
 
   22:
+    bott: yes
     description: blowup of ((2-34)) in a conic on $\{x\}\times\mathbb{P}^2$, $x\in\mathbb{P}^1$
     -KX3: 40
     h12: 0
@@ -1793,6 +1921,7 @@
 
 
   23:
+    bott: yes
     description: blowup of ((2-35)) in the proper transform of a conic containing the center of the blowup
     -KX3: 42
     h12: 0
@@ -1818,6 +1947,7 @@
 
 
   24:
+    bott: yes
     description: the fiber product of ((2-32)) with $\mathrm{Bl}_p\mathbb{P}^2$ over $\mathbb{P}^2$
     alternative:
       - complete intersection of degree $(1,1,0)$ and $(0,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^2\times\mathbb{P}^2$
@@ -1848,6 +1978,12 @@
 
 
   25:
+    qh:
+      - type: small
+        who: Ciolli
+        when: 2005
+        ref: MR2168069
+        using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in the disjoint union of two lines
     alternative:
       - $\mathbb{P}(\mathcal{O}(1,0)\oplus\mathcal{O}(0,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
@@ -1905,6 +2041,8 @@
 
 
   27:
+    exceptional:
+      - Orlov's projective bundle formula
     description: $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 48
     h12: 0
@@ -2027,6 +2165,8 @@
 
 
   31:
+    exceptional:
+      - Orlov's projective bundle formula
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the vertex
     alternative:
       - $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
@@ -2109,6 +2249,7 @@
 
 
   3:
+    bott: yes
     description: blowup of ((3-27)) in a curve of degree $(1,1,2)$
     -KX3: 30
     h12: 0
@@ -2132,6 +2273,7 @@
 
 
   4:
+    bott: yes
     description: blowup of ((3-19)) in the proper transform of a conic through the points
     -KX3: 32
     h12: 0
@@ -2157,6 +2299,7 @@
 
 
   5:
+    bott: yes
     description: blowup of ((2-34)) in the disjoint union of a curve of degree $(2,1)$ and a curve of degree $(1,0)$
     -KX3: 32
     h12: 0
@@ -2182,6 +2325,7 @@
 
 
   6:
+    bott: yes
     description: blowup of ((1-17)) in the disjoint union of 3 lines
     alternative:
       - blowup of ((3-27)) in the tridiagonal
@@ -2208,6 +2352,7 @@
 
 
   7:
+    bott: yes
     description: blowup of ((2-32)) in the disjoint union of a curve of degree $(0,1)$ and a curve of degree $(1,0)$
     -KX3: 36
     h12: 0
@@ -2231,6 +2376,7 @@
 
 
   8:
+    bott: yes
     description: blowup of ((3-27)) in a curve of degree $(0,1,1)$
     -KX3: 38
     h12: 0
@@ -2387,6 +2533,7 @@
 # rank 5
 5:
   1:
+    bott: yes
     description: blowup of ((2-29)) in the disjoint union of three exceptional lines of the blowup
     -KX3: 28
     h12: 0
@@ -2462,6 +2609,7 @@
 # rank 6
 6:
   1:
+    bott: yes
     description: $\mathbb{P}^1\times\mathrm{Bl}_4\mathbb{P}^2$
     -KX3: 30
     h12: 0
@@ -2510,6 +2658,7 @@
 # rank 8
 8:
   1:
+    trigonal: yes
     description: $\mathbb{P}^1\times\mathrm{Bl}_6\mathbb{P}^2$
     -KX3: 18
     h12: 0
@@ -2534,6 +2683,7 @@
 # rank 9
 9:
   1:
+    very_ample: no
     description: $\mathbb{P}^1\times\mathrm{Bl}_7\mathbb{P}^2$
     -KX3: 12
     h12: 0
@@ -2556,6 +2706,9 @@
 # rank 10
 10:
   1:
+    very_ample: no
+    basepoint_free: no
+    hyperelliptic: yes
     description: $\mathbb{P}^1\times\mathrm{Bl}_8\mathbb{P}^2$
     -KX3: 6
     h12: 0
