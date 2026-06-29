@@ -1,0 +1,23 @@
+{{/* Generate one page per Fano 3-fold (/rho-ID) and one list page per rank (/rho),
+     from data/data.yml. Pretty URLs are Hugo's default (/2-22/, /2/); do not set
+     uglyURLs. Case is preserved by disablePathToLower in hugo.toml. */}}
+{{ range $rho := seq 1 10 }}
+  {{ $rank := index hugo.Data.data (string $rho) }}
+  {{ range $idStr, $e := $rank }}
+    {{ $id := int $idStr }}
+    {{ $.AddPage (dict
+      "path" (printf "%d-%d" $rho $id)
+      "title" (printf "Fano variety %d-%d" $rho $id)
+      "kind" "page"
+      "type" "entry"
+      "params" (dict "rho" $rho "id" $id "math" true)
+    ) }}
+  {{ end }}
+  {{ $.AddPage (dict
+    "path" (printf "%d" $rho)
+    "title" (printf "List of Fano varieties of rank %d" $rho)
+    "kind" "page"
+    "type" "rank"
+    "params" (dict "rho" $rho "math" true)
+  ) }}
+{{ end }}

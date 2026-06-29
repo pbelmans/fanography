@@ -1,0 +1,11 @@
+{{/* One page per del Pezzo surface from data/delpezzo_surfaces.yml. The explicit
+     "url" preserves the id casing (dP9, P1xP1); "path" alone gets lowercased. */}}
+{{ range $id, $e := hugo.Data.delpezzo_surfaces }}
+  {{ $.AddPage (dict
+    "path" $id
+    "url" (printf "/delpezzos/%s/" $id)
+    "title" (printf "del Pezzo variety %s " $id)
+    "kind" "page"
+    "params" (dict "dpid" $id "math" true)
+  ) }}
+{{ end }}
