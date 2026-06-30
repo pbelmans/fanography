@@ -415,6 +415,7 @@
     basepoint_free: no
     description: blowup of ((1-11)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
     -KX3: 4
+    d: -1
     h12: 22
     moduli: 36
 
@@ -435,6 +436,7 @@
     hyperelliptic: yes
     description: double cover of ((2-34)) with branch locus a $(2,4)$-divisor
     -KX3: 6
+    d: -4
     h12: 20
     moduli: 33
 
@@ -454,6 +456,7 @@
     hyperelliptic: yes
     description: blowup of ((1-12)) in an elliptic curve which is the intersection of two divisors from half the anticanonical linear system
     -KX3: 8
+    d: -4
     h12: 11
     moduli: 23
 
@@ -476,6 +479,7 @@
     alternative:
       - $(1,3)$-divisor on $\mathbb{P}^1\times\mathbb{P}^3$
     -KX3: 10
+    d: -9
     h12: 10
     moduli: 21
 
@@ -501,6 +505,7 @@
     trigonal: yes
     description: blowup of ((1-13)) in a plane cubic
     -KX3: 12
+    d: -9
     h12: 6
     moduli: 16
 
@@ -528,6 +533,7 @@
       - $(2,2)$-divisor on $\mathbb{P}^2\times\mathbb{P}^2$
       - double cover of ((2-32)) with branch locus an anticanonical divisor
     -KX3: 12
+    d: -12
     h12: 9
     moduli: [19, 18]
 
@@ -553,6 +559,7 @@
   7:
     description: blowup of ((1-16)) in the intersection of two divisors from $|\mathcal{O}_Q(2)|$
     -KX3: 14
+    d: -16
     h12: 5
     moduli: 14
 
@@ -579,6 +586,7 @@
       - double cover of ((2-35)) with branch locus an anticanonical divisor such that the intersection with the exceptional divisor is smooth
       - double cover of ((2-35)) with branch locus an anticanonical divisor such that the intersection with the exceptional divisor is singular but reduced
     -KX3: 14
+    d: -8
     h12: 9
     moduli: [18, 17]
 
@@ -603,6 +611,7 @@
     alternative:
       - blowup of ((1-17)) in a curve of degree 7 and genus 5, which is an intersection of 3 cubics
     -KX3: 16
+    d: -17
     h12: 5
     moduli: 13
 
@@ -624,6 +633,7 @@
   10:
     description: blowup of ((1-14)) in an elliptic curve which is an intersection of 2 hyperplanes
     -KX3: 16
+    d: -16
     h12: 3
     moduli: 11
 
@@ -645,6 +655,7 @@
   11:
     description: blowup of ((1-13)) in a line
     -KX3: 18
+    d: -13
     h12: 5
     moduli: 12
 
@@ -668,6 +679,7 @@
     alternative:
       - blowup of ((1-17)) in a curve of degree 6 and genus 3 which is an intersection of 4 cubics
     -KX3: 20
+    d: -20
     h12: 3
     moduli: 9
 
@@ -698,6 +710,7 @@
   13:
     description: blowup of ((1-16)) in a curve of degree 6 and genus 2
     -KX3: 20
+    d: -24
     h12: 2
     moduli: 8
 
@@ -719,6 +732,7 @@
   14:
     description: blowup of ((1-15)) in an elliptic curve which is an intersection of 2 hyperplanes
     -KX3: 20
+    d: -25
     h12: 1
     moduli: 7
 
@@ -738,6 +752,7 @@
       - blowup of ((1-17)) in the intersection of a quadric and a cubic where the quadric is smooth
       - blowup of ((1-17)) in the intersection of a quadric and a cubic where the quadric is singular but reduced
     -KX3: 22
+    d: -12
     h12: 4
     moduli: [9, 8]
 
@@ -763,6 +778,7 @@
   16:
     description: blowup of ((1-14)) in a conic
     -KX3: 22
+    d: -20
     h12: 2
     moduli: 7
 
@@ -784,6 +800,7 @@
   17:
     description: blowup of ((1-16)) in an elliptic curve of degree 5
     -KX3: 24
+    d: -25
     h12: 1
     moduli: 5
 
@@ -803,6 +820,7 @@
   18:
     description: double cover of ((2-34)) with branch locus a divisor of degree $(2,2)$
     -KX3: 24
+    d: -16
     h12: 2
     moduli: 6
 
@@ -827,6 +845,7 @@
   19:
     description: blowup of ((1-14)) in a line
     -KX3: 26
+    d: -17
     h12: 2
     moduli: 5
 
@@ -848,6 +867,7 @@
   20:
     description: blowup of ((1-15)) in a twisted cubic
     -KX3: 26
+    d: -29
     h12: 0
     moduli: 3
 
@@ -873,6 +893,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in a twisted quartic
     -KX3: 28
+    d: -28
     h12: 0
     moduli: 2
 
@@ -934,6 +955,7 @@
       - blowup of ((1-16)) in an intersection of $A\in|\mathcal{O}_Q(1)|$ and $B\in|\mathcal{O}_Q(2)|$ such that $A$ is smooth
       - blowup of ((1-16)) in an intersection of $A\in|\mathcal{O}_Q(1)|$ and $B\in|\mathcal{O}_Q(2)|$ such that $A$ is singular
     -KX3: 30
+    d: -16
     h12: 1
     moduli: [2, 1]
 
@@ -989,6 +1011,7 @@
     alternative:
       - $(1,2)$-divisor on $\mathbb{P}^1\times\mathbb{P}^3$
     -KX3: 32
+    d: -16
     h12: 1
     moduli: 1
 
@@ -1019,6 +1042,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-15)) in a line
     -KX3: 34
+    d: -21
     h12: 0
     moduli: 0
 
@@ -1044,6 +1068,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in a twisted cubic
     -KX3: 38
+    d: -17
     h12: 0
     moduli: 0
 
@@ -1070,6 +1095,7 @@
   28:
     description: blowup of ((1-17)) in a plane cubic
     -KX3: 40
+    d: -9
     h12: 1
     moduli: 1
 
@@ -1101,6 +1127,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in a conic
     -KX3: 40
+    d: -16
     h12: 0
     moduli: 0
 
@@ -1191,6 +1218,7 @@
       - $\mathbb{P}(\mathrm{T}_{\mathbb{P}^2})$
       - the complete flag variety for $\mathbb{P}^2$
     -KX3: 48
+    d: -12
     h12: 0
     moduli: 0
 
@@ -1226,6 +1254,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in a line
     -KX3: 54
+    d: -9
     h12: 0
     moduli: 0
 
@@ -1254,6 +1283,7 @@
       - Orlov's projective bundle formula
     description: $\mathbb{P}^1\times\mathbb{P}^2$
     -KX3: 54
+    d: -9
     h12: 0
     moduli: 0
 
@@ -1284,6 +1314,7 @@
     alternative:
       - $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(1))$
     -KX3: 56
+    d: -8
     h12: 0
     moduli: 0
 
@@ -1316,6 +1347,7 @@
       - Orlov's projective bundle formula
     description: $\mathbb{P}(\mathcal{O}_{\mathbb{P}^2}\oplus\mathcal{O}_{\mathbb{P}^2}(2))$
     -KX3: 62
+    d: -5
     h12: 0
     moduli: 0
 
@@ -1346,6 +1378,7 @@
   1:
     description: double cover of ((3-27)) with branch locus a divisor of degree $(2,2,2)$
     -KX3: 12
+    d: 16
     h12: 8
     moduli: 17
 
@@ -1369,6 +1402,7 @@
     trigonal: yes
     description: divisor from $|\mathcal{L}^{\otimes 2}\otimes\mathcal{O}(2,3)|$ on the $\mathbb{P}^2$-bundle $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(-1,-1)^{\oplus 2})$ over $\mathbb{P}^1\times\mathbb{P}^1$ such that $X\cap Y$ is irreducible, and $\mathcal{L}$ is the tautological bundle, and $Y\in|\mathcal{L}|$
     -KX3: 14
+    d: 16
     h12: 3
     moduli: 11
 
@@ -1391,6 +1425,7 @@
   3:
     description: divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$ of degree $(1,1,2)$
     -KX3: 18
+    d: 28
     h12: 3
     moduli: 9
 
@@ -1415,6 +1450,7 @@
   4:
     description: blowup of ((2-18)) in a smooth fiber of the composition of the projection to $\mathbb{P}^1\times\mathbb{P}^2$ with the projection to $\mathbb{P}^2$ of the double cover with the projection
     -KX3: 18
+    d: 24
     h12: 2
     moduli: 8
 
@@ -1439,6 +1475,7 @@
   5:
     description: blowup of ((2-34)) in a curve $C$ of degree $(5,2)$ such that $C\hookrightarrow\mathbb{P}^1\times\mathbb{P}^2\to\mathbb{P}^2$ is an embedding
     -KX3: 20
+    d: 28
     h12: 0
     moduli: 5
 
@@ -1467,6 +1504,7 @@
     alternative:
       - complete intersection of degree $(1,0,2)$ and $(0,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^3$
     -KX3: 22
+    d: 32
     h12: 1
     moduli: 5
 
@@ -1491,6 +1529,7 @@
   7:
     description: blowup of ((2-32)) in an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_W|$
     -KX3: 24
+    d: 36
     h12: 1
     moduli: 4
 
@@ -1512,6 +1551,7 @@
   8:
     description: divisor from the linear system $|(\alpha\circ\pi_1)^*(\mathcal{O}_{\mathbb{P}^2}(1)\otimes\pi_2^*(\mathcal{O}_{\mathbb{P}^2}(2))|$ where $\pi_i\colon\mathrm{Bl}_1\mathbb{P}^2\times\mathbb{P}^2\to\mathrm{Bl}_1\mathbb{P}^2,\mathbb{P}^2$ are the projections, and $\alpha\colon\mathrm{Bl}_1\mathbb{P}^2\to\mathbb{P}^2$ is the blowup
     -KX3: 24
+    d: 34
     h12: 0
     moduli: 3
 
@@ -1535,6 +1575,7 @@
   9:
     description: blowup of the cone over the Veronese of $\mathbb{P}^2$ in $\mathbb{P}^5$ with center the disjoint union of the vertex and a quartic curve on $\mathbb{P}^2$
     -KX3: 26
+    d: 12
     h12: 3
     moduli: 6
 
@@ -1568,6 +1609,7 @@
     alternative:
       - complete intersection of degree $(1,0,1)$, $(0,1,1)$ and $(0,0,2)$ in $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^4$
     -KX3: 26
+    d: 40
     h12: 0
     moduli: 2
 
@@ -1593,6 +1635,7 @@
   11:
     description: blowup of ((2-35)) in an elliptic curve which is the intersection of two divisors from $|-\frac{1}{2}\mathrm{K}_{V_7}|$
     -KX3: 28
+    d: 28
     h12: 1
     moduli: 2
 
@@ -1622,6 +1665,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in the disjoint union of a line and a twisted cubic
     -KX3: 28
+    d: 36
     h12: 0
     moduli: 1
 
@@ -1648,6 +1692,7 @@
   13:
     description: blowup of ((2-32)) in a curve $C$ of bidegree $(2,2)$ such that the composition $C\hookrightarrow W\hookrightarrow\mathbb{P}^2\times\mathbb{P}^2\overset{p_i}{\to}\mathbb{P}^2$ is an embedding for $i=1,2$
     -KX3: 30
+    d: 40
     h12: 0
     moduli: 1
 
@@ -1681,6 +1726,7 @@
   14:
     description: blowup of ((1-17)) in the disjoint union of a plane cubic curve and a point outside the plane
     -KX3: 32
+    d: 18
     h12: 1
     moduli: 1
 
@@ -1714,6 +1760,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in the disjoint union of a line and a conic
     -KX3: 32
+    d: 34
     h12: 0
     moduli: 0
 
@@ -1739,6 +1786,7 @@
     bott: yes
     description: blowup of ((2-35)) in the proper transform of a twisted cubic containing the center of the blowup
     -KX3: 34
+    d: 30
     h12: 0
     moduli: 0
 
@@ -1910,6 +1958,7 @@
     bott: yes
     description: blowup of ((2-34)) in a conic on $\{x\}\times\mathbb{P}^2$, $x\in\mathbb{P}^1$
     -KX3: 40
+    d: 18
     h12: 0
     moduli: 0
 
@@ -2002,6 +2051,7 @@
     alternative:
       - $\mathbb{P}(\mathcal{O}(1,0)\oplus\mathcal{O}(0,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 44
+    d: 20
     h12: 0
     moduli: 0
 
@@ -2031,6 +2081,7 @@
     alternative:
       - blowup of line on a plane which is section of ((2-34)) mapping to $\mathbb{P}^2$
     -KX3: 46
+    d: 18
     h12: 0
     moduli: 0
 
@@ -2059,6 +2110,7 @@
       - Orlov's projective bundle formula
     description: $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 48
+    d: 16
     h12: 0
     moduli: 0
 
@@ -2094,6 +2146,7 @@
   28:
     description: $\mathbb{P}^1\times\mathrm{Bl}_p\mathbb{P}^2$
     -KX3: 48
+    d: 16
     h12: 0
     moduli: 0
 
@@ -2187,6 +2240,7 @@
     alternative:
       - $\mathbb{P}(\mathcal{O}\oplus\mathcal{O}(1,1))$ over $\mathbb{P}^1\times\mathbb{P}^1$
     -KX3: 52
+    d: 12
     h12: 0
     moduli: 0
 
@@ -2217,6 +2271,7 @@
   1:
     description: divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^1$ of degree $(1,1,1,1)$
     -KX3: 24
+    d: -48
     h12: 1
     moduli: 3
 
@@ -2242,6 +2297,7 @@
   2:
     description: blowup of the cone over a smooth quadric in $\mathbb{P}^3$ in the disjoint union of the vertex and an elliptic curve on the quadric
     -KX3: 28
+    d: -32
     h12: 1
     moduli: 2 # this is H^1(X,T_X), there are really just 1 moduli
 
@@ -2268,6 +2324,7 @@
     bott: yes
     description: blowup of ((3-27)) in a curve of degree $(1,1,2)$
     -KX3: 30
+    d: -48
     h12: 0
     moduli: 0
 
@@ -2348,6 +2405,7 @@
     alternative:
       - blowup of ((3-27)) in the tridiagonal
     -KX3: 34
+    d: -44
     h12: 0
     moduli: 0
 
@@ -2373,6 +2431,7 @@
     bott: yes
     description: blowup of ((2-32)) in the disjoint union of a curve of degree $(0,1)$ and a curve of degree $(1,0)$
     -KX3: 36
+    d: -39
     h12: 0
     moduli: 0
 
@@ -2397,6 +2456,7 @@
     bott: yes
     description: blowup of ((3-27)) in a curve of degree $(0,1,1)$
     -KX3: 38
+    d: -32
     h12: 0
     moduli: 0
 
@@ -2422,6 +2482,7 @@
   9:
     description: blowup of ((3-25)) in an exceptional curve of the blowup
     -KX3: 40
+    d: -31
     h12: 0
     moduli: 0
 
@@ -2448,6 +2509,7 @@
   10:
     description: $\mathbb{P}^1\times\mathrm{Bl}_2\mathbb{P}^2$
     -KX3: 42
+    d: -28
     h12: 0
     moduli: 0
 
@@ -2474,6 +2536,7 @@
   11:
     description: blowup of ((3-28)) in $\{x\}\times E$, $x\in\mathbb{P}^1$ and $E$ the $(-1)$-curve
     -KX3: 44
+    d: -23
     h12: 0
     moduli: 0
 
@@ -2500,6 +2563,7 @@
   12:
     description: blowup of ((2-33)) in the disjoint union of two exceptional lines of the blowup
     -KX3: 46
+    d: -20
     h12: 0
     moduli: 0
 
@@ -2526,6 +2590,7 @@
   13:
     description: blowup of ((3-27)) in a curve of degree $(1,1,3)$
     -KX3: 26
+    d: -44
     h12: 0
     moduli: 1
 
@@ -2554,6 +2619,7 @@
     bott: yes
     description: blowup of ((2-29)) in the disjoint union of three exceptional lines of the blowup
     -KX3: 28
+    d: 56
     h12: 0
     moduli: 0
 
@@ -2632,6 +2698,7 @@
     bott: yes
     description: $\mathbb{P}^1\times\mathrm{Bl}_4\mathbb{P}^2$
     -KX3: 30
+    d: -80
     h12: 0
     moduli: 0
 
@@ -2656,6 +2723,7 @@
   1:
     description: $\mathbb{P}^1\times\mathrm{Bl}_5\mathbb{P}^2$
     -KX3: 24
+    d: 128
     h12: 0
     moduli: 2
 
@@ -2681,6 +2749,7 @@
     trigonal: yes
     description: $\mathbb{P}^1\times\mathrm{Bl}_6\mathbb{P}^2$
     -KX3: 18
+    d: -192
     h12: 0
     moduli: 4
 
@@ -2706,6 +2775,7 @@
     very_ample: no
     description: $\mathbb{P}^1\times\mathrm{Bl}_7\mathbb{P}^2$
     -KX3: 12
+    d: 256
     h12: 0
     moduli: 6
 
@@ -2731,6 +2801,7 @@
     hyperelliptic: yes
     description: $\mathbb{P}^1\times\mathrm{Bl}_8\mathbb{P}^2$
     -KX3: 6
+    d: -256
     h12: 0
     moduli: 8
 
