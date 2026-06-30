@@ -220,6 +220,7 @@
 
 
   11:
+    name: double Veronese cone
     very_ample: no
     description: hypersurface of degree 6 in $\mathbb{P}(1,1,1,2,3)$
     -KX3: 8
@@ -237,6 +238,7 @@
 
 
   12:
+    name: quartic double solid
     description: double cover of $\mathbb{P}^3$ with branch locus a smooth quartic surface
     alternative:
       - hypersurface of degree 4 in $\mathbb{P}(1,1,1,1,2)$
@@ -311,6 +313,7 @@
 
 
   15:
+    name: quintic del Pezzo threefold
     qh:
       - type: small
         who: someone
