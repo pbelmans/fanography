@@ -1,3 +1,32 @@
 {{- /* del Pezzo Hodge diamond. Input: enriched $dp. */ -}}
 {{- $dp := . -}}
 {{ partial "components/surface-diamond.html" (dict "pg" 0 "q" 0 "h12" $dp.rank) }}
+
+{{- /* polyvector parallelogram: H^q(S, wedge^p T_S), laid out by HH^n anti-diagonals */ -}}
+{{ $pv := $dp.polyvector }}
+<div class="parallelogram">
+  <span>{{ index (index $pv 0) 0 }}</span>
+  <span></span>
+  <span></span>
+  <br style="clear: both">
+
+  <span>{{ index (index $pv 0) 1 }}</span>
+  <span>{{ index (index $pv 1) 0 }}</span>
+  <span></span>
+  <br style="clear: both">
+
+  <span>{{ index (index $pv 0) 2 }}</span>
+  <span>{{ index (index $pv 1) 1 }}</span>
+  <span>{{ index (index $pv 2) 0 }}</span>
+  <br style="clear: both">
+
+  <span></span>
+  <span>{{ index (index $pv 1) 2 }}</span>
+  <span>{{ index (index $pv 2) 1 }}</span>
+  <br style="clear: both">
+
+  <span></span>
+  <span></span>
+  <span>{{ index (index $pv 2) 2 }}</span>
+  <br style="clear: both">
+</div>

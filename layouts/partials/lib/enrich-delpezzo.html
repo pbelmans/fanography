@@ -31,6 +31,11 @@
 {{- $groups := slice -}}
 {{- if le $degree 4 -}}{{- $groups = index $autRaw "groups" -}}{{- end -}}
 
+{{- /* polyvector parallelogram: H^q(S, wedge^p T_S), rows p=0,1,2. From HKR:
+       p=0 (O_S) -> [1,0,0]; p=1 (T_S) -> [dim Aut^0, #moduli, 0];
+       p=2 (wedge^2 T_S = -K_S) -> [h^0(-K_S)=deg+1, 0, 0]. */ -}}
+{{- $polyvector := slice (slice 1 0 0) (slice (index $automorphisms 1) $moduli 0) (slice (add $degree 1) 0 0) -}}
+
 {{- /* previous / next in the curated order, clamped (no wrap) */ -}}
 {{- $order := slice "dP9" "P1xP1" "dP8" "dP7" "dP6" "dP5" "dP4" "dP3" "dP2" "dP1" -}}
 {{- $pos := -1 -}}
@@ -55,7 +60,7 @@
   "anticanonical" (index $e "anticanonical" | default "")
   "alternatives" (index $e "alternatives" | default slice)
   "exceptional" (index $e "exceptional")
-  "degree" $degree "rank" $rank "moduli" $moduli "bott" $bott
+  "degree" $degree "rank" $rank "moduli" $moduli "bott" $bott "polyvector" $polyvector
   "automorphisms" $automorphisms "groups" $groups
   "index" (index $e "index")
   "previous" $prev "next" $nxt
