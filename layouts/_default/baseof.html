@@ -91,6 +91,17 @@
       });
       new bootstrap.Tooltip(el, {html: true});
     });
+
+    // Keyboard navigation (issue #1): left/right arrows follow the prev/next links.
+    document.addEventListener("keydown", function (e) {
+      if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+      var sel = e.key === "ArrowLeft" ? "a.previous"
+              : e.key === "ArrowRight" ? "a.next" : null;
+      if (!sel) return;
+      var link = document.querySelector(sel);
+      if (link) window.location.href = link.href;
+    });
   });
 </script>
 
