@@ -907,6 +907,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-15)) in a conic
     -KX3: 30
+    d: -24
     h12: 0
     moduli: 1
 
@@ -958,6 +959,7 @@
       - Orlov's projective bundle formula
     description: divisor on $\mathbb{P}^2\times\mathbb{P}^2$ of bidegree $(1,2)$
     -KX3: 30
+    d: -21
     h12: 0
     moduli: 1
 
@@ -1129,6 +1131,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in a conic
     -KX3: 46
+    d: -12
     h12: 0
     moduli: 0
 
@@ -1154,6 +1157,7 @@
   31:
     description: blowup of ((1-16)) in a line
     -KX3: 46
+    d: -13
     h12: 0
     moduli: 0
 
@@ -1760,6 +1764,7 @@
   17:
     description: divisor on $\mathbb{P}^1\times\mathbb{P}^1\times\mathbb{P}^2$ of degree $(1,1,1)$
     -KX3: 36
+    d: 28
     h12: 0
     moduli: 0
 
@@ -1793,6 +1798,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-17)) in the disjoint union of a line and a conic
     -KX3: 36
+    d: 26
     h12: 0
     moduli: 0
 
@@ -1819,6 +1825,7 @@
     bott: yes
     description: blowup of ((1-16)) in two non-collinear points
     -KX3: 38
+    d: 24
     h12: 0
     moduli: 0
 
@@ -1851,6 +1858,7 @@
         using: 'the description of a 1 or 2-curve blowup of $\mathbb{P}^3$ or $Q^3$'
     description: blowup of ((1-16)) in the disjoint union of two lines
     -KX3: 38
+    d: 28
     h12: 0
     moduli: 0
 
@@ -1875,6 +1883,7 @@
     bott: yes
     description: blowup of ((2-34)) in a curve of degree $(2,1)$
     -KX3: 38
+    d: 22
     h12: 0
     moduli: 0
 
@@ -1927,6 +1936,7 @@
     bott: yes
     description: blowup of ((2-35)) in the proper transform of a conic containing the center of the blowup
     -KX3: 42
+    d: 20
     h12: 0
     moduli: 0
 
@@ -1955,6 +1965,7 @@
     alternative:
       - complete intersection of degree $(1,1,0)$ and $(0,1,1)$ in $\mathbb{P}^1\times\mathbb{P}^2\times\mathbb{P}^2$
     -KX3: 42
+    d: 22
     h12: 0
     moduli: 0
 
@@ -2113,6 +2124,7 @@
   29:
     description: blowup of ((2-35)) in a line on the exceptional divisor
     -KX3: 50
+    d: 12
     h12: 0
     moduli: 0
 
@@ -2141,6 +2153,7 @@
     alternative:
       - $\mathbb{P}_{\mathbb{F}_1}(\mathcal{O}\oplus\mathcal{O}(\ell))$ where $\ell^2=1$
     -KX3: 50
+    d: 14
     h12: 0
     moduli: 0
 
@@ -2279,6 +2292,7 @@
     bott: yes
     description: blowup of ((3-19)) in the proper transform of a conic through the points
     -KX3: 32
+    d: -40
     h12: 0
     moduli: 0
 
@@ -2305,6 +2319,7 @@
     bott: yes
     description: blowup of ((2-34)) in the disjoint union of a curve of degree $(2,1)$ and a curve of degree $(1,0)$
     -KX3: 32
+    d: -39
     h12: 0
     moduli: 0
 
@@ -2562,6 +2577,7 @@
   2:
     description: blowup of ((3-25)) in the disjoint union of two exceptional lines on the same irreducible component
     -KX3: 36
+    d: 44
     h12: 0
     moduli: 0
 
@@ -2588,6 +2604,7 @@
   3:
     description: $\mathbb{P}^1\times\mathrm{Bl}_3\mathbb{P}^2$
     -KX3: 36
+    d: 48
     h12: 0
     moduli: 0
 

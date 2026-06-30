@@ -50,6 +50,12 @@
 {{- $genus := "" -}}
 {{- if and (eq $rho 1) (eq $idx 1) }}{{ $genus = int (math.Floor (div (add $kx3 2) 2)) }}{{ end -}}
 
+{{- /* Mori-Mukai invariant d = det of (-K . D_i . D_j). For rho=1 this is (-K)^3/index^2;
+       for rho>=2 it is not derivable from scalar invariants, so it is hardcoded per family
+       in data.yml ("d:") and shown as "?" until filled in. */ -}}
+{{- $d := "?" -}}
+{{- if eq $rho 1 -}}{{- $d = int (math.Floor (div $kx3 (mul $idx $idx))) -}}{{- else if isset $e "d" -}}{{- $d = index $e "d" -}}{{- end -}}
+
 {{- /* blowdown refs: iterate rank rho-1 numerically and keep those whose id is in the
        blowdown list (this dedups and orders by lower-rank id) */ -}}
 {{- $isPrimitive := not (index $e "blowdown") -}}
@@ -201,7 +207,7 @@
   "name" (index $e "name")
   "description" $desc "plaintext" $plaintext "alternative" $alt
   "remarks" (index $e "remarks")
-  "KX3" $kx3 "h12" $h12 "moduli" $moduli "index" $idx "genus" $genus
+  "KX3" $kx3 "h12" $h12 "moduli" $moduli "index" $idx "genus" $genus "d" $d
   "is_primitive" $isPrimitive "blowdown" $blowdown "blowup" $blowup
   "is_rational" $isRational "rationality" $rationality
   "is_unirational" $isUnirational "unirationality" $unirationality
