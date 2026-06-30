@@ -3,6 +3,7 @@
   <div class="card-columns">
     {{ partial "components/component.html" (dict "header" "Identification" "id" "" "body" (partial "components/basic.html" $fano)) }}
     {{ partial "components/component.html" (dict "header" "Hodge diamond and polyvector parallelogram" "id" "" "body" (partial "components/diamond.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Poisson structures" "id" "" "body" (partial "components/poisson.html" $fano)) }}
     {{ partial "components/component.html" (dict "header" "Anticanonical bundle" "id" "" "body" (partial "components/anticanonical.html" $fano)) }}
     {{ partial "components/component.html" (dict "header" "Birational geometry" "id" "birational" "body" (partial "components/birational.html" $fano)) }}
     {{ partial "components/component.html" (dict "header" "Deformation theory" "id" "" "body" (partial "components/deformations.html" $fano)) }}

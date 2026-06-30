@@ -1,0 +1,45 @@
+{{- /* Poisson structures (issue #7).
+   Holomorphic Poisson structures on Picard-rank-1 Fano 3-folds are classified by
+   Loray-Pereira-Touzet, "Foliations with trivial canonical bundle on Fano 3-folds",
+   Math. Nachr. 286 (2013) 921-940 [doi:10.1002/mana.201100354], Theorem 9.1 / Table 1.
+   Poisson(X) is a union of irreducible components inside P H^0(X, wedge^2 T_X); the rows
+   below are the K_F = 0 components (Table 1) with their dimensions -- this dimension is
+   the dimension of that component, NOT h^0(wedge^2 T_X). For rho >= 2 existence is open.
+   Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+{{- $doi := "https://doi.org/10.1002/mana.201100354" -}}
+{{- /* identifier -> Table 1 components, each [name, dimension] */ -}}
+{{- $table := dict
+  "1-11" (slice (slice "Rat(1,1)" 2))
+  "1-12" (slice (slice "Rat(1,1)" 4))
+  "1-13" (slice (slice "Rat(1,1)" 6))
+  "1-14" (slice (slice "Rat(1,1)" 8))
+  "1-15" (slice (slice "Rat(1,1)" 10) (slice "Aff" 1))
+  "1-16" (slice (slice "Rat(1,2)" 17) (slice "Log(1,1,1)" 14) (slice "Aff" 8))
+  "1-17" (slice (slice "Rat(1,3)" 21) (slice "Rat(2,2)" 16) (slice "Log(1,1,1,1)" 14) (slice "Log(1,1,2)" 17) (slice "LPB(2)" 17) (slice "Aff" 13))
+-}}
+{{- $comps := index $table $fano.identifier -}}
+{{ if ge $fano.rho 2 }}
+<p>Still open.
+{{ else }}
+{{ if $comps }}
+<p>The holomorphic Poisson structures form the following irreducible components of $\mathbb{P}\mathrm{H}^0(X,\wedge^2\mathrm{T}_X)$:
+<table class="table-sm mx-auto">
+  <thead>
+    <tr class="border-bottom"><th class="text-center">component</th><th class="text-center">dimension</th></tr>
+  </thead>
+  <tbody>
+    {{ range $comps }}<tr><td class="text-center">{{ index . 0 }}</td><td class="text-center">{{ index . 1 }}</td></tr>
+    {{ end }}
+  </tbody>
+</table>
+{{ if or (eq $fano.identifier "1-16") (eq $fano.identifier "1-17") }}
+<p>There are further components with $\mathrm{K}_{\mathcal{F}}&lt;0$ whose dimension is not recorded (Theorem 9.1).
+{{ end }}
+{{ else if eq $fano.identifier "1-10" }}
+<p>The generic member admits no nontrivial holomorphic Poisson structure; the special Mukai&ndash;Umemura member admits a 1-dimensional family (type $\mathrm{Aff}$).
+{{ else }}
+<p>No nontrivial holomorphic Poisson structures.
+{{ end }}
+<p>See <a href="{{ $doi }}">Loray&ndash;Pereira&ndash;Touzet</a>.
+{{ end }}
