@@ -33,9 +33,6 @@
     {{ end }}
   </tbody>
 </table>
-{{ if or (eq $fano.identifier "1-16") (eq $fano.identifier "1-17") }}
-<p>There are further components with $\mathrm{K}_{\mathcal{F}}&lt;0$ whose dimension is not recorded (Theorem 9.1).
-{{ end }}
 {{ else if eq $fano.identifier "1-10" }}
 <p>The generic member admits no nontrivial holomorphic Poisson structure; the special Mukai&ndash;Umemura member admits a 1-dimensional family (type $\mathrm{Aff}$).
 {{ else }}
