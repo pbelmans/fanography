@@ -34,11 +34,13 @@ layout: about
 
 
 <h2>How to cite?</h2>
+<p>The website is archived on Zenodo. To cite the version-independent latest release, use the concept DOI <a href="https://doi.org/10.5281/zenodo.21296718">10.5281/zenodo.21296718</a>.
 If you use <a href="https://www.ctan.org/pkg/biblatex">biblatex</a>:
 <pre><code>@online{fanography,
   author = {Belmans, Pieter},
   title = {Fanography},
   url = {https://fanography.info},
+  doi = {10.5281/zenodo.21296718},
   year = {{< year >}},
 }</code></pre>
 <p>If you still use <a href="https://www.bibtex.org">bibtex</a>:
@@ -46,6 +48,7 @@ If you use <a href="https://www.ctan.org/pkg/biblatex">biblatex</a>:
   author = {Belmans, Pieter},
   title = {Fanography},
   howpublished = {\url{https://fanography.info}},
+  doi = {10.5281/zenodo.21296718},
   year = {{< year >}},
 }</code></pre>
 

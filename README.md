@@ -1,5 +1,7 @@
 # Fanography
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21296718.svg)](https://doi.org/10.5281/zenodo.21296718)
+
 This is the repository for [fanography.info](https://fanography.info), a tool to
 visually study the geography of Fano 3-folds.
 
