@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this website, please cite it as below."
+type: dataset
+title: "Fanography"
+abstract: >-
+  A tool to visually study the geography of Fano 3-folds: an interactive
+  presentation of the classification of Fano 3-folds and their invariants.
+authors:
+  - family-names: Belmans
+    given-names: Pieter
+    affiliation: "Utrecht University"
+    orcid: "https://orcid.org/0000-0002-0140-2824"
+url: "https://fanography.info"
+repository-code: "https://github.com/pbelmans/fanography"
+license: CC-BY-4.0
+version: 1.0.0
+date-released: "2026-07-10"
+keywords:
+  - Fano varieties
+  - Fano 3-folds
+  - algebraic geometry
+  - classification
