@@ -41,3 +41,19 @@ To edit the data, change the YAML in `data/` and rebuild — all pages update.
 
 Pushing to `master` builds the site and deploys it to GitHub Pages via
 `.github/workflows/hugo.yml` (custom domain set through `static/CNAME`).
+
+## How to cite
+
+The website is archived on Zenodo. To cite the version-independent latest
+release, use the concept DOI
+[10.5281/zenodo.21296718](https://doi.org/10.5281/zenodo.21296718).
+
+```bibtex
+@online{fanography,
+  author = {Belmans, Pieter},
+  title  = {Fanography},
+  url    = {https://fanography.info},
+  doi    = {10.5281/zenodo.21296718},
+  year   = {2026},
+}
+```
