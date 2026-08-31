@@ -150,6 +150,28 @@ ol.description > li:before {
   counter-increment: list;
 }
 
+.toric-polytope {
+  margin: .5rem auto 1rem;
+  max-width: 24rem;
+}
+
+.toric-polytope svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: grab;
+  touch-action: none;
+}
+
+.toric-polytope svg:active {
+  cursor: grabbing;
+}
+
+.toric-polytope-compact {
+  margin: 0 auto;
+  width: 7rem;
+}
+
 @media (min-width: 992px) {
   th[role=columnheader]:not(.no-sort) {
   	cursor: pointer;

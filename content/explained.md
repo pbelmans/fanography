@@ -66,7 +66,7 @@ The calculation is due to
 
 
 <h3 id="toric">Toric varieties</h3>
-<p>For now, see the <a href="/toric">overview page</a>.
+<p>See the <a href="/toric">overview page</a> for the list of toric Fano threefolds and rotatable diagrams of their polytopes.
 
 
 <h3 id="zero-section">As a zero section</h3>

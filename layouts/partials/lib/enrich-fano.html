@@ -123,6 +123,8 @@
 
 {{- /* toric */ -}}
 {{- $toric := isset $e "toric" -}}
+{{- $toricPolytope := false -}}
+{{- if $toric -}}{{- $toricPolytope = index hugo.Data.toric_polytopes (string (index $e "toric")) -}}{{- end -}}
 
 {{- /* period */ -}}
 {{- $period := isset $e "period" -}}
@@ -245,7 +247,7 @@
   "is_unirational" $isUnirational "unirationality" $unirationality
   "coregularity" $coregularity
   "fibrelike" $fibrelike
-  "toric" $toric "grdb" (index $e "toric")
+  "toric" $toric "grdb" (index $e "toric") "toric_polytope" $toricPolytope
   "very_ample" (index $e "very_ample") "basepoint_free" (index $e "basepoint_free") "hyperelliptic" (index $e "hyperelliptic") "trigonal" (index $e "trigonal")
   "period" $period "period_grdb" $periodGrdb "period_fanosearch" $periodFano
   "Aut" $aut "aut_dims" $autDims

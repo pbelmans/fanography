@@ -1,0 +1,10 @@
+{{- /* Interactive SVG polytope. Input: {polytope, label, compact?}. */ -}}
+{{- $compact := .compact | default false -}}
+<div class="toric-polytope{{ if $compact }} toric-polytope-compact{{ end }}"
+     data-vertices='{{ .polytope.vertices | jsonify }}'
+     data-faces='{{ .polytope.faces | jsonify }}'>
+  <svg viewBox="0 0 260 220"
+       role="img"
+       aria-label="{{ .label }}"></svg>
+  {{ if not $compact }}<p class="small text-muted text-center">Drag to rotate.</p>{{ end }}
+</div>
