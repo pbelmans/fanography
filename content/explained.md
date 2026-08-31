@@ -25,6 +25,19 @@ layout: explained
 <p>At some point we should explain the notation which is used for automorphism groups, but for now one is referred to the notation overview on pages 4 and 5 of <a href="https://arxiv.org/abs/1809.09223">Cheltsov&ndash;Przyjalkowski&ndash;Shramov: Fano threefolds with infinite automorphism groups</a>.
 
 
+<h3 id="rationality">Rationality</h3>
+<p>The family tables distinguish rationality from stable rationality.
+The qualifier “very general” is essential for stable irrationality:
+it describes the complement of a countable union of proper closed subsets of the moduli space,
+not every smooth member of the family.
+Rational families are stably rational.
+For the other families,
+the stable-irrationality statements follow from
+<a href="https://math.nyu.edu/~tschinke/papers/yuri/16fano3/fano3-9.pdf">Hassett&ndash;Tschinkel</a>,
+with the cubic-threefold case supplied by
+<a href="https://arxiv.org/abs/2507.15704">Engel&ndash;de Gaay Fortman&ndash;Schreieder</a>.
+
+
 <h3 id="toric">Toric varieties</h3>
 <p>For now, see the <a href="/toric">overview page</a>.
 

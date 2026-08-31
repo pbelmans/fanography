@@ -91,10 +91,19 @@
 {{- $ratRaw := index $e "rational" -}}
 {{- $isRational := eq $ratRaw "yes" -}}
 {{- $rationality := cond (isset $e "rational") (cond (eq $ratRaw "yes") "yes" (string $ratRaw)) "no" -}}
+{{- if eq $rationality "generically non-rational" }}{{ $rationality = "generally not" }}{{ end -}}
 {{- $uniRaw := index $e "unirational" -}}
 {{- $isUnirational := or (eq $uniRaw "yes") (isset $e "rational") -}}
 {{- $unirationality := "no" -}}
 {{- if isset $e "unirational" }}{{ $unirationality = cond (eq $uniRaw "yes") "yes" (string $uniRaw) }}{{ else if $isRational }}{{ $unirationality = "yes" }}{{ end -}}
+{{- $stableRationality := "very generally not" -}}
+{{- $stableRationalityRef := "https://math.nyu.edu/~tschinke/papers/yuri/16fano3/fano3-9.pdf" -}}
+{{- if $isRational -}}
+  {{- $stableRationality = "yes" -}}
+  {{- $stableRationalityRef = "" -}}
+{{- else if eq $ident "1-13" -}}
+  {{- $stableRationalityRef = "https://arxiv.org/abs/2507.15704" -}}
+{{- end -}}
 
 {{- /* fibre-like */ -}}
 {{- $fibrelike := or (eq $rho 1) (isset $e "fibrelike") -}}
@@ -211,6 +220,7 @@
   "KX3" $kx3 "h12" $h12 "moduli" $moduli "index" $idx "genus" $genus "d" $d
   "is_primitive" $isPrimitive "blowdown" $blowdown "blowup" $blowup
   "is_rational" $isRational "rationality" $rationality
+  "stable_rationality" $stableRationality "stable_rationality_ref" $stableRationalityRef
   "is_unirational" $isUnirational "unirationality" $unirationality
   "fibrelike" $fibrelike
   "toric" $toric "grdb" (index $e "toric")

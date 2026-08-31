@@ -115,6 +115,10 @@ table.overview tr .moduli {
   width: 5rem;
 }
 
+table.overview tr .stable-rationality {
+  width: 7rem;
+}
+
 table.overview tr .blowup {
   width: 6rem;
 }

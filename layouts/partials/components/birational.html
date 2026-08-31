@@ -2,14 +2,20 @@
 {{- $fano := . -}}
 {{ if eq $fano.rationality "yes" }}
   <p>This variety is rational.
-{{ else if eq $fano.rationality "generically non-rational" }}
-  <p>This variety is known to be generically non-rational.
+{{ else if eq $fano.rationality "generally not" }}
+  <p>This variety is generally not rational.
 {{ else if in (slice "yes" "some") $fano.unirationality }}
   <p>This variety is not rational but {{ if eq $fano.unirationality "some" }}at least some are{{ end }} unirational.
 {{ else if eq $fano.unirationality "?" }}
   <p>This variety is not known to be unirational.
 {{ else }}
   <p>This variety is not unirational.
+{{ end }}
+
+{{ if eq $fano.stable_rationality "yes" }}
+  <p>This variety is stably rational.
+{{ else }}
+  <p>A <a href="{{ $fano.stable_rationality_ref }}">very general member</a> is not stably rational.
 {{ end }}
 
 <hr>

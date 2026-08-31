@@ -29,6 +29,8 @@
 
       <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">rational</th>
 
+      <th scope="col" class="text-center d-none d-xl-table-cell d-print-table-cell">stably rational</th>
+
       <th scope="col" class="text-center d-none d-lg-table-cell d-print-table-cell">unirational</th>
 
       <th scope="col" class="text-center d-none d-xl-table-cell d-print-table-cell">moduli</th>
@@ -70,6 +72,8 @@
         {{ end }}
 
         <td class="align-middle rationality text-center d-none d-lg-table-cell d-print-table-cell">{{ $fano.rationality }}</td>
+
+        <td class="align-middle stable-rationality text-center d-none d-xl-table-cell d-print-table-cell">{{ $fano.stable_rationality }}</td>
 
         <td class="align-middle unirationality text-center d-none d-lg-table-cell d-print-table-cell">{{ $fano.unirationality }}</td>
 
