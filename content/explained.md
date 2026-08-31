@@ -65,6 +65,12 @@ The calculation is due to
 <a href="https://arxiv.org/abs/2307.02258">Sektnan&ndash;Tipler</a>.
 
 
+<h3 id="atomic-decompositions">Atomic decompositions</h3>
+<p>For Picard-rank-one families,
+the semiorthogonal-decomposition card records both the naive atomic dimensions and a standard semiorthogonal decomposition from
+<a href="https://arxiv.org/abs/2606.17884">Böhning&ndash;Graf von Bothmer&ndash;Su'a</a>.
+
+
 <h3 id="toric">Toric varieties</h3>
 <p>See the <a href="/toric">overview page</a> for the list of toric Fano threefolds and rotatable diagrams of their polytopes.
 
