@@ -1,6 +1,16 @@
 {{- /* semiorthogonal decompositions. Input: enriched $fano. */ -}}
 {{- $fano := . -}}
+{{ with $fano.atomic }}
+  <p>The naive atomic decomposition has atom dimensions
+    ${{ delimit (apply .naive "string" ".") "+" }}$.
+  <p>A standard semiorthogonal decomposition is
+    ${{ .sod }}$.
+  <p>Both decompositions are recorded in
+    <a href="https://arxiv.org/abs/2606.17884">Böhning&ndash;Graf von Bothmer&ndash;Su'a</a>.
+{{ end }}
+
 {{ if eq $fano.h12 0 }}
+  {{ if $fano.atomic }}<hr>{{ end }}
   {{ if eq (len $fano.exceptional) 1 }}
     <p>A full exceptional collection can be constructed using {{ index $fano.exceptional 0 }}.
   {{ else }}
@@ -10,6 +20,6 @@
   {{ if $fano.toric }}
     <p>Alternatively, Kawamata has constructed a full exceptional collection for every smooth projective toric variety.
   {{ end }}
-{{ else }}
+{{ else if not $fano.atomic }}
   <p><em>There exist interesting semiorthogonal decompositions, but this data is not yet added.</em>
 {{ end }}

@@ -125,6 +125,7 @@
 {{- /* exceptional collection: explicit on the entry, else the default blowup formula when h12=0 */ -}}
 {{- $exc := index $e "exceptional" -}}
 {{- if and (not $exc) (eq $h12 0) -}}{{- $exc = slice "Orlov's blowup formula" -}}{{- end -}}
+{{- $atomic := index hugo.Data.atomic_decompositions $ident -}}
 
 {{- /* MMP, hilbert */ -}}
 {{- $mmp := index $e "MMP" | default slice -}}
@@ -216,7 +217,7 @@
   "very_ample" (index $e "very_ample") "basepoint_free" (index $e "basepoint_free") "hyperelliptic" (index $e "hyperelliptic") "trigonal" (index $e "trigonal")
   "period" $period "period_grdb" $periodGrdb "period_fanosearch" $periodFano
   "Aut" $aut "aut_dims" $autDims
-  "exceptional" $exc "MMP" $mmp "hilbert" $hilbert "bott" $bott "qh" $qh
+  "exceptional" $exc "atomic" $atomic "MMP" $mmp "hilbert" $hilbert "bott" $bott "qh" $qh
   "polyvector" $polyvector
   "Ks" $Ks "Kps" $Kps "Kss" $Kss "Ks_open" $KsOpen "Kps_open" $KpsOpen "Kss_open" $KssOpen
   "Kref" $kref "sections" $sections

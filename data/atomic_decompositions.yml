@@ -1,0 +1,53 @@
+# Naive atomic decompositions and standard semiorthogonal decompositions
+# for Picard-rank-one Fano threefolds, from arXiv:2606.17884, Table in section 10.
+"1-1":
+  naive: [3, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{O}_X \rangle'
+"1-2":
+  naive: [3, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{O}_X \rangle'
+"1-3":
+  naive: [3, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{O}_X \rangle'
+"1-4":
+  naive: [3, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{O}_X \rangle'
+"1-5":
+  naive: [2, 1, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{E}_2, \mathcal{O}_X \rangle'
+"1-6":
+  naive: [2, 1, 1]
+  sod: '\langle \mathrm{D}^{\mathrm{b}}(C_7), \mathcal{E}_5, \mathcal{O}_X \rangle'
+"1-7":
+  naive: [2, 1, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{E}_2, \mathcal{O}_X \rangle'
+"1-8":
+  naive: [2, 1, 1]
+  sod: '\langle \mathrm{D}^{\mathrm{b}}(C_3), \mathcal{E}_3, \mathcal{O}_X \rangle'
+"1-9":
+  naive: [2, 1, 1]
+  sod: '\langle \mathrm{D}^{\mathrm{b}}(C_2), \mathcal{E}_2, \mathcal{O}_X \rangle'
+"1-10":
+  naive: [1, 1, 1, 1]
+  sod: '\langle \mathcal{E}_4, \mathcal{E}_3, \mathcal{E}_2, \mathcal{O}_X \rangle'
+"1-11":
+  naive: [2, 1, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{O}_X, \mathcal{O}_X(1) \rangle'
+"1-12":
+  naive: [2, 1, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{O}_X, \mathcal{O}_X(1) \rangle'
+"1-13":
+  naive: [2, 1, 1]
+  sod: '\langle \operatorname{Ku}(X), \mathcal{O}_X, \mathcal{O}_X(1) \rangle'
+"1-14":
+  naive: [2, 1, 1]
+  sod: '\langle \mathrm{D}^{\mathrm{b}}(C_2), \mathcal{O}_X, \mathcal{O}_X(1) \rangle'
+"1-15":
+  naive: [1, 1, 1, 1]
+  sod: '\langle \mathcal{F}_3, \mathcal{F}_2, \mathcal{O}_X, \mathcal{O}_X(1) \rangle'
+"1-16":
+  naive: [1, 1, 1, 1]
+  sod: '\langle \mathcal{S}, \mathcal{O}_X, \mathcal{O}_X(1), \mathcal{O}_X(2) \rangle'
+"1-17":
+  naive: [1, 1, 1, 1]
+  sod: '\langle \mathcal{O}_X, \mathcal{O}_X(1), \mathcal{O}_X(2), \mathcal{O}_X(3) \rangle'
