@@ -38,6 +38,17 @@ with the cubic-threefold case supplied by
 <a href="https://arxiv.org/abs/2507.15704">Engel&ndash;de Gaay Fortman&ndash;Schreieder</a>.
 
 
+<h3 id="coregularity">Coregularity</h3>
+<p>The coregularity of a Fano variety is the dimension of its dual complex,
+subtracted from the dimension of the variety and then decreased by one.
+Thus coregularity zero is the extremal case in which a log Calabi&ndash;Yau boundary has a dual complex of maximal dimension.
+The first coregularity is the analogous invariant obtained using anticanonical boundaries only.
+The family statements use
+<a href="https://arxiv.org/abs/2309.16784">Avilov&ndash;Loginov&ndash;Przyjalkowski</a>
+and the remaining existence results use
+<a href="https://arxiv.org/abs/2409.02523">Zhakupov</a>.
+
+
 <h3 id="toric">Toric varieties</h3>
 <p>For now, see the <a href="/toric">overview page</a>.
 

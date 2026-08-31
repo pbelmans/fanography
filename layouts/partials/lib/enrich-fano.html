@@ -105,6 +105,19 @@
   {{- $stableRationalityRef = "https://arxiv.org/abs/2507.15704" -}}
 {{- end -}}
 
+{{- /* coregularity: the generic and uniform statements proved in arXiv:2309.16784,
+       supplemented by the existence result of arXiv:2409.02523 */ -}}
+{{- $coregularity := "every smooth member has coregularity 0" -}}
+{{- if in (slice "1-1" "1-2") $ident -}}
+  {{- $coregularity = "the general member has coregularity at least 1; some member has coregularity 0" -}}
+{{- else if in (slice "1-3" "1-4") $ident -}}
+  {{- $coregularity = "the general member has first coregularity 2; some member has coregularity 0" -}}
+{{- else if eq $ident "1-5" -}}
+  {{- $coregularity = "the general member has coregularity at most 1; some member has coregularity 0" -}}
+{{- else if or (in (slice "1-6" "1-7" "1-8" "1-9" "1-10" "1-11") $ident) (in (slice "2-1" "10-1") $ident) -}}
+  {{- $coregularity = "the general member has coregularity 0" -}}
+{{- end -}}
+
 {{- /* fibre-like */ -}}
 {{- $fibrelike := or (eq $rho 1) (isset $e "fibrelike") -}}
 
@@ -222,6 +235,7 @@
   "is_rational" $isRational "rationality" $rationality
   "stable_rationality" $stableRationality "stable_rationality_ref" $stableRationalityRef
   "is_unirational" $isUnirational "unirationality" $unirationality
+  "coregularity" $coregularity
   "fibrelike" $fibrelike
   "toric" $toric "grdb" (index $e "toric")
   "very_ample" (index $e "very_ample") "basepoint_free" (index $e "basepoint_free") "hyperelliptic" (index $e "hyperelliptic") "trigonal" (index $e "trigonal")

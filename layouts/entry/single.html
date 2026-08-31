@@ -15,6 +15,7 @@
     {{ partial "components/component.html" (dict "header" "Structure of quantum cohomology" "id" "" "body" (partial "components/qh.html" $fano)) }}
     {{ partial "components/component.html" (dict "header" "Zero section description" "id" "" "body" (partial "components/zero-section.html" $fano)) }}
     {{ partial "components/component.html" (dict "header" "K-stability" "id" "" "body" (partial "components/k-stability.html" $fano)) }}
+    {{ partial "components/component.html" (dict "header" "Coregularity" "id" "coregularity" "body" (partial "components/coregularity.html" $fano)) }}
     {{ if $fano.hilbert }}
       {{ partial "components/component.html" (dict "header" "Hilbert schemes of curves" "id" "" "body" (partial "components/hilbert.html" $fano)) }}
     {{ end }}
