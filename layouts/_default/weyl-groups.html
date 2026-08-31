@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ .Content }}
+
+{{- $families := slice -}}
+{{- range $identifier, $group := hugo.Data.weyl_groups -}}
+  {{- $parts := split $identifier "-" -}}
+  {{- $rho := int (index $parts 0) -}}
+  {{- $id := int (index $parts 1) -}}
+  {{- $families = $families | append (dict
+    "identifier" $identifier
+    "rho" $rho
+    "id" $id
+    "group" $group
+    "sortKey" (printf "%03d-%03d" $rho $id)
+  ) -}}
+{{- end -}}
+
+<table class="table table-hover table-sm" id="weyl-groups-table">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+      <th scope="col" class="text-center" data-sort-method="number">$\rho$</th>
+      <th scope="col" class="text-center no-sort" data-sort-method="none">Weyl group</th>
+      <th scope="col" class="no-sort" data-sort-method="none">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range sort $families "sortKey" }}
+      {{- $fano := partialCached "lib/enrich-fano.html" (dict "rho" .rho "id" .id) .identifier -}}
+      <tr>
+        <td class="align-middle row-identifier text-center" data-sort="{{ .sortKey }}">
+          <a class="identifier text-nowrap" href="/{{ .identifier }}">{{ .identifier }}</a>
+        </td>
+        <td class="align-middle text-center">{{ .rho }}</td>
+        <td class="align-middle text-center">${{ .group }}$</td>
+        {{ partial "components/description-cell.html" $fano }}
+      </tr>
+    {{ end }}
+  </tbody>
+</table>
+
+<script type="text/javascript">
+new Tablesort(document.getElementById("weyl-groups-table"));
+</script>
+{{ end }}

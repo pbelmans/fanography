@@ -38,6 +38,13 @@ with the cubic-threefold case supplied by
 <a href="https://arxiv.org/abs/2507.15704">Engel&ndash;de Gaay Fortman&ndash;Schreieder</a>.
 
 
+<h3 id="weyl-groups">Weyl groups and birational transformations</h3>
+<p>The displayed Weyl group describes symmetries of the KKMR chamber decomposition associated with the Fano threefold.
+See the <a href="/weyl-groups">Weyl-group overview and table</a> for the definition,
+the 35 nontrivial cases,
+and sources.
+
+
 <h3 id="coregularity">Coregularity</h3>
 <p>The coregularity of a Fano variety is the dimension of its dual complex,
 subtracted from the dimension of the variety and then decreased by one.
