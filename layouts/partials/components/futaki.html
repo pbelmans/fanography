@@ -1,0 +1,16 @@
+{{- /* Futaki invariant. Input: enriched $fano. */ -}}
+{{- $fano := . -}}
+{{ if $fano.futaki_exceptional }}
+  <p>For every K-polystable member,
+    the zero locus of the Futaki invariant contains a 2-dimensional family of Kähler classes including the anticanonical class.
+  {{ if $fano.futaki_three_dimensional }}
+    <p>For members with infinite automorphism group,
+      the construction gives a 3-dimensional family near the anticanonical class.
+  {{ end }}
+{{ else }}
+  <p>For every K-polystable member,
+    the Futaki invariant vanishes identically on the entire Kähler cone.
+{{ end }}
+
+<p>This is the computation of
+  <a href="https://arxiv.org/abs/2307.02258">Sektnan&ndash;Tipler</a>.

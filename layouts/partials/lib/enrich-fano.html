@@ -149,6 +149,11 @@
 {{- if and (not $exc) (eq $h12 0) -}}{{- $exc = slice "Orlov's blowup formula" -}}{{- end -}}
 {{- $atomic := index hugo.Data.atomic_decompositions $ident -}}
 
+{{- /* Futaki invariant on the Kähler cone of K-polystable members */ -}}
+{{- $futakiExceptions := slice "3-9" "3-13" "3-19" "3-20" "4-2" "4-4" "4-7" "5-3" -}}
+{{- $futakiExceptional := in $futakiExceptions $ident -}}
+{{- $futakiThreeDimensional := in (slice "4-2" "4-4" "4-7") $ident -}}
+
 {{- /* MMP, hilbert */ -}}
 {{- $mmp := index $e "MMP" | default slice -}}
 {{- $hilbert := index $e "hilbert" -}}
@@ -242,6 +247,7 @@
   "period" $period "period_grdb" $periodGrdb "period_fanosearch" $periodFano
   "Aut" $aut "aut_dims" $autDims
   "exceptional" $exc "atomic" $atomic "MMP" $mmp "hilbert" $hilbert "bott" $bott "qh" $qh
+  "futaki_exceptional" $futakiExceptional "futaki_three_dimensional" $futakiThreeDimensional
   "polyvector" $polyvector
   "Ks" $Ks "Kps" $Kps "Kss" $Kss "Ks_open" $KsOpen "Kps_open" $KpsOpen "Kss_open" $KssOpen
   "Kref" $kref "sections" $sections

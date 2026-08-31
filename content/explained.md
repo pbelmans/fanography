@@ -49,6 +49,15 @@ and the remaining existence results use
 <a href="https://arxiv.org/abs/2409.02523">Zhakupov</a>.
 
 
+<h3 id="futaki-invariant">Futaki invariant</h3>
+<p>The Futaki card concerns K-polystable members and varies the Kähler class over the Kähler cone.
+It records whether the invariant vanishes identically and,
+in the exceptional cases,
+a lower bound on the dimension of a family of zeroes containing the anticanonical class.
+The calculation is due to
+<a href="https://arxiv.org/abs/2307.02258">Sektnan&ndash;Tipler</a>.
+
+
 <h3 id="toric">Toric varieties</h3>
 <p>For now, see the <a href="/toric">overview page</a>.
 
